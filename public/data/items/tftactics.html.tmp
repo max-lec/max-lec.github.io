@@ -1,0 +1,337 @@
+<div id="root">
+    <div class="App">
+        <nav class="nav toolbar">
+            <div class="nav-wrapper container"><a class="nav-brand active" aria-current="page" href="/"><img
+                        class="brand" src="https://rerollcdn.com/brand.svg" alt="TFTactics"></a>
+                <div class="set-btn dropdown"><button type="button" aria-haspopup="true" aria-expanded="false"
+                        class="dropdown-toggle btn btn-secondary">Set 9</button>
+                    <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button"
+                            set="9" tabindex="0" role="menuitem" class=" active dropdown-item">Set 9</button></div>
+                </div>
+                <div class="searchbar player-search">
+                    <div class="dropdown"><button type="button" aria-haspopup="true" aria-expanded="false"
+                            class="dropdown-toggle btn btn-secondary">NA</button>
+                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button type="button"
+                                region="{&quot;name&quot;:&quot;BR&quot;,&quot;code&quot;:&quot;br1&quot;}" tabindex="0"
+                                role="menuitem" class="dropdown-item">BR</button><button type="button"
+                                region="{&quot;name&quot;:&quot;EUNE&quot;,&quot;code&quot;:&quot;eun1&quot;}"
+                                tabindex="0" role="menuitem" class="dropdown-item">EUNE</button><button type="button"
+                                region="{&quot;name&quot;:&quot;EUW&quot;,&quot;code&quot;:&quot;euw1&quot;}"
+                                tabindex="0" role="menuitem" class="dropdown-item">EUW</button><button type="button"
+                                region="{&quot;name&quot;:&quot;JP&quot;,&quot;code&quot;:&quot;jp1&quot;}" tabindex="0"
+                                role="menuitem" class="dropdown-item">JP</button><button type="button"
+                                region="{&quot;name&quot;:&quot;KR&quot;,&quot;code&quot;:&quot;kr&quot;}" tabindex="0"
+                                role="menuitem" class="dropdown-item">KR</button><button type="button"
+                                region="{&quot;name&quot;:&quot;LAN&quot;,&quot;code&quot;:&quot;la1&quot;}"
+                                tabindex="0" role="menuitem" class="dropdown-item">LAN</button><button type="button"
+                                region="{&quot;name&quot;:&quot;LAS&quot;,&quot;code&quot;:&quot;la2&quot;}"
+                                tabindex="0" role="menuitem" class="dropdown-item">LAS</button><button type="button"
+                                region="{&quot;name&quot;:&quot;NA&quot;,&quot;code&quot;:&quot;na1&quot;}" tabindex="0"
+                                role="menuitem" class=" active dropdown-item">NA</button><button type="button"
+                                region="{&quot;name&quot;:&quot;OCE&quot;,&quot;code&quot;:&quot;oc1&quot;}"
+                                tabindex="0" role="menuitem" class="dropdown-item">OCE</button><button type="button"
+                                region="{&quot;name&quot;:&quot;TR&quot;,&quot;code&quot;:&quot;tr1&quot;}" tabindex="0"
+                                role="menuitem" class="dropdown-item">TR</button><button type="button"
+                                region="{&quot;name&quot;:&quot;RU&quot;,&quot;code&quot;:&quot;ru&quot;}" tabindex="0"
+                                role="menuitem" class="dropdown-item">RU</button></div>
+                    </div><input class="searchbar-input" type="text" placeholder="Search Summoner Name..." value=""><img
+                        class="searchbar-icon" src="https://rerollcdn.com/search-icon.svg" alt="search icon">
+                </div><a class="cta-btn d-none d-xl-flex"
+                    href="https://download.overwolf.com/install/Download?&amp;PartnerId=3792&amp;ExtensionId=delfmdadipjjmpajblkalfkbebcbldbknecigjpc">
+                    <div class="btn">Download App</div>
+                </a>
+                <div class="hamburger ml-auto d-xl-none">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-menu d-xl-none">
+                <h2>Navigation</h2>
+                <ul class="mobile-links">
+                    <li class="mobile-item"><a class="mobile-link" href="/tierlist/team-comps">Team Comps</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/meta-report">Meta Report</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/champions">Champions</a></li>
+                    <li class="mobile-item"><a class="mobile-link active" aria-current="page" href="/tierlist">Tier
+                            List</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/item-builder">Item Builder</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/team-builder">Team Builder</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/db">Database</a></li>
+                    <li class="mobile-item"><a class="mobile-link" href="/patch-notes">Patch Notes</a></li>
+                </ul>
+            </div>
+        </nav>
+        <nav class="nav d-none d-xl-flex">
+            <div class="nav-wrapper container">
+                <ul class="nav-links" style="width: 100%;">
+                    <li class="nav-item"><a class="nav-link" href="/tierlist/team-comps">Team Comps</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/meta-report">Meta Report</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/champions">Champions</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle active" aria-current="page"
+                            id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false" href="/tierlist">Tier Lists</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="nav-link"
+                                href="/tierlist/champions">Champions</a><a class="nav-link active"
+                                href="/tierlist/items" aria-current="page">Items</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/item-builder">Item Builder</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/team-builder">Team Builder</a></li>
+                    <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/db">Database</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="nav-link"
+                                href="/db/champions">Champions</a><a class="nav-link" href="/db/champion-stats">Champion
+                                Stats</a><a class="nav-link" href="/db/origins">Origins</a><a class="nav-link"
+                                href="/db/classes">Classes</a><a class="nav-link" href="/db/rolling">Rolling</a><a
+                                class="nav-link" href="/db/augments">Augments</a><a class="nav-link"
+                                href="/db/legends">Legends</a><a class="nav-link" href="/db/region-portals">Region
+                                Portals</a></div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/patch-notes">Patch Notes</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="tierlist characters-tier container">
+            <div id="nn_1by1"></div>
+            <div class="wrapper-lb1" style="margin-top: 0px;">
+                <div id="nn_lb1"></div>
+            </div>
+            <div id="nn_skinr"></div>
+            <div id="nn_skinl"></div>
+            <div class="row"><a class="set-update-banner" href="/set-9-update">
+                    <div class="update-title">Set 9 Update is now live on TFTactics!</div>
+                    <div class="update-subtitle">Click here to learn more</div>
+                </a>
+                <div class="col-12 col-lg-3 sidebar">
+                    <div class="sidebar-wrapper">
+                        <div class="filters-header">
+                            <h2>Lists</h2>
+                        </div>
+                        <div class="divider"></div>
+                        <ul class="sidenav"><a href="/tierlist/champions">
+                                <li class="sidenav-title">Champions</li>
+                            </a><a class="active" aria-current="page" href="/tierlist/items">
+                                <li class="sidenav-title">Items</li>
+                            </a></ul>
+                        <div class="divider d-none d-lg-block"></div>
+                        <div class="disclaimer d-none d-lg-block">
+                            <p>The order inside each tier does not matter.</p>
+                        </div>
+                        <div class="divider d-lg-none"></div>
+                        <div id="nn_mpu1"></div>
+                    </div>
+                </div>
+                <div class="wrapper-mpu1">
+                    <div id="nn_mobile_mpu1"></div>
+                </div>
+                <div class="col-12 col-lg-9 main">
+                    <div class="page-header">
+                        <h1>TFT Item Tier List</h1>
+                        <div class="page-header-buttons">
+                            <div class="set-btn dropdown"><button type="button" aria-haspopup="true"
+                                    aria-expanded="false" class="dropdown-toggle btn btn-secondary">Set 9</button>
+                                <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu"><button
+                                        type="button" set="9" tabindex="0" role="menuitem"
+                                        class=" active dropdown-item">Set 9</button></div>
+                            </div>
+                        </div>
+                        <div class="searchbar"><img class="searchbar-icon" src="https://rerollcdn.com/search-icon.svg"
+                                alt="search icon"><input class="searchbar-input" type="text" placeholder="Search..."
+                                value=""><img class="searchbar-close" src="https://rerollcdn.com/close-icon.svg"
+                                alt="close icon"></div>
+                    </div>
+                    <div class="divider mb-20"></div>
+                    <div class="disclaimer d-lg-none">
+                        <p>The order inside each tier does not matter.</p>
+                    </div>
+                    <div class="update">
+                        <div class="update-patch">Patch 13.12</div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-up">▴</div>Tier Up
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-down">▾</div>Tier Down
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tier-group">
+                        <div class="characters-category tone">
+                            <h3>S</h3>
+                        </div>
+                        <div class="characters-list"><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Bloodthirster.png" alt="Bloodthirster"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/BlueBuff.png" alt="Blue Buff"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/GiantSlayer.png" alt="Giant Slayer"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/GuinsoosRageblade.png"
+                                        alt="Guinsoo's Rageblade"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/HextechGunblade.png" alt="Hextech Gunblade">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/InfinityEdge.png" alt="Infinity Edge"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/JeweledGauntlet.png" alt="Jeweled Gauntlet">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/LastWhisper.png" alt="Last Whisper"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Redemption.png" alt="Redemption"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/SpearofShojin.png" alt="Spear of Shojin"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/TacticiansCrown.png" alt="Tactician's Crown">
+                                </div>
+                            </a></div>
+                    </div>
+                    <div class="tier-group">
+                        <div class="characters-category ttwo">
+                            <h3>A</h3>
+                        </div>
+                        <div class="characters-list"><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/BrambleVest.png" alt="Bramble Vest"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/DragonsClaw.png" alt="Dragon's Claw"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/GargoyleStoneplate.png"
+                                        alt="Gargoyle Stoneplate"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/HandofJustice.png" alt="Hand of Justice"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/IonicSpark.png" alt="Ionic Spark"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Morellonomicon.png" alt="Morellonomicon"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/StatikkShiv.png" alt="Statikk Shiv"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/SunfireCape.png" alt="Sunfire Cape"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ThiefsGloves.png" alt="Thief's Gloves"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/TitansResolve.png" alt="Titan's Resolve"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/WarmogsArmor.png" alt="Warmog's Armor"></div>
+                            </a></div>
+                    </div>
+                    <div class="tier-group">
+                        <div class="characters-category tthree">
+                            <h3>B</h3>
+                        </div>
+                        <div class="characters-list"><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ArchangelsStaff.png" alt="Archangel's Staff">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Deathblade.png" alt="Deathblade"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/RabadonsDeathcap.png" alt="Rabadon's Deathcap">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/RapidFirecannon.png" alt="Rapid Firecannon">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/RunaansHurricane.png" alt="Runaan's Hurricane">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ZekesHerald.png" alt="Zeke's Herald"></div>
+                            </a></div>
+                    </div>
+                    <div class="wrapper-lb1">
+                        <div id="nn_lb2"></div>
+                    </div>
+                    <div class="wrapper-mpu1">
+                        <div id="nn_mobile_mpu2"></div>
+                    </div>
+                    <div class="tier-group">
+                        <div class="characters-category tfour">
+                            <h3>C</h3>
+                        </div>
+                        <div class="characters-list"><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ChaliceofPower.png" alt="Chalice of Power">
+                                </div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/EdgeofNight.png" alt="Edge of Night"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/LocketoftheIronSolari.png"
+                                        alt="Locket of the Iron Solari"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ProtectorsVow.png" alt="Protector's Vow"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Quicksilver.png" alt="Quicksilver"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Zephyr.png" alt="Zephyr"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ZzRotPortal.png" alt="Zz'Rot Portal"></div>
+                            </a></div>
+                    </div>
+                    <div class="tier-group">
+                        <div class="characters-category tfive">
+                            <h3>D</h3>
+                        </div>
+                        <div class="characters-list"><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/Guardbreaker.png" alt="Guardbreaker"></div>
+                            </a><a class="characters-item" href="/item-builder">
+                                <div class="character-wrapper"><img class="character-icon"
+                                        src="https://rerollcdn.com/items/ShroudofStillness.png"
+                                        alt="Shroud of Stillness"></div>
+                            </a></div>
+                    </div>
+                </div>
+            </div>
+            <div id="nn_player"></div>
+        </section>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-links"><a href="/privacy-policy">Privacy Policy</a><a
+                        href="mailto:hello.tftactics@gmail.com" target="_blank" rel="noopener noreferrer">Contact</a>
+                    <div class="cookies nn-cmp-show" style="cursor: pointer;">Manage Cookie Settings</div>
+                    <div class="switch active">Set Skins<div class="switch-toggle"></div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <p class="footer-about">TFTACTICS.GG isn’t endorsed by Riot Games and doesn’t reflect the views or
+                    opinions of Riot Games or anyone officially involved in producing or managing League of Legends.
+                    League of Legends and Riot Games are trademarks or registered trademarks of Riot Games, Inc. League
+                    of Legends © Riot Games, Inc.</p>
+                <p class="footer-copyright">© TFTactics 2023</p>
+            </div>
+        </footer>
+    </div>
+</div>

@@ -1,0 +1,4387 @@
+[
+    {
+        "name": "Aatrox",
+        "id": "780",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Infinity Edge",
+            "Titan's Resolve"
+        ],
+        "origin": [
+            "Darkin"
+        ],
+        "type": [
+            "Slayer",
+            "Juggernaut"
+        ],
+        "cost": 5,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_cost": 60,
+        "ap": 100,
+        "attack": [
+            80
+        ],
+        "speed": 0.8,
+        "dps": [
+            64
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "World Ender",
+                "icon": true,
+                "type": "Active",
+                "description": "Transform for 10 seconds, gaining 15% of AP Omnivamp. While transformed, attacks deal 80% of AS bonus + % of AD physical damage.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "250%",
+                            "250%",
+                            "2500%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ahri",
+        "id": "781",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Blue Buff",
+            "Giant Slayer",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Sorcerer"
+        ],
+        "cost": 5,
+        "health": [
+            850,
+            1530,
+            2754
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Essence Theft",
+                "icon": true,
+                "type": "Active",
+                "description": "Steal essence from enemies around the current target, dealing magic damage and Mana Reaving them. \\n\\nEvery number of casts, unleash a wave that deals magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.\\n\\nIonia Bonus: +3 Mana per second\\n\\nMana Reave: Increase max Mana by 35% until the next cast",
+                "tags": [
+                    {
+                        "name": "Essence Steal",
+                        "bonus": [
+                            "115%",
+                            "170%",
+                            "1000%"
+                        ]
+                    },
+                    {
+                        "name": "Wave Damage",
+                        "bonus": [
+                            "250%",
+                            "375%",
+                            "3000%"
+                        ]
+                    },
+                    {
+                        "name": "Casts Before Wave",
+                        "bonus": [
+                            2,
+                            2,
+                            0
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Akshan",
+        "id": "782",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Deadeye"
+        ],
+        "cost": 3,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_start": 30,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            65
+        ],
+        "speed": 0.75,
+        "dps": [
+            48.75
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Comeuppance",
+                "icon": true,
+                "type": "Active",
+                "description": "Lock on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals 125% of AD + % of AP physical damage to the first enemy hit.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "20%",
+                            "35%",
+                            "60%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Aphelios",
+        "id": "783",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Infinity Edge"
+        ],
+        "origin": [
+            "Targon"
+        ],
+        "type": [
+            "Deadeye"
+        ],
+        "cost": 4,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 70,
+        "mana_cost": 140,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.8,
+        "dps": [
+            48
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Moonlight Vigil",
+                "icon": true,
+                "type": "Active",
+                "description": "Fire a moon blast at the largest group of enemies that deals physical damage to enemies within 2 hexes.\\n\\nFor 7 seconds, equip 3 Chakram, plus 1 more for each enemy hit by the blast (Max 10). Attacks deal bonus physical damage for each Chakram equipped. Aphelios heals for 50% of AP of damage dealt by Chakrams.",
+                "tags": [
+                    {
+                        "name": "Moon Blast",
+                        "bonus": [
+                            "200%",
+                            "200%",
+                            "550%"
+                        ]
+                    },
+                    {
+                        "name": "Chakram Damage",
+                        "bonus": [
+                            "10%",
+                            "10%",
+                            "40%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ashe",
+        "id": "784",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Freljord"
+        ],
+        "type": [
+            "Deadeye"
+        ],
+        "cost": 2,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            20
+        ],
+        "resistance": [
+            20
+        ],
+        "mana_start": 30,
+        "mana_cost": 60,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.7,
+        "dps": [
+            35
+        ],
+        "range_sm": 5,
+        "skill": [
+            {
+                "name": "Volley",
+                "icon": true,
+                "type": "Active",
+                "description": "Fire 8 arrows in a cone, each dealing 110% of AD as physical damage to the first enemy hit and Chilling them for 2% of AP seconds.\\n\\nChill: Reduced Attack Speed by 30%",
+                "description_kr": "Fire 8 arrows in a cone, each dealing 110% of AD as physical damage to the first enemy hit and Chilling them for 2% of AP seconds.\\n\\nChill: Reduced Attack Speed by 30%"
+            }
+        ]
+    },
+    {
+        "name": "Azir",
+        "id": "785",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Strategist"
+        ],
+        "cost": 4,
+        "health": [
+            750,
+            1350,
+            2430
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 40,
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            30
+        ],
+        "speed": 0.75,
+        "dps": [
+            22.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Arise!",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Every third attack, a Sand Soldier deals magic damage to their target.\\n\\nActive: Summon a Sand Soldier to attack your target. If Azir already has 3 Soldiers, they all immediately deal 70% of the damage instead.",
+                "description_kr": "Passive: Every third attack, a Sand Soldier deals magic damage to their target.\\n\\nActive: Summon a Sand Soldier to attack your target. If Azir already has 3 Soldiers, they all immediately deal 70% of the damage instead."
+            }
+        ]
+    },
+    {
+        "name": "Belveth",
+        "id": "786",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Last Whisper","Titan's Resolve"
+        ],
+        "origin": [
+            "Empress",
+            "Void"
+        ],
+        "type": [
+            "-"
+        ],
+        "cost": 5,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_cost": 70,
+        "ap": 100,
+        "attack": [
+            80
+        ],
+        "speed": 0.85,
+        "dps": [
+            68
+        ],
+        "range_sm": 2,
+        "skill": [
+            {
+                "name": "Royal Maelstrom",
+                "icon": true,
+                "type": "Active",
+                "description":"Lash out at the lowest Health enemy in range 6 + 6 per 100% of AS bonus times. Each lash deals 75% of AD + % of AP physical damage and 2% of the target's max Health as true damage.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "20%",
+                            "30%",
+                            "50%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Cassiopeia",
+        "id": "787",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Blue Buff",
+            "Giant Slayer",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Noxus",
+            "Shurima"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 1,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            20
+        ],
+        "resistance": [
+            20
+        ],
+        "mana_cost": 40,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Twin Fang",
+                "icon": true,
+                "type": "Active",
+                "description": "Deal magic damage to the current target and Wound them for 5 seconds. If they are already Wounded, deal 30% bonus magic damage.\\n\\nWound: Reduce healing received by 50%",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "200%",
+                            "300%",
+                            "450%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Chogath",
+        "id": "788",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": ["Dragon's Claw",
+            "Ionic Spark",
+            "Sunfire Cape"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 1,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 30,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.5,
+        "dps": [
+            25
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Feast",
+                "icon": true,
+                "type": "Active",
+                "description": "Deal magic damage + 10% of HP to the lowest Health enemy in range. If this kills them, devour them and permanently gain maximum Health.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "250%",
+                            "335%",
+                            "450%"
+                        ]
+                    },
+                    {
+                        "name": "Devour Health Bonus",
+                        "bonus": [
+                            30,
+                            30,
+                            30
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Darius",
+        "id": "789",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Infinity Edge","Titan's Resolve"
+        ],
+        "origin": [
+            "Noxus"
+        ],
+        "type": [
+            "Juggernaut"
+        ],
+        "cost": 3,
+        "health": [
+            750,
+            1350,
+            2430
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 30,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            70
+        ],
+        "speed": 0.75,
+        "dps": [
+            52.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Noxian Guillotine",
+                "icon": true,
+                "type": "Active",
+                "description": "Deal 350% of AD + % of AP physical damage to the current target. If they die, immediately cast this again with less damage.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "100%",
+                            "120%",
+                            "150%"
+                        ]
+                    },
+                    {
+                        "name": "Recast Effectiveness",
+                        "bonus": [
+                            "82%",
+                            "85%",
+                            "90%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ekko",
+        "id": "790",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Hand of Justice",
+            "Ionic Spark",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Zaun",
+            "Piltover"
+        ],
+        "type": [
+            "Rogue"
+        ],
+        "cost": 3,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_cost": 45,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.8,
+        "dps": [
+            40
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Phase Dive",
+                "icon": true,
+                "type": "Active",
+                "description": "Heal 30% of damage taken in the last 4 seconds and deal magic damage to the current target.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "290%",
+                            "435%",
+                            "710%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Galio",
+        "id": "791",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": ["Dragon's Claw",
+            "Gargoyle Stoneplate",
+            "Ionic Spark"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            45
+        ],
+        "resistance": [
+            45
+        ],
+        "mana_start": 80,
+        "mana_cost": 140,
+        "ap": 100,
+        "attack": [
+            70
+        ],
+        "speed": 0.5,
+        "dps": [
+            35
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Shield of Durand",
+                "icon": true,
+                "type": "Active",
+                "description": "Reduce damage taken by 20% and heal for % of AP over 4 seconds. After, deal magic damage to adjacent enemies.",
+                "tags": [
+                    {
+                        "name": "Heal",
+                        "bonus": [
+                            "275%",
+                            "300%",
+                            "325%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "200%",
+                            "300%",
+                            "450%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Garen",
+        "id": "792",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster","Guinsoo's Rageblade","Titan's Resolve"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Juggernaut"
+        ],
+        "cost": 3,
+        "health": [
+            850,
+            1530,
+            2754
+        ],
+        "armor": [
+            45
+        ],
+        "resistance": [
+            45
+        ],
+        "mana_cost": 80,
+        "ap": 100,
+        "attack": [
+            70
+        ],
+        "speed": 0.75,
+        "dps": [
+            52.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Judgement",
+                "icon": true,
+                "type": "Active",
+                "description": "Spin 2 + 1 per 50% of AS bonus times every second for the next 4% of AP seconds. Each spin deals physical damage to adjacent enemies.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "70%",
+                            "75%",
+                            "80%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Gwen",
+        "id": "793",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Blue Buff",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Shadow Isles"
+        ],
+        "type": [
+            "Slayer"
+        ],
+        "cost": 4,
+        "health": [
+            900,
+            1620,
+            2916
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_cost": 35,
+        "ap": 100,
+        "attack": [
+            55
+        ],
+        "speed": 0.8,
+        "dps": [
+            44
+        ],
+        "range_sm": 2,
+        "skill": [
+            {
+                "name": "Snip Snip!",
+                "icon": true,
+                "type": "Active",
+                "description": "Dash around the current target and snip 3 times in a cone, each dealing magic damage to enemies hit.\\n\\nEvery 3 casts, gain Armor and Magic resist.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "95%",
+                            "140%",
+                            "400%"
+                        ]
+                    },
+                    {
+                        "name": "Bonus Defense Duration",
+                        "bonus": [
+                            2,
+                            2.5,
+                            4
+                        ]
+                    },
+                    {
+                        "name": "Resists",
+                        "bonus": [
+                            120,
+                            120,
+                            300
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Heimerdinger",
+        "id": "794",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 1,
+        "updated": false,
+        "items": ["Guinsoo's Rageblade",
+            "Spear of Shojin",
+            "Statikk Shiv"
+        ],
+        "origin": [
+            "Piltover",
+            "Yordle"
+        ],
+        "type": [
+            "Technogenius"
+        ],
+        "cost": 5,
+        "health": [
+            750,
+            1350,
+            2430
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 80,
+        "mana_cost": 160,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.75,
+        "dps": [
+            30
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "CH-3X Lightning Grenade",
+                "icon": true,
+                "type": "Active",
+                "description": "Hurl a grenade towards the largest group of enemies, dealing magic damage to enemies in a large area and Stunning them.\\n\\n4 Star Upgrade: YES YES YES, IT WORKS!",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "150%",
+                            "225%",
+                            "3141%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            2,
+                            2,
+                            15
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Irelia",
+        "id": "795",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Challenger"
+        ],
+        "cost": 1,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 40,
+        "mana_cost": 80,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.65,
+        "dps": [
+            32.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Defiant Dance",
+                "icon": true,
+                "type": "Active",
+                "description": "Enter a defensive stance and gain Shield that rapidly decays over 3 seconds. When it expires, deal magic damage + 30% of the damage absorbed to enemies around and in front of Irelia.\\n\\nIonia Bonus: +40 Armor and Magic Resist",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "350%",
+                            "400%",
+                            "450%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "70%",
+                            "100%",
+                            "150%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jarvan IV",
+        "id": "796",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Strategist"
+        ],
+        "cost": 4,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_start": 100,
+        "mana_cost": 180,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.65,
+        "dps": [
+            39
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Cataclysm",
+                "icon": true,
+                "type": "Active",
+                "description": "Leap on a nearby enemy. Deal magic damage to enemies within 2 hexes and Stun them.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "140%",
+                            "210%",
+                            "800%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            1.75,
+                            2.25,
+                            8
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jayce",
+        "id": "797",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Piltover"
+        ],
+        "type": [
+            "Gunner"
+        ],
+        "cost": 3,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_start": 40,
+        "mana_cost": 120,
+        "ap": 100,
+        "attack": [
+            65
+        ],
+        "speed": 0.75,
+        "dps": [
+            48.75
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Acceleration Blast",
+                "icon": true,
+                "type": "Active",
+                "description": "Grant 20% of AP Attack Speed to Jayce and adjacent allies on his left and right for 3 seconds. Fire a blast at the current target that explodes on the first enemy hit. It deals physical damage to enemies near the blast.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "240%",
+                            "240%",
+                            "250%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Jhin",
+        "id": "798",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": ["Guinsoo's Rageblade",
+            "Last Whisper",
+            "Infinity Edge"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Deadeye"
+        ],
+        "cost": 1,
+        "health": [
+            504,
+            907,
+            1633
+        ],
+        "armor": [
+            14
+        ],
+        "resistance": [
+            14
+        ],
+        "mana_start": 44,
+        "mana_cost": 144,
+        "ap": 100,
+        "attack": [
+            54
+        ],
+        "speed": 0.7,
+        "dps": [
+            37.8
+        ],
+        "range_sm": 3,
+        "skill": [
+            {
+                "name": "Curtain Call",
+                "icon": true,
+                "type": "Active",
+                "description": "Take aim at the current target and deal 744% of AD + 60% of AP physical damage to enemies in a line; each hit reduces damage by 40%.\\n\\nIonia Bonus: +30% Attack Damage",
+                "description_kr": "Take aim at the current target and deal 744% of AD + 60% of AP physical damage to enemies in a line; each hit reduces damage by 40%.\\n\\nIonia Bonus: +30% Attack Damage"
+            }
+        ]
+    },
+    {
+        "name": "Jinx",
+        "id": "799",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Zaun"
+        ],
+        "type": [
+            "Gunner"
+        ],
+        "cost": 2,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            20
+        ],
+        "resistance": [
+            20
+        ],
+        "mana_cost": 75,
+        "ap": 100,
+        "attack": [
+            55
+        ],
+        "speed": 0.75,
+        "dps": [
+            41.25
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Fishbones!",
+                "icon": true,
+                "type": "Active",
+                "description": "Fire 5 rockets at random enemies within 2 hexes of the current target. Each rocket deals % of AD + % of AP physical damage.",
+                "tags": [
+                    {
+                        "name": "AD Damage",
+                        "bonus": [
+                            "133%",
+                            "133%",
+                            "140%"
+                        ]
+                    },
+                    {
+                        "name": "AP Damage",
+                        "bonus": [
+                            "10%",
+                            "15%",
+                            "25%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Kaisa",
+        "id": "800",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Guinsoo's Rageblade",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Challenger"
+        ],
+        "cost": 4,
+        "health": [
+            850,
+            1530,
+            2754
+        ],
+        "armor": [
+            35
+        ],
+        "resistance": [
+            35
+        ],
+        "mana_start": 50,
+        "mana_cost": 120,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.8,
+        "dps": [
+            36
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Icathian Rain",
+                "icon": true,
+                "type": "Active",
+                "description": "Dash away from all enemies, then fire missiles split across the 4 nearest enemies. Each missile deals magic damage.",
+                "tags": [
+                    {
+                        "name": "Number of Missiles",
+                        "bonus": [
+                            15,
+                            15,
+                            25
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "75%",
+                            "111%",
+                            "300%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Kalista",
+        "id": "801",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Statikk Shiv"
+        ],
+        "origin": [
+            "Shadow Isles"
+        ],
+        "type": [
+            "Challenger"
+        ],
+        "cost": 3,
+        "health": [
+            650,
+            1170,
+            2106
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_cost": 80,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.85,
+        "dps": [
+            38.25
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Pierce and Rend",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Attacks impale a spear in the target, which deals true damage when removed. Kalista rips the spears out if it would kill the target.\\n\\nActive: Impale 6 spears in the current target.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "16%",
+                            "24%",
+                            "40%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Karma",
+        "id": "802",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 3,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.7,
+        "dps": [
+            31.499999999999996
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Inner Flame",
+                "icon": true,
+                "type": "Active",
+                "description":"Fire a burst of energy at Karma's target that explodes upon impact, dealing magic damage to adjacent enemies. Every third cast launches 3 bursts.\\n\\nIonia Bonus: +30% Ability Power",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "155%",
+                            "230%",
+                            "390%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Kassadin",
+        "id": "803",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Hand of Justice",
+            "Ionic Spark",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Bastion"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            45
+        ],
+        "resistance": [
+            45
+        ],
+        "mana_start": 50,
+        "mana_cost": 100,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.7,
+        "dps": [
+            35
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Force Pulse",
+                "icon": true,
+                "type": "Active",
+                "description": "Gain % of AP Shield for 4 seconds. Deal magic damage to enemies in a cone and Disarm them.\\n\\nDisarm: Cannot move or attack, but CAN cast spells",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "250%",
+                            "300%",
+                            "400%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "150%",
+                            "225%",
+                            "325%"
+                        ]
+                    },
+                    {
+                        "name": "Disarm Duration",
+                        "bonus": [
+                            1.5,
+                            1.75,
+                            2
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Katarina",
+        "id": "804",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Hand of Justice",
+            "Ionic Spark",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Noxus"
+        ],
+        "type": [
+            "Rogue"
+        ],
+        "cost": 3,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 20,
+        "mana_cost": 80,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.75,
+        "dps": [
+            37.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Voracity",
+                "icon": true,
+                "type": "Active",
+                "description": "Throw three daggers that land next to enemies within 1+ Attack Range hexes. Then, teleport to each to deal magic damage to adjacent enemies and Wound them for 6 seconds.\\n\\nWound: Reduce healing received by 50%",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "145%",
+                            "220%",
+                            "360%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Kayle",
+        "id": "805",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 5,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Slayer"
+        ],
+        "cost": 1,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            15
+        ],
+        "resistance": [
+            15
+        ],
+        "ap": 100,
+        "attack": [
+            25
+        ],
+        "speed": 0.75,
+        "dps": [
+            18.75
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Divine Ascent",
+                "icon": true,
+                "type": "Passive",
+                "description": "Passive: Gains new Passive effects as your Tactician levels up.\\nLevel 1: Attacks deal bonus magic damage.\\nLevel 6: Every 3rd attack launches a wave that deals magic damage and 40% Shreds enemies for 3 seconds.\\nLevel 9: Every attack launches a wave and they travel farther.\\n\\nShredded: Reduced Magic Resist by 50%",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "28%",
+                            "40%",
+                            "60%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Kled",
+        "id": "806",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Infinity Edge","Titan's Resolve"
+        ],
+        "origin": [
+            "Noxus",
+            "Yordle"
+        ],
+        "type": [
+            "Slayer"
+        ],
+        "cost": 2,
+        "health": [
+            550,
+            990,
+            1782
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_cost": 175,
+        "ap": 100,
+        "attack": [
+            58
+        ],
+        "speed": 0.75,
+        "dps": [
+            43.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Skaaaaaaarl!",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Start combat with 40% of HP Shield. When it breaks, dismount and gain % of AP stacking Attack Speed for the rest of combat.\\n\\nActive: Remount and gain 40% of HP Shield.\\n\\n4 Star Upgrade: Execute enemies under 25% Health.",
+                "tags": [
+                    {
+                        "name": "Attack Speed Bonus",
+                        "bonus": [
+                            "60%",
+                            "65%",
+                            "70%",
+                            "75%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "KSante",
+        "id": "807",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 1,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Bastion"
+        ],
+        "cost": 5,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_cost": 60,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.7,
+        "dps": [
+            42
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "All Out Strike",
+                "icon": true,
+                "type": "Active",
+                "description":"Knock up the current target before smashing them to the edge of the battlefield. Deal magic damage and Stun them. Deal 50% of the damage to enemies the target collides with and Stun them for 50% of the duration.\\n\\nIf the target can't be pushed back any further, knock them off the battlefield. Otherwise, KSante will chase after them.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "250%",
+                            "400%",
+                            "1000%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            2,
+                            3,
+                            10
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lissandra",
+        "id": "808",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Hextech Gunblade",
+            "Jeweled Gauntlet",
+            "Morellonomicon"
+        ],
+        "origin": [
+            "Freljord"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 3,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 30,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.7,
+        "dps": [
+            35
+        ],
+        "range_sm": 2,
+        "skill": [
+            {
+                "name": "Frozen Tomb",
+                "icon": true,
+                "type": "Active",
+                "description": "Stun the current target for 2 seconds and deal magic damage to enemies within 2 hexes of them. They take 10% more damage for the next 4 seconds.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "160%",
+                            "240%",
+                            "400%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Lux",
+        "id": "809",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Sorcerer"
+        ],
+        "cost": 4,
+        "health": [
+            750,
+            1350,
+            2430
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 25,
+        "mana_cost": 45,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.7,
+        "dps": [
+            31.499999999999996
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Torrent of Light",
+                "icon": true,
+                "type": "Active",
+                "description": "Channel a barrage of light at the current target that deals magic damage over time, reducing their Magic Resistance every second. If they die, shift to a new target.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "750%",
+                            "1125%",
+                            "3333%"
+                        ]
+                    },
+                    {
+                        "name": "Reduce Magic Resist",
+                        "bonus": [
+                            15,
+                            15,
+                            50
+                        ]
+                    },
+                    {
+                        "name": "Duration",
+                        "bonus": [
+                            3,
+                            3,
+                            3
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Malzahar",
+        "id": "810",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Blue Buff",
+            "Giant Slayer",
+            "Morellonomicon"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Sorcerer"
+        ],
+        "cost": 1,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            15
+        ],
+        "resistance": [
+            15
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Call of the Void",
+                "icon": true,
+                "type": "Active",
+                "description": "Open two portals near the current target. Destroy 35% of shields and deal magic damage to all enemies caught between the portals.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "175%",
+                            "260%",
+                            "395%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Maokai",
+        "id": "811",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Shadow Isles"
+        ],
+        "type": [
+            "Bastion"
+        ],
+        "cost": 1,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 50,
+        "mana_cost": 125,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.5,
+        "dps": [
+            30
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Sap Magic",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Whenever an enemy uses their ability, gain 5 Mana.\\n\\nActive: On next attack, heal.",
+                "tags": [
+                    {
+                        "name": "Heal",
+                        "bonus": [
+                            "220%",
+                            "260%",
+                            "300%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Nasus",
+        "id": "812",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Bloodthirster","Titan's Resolve","Warmog's Armor"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Juggernaut"
+        ],
+        "cost": 4,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_start": 70,
+        "mana_cost": 150,
+        "ap": 100,
+        "attack": [
+            90
+        ],
+        "speed": 0.6,
+        "dps": [
+            54
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Soul Eater",
+                "icon": true,
+                "type": "Active",
+                "description": "Steal max Health, 10% Attack Damage, and Armor and Magic Resist from the nearest enemies for 8% of AP seconds.\\n\\nWhile empowered, every third attack deals physical damage.",
+                "tags": [
+                    {
+                        "name": "Max Health Steal",
+                        "bonus": [
+                            "5%",
+                            "5%",
+                            "15%"
+                        ]
+                    },
+                    {
+                        "name": "Defense Steal",
+                        "bonus": [
+                            5,
+                            5,
+                            30
+                        ]
+                    },
+                    {
+                        "name": "Number of Targets",
+                        "bonus": [
+                            4,
+                            5,
+                            9
+                        ]
+                    },
+                    {
+                        "name": "Empowered Attacks",
+                        "bonus": [
+                            "350%",
+                            "350%",
+                            "700%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Orianna",
+        "id": "813",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 5,
+        "updated": false,
+        "items": ["Archangel's Staff","Rabadon's Deathcap",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Piltover"
+        ],
+        "type": [
+            "Sorcerer"
+        ],
+        "cost": 1,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            15
+        ],
+        "resistance": [
+            15
+        ],
+        "mana_start": 50,
+        "mana_cost": 100,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Command: Protect",
+                "icon": true,
+                "type": "Active",
+                "description": "Grant the lowest Health ally Shield for 4 seconds. When the Shield expires, it deals magic damage to adjacent enemies and Chills them for 3 seconds.\\n\\nChill: Reduced Attack Speed by 30%",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "225%",
+                            "250%",
+                            "275%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "180%",
+                            "270%",
+                            "405%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Poppy",
+        "id": "814",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Yordle",
+            "Demacia"
+        ],
+        "type": [
+            "Bastion"
+        ],
+        "cost": 1,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 90,
+        "mana_cost": 150,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.55,
+        "dps": [
+            24.750000000000004
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Steadfast Hammer",
+                "icon": true,
+                "type": "Active",
+                "description":"Gain Shield for 3 seconds. Deal magic damage to the current target.\\n\\n4 Star Upgrade: Knock the target into the largest clump of enemies, dealing 33% of the target's max Health as magic damage to the target and 15% of that amount to the clump. Stun them for 1 seconds.",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "290%",
+                            "310%",
+                            "330%",
+                            "350%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "140%",
+                            "210%",
+                            "315%",
+                            "315%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "RekSai",
+        "id": "815",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Infinity Edge","Titan's Resolve"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 3,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            40
+        ],
+        "resistance": [
+            40
+        ],
+        "mana_start": 30,
+        "mana_cost": 75,
+        "ap": 100,
+        "attack": [
+            65
+        ],
+        "speed": 0.7,
+        "dps": [
+            45.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Furious Bite",
+                "icon": true,
+                "type": "Active",
+                "description": "Deal physical damage to the current target. If they are below 60% Health, this damage is multiplied by 100% + 20% of AP true damage instead.\\n\\nIf this kills the target, rip through them 1 hex and heal for 15% of HP + 15% of AP.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "300%",
+                            "300%",
+                            "315%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Renekton",
+        "id": "816",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 1,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            45
+        ],
+        "resistance": [
+            45
+        ],
+        "mana_start": 50,
+        "mana_cost": 120,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.6,
+        "dps": [
+            30
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Cull the Meek",
+                "icon": true,
+                "type": "Active",
+                "description": "Deal magic damage to adjacent enemies. Heal for the first enemy hit and another 30% of AP for each additional one.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "180%",
+                            "270%",
+                            "400%"
+                        ]
+                    },
+                    {
+                        "name": "Heal",
+                        "bonus": [
+                            "220%",
+                            "270%",
+                            "320%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Ryze Demacia",
+        "id": "817",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to Demacia underneath a cluster of injured allies, granting a Shield. If an ally leaves the safety of the portal, they are healed.",
+                "description_kr": "Ryze creates a portal to Demacia underneath a cluster of injured allies, granting a Shield. If an ally leaves the safety of the portal, they are healed."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Freljord",
+        "id": "839",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to the Freljord underneath a random group of enemies. The freezing winds deal magic damage to enemies within two hexes over the duration and apply Permafrost, a permanent Attack Speed Slow.",
+                "description_kr": "Ryze creates a portal to the Freljord underneath a random group of enemies. The freezing winds deal magic damage to enemies within two hexes over the duration and apply Permafrost, a permanent Attack Speed Slow."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Shurima",
+        "id": "840",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to Shurima, summoning a gigantic sand tornado that travels across the battlefield, dealing magic damage to enemies hit and knocking them up briefly.",
+                "description_kr": "Ryze creates a portal to Shurima, summoning a gigantic sand tornado that travels across the battlefield, dealing magic damage to enemies hit and knocking them up briefly."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Zaun",
+        "id": "841",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Create 3 portals to Zaun, causing hired guns to fire at nearby enemies. Deals magic damage and Wound, 40% Shreds, and 40% Sunders for 6 seconds. The more gold you have, the more powerful the portals become.\\n\\n25 Gold: +1 portal. Portals fire a rocket deals damage in a one-hex radius.\\n50 Gold: Double the portals. Summon 1 additional portals for every 15 Gold more.",
+                "description_kr": "Create 3 portals to Zaun, causing hired guns to fire at nearby enemies. Deals magic damage and Wound, 40% Shreds, and 40% Sunders for 6 seconds. The more gold you have, the more powerful the portals become.\\n\\n25 Gold: +1 portal. Portals fire a rocket deals damage in a one-hex radius.\\n50 Gold: Double the portals. Summon 1 additional portals for every 15 Gold more."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Piltover",
+        "id": "842",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze summons a portal to Piltover that launches out an enforcer grenade towards his target, dealing magic damage to enemies within two hexes and creating a containment area. Enemies are unable to leave the area, and a of the damage dealt to them is also dealt to all other enemies within.",
+                "description_kr": "Ryze summons a portal to Piltover that launches out an enforcer grenade towards his target, dealing magic damage to enemies within two hexes and creating a containment area. Enemies are unable to leave the area, and a of the damage dealt to them is also dealt to all other enemies within."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Noxus",
+        "id": "843",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to Noxus' armory that spews out a torrent of weapons and armor,  granting completed items to random allies with open slots, and throwing Axes towards random enemies that deal magic damage each.",
+                "description_kr": "Ryze creates a portal to Noxus' armory that spews out a torrent of weapons and armor,  granting completed items to random allies with open slots, and throwing Axes towards random enemies that deal magic damage each."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Ionia",
+        "id": "844",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to Ionia, summoning forth a Spirit Tree that affects the closest units. Allies are invigorated, gaining Attack Speed and restoring Health over the duration. Enemies are pacified, causing them to dance.",
+                "description_kr": "Ryze creates a portal to Ionia, summoning forth a Spirit Tree that affects the closest units. Allies are invigorated, gaining Attack Speed and restoring Health over the duration. Enemies are pacified, causing them to dance."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Targon",
+        "id": "845",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description":"Ryze creates a portal to the skies above Mount Targon that beckons his target. After a few seconds, they descend from the heavens as a meteor towards the largest cluster of enemies, dealing a percent of the the initial target's maximum Health as magic damage and knocking up enemies in the epicenter.",
+                "description_kr":"Ryze creates a portal to the skies above Mount Targon that beckons his target. After a few seconds, they descend from the heavens as a meteor towards the largest cluster of enemies, dealing a percent of the the initial target's maximum Health as magic damage and knocking up enemies in the epicenter."
+            }
+        ]
+    },
+    {
+        "name": "Ryze Bandle City",
+        "id": "846",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description": "Ryze creates a portal to Bandle City underneath a random unit on your bench. After a brief delay, they arrive on the battlefield with bonus mana and are...slightly smaller?",
+                "description_kr": "Ryze creates a portal to Bandle City underneath a random unit on your bench. After a brief delay, they arrive on the battlefield with bonus mana and are...slightly smaller?"
+            }
+        ]
+    },
+    {
+        "name": "Ryze Shadow Isles",
+        "id": "847",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Wanderer"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 5,
+        "health": [
+            1111,
+            2000,
+            3600
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 50,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.85,
+        "dps": [
+            42.5
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Realm Warp",
+                "icon": true,
+                "type": "Active",
+                "description":"Ryze creates a portal to the Shadow Isles, reclaiming lost ally's souls. They return to the battlefield, with a percent of their maximum Health.",
+                "description_kr":"Ryze creates a portal to the Shadow Isles, reclaiming lost ally's souls. They return to the battlefield, with a percent of their maximum Health."
+            }
+        ]
+    },
+    {
+        "name": "Samira",
+        "id": "818",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Infinity Edge"
+        ],
+        "origin": [
+            "Noxus"
+        ],
+        "type": [
+            "Challenger"
+        ],
+        "cost": 1,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            15
+        ],
+        "resistance": [
+            15
+        ],
+        "mana_cost": 40,
+        "ap": 100,
+        "attack": [
+            50
+        ],
+        "speed": 0.7,
+        "dps": [
+            35
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Flair",
+                "icon": true,
+                "type": "Active",
+                "description": "Shoot at the current target and deal 200% of AD to the first enemy hit. Reduce their Armor for the rest of combat.",
+                "tags": [
+                    {
+                        "name": "Armor Reduction",
+                        "bonus": [
+                            "20%",
+                            "25%",
+                            "30%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sejuani",
+        "id": "819",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 1,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Freljord"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 4,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_start": 60,
+        "mana_cost": 120,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.6,
+        "dps": [
+            36
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Fury of the North",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Whenever an ally attacks a Chilled enemy, they deal % of HP bonus true damage.\\n\\nActive: Gain % of AP Shield for 4 seconds. Deal magic damage to nearby enemies and Chill them for 4 seconds.\\n\\nChill: Reduced Attack Speed by 30%",
+                "tags": [
+                    {
+                        "name": "Magic Damage",
+                        "bonus": [
+                            "150%",
+                            "225%",
+                            "1000%"
+                        ]
+                    },
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "600%",
+                            "700%",
+                            "2000%"
+                        ]
+                    },
+                    {
+                        "name": "Bonus Damage",
+                        "bonus": [
+                            "1.5%",
+                            "1.5%",
+                            "1.5%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Senna",
+        "id": "820",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Infinity Edge",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Shadow Isles"
+        ],
+        "type": [
+            "Gunner",
+            "Redeemer"
+        ],
+        "cost": 5,
+        "health": [
+            900,
+            1620,
+            2916
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_start": 75,
+        "mana_cost": 150,
+        "ap": 100,
+        "attack": [
+            65
+        ],
+        "speed": 0.8,
+        "dps": [
+            52
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Dawning Shadow",
+                "icon": true,
+                "type": "Active",
+                "description": "Fire a massive beam at the furthest enemy, dealing physical damage to all enemies hit. Any allies hit gain Shield for 4 seconds.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "190%",
+                            "200%",
+                            "2000%"
+                        ]
+                    },
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "250%",
+                            "325%",
+                            "4000%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sett",
+        "id": "821",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Juggernaut"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 40,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.6,
+        "dps": [
+            36
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Facebreaker",
+                "icon": true,
+                "type": "Active",
+                "description": "Grab an enemy from either side and slam them together, knocking them up. Deals magic damage and Stuns them.\\n\\nIf only one enemy is grabbed, the damage and Stun duration are increased by 50%.\\n\\nIonia Bonus: +180 Maximum Health",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "200%",
+                            "300%",
+                            "465%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            1.25,
+                            1.5,
+                            2
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Shen",
+        "id": "822",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 1,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Bastion",
+            "Invoker"
+        ],
+        "cost": 4,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_start": 70,
+        "mana_cost": 140,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.6,
+        "dps": [
+            36
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Ki Barrier",
+                "icon": true,
+                "type": "Active",
+                "description":"Gain % of AP Shield and grant % of AP Shield to the 2 lowest Health allies for 4 seconds. After shielding his allies, Shen's shield refreshes with a burst, dealing magic damage to adjacent enemies.\\n\\nIonia Bonus: +10% Damage Reduction",
+                "tags": [
+                    {
+                        "name": "Self Shield",
+                        "bonus": [
+                            "350%",
+                            "450%",
+                            "2000%"
+                        ]
+                    },
+                    {
+                        "name": "Ally Shield",
+                        "bonus": [
+                            "250%",
+                            "350%",
+                            "1500%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "225%",
+                            "355%",
+                            "1600%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sion",
+        "id": "823",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Noxus"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 5,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_start": 70,
+        "mana_cost": 160,
+        "ap": 100,
+        "attack": [
+            70
+        ],
+        "speed": 0.6,
+        "dps": [
+            42
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Glory in Death",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Upon death, reanimate with 100% Health, decaying per second. Sion can no longer use his ability, but is immune to Crowd Control and gains 150% of AP Attack Speed.\\n\\nActive: Charge towards the most enemies within 3 + Attack Range hexes. Deal physical damage to any enemies along the way and knock them up, Stuning them.",
+                "tags": [
+                    {
+                        "name": "Reanimation Health Decay",
+                        "bonus": [
+                            "12%",
+                            "8%",
+                            "0%"
+                        ]
+                    },
+                    {
+                        "name": "Charge Damage",
+                        "bonus": [
+                            "225%",
+                            "235%",
+                            "500%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            1.25,
+                            1.5,
+                            15
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Sona",
+        "id": "824",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": ["Archangel's Staff",
+            "Morellonomicon",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Demacia"
+        ],
+        "type": [
+            "Multicaster"
+        ],
+        "cost": 3,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_start": 40,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.65,
+        "dps": [
+            26
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Crescendo",
+                "icon": true,
+                "type": "Active",
+                "description": "Send a wave of sound at the largest clump of enemies and deal magic damage to enemies hit. Allies hit by the wave gain Attack Speed for 5 seconds.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "115%",
+                            "175%",
+                            "285%"
+                        ]
+                    },
+                    {
+                        "name": "Attack Speed",
+                        "bonus": [
+                            "25%",
+                            "30%",
+                            "40%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Soraka",
+        "id": "825",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": ["Archangel's Staff","Rabadon's Deathcap",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Targon"
+        ],
+        "type": [
+            "Invoker"
+        ],
+        "cost": 2,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_start": 30,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            55
+        ],
+        "speed": 0.65,
+        "dps": [
+            35.75
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Astral Infusion",
+                "icon": true,
+                "type": "Active",
+                "description": "Heal the lowest health ally for % of AP. If the ally is below 50% Health, heal them for an additional 50%. \\n\\nOver the next 5 seconds, 5 stars hit the enemy closest to them. Each deals magic damage.",
+                "tags": [
+                    {
+                        "name": "Heal",
+                        "bonus": [
+                            "200%",
+                            "225%",
+                            "250%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "100%",
+                            "150%",
+                            "235%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Swain",
+        "id": "826",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Ionic Spark",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Noxus"
+        ],
+        "type": [
+            "Strategist",
+            "Sorcerer"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 50,
+        "mana_cost": 100,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.65,
+        "dps": [
+            29.25
+        ],
+        "range_sm": 2,
+        "skill": [
+            {
+                "name": "Demonflare",
+                "icon": true,
+                "type": "Active",
+                "description": "Transform and gain % of AP max Health for 6 seconds. While transformed, deal magic damage to enemies within 2 hexes every second.",
+                "tags": [
+                    {
+                        "name": "Health Bonus",
+                        "bonus": [
+                            "425%",
+                            "450%",
+                            "480%"
+                        ]
+                    },
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "25%",
+                            "40%",
+                            "60%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Taliyah",
+        "id": "827",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 5,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Jeweled Gauntlet","Rabadon's Deathcap"
+        ],
+        "origin": [
+            "Shurima"
+        ],
+        "type": [
+            "Multicaster"
+        ],
+        "cost": 2,
+        "health": [
+            550,
+            990,
+            1782
+        ],
+        "armor": [
+            20
+        ],
+        "resistance": [
+            20
+        ],
+        "mana_start": 20,
+        "mana_cost": 60,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Seismic Shove",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Whenever an enemy is knocked up or back by anything, throw a boulder towards them. It deals magic damage to the first enemy hit.\\n\\nActive: Deal magic damage to your target and knock them up, stunning them for 2 seconds.",
+                "tags": [
+                    {
+                        "name": "Spell Damage",
+                        "bonus": [
+                            "160%",
+                            "240%",
+                            "375%"
+                        ]
+                    },
+                    {
+                        "name": "Boulder Damage",
+                        "bonus": [
+                            "125%",
+                            "190%",
+                            "300%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Taric",
+        "id": "828",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Targon"
+        ],
+        "type": [
+            "Bastion",
+            "Sorcerer"
+        ],
+        "cost": 3,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 40,
+        "mana_cost": 100,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.6,
+        "dps": [
+            36
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Radiance",
+                "icon": true,
+                "type": "Active",
+                "description": "Gain % of AP Shield for 6 seconds. It absorbs damage received by adjacent allies.",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "400%",
+                            "475%",
+                            "550%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Teemo",
+        "id": "829",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Blue Buff",
+            "Hextech Gunblade",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Yordle"
+        ],
+        "type": [
+            "Strategist",
+            "Multicaster"
+        ],
+        "cost": 2,
+        "health": [
+            500,
+            900,
+            1620
+        ],
+        "armor": [
+            20
+        ],
+        "resistance": [
+            20
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Noxious Trap",
+                "icon": true,
+                "type": "Active",
+                "description": "Hurl an explosive heat-seeking mushroom at the current target. When it detonates, enemies within 1 hex are Wounded and dealt magic damage over 3 seconds.\\n\\n4 Star Upgrade: Increase the explosion radius by 1 hex.\\n\\nWounded: Reduced healing received by 50%",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "210%",
+                            "315%",
+                            "485%",
+                            "485%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Tristana",
+        "id": "830",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Hextech Gunblade",
+            "Last Whisper"
+        ],
+        "origin": [
+            "Yordle"
+        ],
+        "type": [
+            "Gunner"
+        ],
+        "cost": 1,
+        "health": [
+            400,
+            720,
+            1296
+        ],
+        "armor": [
+            15
+        ],
+        "resistance": [
+            15
+        ],
+        "mana_cost": 40,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.7,
+        "dps": [
+            31.499999999999996
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Rapid Fire",
+                "icon": true,
+                "type": "Active",
+                "description": "Gain 70% of AP Attack Speed for 4 seconds. For the duration, attacks explode on impact and deal 60% of AD physical damage to enemies within 1 hex.\\n\\n4 Star Upgrade: Every 8th attack deals 100% of AD bonus physical damage and ricochets to the largest clump of enemies, dealing 50% of AD physical damage to enemies within 1 hex.",
+                "description_kr": "Gain 70% of AP Attack Speed for 4 seconds. For the duration, attacks explode on impact and deal 60% of AD physical damage to enemies within 1 hex.\\n\\n4 Star Upgrade: Every 8th attack deals 100% of AD bonus physical damage and ricochets to the largest clump of enemies, dealing 50% of AD physical damage to enemies within 1 hex."
+            }
+        ]
+    },
+    {
+        "name": "Urgot",
+        "id": "831",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Giant Slayer","Titan's Resolve"
+        ],
+        "origin": [
+            "Zaun"
+        ],
+        "type": [
+            "Deadeye"
+        ],
+        "cost": 4,
+        "health": [
+            1000,
+            1800,
+            3240
+        ],
+        "armor": [
+            60
+        ],
+        "resistance": [
+            60
+        ],
+        "mana_cost": 70,
+        "ap": 100,
+        "attack": [
+            75
+        ],
+        "speed": 0.7,
+        "dps": [
+            52.5
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Disdain",
+                "icon": true,
+                "type": "Active",
+                "description":"Passive: Whenever an enemy enters Attack Range, fire a blast from the leg facing that direction that deals 275% of AD + % of AP physical damage. Each of Urgot's 6 legs has a cooldown.\\n\\nActive: Gain % of AP Shield for 5 seconds and dash behind the current target. Reset all leg cooldowns.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "50%",
+                            "75%",
+                            "500%"
+                        ]
+                    },
+                    {
+                        "name": "Leg Cooldown",
+                        "bonus": [
+                            4,
+                            4,
+                            1
+                        ]
+                    },
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "400%",
+                            "500%",
+                            "1200%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Velkoz",
+        "id": "832",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Giant Slayer",
+            "Jeweled Gauntlet",
+            "Spear of Shojin"
+        ],
+        "origin": [
+            "Void"
+        ],
+        "type": [
+            "Multicaster",
+            "Sorcerer"
+        ],
+        "cost": 3,
+        "health": [
+            700,
+            1260,
+            2268
+        ],
+        "armor": [
+            30
+        ],
+        "resistance": [
+            30
+        ],
+        "mana_cost": 60,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.7,
+        "dps": [
+            28
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Plasma Fission",
+                "icon": true,
+                "type": "Active",
+                "description": "Fire a plasma bolt towards the current target that deals magic damage to the first enemy hit. It then splits in two, dealing 50% less damage whenever it passes through an enemy.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "210%",
+                            "315%",
+                            "520%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Vi",
+        "id": "833",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Piltover"
+        ],
+        "type": [
+            "Bruiser"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_cost": 80,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.6,
+        "dps": [
+            36
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Blast Shield",
+                "icon": true,
+                "type": "Active",
+                "description": "Gain % of AP Shield for 4 seconds. Deal 200% of AD physical damage to enemies within 1 hex of the current target and 40% Sunder them for 4 seconds.\\n\\nSunder: Reduced Armor",
+                "tags": [
+                    {
+                        "name": "Shield",
+                        "bonus": [
+                            "325%",
+                            "350%",
+                            "400%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Viego",
+        "id": "834",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Hand of Justice",
+            "Ionic Spark",
+            "Jeweled Gauntlet"
+        ],
+        "origin": [
+            "Shadow Isles"
+        ],
+        "type": [
+            "Rogue"
+        ],
+        "cost": 1,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            45
+        ],
+        "speed": 0.75,
+        "dps": [
+            33.75
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Blade of the Ruined King",
+                "icon": true,
+                "type": "Active",
+                "description":"Deal magic damage to the current target. For the rest of combat, Viego's attacks deal bonus stacking magic damage.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "125%",
+                            "185%",
+                            "280%"
+                        ]
+                    },
+                    {
+                        "name": "Stacking Damage",
+                        "bonus": [
+                            "20%",
+                            "30%",
+                            "45%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Warwick",
+        "id": "835",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 4,
+        "updated": false,
+        "items": [
+            "Redemption",
+            "Sunfire Cape","Warmog's Armor"
+        ],
+        "origin": [
+            "Zaun"
+        ],
+        "type": [
+            "Juggernaut",
+            "Challenger"
+        ],
+        "cost": 2,
+        "health": [
+            800,
+            1440,
+            2592
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 40,
+        "mana_cost": 90,
+        "ap": 100,
+        "attack": [
+            40
+        ],
+        "speed": 0.75,
+        "dps": [
+            30
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Primal Howl",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Attacks heal for % of AP.\\n\\nActive: Increase the Passive healing by 50% for 2.5 seconds. Then, Stun adjacent enemies.",
+                "tags": [
+                    {
+                        "name": "Heal",
+                        "bonus": [
+                            "25%",
+                            "30%",
+                            "35%"
+                        ]
+                    },
+                    {
+                        "name": "Stun Duration",
+                        "bonus": [
+                            1.25,
+                            1.5,
+                            2
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Yasuo",
+        "id": "836",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 2,
+        "updated": false,
+        "items": [
+            "Bloodthirster",
+            "Infinity Edge","Titan's Resolve"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Challenger"
+        ],
+        "cost": 4,
+        "health": [
+            950,
+            1710,
+            3078
+        ],
+        "armor": [
+            50
+        ],
+        "resistance": [
+            50
+        ],
+        "mana_start": 50,
+        "mana_cost": 110,
+        "ap": 100,
+        "attack": [
+            75
+        ],
+        "speed": 0.8,
+        "dps": [
+            60
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Last Breath",
+                "icon": true,
+                "type": "Active",
+                "description": "Send a whirlwind at the furthest enemy within 2 + Attack Range hexes, knocking up and Stunning all enemies hit. Dash to and slash the original target, dealing % of AD + % of AP physical damage to them. Slam them into the ground and deal physical damage to enemies within 1 hex.\\n\\nIonia Bonus: +15% Omnivamp",
+                "tags": [
+                    {
+                        "name": "Slash AD",
+                        "bonus": [
+                            "500%",
+                            "500%",
+                            "1500%"
+                        ]
+                    },
+                    {
+                        "name": "Slash AP",
+                        "bonus": [
+                            "50%",
+                            "75%",
+                            "300%"
+                        ]
+                    },
+                    {
+                        "name": "Slam Damage",
+                        "bonus": [
+                            "300%",
+                            "300%",
+                            "750%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Zed",
+        "id": "837",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 3,
+        "updated": false,
+        "items": [
+            "Hand of Justice",
+            "Infinity Edge","Titan's Resolve"
+        ],
+        "origin": [
+            "Ionia"
+        ],
+        "type": [
+            "Rogue",
+            "Slayer"
+        ],
+        "cost": 2,
+        "health": [
+            600,
+            1080,
+            1944
+        ],
+        "armor": [
+            35
+        ],
+        "resistance": [
+            35
+        ],
+        "mana_cost": 70,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.7,
+        "dps": [
+            42
+        ],
+        "range_sm": 1,
+        "skill": [
+            {
+                "name": "Living Shadow",
+                "icon": true,
+                "type": "Active",
+                "description": "Create a shadow at the furthest enemy within 2 + Attack Range hexes. Zed and his shadow slash adjacent enemies, dealing % of AD + % of AP physical damage. \\n\\nIonia Bonus: +15% Critical Strike Chance and Critical Strike Damage",
+                "tags": [
+                    {
+                        "name": "AD Damage",
+                        "bonus": [
+                            "120%",
+                            "120%",
+                            "125%"
+                        ]
+                    },
+                    {
+                        "name": "AP Damage",
+                        "bonus": [
+                            "20%",
+                            "30%",
+                            "50%"
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Zeri",
+        "id": "838",
+        "active": true,
+        "set": [
+            9
+        ],
+        "tier": 1,
+        "updated": false,
+        "items": [
+            "Giant Slayer","Guinsoo's Rageblade",
+            "Infinity Edge"
+        ],
+        "origin": [
+            "Zaun"
+        ],
+        "type": [
+            "Gunner"
+        ],
+        "cost": 4,
+        "health": [
+            750,
+            1350,
+            2430
+        ],
+        "armor": [
+            25
+        ],
+        "resistance": [
+            25
+        ],
+        "mana_cost": 50,
+        "ap": 100,
+        "attack": [
+            60
+        ],
+        "speed": 0.8,
+        "dps": [
+            48
+        ],
+        "range_sm": 4,
+        "skill": [
+            {
+                "name": "Surge",
+                "icon": true,
+                "type": "Active",
+                "description": "Passive: Execute enemies below 8% + 4% of AP Health.\\n\\nActive: For the next 5 seconds, attacks chain lightning to additional enemies, dealing physical damage. Kills reset this duration.",
+                "tags": [
+                    {
+                        "name": "Damage",
+                        "bonus": [
+                            "65%",
+                            "65%",
+                            "100%"
+                        ]
+                    },
+                    {
+                        "name": "Number of Targets",
+                        "bonus": [
+                            3,
+                            3,
+                            5
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

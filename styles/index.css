@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+
+    .main-options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 40vh;
+    }
+
+    .additional-options {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 10vh;
+    }
+
+    .result-stats {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        height: 40vh;
+    }
+}

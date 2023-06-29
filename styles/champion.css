@@ -1,0 +1,66 @@
+.main-options .champion-select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: aqua;
+    margin-left: 5vw;
+    width: 120px;
+    height: 120px;
+    padding: 0;
+    border: 0;
+
+    .current-champion {
+        height: 110px;
+        width: 110px;
+        border-radius: 50%; /* round div */
+        overflow: hidden;
+        z-index: 500;
+
+        .champion-image {
+            margin-top: -5px;
+            margin-left: -5px;
+        }
+    }
+    
+    .champion-list {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        position: absolute;
+        top: 120px;
+        left: 120px;
+        overflow-y: auto;
+        z-index: 600;
+
+        .champion-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 5px 5px;
+            font-size: 1.2em;
+
+            .champion-image {
+                width: 40px;
+                height: 40px;
+                padding-right: 10px
+            }
+        }
+
+        .champion-content-selected {
+            background-color: red;
+        }
+
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.main-options .champion-list.list-active {
+    width: auto;
+    height: 30vh;
+    padding: 10px;
+    background-color: rgba(24, 24, 111, 0.3);
+}
