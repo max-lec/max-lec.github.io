@@ -1,0 +1,27 @@
+{
+  "name": "Kled",
+  "id": 27,
+  "type": [
+    "Noxus, Yordle, Slayer"
+  ],
+  "health": [
+    550,
+    990,
+    1782
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 0,
+  "mana_cost": 175,
+  "ap": 100,
+  "attack": [
+    58,
+    87,
+    131
+  ],
+  "speed": 0.75
+}

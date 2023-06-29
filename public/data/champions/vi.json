@@ -1,0 +1,27 @@
+{
+  "name": "Vi",
+  "id": "54",
+  "type": [
+    "Piltover, Bruiser"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    50
+  ],
+  "resistance": [
+    50
+  ],
+  "mana_start": "0",
+  "mana_cost": "80",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.6"
+}

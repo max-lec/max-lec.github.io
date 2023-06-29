@@ -1,0 +1,27 @@
+{
+  "name": "Poppy",
+  "id": "35",
+  "type": [
+    "Demacia, Yordle, Bastion"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": "90",
+  "mana_cost": "150",
+  "ap": "100",
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": "0.55"
+}

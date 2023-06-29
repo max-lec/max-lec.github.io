@@ -1,0 +1,27 @@
+{
+  "name": "Sion",
+  "id": "44",
+  "type": [
+    "Noxus, Bruiser"
+  ],
+  "health": [
+    1000,
+    1800,
+    3240
+  ],
+  "armor": [
+    60
+  ],
+  "resistance": [
+    60
+  ],
+  "mana_start": "70",
+  "mana_cost": "160",
+  "ap": "100",
+  "attack": [
+    70,
+    105,
+    158
+  ],
+  "speed": "0.6"
+}

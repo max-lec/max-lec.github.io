@@ -1,0 +1,27 @@
+{
+  "name": "Rek&#039;Sai",
+  "id": "36",
+  "type": [
+    "Void, Bruiser"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": "30",
+  "mana_cost": "75",
+  "ap": "100",
+  "attack": [
+    65,
+    98,
+    146
+  ],
+  "speed": "0.7"
+}

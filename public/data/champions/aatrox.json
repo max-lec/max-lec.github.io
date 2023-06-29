@@ -1,0 +1,27 @@
+{
+  "name": "Aatrox",
+  "id": 1,
+  "type": [
+    "Darkin, Juggernaut, Slayer"
+  ],
+  "health": [
+    1100,
+    1980,
+    3564
+  ],
+  "armor": [
+    60
+  ],
+  "resistance": [
+    60
+  ],
+  "mana_start": 0,
+  "mana_cost": 60,
+  "ap": 100,
+  "attack": [
+    80,
+    120,
+    180
+  ],
+  "speed": 0.8
+}

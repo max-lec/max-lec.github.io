@@ -1,0 +1,27 @@
+{
+  "name": "Akshan",
+  "id": 3,
+  "type": [
+    "Shurima, Deadeye"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": 30,
+  "mana_cost": 90,
+  "ap": 100,
+  "attack": [
+    65,
+    98,
+    146
+  ],
+  "speed": 0.75
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Malzahar",
+  "id": "31",
+  "type": [
+    "Void, Sorcerer"
+  ],
+  "health": [
+    500,
+    900,
+    1620
+  ],
+  "armor": [
+    15
+  ],
+  "resistance": [
+    15
+  ],
+  "mana_start": "0",
+  "mana_cost": "50",
+  "ap": "100",
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": "0.7"
+}

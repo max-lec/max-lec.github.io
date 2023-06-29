@@ -1,0 +1,27 @@
+{
+  "name": "Lissandra",
+  "id": 29,
+  "type": [
+    "Freljord, Invoker"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 30,
+  "mana_cost": 90,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.7
+}

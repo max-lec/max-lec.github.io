@@ -1,0 +1,27 @@
+{
+  "name": "Aphelios",
+  "id": 4,
+  "type": [
+    "Targon, Deadeye"
+  ],
+  "health": [
+    750,
+    1350,
+    2430
+  ],
+  "armor": [
+    30
+  ],
+  "resistance": [
+    30
+  ],
+  "mana_start": 70,
+  "mana_cost": 140,
+  "ap": 100,
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": 0.8
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Tristana",
+  "id": "51",
+  "type": [
+    "Yordle, Gunner"
+  ],
+  "health": [
+    400,
+    720,
+    1296
+  ],
+  "armor": [
+    15
+  ],
+  "resistance": [
+    15
+  ],
+  "mana_start": "0",
+  "mana_cost": "40",
+  "ap": "100",
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": "0.7"
+}

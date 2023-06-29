@@ -1,0 +1,27 @@
+{
+  "name": "Ryze",
+  "id": "38",
+  "type": [
+    "Wanderer, Invoker"
+  ],
+  "health": [
+    1111,
+    2000,
+    3600
+  ],
+  "armor": [
+    30
+  ],
+  "resistance": [
+    30
+  ],
+  "mana_start": "0",
+  "mana_cost": "99",
+  "ap": "100",
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": "0.85"
+}

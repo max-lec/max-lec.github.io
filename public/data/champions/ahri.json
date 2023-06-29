@@ -1,0 +1,27 @@
+{
+  "name": "Ahri",
+  "id": 2,
+  "type": [
+    "Ionia, Sorcerer"
+  ],
+  "health": [
+    850,
+    1530,
+    2754
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 0,
+  "mana_cost": 50,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.85
+}

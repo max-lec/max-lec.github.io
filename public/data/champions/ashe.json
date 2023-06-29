@@ -1,0 +1,27 @@
+{
+  "name": "Ashe",
+  "id": 5,
+  "type": [
+    "Freljord, Deadeye"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    20
+  ],
+  "resistance": [
+    20
+  ],
+  "mana_start": 30,
+  "mana_cost": 60,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.7
+}

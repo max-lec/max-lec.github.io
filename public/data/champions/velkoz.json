@@ -1,0 +1,27 @@
+{
+  "name": "Vel&#039;Koz",
+  "id": "53",
+  "type": [
+    "Void, Multicaster, Sorcerer"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    30
+  ],
+  "resistance": [
+    30
+  ],
+  "mana_start": "0",
+  "mana_cost": "60",
+  "ap": "100",
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": "0.7"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Sejuani",
+  "id": "40",
+  "type": [
+    "Freljord, Bruiser"
+  ],
+  "health": [
+    1000,
+    1800,
+    3240
+  ],
+  "armor": [
+    60
+  ],
+  "resistance": [
+    60
+  ],
+  "mana_start": "60",
+  "mana_cost": "120",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.6"
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Warwick",
+  "id": "56",
+  "type": [
+    "Zaun, Challenger, Juggernaut"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    50
+  ],
+  "resistance": [
+    50
+  ],
+  "mana_start": "40",
+  "mana_cost": "90",
+  "ap": "100",
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": "0.75"
+}

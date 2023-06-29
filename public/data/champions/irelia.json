@@ -1,0 +1,27 @@
+{
+  "name": "Irelia",
+  "id": 16,
+  "type": [
+    "Ionia, Challenger"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 40,
+  "mana_cost": 80,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.65
+}

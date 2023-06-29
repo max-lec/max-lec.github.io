@@ -1,0 +1,1595 @@
+[
+  {
+    "name": "Aatrox",
+    "id": "1",
+    "type": [
+      "Darkin, Juggernaut, Slayer"
+    ],
+    "health": [
+      1100,
+      1980,
+      3564
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      80,
+      120,
+      180
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Ahri",
+    "id": "2",
+    "type": [
+      "Ionia, Sorcerer"
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Akshan",
+    "id": "3",
+    "type": [
+      "Shurima, Deadeye"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Aphelios",
+    "id": "4",
+    "type": [
+      "Targon, Deadeye"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "70",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Ashe",
+    "id": "5",
+    "type": [
+      "Freljord, Deadeye"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "30",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Azir",
+    "id": "6",
+    "type": [
+      "Shurima, Strategist"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "30",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Bel&#039;Veth",
+    "id": "7",
+    "type": [
+      "Void, Empress"
+    ],
+    "health": [
+      1100,
+      1980,
+      3564
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "55",
+    "ap": "100",
+    "attack": [
+      80,
+      120,
+      180
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Cassiopeia",
+    "id": "8",
+    "type": [
+      "Noxus, Shurima, Invoker"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Cho&#039;Gath",
+    "id": "9",
+    "type": [
+      "Void, Bruiser"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Darius",
+    "id": "10",
+    "type": [
+      "Noxus, Juggernaut"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Ekko",
+    "id": "11",
+    "type": [
+      "Piltover, Zaun, Rogue"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "45",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Galio",
+    "id": "12",
+    "type": [
+      "Demacia, Invoker"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "80",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Garen",
+    "id": "13",
+    "type": [
+      "Demacia, Juggernaut"
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Gwen",
+    "id": "14",
+    "type": [
+      "Shadow Isles, Slayer"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "35",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Heimerdinger",
+    "id": "15",
+    "type": [
+      "Piltover, Yordle, Technogenius"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "80",
+    "mana_cost": "160",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Irelia",
+    "id": "16",
+    "type": [
+      "Ionia, Challenger"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "40",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Jarvan IV",
+    "id": "17",
+    "type": [
+      "Demacia, Strategist"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "100",
+    "mana_cost": "180",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Jayce",
+    "id": "18",
+    "type": [
+      "Piltover, Gunner"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "40",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Jhin",
+    "id": "19",
+    "type": [
+      "Ionia, Deadeye"
+    ],
+    "health": [
+      504,
+      907,
+      1633
+    ],
+    "armor": [
+      14
+    ],
+    "resistance": [
+      14
+    ],
+    "mana_start": "44",
+    "mana_cost": "144",
+    "ap": "100",
+    "attack": [
+      54,
+      81,
+      122
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Jinx",
+    "id": "20",
+    "type": [
+      "Zaun, Gunner"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "75",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kai&#039;Sa",
+    "id": "21",
+    "type": [
+      "Void, Challenger"
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      35
+    ],
+    "resistance": [
+      35
+    ],
+    "mana_start": "40",
+    "mana_cost": "110",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Kalista",
+    "id": "22",
+    "type": [
+      "Shadow Isles, Challenger"
+    ],
+    "health": [
+      650,
+      1170,
+      2106
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Karma",
+    "id": "23",
+    "type": [
+      "Ionia, Invoker"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Kassadin",
+    "id": "24",
+    "type": [
+      "Void, Bastion"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Katarina",
+    "id": "25",
+    "type": [
+      "Noxus, Rogue"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "20",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kayle",
+    "id": "26",
+    "type": [
+      "Demacia, Slayer"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "No cost",
+    "mana_cost": "No cost",
+    "ap": "100",
+    "attack": [
+      25,
+      38,
+      56
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kled",
+    "id": "27",
+    "type": [
+      "Noxus, Yordle, Slayer"
+    ],
+    "health": [
+      550,
+      990,
+      1782
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "175",
+    "ap": "100",
+    "attack": [
+      58,
+      87,
+      131
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "K&#039;Sante",
+    "id": "28",
+    "type": [
+      "Shurima, Bastion"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Lissandra",
+    "id": "29",
+    "type": [
+      "Freljord, Invoker"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Lux",
+    "id": "30",
+    "type": [
+      "Demacia, Sorcerer"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "25",
+    "mana_cost": "45",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Malzahar",
+    "id": "31",
+    "type": [
+      "Void, Sorcerer"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Maokai",
+    "id": "32",
+    "type": [
+      "Shadow Isles, Bastion"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "50",
+    "mana_cost": "125",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Nasus",
+    "id": "33",
+    "type": [
+      "Shurima, Juggernaut"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "150",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Orianna",
+    "id": "34",
+    "type": [
+      "Piltover, Sorcerer"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Poppy",
+    "id": "35",
+    "type": [
+      "Demacia, Yordle, Bastion"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "90",
+    "mana_cost": "150",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.55"
+  },
+  {
+    "name": "Rek&#039;Sai",
+    "id": "36",
+    "type": [
+      "Void, Bruiser"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "30",
+    "mana_cost": "75",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Renekton",
+    "id": "37",
+    "type": [
+      "Shurima, Bruiser"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "50",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Ryze",
+    "id": "38",
+    "type": [
+      "Wanderer, Invoker"
+    ],
+    "health": [
+      1111,
+      2000,
+      3600
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "0",
+    "mana_cost": "99",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Samira",
+    "id": "39",
+    "type": [
+      "Noxus, Challenger"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Sejuani",
+    "id": "40",
+    "type": [
+      "Freljord, Bruiser"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "60",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Senna",
+    "id": "41",
+    "type": [
+      "Shadow Isles, Gunner, Redeemer"
+    ],
+    "health": [
+      900,
+      1620,
+      2916
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "75",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Sett",
+    "id": "42",
+    "type": [
+      "Ionia, Juggernaut"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Shen",
+    "id": "43",
+    "type": [
+      "Ionia, Bastion, Invoker"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Sion",
+    "id": "44",
+    "type": [
+      "Noxus, Bruiser"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "160",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Sona",
+    "id": "45",
+    "type": [
+      "Demacia, Multicaster"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Soraka",
+    "id": "46",
+    "type": [
+      "Targon, Invoker"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Swain",
+    "id": "47",
+    "type": [
+      "Noxus, Sorcerer, Strategist"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Taliyah",
+    "id": "48",
+    "type": [
+      "Shurima, Multicaster"
+    ],
+    "health": [
+      550,
+      990,
+      1782
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "20",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Taric",
+    "id": "49",
+    "type": [
+      "Targon, Bastion, Sorcerer"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Teemo",
+    "id": "50",
+    "type": [
+      "Yordle, Multicaster, Strategist"
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Tristana",
+    "id": "51",
+    "type": [
+      "Yordle, Gunner"
+    ],
+    "health": [
+      400,
+      720,
+      1296
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Urgot",
+    "id": "52",
+    "type": [
+      "Zaun, Deadeye"
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      75,
+      113,
+      169
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Vel&#039;Koz",
+    "id": "53",
+    "type": [
+      "Void, Multicaster, Sorcerer"
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Vi",
+    "id": "54",
+    "type": [
+      "Piltover, Bruiser"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Viego",
+    "id": "55",
+    "type": [
+      "Shadow Isles, Rogue"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Warwick",
+    "id": "56",
+    "type": [
+      "Zaun, Challenger, Juggernaut"
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Yasuo",
+    "id": "57",
+    "type": [
+      "Ionia, Challenger"
+    ],
+    "health": [
+      950,
+      1710,
+      3078
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "50",
+    "mana_cost": "110",
+    "ap": "100",
+    "attack": [
+      75,
+      113,
+      169
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Zed",
+    "id": "58",
+    "type": [
+      "Ionia, Rogue, Slayer"
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      35
+    ],
+    "resistance": [
+      35
+    ],
+    "mana_start": "0",
+    "mana_cost": "70",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Zeri",
+    "id": "59",
+    "type": [
+      "Zaun, Gunner"
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.8"
+  }
+]

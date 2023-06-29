@@ -1,0 +1,11 @@
+.main-options .trait-selects-wrapper {
+    display: grid;
+    position: relative;
+    background-color: aqua;
+    padding: 0;
+    border: 0;
+    height: 70%;
+    width: 15vw;
+    font-size: 1.2em;
+
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Cassiopeia",
+  "id": 8,
+  "type": [
+    "Noxus, Shurima, Invoker"
+  ],
+  "health": [
+    500,
+    900,
+    1620
+  ],
+  "armor": [
+    20
+  ],
+  "resistance": [
+    20
+  ],
+  "mana_start": 0,
+  "mana_cost": 40,
+  "ap": 100,
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": 0.7
+}

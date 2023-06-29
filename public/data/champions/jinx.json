@@ -1,0 +1,27 @@
+{
+  "name": "Jinx",
+  "id": 20,
+  "type": [
+    "Zaun, Gunner"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    20
+  ],
+  "resistance": [
+    20
+  ],
+  "mana_start": 0,
+  "mana_cost": 75,
+  "ap": 100,
+  "attack": [
+    55,
+    83,
+    124
+  ],
+  "speed": 0.75
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Katarina",
+  "id": 25,
+  "type": [
+    "Noxus, Rogue"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 20,
+  "mana_cost": 80,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.75
+}

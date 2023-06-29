@@ -5,7 +5,7 @@ document.addEventListener('alpine:init', () => {
         championsStats: [],
 
         init() {
-            championsStats = JSON.parse(document.getElementById("championsStatsData").textContent);
+            this.championsStats = JSON.parse(document.getElementById("championsStatsData").textContent);
         },
     });
 
@@ -25,27 +25,32 @@ document.addEventListener('alpine:init', () => {
         criticalDamage: 1.3,
 
         init() {
-            this.id = 798; //inits to jhin
+            this.id = 19; //inits to jhin
             this.selectChampion(this.id);
         },
 
         setChampionStats(id) {
             championStats = getChampionStats(id)
-            this.name = championStats.name;
-            this.srcPath = getChampionSrcPath(championStats.name)
-            this.health = championStats.health[this.level - 1]
-            this.armor = championStats.armor[this.level - 1]
-            this.resistance = championStats.resistance[this.level - 1]
-            this.manaStart = championStats.mana_start ?? 0
-            this.ap = championStats.ap
-            this.attack = championStats.attack[this.level - 1]
-            this.speed = championStats.speed
+            this.name = decodeHtmlEntity(championStats.name);
+            this.srcPath = getChampionSrcPath(this.name)
+            this.health = championStats.health.length >= this.level ? Number(championStats.health[this.level - 1]) : championStats.health[0]
+            this.armor = championStats.armor.length >= this.level ? Number(championStats.armor[this.level - 1]) : championStats.armor[0]
+            this.resistance = championStats.resistance.length >= this.level ? Number(championStats.resistance[this.level - 1]) : championStats.resistance[0]
+            this.manaStart = Number(championStats.mana_start) ?? 0
+            this.ap = Number(championStats.ap)
+            this.attack = championStats.attack.length >= this.level ? Number(championStats.attack[this.level - 1]) : championStats.attack[0]
+            this.speed = Number(championStats.speed) * 100
         },
 
         selectChampion(id) {
             this.id = id;
             this.setChampionStats(id);
-        }
+        },
+        
+        setChampionLevel(level) {
+            this.level = level;
+            this.setChampionStats(this.id);
+        },
     });
 
 });
@@ -53,19 +58,20 @@ document.addEventListener('alpine:init', () => {
 document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
         const id = Alpine.store('currentChampion').id;
+        const level = Alpine.store('currentChampion').level;
         Alpine.store('stats').updateCurrentStats();
     });
 });
 
 function getChampionsData() {
-    championStats = Alpine.store('championsStatsData').championStats;
+    championsStats = Alpine.store('championsStatsData').championsStats;
     championMap = [];
 
     for(var champion of championsStats){
         championData = { 
             "id": champion.id, 
-            "name": champion.name, 
-            "srcPath": getChampionSrcPath(champion.name)
+            "name": decodeHtmlEntity(champion.name), 
+            "srcPath": getChampionSrcPath(decodeHtmlEntity(champion.name))
         };
         championMap.push(championData);
     }
@@ -75,10 +81,15 @@ function getChampionsData() {
 }
 
 function getChampionStats(id) {
-    championStats = Alpine.store('championsStatsData').championStats;
-    return championsStats.find(championStats => championStats.id == id);
+    return Alpine.store('championsStatsData').championsStats.find(champ => champ.id == id);
 }
 
 function getChampionSrcPath(championName) {
     return "public/images/champions/" + championName.replace(" ", "") + ".png"
+}
+
+function decodeHtmlEntity(str) {
+    return str.replace(/&#(\d+);/g, function(match, dec) {
+      return String.fromCharCode(dec);
+    });
 }

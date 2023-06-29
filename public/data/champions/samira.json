@@ -1,0 +1,27 @@
+{
+  "name": "Samira",
+  "id": "39",
+  "type": [
+    "Noxus, Challenger"
+  ],
+  "health": [
+    500,
+    900,
+    1620
+  ],
+  "armor": [
+    15
+  ],
+  "resistance": [
+    15
+  ],
+  "mana_start": "0",
+  "mana_cost": "40",
+  "ap": "100",
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": "0.7"
+}

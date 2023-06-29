@@ -1,0 +1,27 @@
+{
+  "name": "Sona",
+  "id": "45",
+  "type": [
+    "Demacia, Multicaster"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": "40",
+  "mana_cost": "90",
+  "ap": "100",
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": "0.65"
+}

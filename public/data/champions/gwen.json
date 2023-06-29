@@ -1,0 +1,27 @@
+{
+  "name": "Gwen",
+  "id": 14,
+  "type": [
+    "Shadow Isles, Slayer"
+  ],
+  "health": [
+    1000,
+    1800,
+    3240
+  ],
+  "armor": [
+    50
+  ],
+  "resistance": [
+    50
+  ],
+  "mana_start": 0,
+  "mana_cost": 35,
+  "ap": 100,
+  "attack": [
+    55,
+    83,
+    124
+  ],
+  "speed": 0.8
+}

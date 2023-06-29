@@ -1,0 +1,27 @@
+{
+  "name": "Soraka",
+  "id": "46",
+  "type": [
+    "Targon, Invoker"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": "30",
+  "mana_cost": "90",
+  "ap": "100",
+  "attack": [
+    55,
+    83,
+    124
+  ],
+  "speed": "0.65"
+}

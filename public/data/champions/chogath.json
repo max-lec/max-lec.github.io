@@ -1,0 +1,27 @@
+{
+  "name": "Cho&#039;Gath",
+  "id": 9,
+  "type": [
+    "Void, Bruiser"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    30
+  ],
+  "resistance": [
+    30
+  ],
+  "mana_start": 30,
+  "mana_cost": 90,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.5
+}

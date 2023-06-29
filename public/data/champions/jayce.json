@@ -1,0 +1,27 @@
+{
+  "name": "Jayce",
+  "id": 18,
+  "type": [
+    "Piltover, Gunner"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": 40,
+  "mana_cost": 120,
+  "ap": 100,
+  "attack": [
+    65,
+    98,
+    146
+  ],
+  "speed": 0.75
+}

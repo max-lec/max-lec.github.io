@@ -1,0 +1,27 @@
+{
+  "name": "Jhin",
+  "id": 19,
+  "type": [
+    "Ionia, Deadeye"
+  ],
+  "health": [
+    504,
+    907,
+    1633
+  ],
+  "armor": [
+    14
+  ],
+  "resistance": [
+    14
+  ],
+  "mana_start": 44,
+  "mana_cost": 144,
+  "ap": 100,
+  "attack": [
+    54,
+    81,
+    122
+  ],
+  "speed": 0.7
+}

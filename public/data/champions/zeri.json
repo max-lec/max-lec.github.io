@@ -1,0 +1,27 @@
+{
+  "name": "Zeri",
+  "id": "59",
+  "type": [
+    "Zaun, Gunner"
+  ],
+  "health": [
+    750,
+    1350,
+    2430
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": "0",
+  "mana_cost": "50",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.8"
+}

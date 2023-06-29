@@ -1,0 +1,27 @@
+{
+  "name": "Maokai",
+  "id": "32",
+  "type": [
+    "Shadow Isles, Bastion"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": "50",
+  "mana_cost": "125",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.5"
+}

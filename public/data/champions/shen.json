@@ -1,0 +1,27 @@
+{
+  "name": "Shen",
+  "id": "43",
+  "type": [
+    "Ionia, Bastion, Invoker"
+  ],
+  "health": [
+    1000,
+    1800,
+    3240
+  ],
+  "armor": [
+    60
+  ],
+  "resistance": [
+    60
+  ],
+  "mana_start": "70",
+  "mana_cost": "140",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.6"
+}

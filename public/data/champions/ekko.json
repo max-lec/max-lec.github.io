@@ -1,0 +1,27 @@
+{
+  "name": "Ekko",
+  "id": 11,
+  "type": [
+    "Piltover, Zaun, Rogue"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    40
+  ],
+  "resistance": [
+    40
+  ],
+  "mana_start": 0,
+  "mana_cost": 45,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.8
+}

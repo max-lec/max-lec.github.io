@@ -1,0 +1,27 @@
+{
+  "name": "Urgot",
+  "id": "52",
+  "type": [
+    "Zaun, Deadeye"
+  ],
+  "health": [
+    1000,
+    1800,
+    3240
+  ],
+  "armor": [
+    60
+  ],
+  "resistance": [
+    60
+  ],
+  "mana_start": "0",
+  "mana_cost": "100",
+  "ap": "100",
+  "attack": [
+    75,
+    113,
+    169
+  ],
+  "speed": "0.7"
+}

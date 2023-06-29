@@ -1,0 +1,27 @@
+{
+  "name": "Kai&#039;Sa",
+  "id": 21,
+  "type": [
+    "Void, Challenger"
+  ],
+  "health": [
+    850,
+    1530,
+    2754
+  ],
+  "armor": [
+    35
+  ],
+  "resistance": [
+    35
+  ],
+  "mana_start": 40,
+  "mana_cost": 110,
+  "ap": 100,
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": 0.8
+}

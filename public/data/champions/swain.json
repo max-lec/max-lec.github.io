@@ -1,0 +1,27 @@
+{
+  "name": "Swain",
+  "id": "47",
+  "type": [
+    "Noxus, Sorcerer, Strategist"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    50
+  ],
+  "resistance": [
+    50
+  ],
+  "mana_start": "50",
+  "mana_cost": "100",
+  "ap": "100",
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": "0.65"
+}

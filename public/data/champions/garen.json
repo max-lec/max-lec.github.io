@@ -1,0 +1,27 @@
+{
+  "name": "Garen",
+  "id": 13,
+  "type": [
+    "Demacia, Juggernaut"
+  ],
+  "health": [
+    850,
+    1530,
+    2754
+  ],
+  "armor": [
+    45
+  ],
+  "resistance": [
+    45
+  ],
+  "mana_start": 0,
+  "mana_cost": 80,
+  "ap": 100,
+  "attack": [
+    70,
+    105,
+    158
+  ],
+  "speed": 0.75
+}

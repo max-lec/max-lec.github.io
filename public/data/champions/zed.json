@@ -1,0 +1,27 @@
+{
+  "name": "Zed",
+  "id": "58",
+  "type": [
+    "Ionia, Rogue, Slayer"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    35
+  ],
+  "resistance": [
+    35
+  ],
+  "mana_start": "0",
+  "mana_cost": "70",
+  "ap": "100",
+  "attack": [
+    60,
+    90,
+    135
+  ],
+  "speed": "0.7"
+}

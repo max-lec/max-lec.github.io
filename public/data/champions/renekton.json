@@ -1,0 +1,27 @@
+{
+  "name": "Renekton",
+  "id": "37",
+  "type": [
+    "Shurima, Bruiser"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    45
+  ],
+  "resistance": [
+    45
+  ],
+  "mana_start": "50",
+  "mana_cost": "120",
+  "ap": "100",
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": "0.6"
+}

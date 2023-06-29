@@ -1,0 +1,27 @@
+{
+  "name": "Taliyah",
+  "id": "48",
+  "type": [
+    "Shurima, Multicaster"
+  ],
+  "health": [
+    550,
+    990,
+    1782
+  ],
+  "armor": [
+    20
+  ],
+  "resistance": [
+    20
+  ],
+  "mana_start": "20",
+  "mana_cost": "60",
+  "ap": "100",
+  "attack": [
+    40,
+    60,
+    90
+  ],
+  "speed": "0.7"
+}

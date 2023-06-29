@@ -1,0 +1,27 @@
+{
+  "name": "Karma",
+  "id": 23,
+  "type": [
+    "Ionia, Invoker"
+  ],
+  "health": [
+    700,
+    1260,
+    2268
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": 0,
+  "mana_cost": 50,
+  "ap": 100,
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": 0.7
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Kassadin",
+  "id": 24,
+  "type": [
+    "Void, Bastion"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    45
+  ],
+  "resistance": [
+    45
+  ],
+  "mana_start": 50,
+  "mana_cost": 100,
+  "ap": 100,
+  "attack": [
+    50,
+    75,
+    113
+  ],
+  "speed": 0.7
+}

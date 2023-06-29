@@ -4,7 +4,6 @@
     justify-content: center;
     position: relative;
     background-color: aqua;
-    margin-left: 5vw;
     width: 120px;
     height: 120px;
     padding: 0;
@@ -38,7 +37,7 @@
             flex-direction: row;
             align-items: center;
             padding: 5px 5px;
-            font-size: 1.2em;
+            color: rgb(239, 232, 216);
 
             .champion-image {
                 width: 40px;
@@ -62,5 +61,5 @@
     width: auto;
     height: 30vh;
     padding: 10px;
-    background-color: rgba(24, 24, 111, 0.3);
+    background-color: rgb(55, 44, 107);
 }

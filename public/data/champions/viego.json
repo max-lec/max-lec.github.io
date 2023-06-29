@@ -1,0 +1,27 @@
+{
+  "name": "Viego",
+  "id": "55",
+  "type": [
+    "Shadow Isles, Rogue"
+  ],
+  "health": [
+    600,
+    1080,
+    1944
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": "0",
+  "mana_cost": "50",
+  "ap": "100",
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": "0.75"
+}

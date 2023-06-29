@@ -1,0 +1,27 @@
+{
+  "name": "Yasuo",
+  "id": "57",
+  "type": [
+    "Ionia, Challenger"
+  ],
+  "health": [
+    950,
+    1710,
+    3078
+  ],
+  "armor": [
+    50
+  ],
+  "resistance": [
+    50
+  ],
+  "mana_start": "50",
+  "mana_cost": "110",
+  "ap": "100",
+  "attack": [
+    75,
+    113,
+    169
+  ],
+  "speed": "0.8"
+}

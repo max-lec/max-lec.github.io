@@ -1,0 +1,27 @@
+{
+  "name": "Galio",
+  "id": 12,
+  "type": [
+    "Demacia, Invoker"
+  ],
+  "health": [
+    800,
+    1440,
+    2592
+  ],
+  "armor": [
+    45
+  ],
+  "resistance": [
+    45
+  ],
+  "mana_start": 80,
+  "mana_cost": 140,
+  "ap": 100,
+  "attack": [
+    70,
+    105,
+    158
+  ],
+  "speed": 0.5
+}

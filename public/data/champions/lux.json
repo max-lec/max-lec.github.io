@@ -1,0 +1,27 @@
+{
+  "name": "Lux",
+  "id": "30",
+  "type": [
+    "Demacia, Sorcerer"
+  ],
+  "health": [
+    750,
+    1350,
+    2430
+  ],
+  "armor": [
+    30
+  ],
+  "resistance": [
+    30
+  ],
+  "mana_start": "25",
+  "mana_cost": "45",
+  "ap": "100",
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": "0.7"
+}

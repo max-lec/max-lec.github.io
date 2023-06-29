@@ -1,0 +1,14 @@
+.main-options .augment-selects-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    background-color: aqua;
+    padding: 0;
+    border: 0;
+    height: 70%;
+    width: 30vw;
+    font-size: 1.2em;
+
+}

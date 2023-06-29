@@ -1,0 +1,27 @@
+{
+  "name": "Kalista",
+  "id": 22,
+  "type": [
+    "Shadow Isles, Challenger"
+  ],
+  "health": [
+    650,
+    1170,
+    2106
+  ],
+  "armor": [
+    25
+  ],
+  "resistance": [
+    25
+  ],
+  "mana_start": 0,
+  "mana_cost": 80,
+  "ap": 100,
+  "attack": [
+    45,
+    68,
+    101
+  ],
+  "speed": 0.85
+}
