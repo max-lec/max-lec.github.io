@@ -1,7 +1,7 @@
 {
   "name": "Adrenaline Rush",
   "id": "52",
-  "desc": "",
+  "desc": "Your Juggernaut units deal 10% extra damage, increased to 25% for the rest of combat when they fall below 50% Health. Gain 2 Juggernauts.",
   "srcPath": "public/images/augments/Adrenaline Rush.png",
   "stats": {
     "health": 0,

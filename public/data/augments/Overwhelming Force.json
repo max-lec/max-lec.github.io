@@ -1,7 +1,7 @@
 {
   "name": "Overwhelming Force",
   "id": "202",
-  "desc": "",
+  "desc": "Gain a Deathblade and an Infinity Edge.",
   "srcPath": "public/images/augments/Overwhelming Force.png",
   "stats": {
     "health": 0,

@@ -1,15 +1,15 @@
 {
   "name": "Gifts from the Fallen",
   "id": "80",
-  "desc": "",
+  "desc": "Your units gain 4% Attack Damage, 4 Ability Power, 4 Armor, and 4 Magic Resist. When one of your units dies, all your units gain these stats again.",
   "srcPath": "public/images/augments/Gifts from the Fallen.png",
   "stats": {
     "health": 0,
-    "armor": 0,
-    "resistance": 0,
+    "armor": 4,
+    "resistance": 4,
     "mana": 0,
-    "ap": 0,
-    "attack": 0,
+    "ap": 4,
+    "attack": 4,
     "speed": 0
   }
 }

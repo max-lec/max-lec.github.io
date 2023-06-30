@@ -1,7 +1,7 @@
 {
   "name": "Parting Gifts",
   "id": "110",
-  "desc": "",
+  "desc": "When a unit dies, they pass a temporary copy of one of their items to the nearest ally with open slots and shield them for 40% of their maximum Health.",
   "srcPath": "public/images/augments/Parting Gifts.png",
   "stats": {
     "health": 0,

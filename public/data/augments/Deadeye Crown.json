@@ -1,7 +1,7 @@
 {
   "name": "Deadeye Crown",
   "id": "176",
-  "desc": "",
+  "desc": "Gain a Deadeye Emblem, a Guinsoo&#039;s Rageblade, and an Akshan.",
   "srcPath": "public/images/augments/Deadeye Crown.png",
   "stats": {
     "health": 0,

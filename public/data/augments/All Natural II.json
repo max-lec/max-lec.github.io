@@ -1,10 +1,10 @@
 {
   "name": "All Natural II",
   "id": "53",
-  "desc": "",
+  "desc": "Your units with no items equipped gain 150 Health and heal for 2% of their max Health each second.",
   "srcPath": "public/images/augments/All Natural II.png",
   "stats": {
-    "health": 0,
+    "health": 150,
     "armor": 0,
     "resistance": 0,
     "mana": 0,

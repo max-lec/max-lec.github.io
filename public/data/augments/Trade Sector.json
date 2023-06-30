@@ -1,7 +1,7 @@
 {
   "name": "Trade Sector",
   "id": "150",
-  "desc": "",
+  "desc": "Gain a free Shop refresh each round.",
   "srcPath": "public/images/augments/Trade Sector.png",
   "stats": {
     "health": 0,

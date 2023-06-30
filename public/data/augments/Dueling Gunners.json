@@ -1,7 +1,7 @@
 {
   "name": "Dueling Gunners",
   "id": "73",
-  "desc": "",
+  "desc": "Your Gunner units gain 10% Attack Speed, plus 2% per Gunner stack. Gain 2 Gunners.",
   "srcPath": "public/images/augments/Dueling Gunners.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 10
   }
 }

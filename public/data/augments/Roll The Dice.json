@@ -1,7 +1,7 @@
 {
   "name": "Roll The Dice",
   "id": "210",
-  "desc": "",
+  "desc": "Gain a Radiant Thieves Gloves.",
   "srcPath": "public/images/augments/Roll The Dice.png",
   "stats": {
     "health": 0,

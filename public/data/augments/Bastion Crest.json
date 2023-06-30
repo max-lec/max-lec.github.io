@@ -1,7 +1,7 @@
 {
   "name": "Bastion Crest",
   "id": "56",
-  "desc": "",
+  "desc": "Gain a Bastion Emblem and a Kassadin.",
   "srcPath": "public/images/augments/Bastion Crest.png",
   "stats": {
     "health": 0,

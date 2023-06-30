@@ -1,7 +1,7 @@
 {
   "name": "Infernal Contract",
   "id": "191",
-  "desc": "",
+  "desc": "Your max level is 7. Gain 85 Gold.",
   "srcPath": "public/images/augments/Infernal Contract.png",
   "stats": {
     "health": 0,

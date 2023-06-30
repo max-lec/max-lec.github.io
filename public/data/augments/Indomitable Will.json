@@ -1,7 +1,7 @@
 {
   "name": "Indomitable Will",
   "id": "88",
-  "desc": "",
+  "desc": "When your units score a Takedown they shed all negative effects and become immune to Crowd Control for 10 seconds.",
   "srcPath": "public/images/augments/Indomitable Will.png",
   "stats": {
     "health": 0,

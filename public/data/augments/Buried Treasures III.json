@@ -1,7 +1,7 @@
 {
   "name": "Buried Treasures III",
   "id": "169",
-  "desc": "",
+  "desc": "At the start of the next 5 rounds, gain a random item component.",
   "srcPath": "public/images/augments/Buried Treasures III.png",
   "stats": {
     "health": 0,

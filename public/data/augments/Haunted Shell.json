@@ -1,11 +1,11 @@
 {
   "name": "Haunted Shell",
   "id": "84",
-  "desc": "",
+  "desc": "If Shadow Isles is active, your units gain 10 Armor and Magic Resistance for the rest of combat each time an ally dies. Gain 2 Shadow Isles units.",
   "srcPath": "public/images/augments/Haunted Shell.png",
   "stats": {
     "health": 0,
-    "armor": 0,
+    "armor": 10,
     "resistance": 0,
     "mana": 0,
     "ap": 0,

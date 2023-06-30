@@ -1,7 +1,7 @@
 {
   "name": "Cursed Crown",
   "id": "173",
-  "desc": "",
+  "desc": "Gain +2 maximum team size, but take 100% increased player damage.",
   "srcPath": "public/images/augments/Cursed Crown.png",
   "stats": {
     "health": 0,

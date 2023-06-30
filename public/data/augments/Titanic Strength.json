@@ -1,15 +1,16 @@
 {
-  "name": "Titanic Strength",
-  "id": "147",
-  "desc": "",
-  "srcPath": "public/images/augments/Titanic Strength.png",
-  "stats": {
-    "health": 0,
-    "armor": 0,
-    "resistance": 0,
-    "mana": 0,
-    "ap": 0,
-    "attack": 0,
-    "speed": 0
+    "name": "Titanic Strength",
+    "id": "147",
+    "desc": "Bruisers gain % increased Attack Damage equal to 1.5% of their maximum Health. Gain 2 Bruisers.",
+    "srcPath": "public/images/augments/Titanic Strength.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
   }
-}
+  

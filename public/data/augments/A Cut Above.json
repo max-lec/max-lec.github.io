@@ -1,7 +1,7 @@
 {
   "name": "A Cut Above",
   "id": "51",
-  "desc": "",
+  "desc": "Gain a Deathblade. Champions with Deathblade have a 40% chance to drop 1 gold on kill.",
   "srcPath": "public/images/augments/A Cut Above.png",
   "stats": {
     "health": 0,

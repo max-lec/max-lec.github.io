@@ -1,7 +1,7 @@
 {
   "name": "Rogue Crest",
   "id": "120",
-  "desc": "",
+  "desc": "Gain a Rogue Emblem and a Zed.",
   "srcPath": "public/images/augments/Rogue Crest.png",
   "stats": {
     "health": 0,

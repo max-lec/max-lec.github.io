@@ -1,7 +1,7 @@
 {
   "name": "Phreaky Friday",
   "id": "204",
-  "desc": "",
+  "desc": "Gain an Infinity Force. After 5 Player combats, gain a second Infinity Force. Gain an Infinity Force. After 3 Player combats, gain a second Infinity Force.",
   "srcPath": "public/images/augments/Phreaky Friday.png",
   "stats": {
     "health": 0,

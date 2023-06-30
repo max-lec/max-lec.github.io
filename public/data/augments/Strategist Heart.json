@@ -1,7 +1,7 @@
 {
   "name": "Strategist Heart",
   "id": "141",
-  "desc": "",
+  "desc": "Your team counts as having 1 additional Strategist. Gain a Swain.",
   "srcPath": "public/images/augments/Strategist Heart.png",
   "stats": {
     "health": 0,

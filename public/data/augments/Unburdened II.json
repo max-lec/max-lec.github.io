@@ -1,7 +1,7 @@
 {
   "name": "Unburdened II",
   "id": "153",
-  "desc": "",
+  "desc": "Your units without items equipped gain 55% Attack Speed.",
   "srcPath": "public/images/augments/Unburdened II.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 55
   }
 }

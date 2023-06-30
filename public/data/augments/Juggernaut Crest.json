@@ -1,7 +1,7 @@
 {
   "name": "Juggernaut Crest",
   "id": "93",
-  "desc": "",
+  "desc": "Gain an Juggernaut Emblem and a Sett.",
   "srcPath": "public/images/augments/Juggernaut Crest.png",
   "stats": {
     "health": 0,

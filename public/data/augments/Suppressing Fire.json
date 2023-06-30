@@ -1,7 +1,7 @@
 {
   "name": "Suppressing Fire",
   "id": "142",
-  "desc": "",
+  "desc": "The target of your Deadeye units&#039; shared attack is stunned for 4 seconds. Gain 2 Deadeyes.",
   "srcPath": "public/images/augments/Suppressing Fire.png",
   "stats": {
     "health": 0,

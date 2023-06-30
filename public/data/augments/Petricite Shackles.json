@@ -1,7 +1,7 @@
 {
   "name": "Petricite Shackles",
   "id": "113",
-  "desc": "",
+  "desc": "Your Demacians deal 15% more damage, increased to 30% against Noxians and enemies with 100 or more maximum Mana. Gain 3 Demacians.",
   "srcPath": "public/images/augments/Petricite Shackles.png",
   "stats": {
     "health": 0,

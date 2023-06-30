@@ -1,7 +1,7 @@
 {
   "name": "Shurima Crest",
   "id": "129",
-  "desc": "",
+  "desc": "Gain a Shurima Emblem and a Taliyah.",
   "srcPath": "public/images/augments/Shurima Crest.png",
   "stats": {
     "health": 0,

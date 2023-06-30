@@ -1,7 +1,7 @@
 {
   "name": "Radiant Relics",
   "id": "208",
-  "desc": "",
+  "desc": "Open an Armory and choose 1 of 5 unique Radiant items.",
   "srcPath": "public/images/augments/Radiant Relics.png",
   "stats": {
     "health": 0,

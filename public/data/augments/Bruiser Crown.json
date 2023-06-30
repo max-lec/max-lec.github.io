@@ -1,7 +1,7 @@
 {
   "name": "Bruiser Crown",
   "id": "167",
-  "desc": "",
+  "desc": "Gain a Bruiser Emblem, a Redemption, and a Rek&#039;Sai.",
   "srcPath": "public/images/augments/Bruiser Crown.png",
   "stats": {
     "health": 0,

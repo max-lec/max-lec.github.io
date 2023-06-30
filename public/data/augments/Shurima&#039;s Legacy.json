@@ -1,7 +1,7 @@
 {
   "name": "Shurima&#039;s Legacy",
   "id": "130",
-  "desc": "",
+  "desc": "Once assembled, your Sun Disc attacks enemies for 180-900 Magic Damage every 2 seconds (based on current Stage). Gain 3 Shurimans.",
   "srcPath": "public/images/augments/Shurima&#039;s Legacy.png",
   "stats": {
     "health": 0,

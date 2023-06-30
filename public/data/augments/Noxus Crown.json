@@ -1,7 +1,7 @@
 {
   "name": "Noxus Crown",
   "id": "201",
-  "desc": "",
+  "desc": "Gain a Noxus Emblem, an Infinity Edge, and a Darius.",
   "srcPath": "public/images/augments/Noxus Crown.png",
   "stats": {
     "health": 0,

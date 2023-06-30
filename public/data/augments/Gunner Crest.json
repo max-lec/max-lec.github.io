@@ -1,7 +1,7 @@
 {
   "name": "Gunner Crest",
   "id": "82",
-  "desc": "",
+  "desc": "Gain a Gunner Emblem and a Jinx.",
   "srcPath": "public/images/augments/Gunner Crest.png",
   "stats": {
     "health": 0,

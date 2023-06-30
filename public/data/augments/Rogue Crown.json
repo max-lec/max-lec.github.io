@@ -1,7 +1,7 @@
 {
   "name": "Rogue Crown",
   "id": "209",
-  "desc": "",
+  "desc": "Gain a Rogue Emblem, a Hand of Justice, and a Katarina.",
   "srcPath": "public/images/augments/Rogue Crown.png",
   "stats": {
     "health": 0,

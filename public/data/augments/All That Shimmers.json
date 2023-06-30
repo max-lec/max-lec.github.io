@@ -1,7 +1,7 @@
 {
   "name": "All That Shimmers",
   "id": "54",
-  "desc": "",
+  "desc": "Gain a Shimmerscale Item armory that offers 3 options. Shimmerscale items aid gold generation.",
   "srcPath": "public/images/augments/All That Shimmers.png",
   "stats": {
     "health": 0,

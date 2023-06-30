@@ -1,7 +1,7 @@
 {
   "name": "Wandering Trainer",
   "id": "227",
-  "desc": "",
+  "desc": "Gain 4 gold and a Training Dummy. It has 3 random emblems equipped, which cannot be removed.",
   "srcPath": "public/images/augments/Wandering Trainer.png",
   "stats": {
     "health": 0,

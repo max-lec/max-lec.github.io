@@ -1,7 +1,7 @@
 {
   "name": "Challenger Crown",
   "id": "171",
-  "desc": "",
+  "desc": "Gain a Challenger Emblem, a Rapid Firecannon, and a Kalista.",
   "srcPath": "public/images/augments/Challenger Crown.png",
   "stats": {
     "health": 0,

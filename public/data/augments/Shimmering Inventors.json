@@ -1,7 +1,7 @@
 {
   "name": "Shimmering Inventors",
   "id": "127",
-  "desc": "",
+  "desc": "Your Piltover units gain 8% Attack Speed for every 10 gold you have (Max: 40%), and have a 33% chance to drop 1 gold at round start. Gain an Ekko.",
   "srcPath": "public/images/augments/Shimmering Inventors.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 8
   }
 }

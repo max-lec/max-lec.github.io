@@ -1,7 +1,7 @@
 {
   "name": "Noxus Crest",
   "id": "107",
-  "desc": "",
+  "desc": "Gain a Noxus Emblem and a Swain.",
   "srcPath": "public/images/augments/Noxus Crest.png",
   "stats": {
     "health": 0,

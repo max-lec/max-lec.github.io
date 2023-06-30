@@ -1,7 +1,7 @@
 {
   "name": "Hedge Fund",
   "id": "186",
-  "desc": "",
+  "desc": "You have no interest cap. Gain 22 gold. You have no interest cap. Gain 32 gold. You have no interest cap. Gain 44 gold.",
   "srcPath": "public/images/augments/Hedge Fund.png",
   "stats": {
     "health": 0,

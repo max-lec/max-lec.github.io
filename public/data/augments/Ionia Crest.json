@@ -1,7 +1,7 @@
 {
   "name": "Ionia Crest",
   "id": "91",
-  "desc": "",
+  "desc": "Gain a Ionia Emblem and a Sett.",
   "srcPath": "public/images/augments/Ionia Crest.png",
   "stats": {
     "health": 0,

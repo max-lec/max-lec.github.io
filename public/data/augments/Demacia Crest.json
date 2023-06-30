@@ -1,7 +1,7 @@
 {
   "name": "Demacia Crest",
   "id": "71",
-  "desc": "",
+  "desc": "Gain a Demacia Emblem and a Galio.",
   "srcPath": "public/images/augments/Demacia Crest.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Strategist Soul",
   "id": "218",
-  "desc": "",
+  "desc": "Your team counts as having 1 additional Strategist. Gain a Chalice of Power and a Swain.",
   "srcPath": "public/images/augments/Strategist Soul.png",
   "stats": {
     "health": 0,

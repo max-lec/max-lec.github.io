@@ -1,7 +1,7 @@
 {
   "name": "Hustler",
   "id": "86",
-  "desc": "",
+  "desc": "Instead of having no interest, you get 3 golds at the beginning of player combat rounds.",
   "srcPath": "public/images/augments/Hustler.png",
   "stats": {
     "health": 0,

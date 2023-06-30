@@ -1,7 +1,7 @@
 {
   "name": "Morning Light",
   "id": "104",
-  "desc": "",
+  "desc": "When your Bastion units drop below 50% Health, they heal for 40% of their maximum Health over 4 seconds. Gain 2 Bastion units.",
   "srcPath": "public/images/augments/Morning Light.png",
   "stats": {
     "health": 0,

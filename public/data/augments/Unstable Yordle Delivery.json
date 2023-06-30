@@ -1,7 +1,7 @@
 {
   "name": "Unstable Yordle Delivery",
   "id": "155",
-  "desc": "",
+  "desc": "Round Start: Gain a random Yordle or 1-5 gold (based on current Stage). Gain 3 Yordles.",
   "srcPath": "public/images/augments/Unstable Yordle Delivery.png",
   "stats": {
     "health": 0,

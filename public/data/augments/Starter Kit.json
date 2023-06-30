@@ -1,7 +1,7 @@
 {
   "name": "Starter Kit",
   "id": "217",
-  "desc": "",
+  "desc": "Gain a Tier 4 champion, and a 2-star Tier 1 champion that shares a trait with them. At the next 1 stages, gain the Tier 4 champion again.",
   "srcPath": "public/images/augments/Starter Kit.png",
   "stats": {
     "health": 0,

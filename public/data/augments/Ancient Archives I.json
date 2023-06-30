@@ -1,7 +1,7 @@
 {
   "name": "Ancient Archives I",
   "id": "55",
-  "desc": "",
+  "desc": "Gain 1 Tome of Traits and 5 gold.",
   "srcPath": "public/images/augments/Ancient Archives I.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "You Have My Sword",
   "id": "160",
-  "desc": "",
+  "desc": "Gain a B.F. Sword. Your units gain 18% Attack Damage.",
   "srcPath": "public/images/augments/You Have My Sword.png",
   "stats": {
     "health": 0,
@@ -9,7 +9,7 @@
     "resistance": 0,
     "mana": 0,
     "ap": 0,
-    "attack": 0,
+    "attack": 18,
     "speed": 0
   }
 }

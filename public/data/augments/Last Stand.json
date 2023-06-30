@@ -1,12 +1,12 @@
 {
   "name": "Last Stand",
   "id": "95",
-  "desc": "",
+  "desc": "The first time you would be eliminated or reduced to 1 Health, instead remain alive. After this effect triggers, your units permanently gain 180 Health, 18 Armor and Magic Resist, and 18% Omnivamp.",
   "srcPath": "public/images/augments/Last Stand.png",
   "stats": {
-    "health": 0,
-    "armor": 0,
-    "resistance": 0,
+    "health": 180,
+    "armor": 18,
+    "resistance": 18,
     "mana": 0,
     "ap": 0,
     "attack": 0,

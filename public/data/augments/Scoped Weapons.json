@@ -1,7 +1,7 @@
 {
   "name": "Scoped Weapons",
   "id": "123",
-  "desc": "",
+  "desc": "Your units that start combat in the back 2 rows gain +2 Attack Range and 15% Attack Speed.",
   "srcPath": "public/images/augments/Scoped Weapons.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 15
   }
 }

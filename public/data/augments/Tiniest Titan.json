@@ -1,7 +1,7 @@
 {
   "name": "Tiniest Titan",
   "id": "223",
-  "desc": "",
+  "desc": "Your tactician is small and speedy, heals 2 Health after a PVP round, and grants 2 Gold per round.",
   "srcPath": "public/images/augments/Tiniest Titan.png",
   "stats": {
     "health": 0,

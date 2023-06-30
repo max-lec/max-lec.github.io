@@ -1,7 +1,7 @@
 {
   "name": "Shoplifting",
   "id": "128",
-  "desc": "",
+  "desc": "After your first shop refresh each turn, gain the highest cost champion for free.",
   "srcPath": "public/images/augments/Shoplifting.png",
   "stats": {
     "health": 0,

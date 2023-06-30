@@ -1,7 +1,7 @@
 {
   "name": "You Have My Bow",
   "id": "159",
-  "desc": "",
+  "desc": "Gain a Recurve Bow. Your units gain 15% Attack Speed.",
   "srcPath": "public/images/augments/You Have My Bow.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 15
   }
 }

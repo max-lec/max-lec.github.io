@@ -1,15 +1,15 @@
 {
   "name": "Built Different III",
   "id": "168",
-  "desc": "",
+  "desc": "Your units with no Traits active gain 240-570 Health and 35-55% Attack Speed (based on current Stage).",
   "srcPath": "public/images/augments/Built Different III.png",
   "stats": {
-    "health": 0,
+    "health": 570,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 55
   }
 }

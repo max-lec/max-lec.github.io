@@ -1,7 +1,7 @@
 {
   "name": "Gifts From Above",
   "id": "182",
-  "desc": "",
+  "desc": "At the start of combat, distribute 4 temporary completed items to the champions with the fewest items.",
   "srcPath": "public/images/augments/Gifts From Above.png",
   "stats": {
     "health": 0,

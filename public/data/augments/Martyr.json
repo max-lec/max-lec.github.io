@@ -1,7 +1,7 @@
 {
   "name": "Martyr",
   "id": "101",
-  "desc": "",
+  "desc": "Whenever one of your units dies, all allies heal for 10% of Maximum health",
   "srcPath": "public/images/augments/Martyr.png",
   "stats": {
     "health": 0,

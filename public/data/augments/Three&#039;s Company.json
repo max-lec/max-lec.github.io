@@ -1,7 +1,7 @@
 {
   "name": "Three&#039;s Company",
   "id": "145",
-  "desc": "",
+  "desc": "Gain 4 random Tier 3 champions.",
   "srcPath": "public/images/augments/Three&#039;s Company.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Salvage Bin+",
   "id": "122",
-  "desc": "",
+  "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown).",
   "srcPath": "public/images/augments/Salvage Bin+.png",
   "stats": {
     "health": 0,

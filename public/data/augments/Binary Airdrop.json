@@ -1,7 +1,7 @@
 {
   "name": "Binary Airdrop",
   "id": "164",
-  "desc": "",
+  "desc": "Your champions equipped with 2 items temporarily gain a random completed item at the start of combat. Gain @ItemComponents@ random item components.",
   "srcPath": "public/images/augments/Binary Airdrop.png",
   "stats": {
     "health": 0,

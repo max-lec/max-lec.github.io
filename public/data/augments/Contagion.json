@@ -1,7 +1,7 @@
 {
   "name": "Contagion",
   "id": "65",
-  "desc": "",
+  "desc": "Combat Start: Infect the highest health enemy, increasing their damage taken by 20%. Every 5 seconds or on death, the infection spreads to 2 nearby units.",
   "srcPath": "public/images/augments/Contagion.png",
   "stats": {
     "health": 0,

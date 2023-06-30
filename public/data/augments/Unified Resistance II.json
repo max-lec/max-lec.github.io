@@ -1,12 +1,12 @@
 {
   "name": "Unified Resistance II",
   "id": "154",
-  "desc": "",
+  "desc": "If you have 3 or more units in the same row at the start of combat, they all gain 30 Armor and Magic Resist.",
   "srcPath": "public/images/augments/Unified Resistance II.png",
   "stats": {
     "health": 0,
-    "armor": 0,
-    "resistance": 0,
+    "armor": 30,
+    "resistance": 30,
     "mana": 0,
     "ap": 0,
     "attack": 0,

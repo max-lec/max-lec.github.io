@@ -1,10 +1,10 @@
 {
   "name": "Transfusion II",
   "id": "151",
-  "desc": "",
+  "desc": "Your team gains 80 Health, plus 3 Health per missing Tactician Health.",
   "srcPath": "public/images/augments/Transfusion II.png",
   "stats": {
-    "health": 0,
+    "health": 80,
     "armor": 0,
     "resistance": 0,
     "mana": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Rich Get Richer+",
   "id": "119",
-  "desc": "",
+  "desc": "Gain 18 gold. Your maximum interest is increased to 7.",
   "srcPath": "public/images/augments/Rich Get Richer+.png",
   "stats": {
     "health": 0,

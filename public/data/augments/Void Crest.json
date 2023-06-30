@@ -1,7 +1,7 @@
 {
   "name": "Void Crest",
   "id": "157",
-  "desc": "",
+  "desc": "Gain a Void Emblem, Kassadin.",
   "srcPath": "public/images/augments/Void Crest.png",
   "stats": {
     "health": 0,

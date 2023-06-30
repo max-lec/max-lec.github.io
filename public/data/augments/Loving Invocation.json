@@ -1,14 +1,14 @@
 {
   "name": "Loving Invocation",
   "id": "98",
-  "desc": "",
+  "desc": "Your team gains 2.5% Ability Power until the end of combat each time your Invoker units cast their Abilities. Gain 2 Invokers.",
   "srcPath": "public/images/augments/Loving Invocation.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
-    "ap": 0,
+    "ap": 2.5,
     "attack": 0,
     "speed": 0
   }

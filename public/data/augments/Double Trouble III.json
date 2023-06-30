@@ -1,15 +1,15 @@
 {
   "name": "Double Trouble III",
   "id": "178",
-  "desc": "",
+  "desc": "When you field exactly 2 copies of a champion, they both gain 44% Attack Damage and 44 Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
   "srcPath": "public/images/augments/Double Trouble III.png",
   "stats": {
     "health": 0,
-    "armor": 0,
-    "resistance": 0,
+    "armor": 44,
+    "resistance": 44,
     "mana": 0,
-    "ap": 0,
-    "attack": 0,
+    "ap": 44,
+    "attack": 44,
     "speed": 0
   }
 }

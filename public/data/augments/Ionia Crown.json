@@ -1,7 +1,7 @@
 {
   "name": "Ionia Crown",
   "id": "193",
-  "desc": "",
+  "desc": "Gain an Ionia Emblem, a Guardbreaker, and a Karma.",
   "srcPath": "public/images/augments/Ionia Crown.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Unleashed Arcana",
   "id": "225",
-  "desc": "",
+  "desc": "Gain a Jeweled Gauntlet and a Rabadon&#039;s Deathcap.",
   "srcPath": "public/images/augments/Unleashed Arcana.png",
   "stats": {
     "health": 0,

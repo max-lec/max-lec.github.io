@@ -1,14 +1,14 @@
 {
   "name": "Magic Wand",
   "id": "99",
-  "desc": "",
+  "desc": "Gain a Needlessly Large Rod. Your units gain 20% Ability Power.",
   "srcPath": "public/images/augments/Magic Wand.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
-    "ap": 0,
+    "ap": 20,
     "attack": 0,
     "speed": 0
   }

@@ -1,7 +1,7 @@
 {
   "name": "Mana Burn",
   "id": "100",
-  "desc": "",
+  "desc": "Gain a Shroud of Stillness. All enemies take 3% of their maximum health as true damage each second until the first time they cast their spell. No longer damages units without mana.",
   "srcPath": "public/images/augments/Mana Burn.png",
   "stats": {
     "health": 0,

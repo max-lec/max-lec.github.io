@@ -1,7 +1,7 @@
 {
   "name": "Know Your Enemy",
   "id": "94",
-  "desc": "",
+  "desc": "After the first enemy dies each round, your units deal 25% Increased damage.",
   "srcPath": "public/images/augments/Know Your Enemy.png",
   "stats": {
     "health": 0,

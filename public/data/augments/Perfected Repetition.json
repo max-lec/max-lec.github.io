@@ -1,7 +1,7 @@
 {
   "name": "Perfected Repetition",
   "id": "112",
-  "desc": "",
+  "desc": "Each time your Multicaster units deal ability damage, they gain 10%% Ability power (Max: 60%%) until the end of combat. Gain 2 Multicasters.",
   "srcPath": "public/images/augments/Perfected Repetition.png",
   "stats": {
     "health": 0,

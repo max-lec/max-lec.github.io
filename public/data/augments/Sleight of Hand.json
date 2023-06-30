@@ -1,7 +1,7 @@
 {
   "name": "Sleight of Hand",
   "id": "134",
-  "desc": "",
+  "desc": "Gain a Thiefs Gloves. Your allies holding Thiefs Gloves gain 30% Attack Speed.",
   "srcPath": "public/images/augments/Sleight of Hand.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 30
   }
 }

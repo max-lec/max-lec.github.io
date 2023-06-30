@@ -1,7 +1,7 @@
 {
   "name": "Vampiric Blades",
   "id": "156",
-  "desc": "",
+  "desc": "Your team gains 10% Omnivamp. Your Rogue units gain 20% instead. Gain 2 Rogues.",
   "srcPath": "public/images/augments/Vampiric Blades.png",
   "stats": {
     "health": 0,

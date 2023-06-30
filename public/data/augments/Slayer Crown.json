@@ -1,7 +1,7 @@
 {
   "name": "Slayer Crown",
   "id": "213",
-  "desc": "",
+  "desc": "Gain a Slayer Emblem, a Deathblade, and a Kled.",
   "srcPath": "public/images/augments/Slayer Crown.png",
   "stats": {
     "health": 0,

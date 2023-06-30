@@ -1,7 +1,7 @@
 {
   "name": "Portable Forge",
   "id": "115",
-  "desc": "",
+  "desc": "Open an Armory and choose 1 of 3 unique Artifacts crafted by Ornn.",
   "srcPath": "public/images/augments/Portable Forge.png",
   "stats": {
     "health": 0,

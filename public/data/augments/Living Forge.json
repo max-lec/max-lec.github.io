@@ -1,7 +1,7 @@
 {
   "name": "Living Forge",
   "id": "197",
-  "desc": "",
+  "desc": "Gain an Ornn Item Anvil now and after every 10 player combats.",
   "srcPath": "public/images/augments/Living Forge.png",
   "stats": {
     "health": 0,

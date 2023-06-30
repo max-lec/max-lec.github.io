@@ -1,7 +1,7 @@
 {
   "name": "Glacial Breeze",
   "id": "81",
-  "desc": "",
+  "desc": "When your Freljordian Storm strikes, your units are shielded for 15% of their maximum Health and gain 8% Attack Speed. Gain 2 Freljord units.",
   "srcPath": "public/images/augments/Glacial Breeze.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 8
   }
 }

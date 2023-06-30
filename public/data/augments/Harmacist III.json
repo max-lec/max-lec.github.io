@@ -1,7 +1,7 @@
 {
   "name": "Harmacist III",
   "id": "185",
-  "desc": "",
+  "desc": "Your units heal for 25% of the damage they deal, and they convert 30% of excess healing to true damage on their next attack.",
   "srcPath": "public/images/augments/Harmacist III.png",
   "stats": {
     "health": 0,

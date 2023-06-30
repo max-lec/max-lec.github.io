@@ -1,7 +1,7 @@
 {
   "name": "Invoker Crest",
   "id": "90",
-  "desc": "",
+  "desc": "Gain an Invoker Emblem and a Soraka.",
   "srcPath": "public/images/augments/Invoker Crest.png",
   "stats": {
     "health": 0,

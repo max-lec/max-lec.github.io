@@ -1,7 +1,7 @@
 {
   "name": "High End Sector",
   "id": "189",
-  "desc": "",
+  "desc": "Gain 1 gold per round. When you level up, gain a number of free shop refreshes equal to your level.",
   "srcPath": "public/images/augments/High End Sector.png",
   "stats": {
     "health": 0,

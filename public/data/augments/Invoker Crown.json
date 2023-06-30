@@ -1,7 +1,7 @@
 {
   "name": "Invoker Crown",
   "id": "192",
-  "desc": "",
+  "desc": "Gain a Invoker Emblem, a Jeweled Gauntlet, and a Karma.",
   "srcPath": "public/images/augments/Invoker Crown.png",
   "stats": {
     "health": 0,

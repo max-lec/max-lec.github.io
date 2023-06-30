@@ -1,10 +1,10 @@
 {
   "name": "What The Forge",
   "id": "229",
-  "desc": "",
+  "desc": "All Completed items you own or receive are reforged into random Ornn Artifacts (excluding Tactician&#039;s Crown and Emblems). Units gain 160 Health per equipped Artifact.",
   "srcPath": "public/images/augments/What The Forge.png",
   "stats": {
-    "health": 0,
+    "health": 160,
     "armor": 0,
     "resistance": 0,
     "mana": 0,

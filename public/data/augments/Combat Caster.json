@@ -1,7 +1,7 @@
 {
   "name": "Combat Caster",
   "id": "64",
-  "desc": "",
+  "desc": "Your units gain a 90-170 (based on current Stage) health shield for 6 seconds after casting their spell.",
   "srcPath": "public/images/augments/Combat Caster.png",
   "stats": {
     "health": 0,

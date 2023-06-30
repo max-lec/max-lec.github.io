@@ -1,7 +1,7 @@
 {
   "name": "Sorcerer Crown",
   "id": "215",
-  "desc": "",
+  "desc": "Gain a Sorcerer Emblem, a Spear of Shojin, and a Vel&#039;Koz.",
   "srcPath": "public/images/augments/Sorcerer Crown.png",
   "stats": {
     "health": 0,

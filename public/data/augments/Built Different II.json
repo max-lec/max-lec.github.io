@@ -1,15 +1,15 @@
 {
   "name": "Built Different II",
   "id": "58",
-  "desc": "",
+  "desc": "Your units with no Traits active gain 175-340 Health and 30-50% Attack Speed (based on current Stage).",
   "srcPath": "public/images/augments/Built Different II.png",
   "stats": {
-    "health": 0,
+    "health": 340,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 50
   }
 }

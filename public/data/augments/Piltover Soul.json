@@ -1,7 +1,7 @@
 {
   "name": "Piltover Soul",
   "id": "206",
-  "desc": "",
+  "desc": "Your team counts as having 1 additional Piltover. Gain a Zeke&#039;s Herald and a Jayce.",
   "srcPath": "public/images/augments/Piltover Soul.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Caretaker&#039;s Favor",
   "id": "61",
-  "desc": "",
+  "desc": "When you reach Level 6, gain 3 random components. Then when you reach Level 8, gain 2 more random components.",
   "srcPath": "public/images/augments/Caretaker&#039;s Favor.png",
   "stats": {
     "health": 0,

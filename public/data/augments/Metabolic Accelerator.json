@@ -1,7 +1,7 @@
 {
   "name": "Metabolic Accelerator",
   "id": "103",
-  "desc": "",
+  "desc": "Your Tactician moves faster and heals 2 Health after a PvP round.",
   "srcPath": "public/images/augments/Metabolic Accelerator.png",
   "stats": {
     "health": 0,

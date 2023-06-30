@@ -1,7 +1,7 @@
 {
   "name": "Wellness Trust",
   "id": "228",
-  "desc": "",
+  "desc": "Round Start: Gain 3 gold. If you have at least 50 gold, your Tactician heals 2 Health.",
   "srcPath": "public/images/augments/Wellness Trust.png",
   "stats": {
     "health": 0,

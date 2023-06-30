@@ -1,7 +1,7 @@
 {
   "name": "Birthday Present",
   "id": "165",
-  "desc": "",
+  "desc": "Gain a 2-star champion and 1 gold every time you level up. The champion&#039;s tier is your level minus 4 (min: Tier 1).",
   "srcPath": "public/images/augments/Birthday Present.png",
   "stats": {
     "health": 0,

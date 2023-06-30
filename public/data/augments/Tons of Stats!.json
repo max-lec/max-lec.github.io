@@ -1,15 +1,15 @@
 {
   "name": "Tons of Stats!",
   "id": "148",
-  "desc": "",
+  "desc": "Your team gains 55 Health, 5% Attack Damage, 5 Ability Power, 5 Armor, 5 Magic Resist, 5% Attack Speed, and 5 Mana.",
   "srcPath": "public/images/augments/Tons of Stats!.png",
   "stats": {
-    "health": 0,
-    "armor": 0,
-    "resistance": 0,
-    "mana": 0,
-    "ap": 0,
-    "attack": 0,
-    "speed": 0
+    "health": 55,
+    "armor": 5,
+    "resistance": 5,
+    "mana": 5,
+    "ap": 5,
+    "attack": 5,
+    "speed": 5
   }
 }

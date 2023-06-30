@@ -1,7 +1,7 @@
 {
   "name": "What Doesn&#039;t Kill You",
   "id": "158",
-  "desc": "",
+  "desc": "After losing your combat, gain 2 gold. Every 5 losses, gain a random component.",
   "srcPath": "public/images/augments/What Doesn&#039;t Kill You.png",
   "stats": {
     "health": 0,

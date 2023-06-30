@@ -1,7 +1,7 @@
 {
   "name": "Golden Ticket",
   "id": "183",
-  "desc": "",
+  "desc": "Each time your Shop is refreshed, you have a 50% chance to gain a free refresh.",
   "srcPath": "public/images/augments/Golden Ticket.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Frequent Flier",
   "id": "78",
-  "desc": "",
+  "desc": "After you refresh your shop 10 times, your refreshes cost 1 for the rest of the game.",
   "srcPath": "public/images/augments/Frequent Flier.png",
   "stats": {
     "health": 0,

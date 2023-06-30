@@ -1,7 +1,7 @@
 {
   "name": "Challenger Crest",
   "id": "62",
-  "desc": "",
+  "desc": "Gain a Challenger Emblem and a Warwick.",
   "srcPath": "public/images/augments/Challenger Crest.png",
   "stats": {
     "health": 0,

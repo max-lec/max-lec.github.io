@@ -1,13 +1,13 @@
 {
   "name": "Overcharged Manafont",
   "id": "108",
-  "desc": "",
+  "desc": "Combat Start: Your Sorcerer units gain 10 mana. The first time each Sorcerer gets a take down each combat, they gain 20 mana. Gain 2 Sorcerers.",
   "srcPath": "public/images/augments/Overcharged Manafont.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
-    "mana": 0,
+    "mana": 20,
     "ap": 0,
     "attack": 0,
     "speed": 0

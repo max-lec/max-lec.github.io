@@ -1,10 +1,10 @@
 {
   "name": "Cybernetic Leech II",
   "id": "67",
-  "desc": "",
+  "desc": "Your units holding an item gain 120 Health and 18% Omnivamp.",
   "srcPath": "public/images/augments/Cybernetic Leech II.png",
   "stats": {
-    "health": 0,
+    "health": 120,
     "armor": 0,
     "resistance": 0,
     "mana": 0,

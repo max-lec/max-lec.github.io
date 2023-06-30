@@ -1,14 +1,14 @@
 {
   "name": "Early Education",
   "id": "74",
-  "desc": "",
+  "desc": "Your champions permanently gain 1 Ability Power whenever they kill an enemy. Champions start with 15 bonus Ability Power.",
   "srcPath": "public/images/augments/Early Education.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
-    "ap": 0,
+    "ap": 15,
     "attack": 0,
     "speed": 0
   }

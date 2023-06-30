@@ -1,7 +1,7 @@
 {
   "name": "Escort Quest",
   "id": "76",
-  "desc": "",
+  "desc": "Gain a Training Dummy. Each round, if it survives combat, gain 3 gold.",
   "srcPath": "public/images/augments/Escort Quest.png",
   "stats": {
     "health": 0,

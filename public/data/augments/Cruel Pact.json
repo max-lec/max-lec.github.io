@@ -1,7 +1,7 @@
 {
   "name": "Cruel Pact",
   "id": "172",
-  "desc": "",
+  "desc": "Buying XP costs 5 Health instead of gold. Heal 2 Health before each player combat.",
   "srcPath": "public/images/augments/Cruel Pact.png",
   "stats": {
     "health": 0,

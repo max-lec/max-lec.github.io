@@ -1,7 +1,7 @@
 {
   "name": "Targon Heart",
   "id": "144",
-  "desc": "",
+  "desc": "Your team counts as having 1 additional Targon. Gain a Soraka.",
   "srcPath": "public/images/augments/Targon Heart.png",
   "stats": {
     "health": 0,

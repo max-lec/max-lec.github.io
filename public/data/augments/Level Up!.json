@@ -1,7 +1,7 @@
 {
   "name": "Level Up!",
   "id": "196",
-  "desc": "",
+  "desc": "When you buy XP, gain an additional 3. Gain 4 immediately. You can now reach level 10.",
   "srcPath": "public/images/augments/Level Up!.png",
   "stats": {
     "health": 0,

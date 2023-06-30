@@ -1,10 +1,10 @@
 {
   "name": "Three&#039;s a Crowd",
   "id": "146",
-  "desc": "",
+  "desc": "Your units gain 100 health for each Tier-3 unit you field.",
   "srcPath": "public/images/augments/Three&#039;s a Crowd.png",
   "stats": {
-    "health": 0,
+    "health": 100,
     "armor": 0,
     "resistance": 0,
     "mana": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Freljord Heart",
   "id": "77",
-  "desc": "",
+  "desc": "Your team counts as having 1 additional Freljord. Gain an Ashe.",
   "srcPath": "public/images/augments/Freljord Heart.png",
   "stats": {
     "health": 0,

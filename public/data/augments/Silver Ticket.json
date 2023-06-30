@@ -1,7 +1,7 @@
 {
   "name": "Silver Ticket",
   "id": "131",
-  "desc": "",
+  "desc": "Each time your Shop is refreshed, you have a 30% chance to gain a free refresh.",
   "srcPath": "public/images/augments/Silver Ticket.png",
   "stats": {
     "health": 0,

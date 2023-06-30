@@ -1,7 +1,7 @@
 {
   "name": "Shadow Isles Crest",
   "id": "126",
-  "desc": "",
+  "desc": "Gain a Shadow Isles Emblem, a Maokai, and 1 gold.",
   "srcPath": "public/images/augments/Shadow Isles Crest.png",
   "stats": {
     "health": 0,

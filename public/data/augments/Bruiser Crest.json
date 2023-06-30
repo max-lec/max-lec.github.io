@@ -1,7 +1,7 @@
 {
   "name": "Bruiser Crest",
   "id": "57",
-  "desc": "",
+  "desc": "Gain a Bruiser Emblem and a Vi.",
   "srcPath": "public/images/augments/Bruiser Crest.png",
   "stats": {
     "health": 0,

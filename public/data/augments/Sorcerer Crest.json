@@ -1,7 +1,7 @@
 {
   "name": "Sorcerer Crest",
   "id": "136",
-  "desc": "",
+  "desc": "Gain a Sorcerer Emblem and a Swain.",
   "srcPath": "public/images/augments/Sorcerer Crest.png",
   "stats": {
     "health": 0,

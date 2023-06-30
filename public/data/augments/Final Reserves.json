@@ -1,7 +1,7 @@
 {
   "name": "Final Reserves",
   "id": "180",
-  "desc": "",
+  "desc": "The first time you would be eliminated or reduced to 1 Health, instead remain alive. After this effect triggers, at the beginning of your next planning phase gain 80 XP and 40 Gold.",
   "srcPath": "public/images/augments/Final Reserves.png",
   "stats": {
     "health": 0,

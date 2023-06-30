@@ -1,15 +1,15 @@
 {
   "name": "Tactical Superiority",
   "id": "143",
-  "desc": "",
+  "desc": "Your units gain 5% Attack Damage and Ability Power for each of their traits you have activated, doubled when you field a Strategist. Gain 2 Strategists.",
   "srcPath": "public/images/augments/Tactical Superiority.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
-    "ap": 0,
-    "attack": 0,
+    "ap": 5,
+    "attack": 5,
     "speed": 0
   }
 }

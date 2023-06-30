@@ -1,7 +1,7 @@
 {
   "name": "Patient Study",
   "id": "111",
-  "desc": "",
+  "desc": "After player combat, gain 2 XP if you won or 3 XP if you lost. You can now reach Level 10.",
   "srcPath": "public/images/augments/Patient Study.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Woodland Charm",
   "id": "230",
-  "desc": "",
+  "desc": "Your highest Health champion is cloned. Clones cannot hold items.",
   "srcPath": "public/images/augments/Woodland Charm.png",
   "stats": {
     "health": 0,

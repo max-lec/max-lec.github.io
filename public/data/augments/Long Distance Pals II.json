@@ -1,15 +1,15 @@
 {
   "name": "Long Distance Pals II",
   "id": "97",
-  "desc": "",
+  "desc": "Combat start: Your two furthest champions form a bond, sharing 30% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.",
   "srcPath": "public/images/augments/Long Distance Pals II.png",
   "stats": {
     "health": 0,
-    "armor": 0,
-    "resistance": 0,
+    "armor": 30,
+    "resistance": 30,
     "mana": 0,
-    "ap": 0,
-    "attack": 0,
+    "ap": 30,
+    "attack": 30,
     "speed": 0
   }
 }

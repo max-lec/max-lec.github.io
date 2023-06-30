@@ -1,7 +1,7 @@
 {
   "name": "Medium-End Shopping",
   "id": "102",
-  "desc": "",
+  "desc": "Gain a 3 gold. Champions appear in the first 3 slots of your Shop as if you were 1 level higher.",
   "srcPath": "public/images/augments/Medium-End Shopping.png",
   "stats": {
     "health": 0,

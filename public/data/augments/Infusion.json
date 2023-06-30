@@ -1,13 +1,13 @@
 {
   "name": "Infusion",
   "id": "89",
-  "desc": "",
+  "desc": "Your team restores 20 Mana every 5 seconds.",
   "srcPath": "public/images/augments/Infusion.png",
   "stats": {
     "health": 0,
     "armor": 0,
     "resistance": 0,
-    "mana": 0,
+    "mana": 20,
     "ap": 0,
     "attack": 0,
     "speed": 0

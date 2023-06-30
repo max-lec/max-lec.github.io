@@ -1,7 +1,7 @@
 {
   "name": "Dedication",
   "id": "69",
-  "desc": "",
+  "desc": "The first time you field at least 5 distinct units of the same trait in a player combat, gain an Emblem for that trait.",
   "srcPath": "public/images/augments/Dedication.png",
   "stats": {
     "health": 0,

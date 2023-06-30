@@ -1,7 +1,7 @@
 {
   "name": "Idealism",
   "id": "87",
-  "desc": "",
+  "desc": "Gain a Hand of Justice. Champions with a Hand of Justice deal 13% increased damage.",
   "srcPath": "public/images/augments/Idealism.png",
   "stats": {
     "health": 0,

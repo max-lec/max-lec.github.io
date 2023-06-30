@@ -1,7 +1,7 @@
 {
   "name": "Zaun Crest",
   "id": "161",
-  "desc": "",
+  "desc": "Gain a Zaun Emblem and a Warwick.",
   "srcPath": "public/images/augments/Zaun Crest.png",
   "stats": {
     "health": 0,

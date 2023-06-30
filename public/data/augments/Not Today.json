@@ -1,7 +1,7 @@
 {
   "name": "Not Today",
   "id": "106",
-  "desc": "",
+  "desc": "Gain an Edge of Night. Allies holding Edge of Night gain 35% Attack Speed.",
   "srcPath": "public/images/augments/Not Today.png",
   "stats": {
     "health": 0,
@@ -10,6 +10,6 @@
     "mana": 0,
     "ap": 0,
     "attack": 0,
-    "speed": 0
+    "speed": 35
   }
 }

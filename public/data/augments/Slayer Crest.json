@@ -1,7 +1,7 @@
 {
   "name": "Slayer Crest",
   "id": "132",
-  "desc": "",
+  "desc": "Gain a Slayer Emblem and a Kled.",
   "srcPath": "public/images/augments/Slayer Crest.png",
   "stats": {
     "health": 0,

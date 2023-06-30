@@ -1,7 +1,7 @@
 {
   "name": "Juggernaut Crown",
   "id": "195",
-  "desc": "",
+  "desc": "Gain an Juggernaut Emblem, a Titan&#039;s Resolve, and a Darius.",
   "srcPath": "public/images/augments/Juggernaut Crown.png",
   "stats": {
     "health": 0,

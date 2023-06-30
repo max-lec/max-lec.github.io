@@ -1,7 +1,7 @@
 {
   "name": "Total Domination",
   "id": "149",
-  "desc": "",
+  "desc": "Attacks and Abilities of your Noxus units execute enemies below 8% of their maximum Health, increased by +1% for each player you&#039;ve Conquered. Gain 3 Noxians.",
   "srcPath": "public/images/augments/Total Domination.png",
   "stats": {
     "health": 0,

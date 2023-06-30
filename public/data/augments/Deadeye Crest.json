@@ -1,7 +1,7 @@
 {
   "name": "Deadeye Crest",
   "id": "68",
-  "desc": "",
+  "desc": "Gain a Deadeye Emblem and an Ashe.",
   "srcPath": "public/images/augments/Deadeye Crest.png",
   "stats": {
     "health": 0,

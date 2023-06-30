@@ -1,7 +1,7 @@
 {
   "name": "Shadow Isles Crown",
   "id": "211",
-  "desc": "",
+  "desc": "Gain a Shadow Isles Emblem, a Bloodthirster, and a Kalista.",
   "srcPath": "public/images/augments/Shadow Isles Crown.png",
   "stats": {
     "health": 0,

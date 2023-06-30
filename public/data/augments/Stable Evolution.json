@@ -1,15 +1,15 @@
 {
   "name": "Stable Evolution",
   "id": "138",
-  "desc": "",
+  "desc": "Your Void units gain 80 Health and 8 Attack Damage and Ability Power for each star level they have. Gain 3 Void units.",
   "srcPath": "public/images/augments/Stable Evolution.png",
   "stats": {
-    "health": 0,
+    "health": 80,
     "armor": 0,
     "resistance": 0,
     "mana": 0,
-    "ap": 0,
-    "attack": 0,
+    "ap": 8,
+    "attack": 8,
     "speed": 0
   }
 }

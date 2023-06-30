@@ -1,7 +1,7 @@
 {
   "name": "March of Progress",
   "id": "199",
-  "desc": "",
+  "desc": "Gain 3 XP now, and bonus XP equal to your level at the start of every player combat round. You can no longer use gold to level up.",
   "srcPath": "public/images/augments/March of Progress.png",
   "stats": {
     "health": 0,

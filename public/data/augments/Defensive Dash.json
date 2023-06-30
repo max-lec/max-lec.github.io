@@ -1,7 +1,7 @@
 {
   "name": "Defensive Dash",
   "id": "70",
-  "desc": "",
+  "desc": "Combat Start and on takedown: Your Challenger units gain a 75-225 health shield for 2.5 seconds (based on current Stage). Gain 2 Challenger units.",
   "srcPath": "public/images/augments/Defensive Dash.png",
   "stats": {
     "health": 0,
