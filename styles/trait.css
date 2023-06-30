@@ -1,4 +1,6 @@
 .main-options .trait-selects-wrapper {
+    
+    margin-left: 7vw;
     display: grid;
     position: relative;
     background-color: aqua;

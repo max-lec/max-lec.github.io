@@ -21,6 +21,7 @@
 <!-- custom scripts here -->
 <script src="./scripts/champions.js"></script>
 <script src="./scripts/items.js"></script>
+<script src="./scripts/augments.js"></script>
 <script src="./scripts/stats.js"></script>
 
 <!-- compiled css here -->
@@ -29,6 +30,7 @@
 <link href="./styles/item.css" rel="stylesheet">
 <link href="./styles/augment.css" rel="stylesheet">
 <link href="./styles/trait.css" rel="stylesheet">
+<link href="./styles/level.css" rel="stylesheet">
 
 </head>
 
@@ -44,6 +46,8 @@
                 <img class="champion-image" x-bind:src="$store.currentChampion.srcPath" >
             </div>
     
+            <img class="champion-list-arrow" src="./public/icons/arrow-icon.png" @click="showSelect=true"/>
+
             <div class="champion-list" :class="{'list-active' : showSelect }" x-data="{championMap: getChampionsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                 <template x-for="champion in championMap">
                     <div class="champion-content" :class="{'champion-content-selected' : champion.id == $store.currentChampion.id }" x-data="champion" @click="$store.currentChampion.selectChampion(champion.id); showSelect=false" >
@@ -54,22 +58,26 @@
         </div>
 
         <div class="level-select" x-data>
-            <div :class="{'gold-star' : $store.currentChampion.level == 1 }" @click="$store.currentChampion.setChampionLevel(1)">★</div>
-            <div :class="{'gold-star' : $store.currentChampion.level == 2 }" @click="$store.currentChampion.setChampionLevel(2)">★</div>
-            <div :class="{'gold-star' : $store.currentChampion.level == 3 }" @click="$store.currentChampion.setChampionLevel(3)">★</div>
+            <div class="level-star" :class="{'gold-star' : $store.currentChampion.level >= 1 }" @click="$store.currentChampion.setChampionLevel(1)">★</div>
+            <div class="level-star" :class="{'gold-star' : $store.currentChampion.level >= 2 }" @click="$store.currentChampion.setChampionLevel(2)">★</div>
+            <div class="level-star" :class="{'gold-star' : $store.currentChampion.level >= 3 }" @click="$store.currentChampion.setChampionLevel(3)">★</div>
         </div>
 
         <div class="item-selects-wrapper">
             <div class="item-select" x-data="{showSelect: false}">
                 
                 <div class="current-item item-1" x-data="$store.currentItem.item1" @click="showSelect=true">
-                    <img class="item-image" x-bind:src="$store.currentItem.item1.srcPath"><span x-text="$store.currentItem.item1.name"></span>
+                    <div class="item-image-wrapper">
+                      <img class="item-image" x-bind:src="$store.currentItem.item1.srcPath" x-show="$store.currentItem.item1.srcPath">
+                    </div>
+                    <span class="item-label" x-text="$store.currentItem.item1.name"></span>
                 </div>
 
                 <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item1.id }" x-data="item" @click="$store.currentItem.selectItem1(item.id); showSelect=false" >
-                            <img class="item-image" x-bind:src="item.srcPath"><span x-text="item.name"></span>
+                            <img class="item-image" x-bind:src="item.srcPath">
+                            <span class="item-label"  x-text="item.name"></span>
                         </div>
                     </template>
                 </div>
@@ -77,14 +85,18 @@
             
             <div class="item-select" x-data="{showSelect: false}">
                             
-                <div class="current-item item-2" x-data="$store.currentItem.item2" @click="showSelect=true">
-                    <img class="item-image" x-bind:src="$store.currentItem.item2.srcPath"><span x-text="$store.currentItem.item2.name"></span>
-                </div>
+              <div class="current-item item-2" x-data="$store.currentItem.item2" @click="showSelect=true">
+                  <div class="item-image-wrapper">
+                    <img class="item-image" x-bind:src="$store.currentItem.item2.srcPath" x-show="$store.currentItem.item2.srcPath">
+                  </div>
+                  <span class="item-label" x-text="$store.currentItem.item2.name"></span>
+              </div>
 
                 <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item2.id }" x-data="item" @click="$store.currentItem.selectItem2(item.id); showSelect=false" >
-                            <img class="item-image" x-bind:src="item.srcPath"><span x-text="item.name"></span>
+                            <img class="item-image" x-bind:src="item.srcPath">
+                            <span class="item-label" x-text="item.name"></span>
                         </div>
                     </template>
                 </div>
@@ -92,14 +104,18 @@
 
             <div class="item-select" x-data="{showSelect: false}">
                             
-                <div class="current-item item-3" x-data="$store.currentItem.item3" @click="showSelect=true">
-                    <img class="item-image" x-bind:src="$store.currentItem.item3.srcPath"><span x-text="$store.currentItem.item3.name"></span>
-                </div>
+              <div class="current-item item-3" x-data="$store.currentItem.item3" @click="showSelect=true">
+                  <div class="item-image-wrapper">
+                    <img class="item-image" x-bind:src="$store.currentItem.item3.srcPath" x-show="$store.currentItem.item3.srcPath">
+                  </div>
+                  <span class="item-label" x-text="$store.currentItem.item3.name"></span>
+              </div>
 
                 <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item3.id }" x-data="item" @click="$store.currentItem.selectItem3(item.id); showSelect=false" >
-                            <img class="item-image" x-bind:src="item.srcPath"><span x-text="item.name"></span>
+                            <img class="item-image" x-bind:src="item.srcPath">
+                            <span class="item-label" x-text="item.name"></span>
                         </div>
                     </template>
                 </div>
@@ -107,9 +123,59 @@
         </div> 
 
         <div class="augment-selects-wrapper">
-            <div class="augment-selector" id="augment-1">AUGMENT1</div>
-            <div class="augment-selector" id="augment-2">AUGMENT2</div>
-            <div class="augment-selector" id="augment-3">AUGMENT3</div>
+            <div class="augment-select" x-data="{showSelect: false}">       
+                <div class="current-augment augment-1" x-data="$store.currentAugment.augment1" @click="showSelect=true">
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment1.srcPath">
+                    <span x-text="$store.currentAugment.augment1.name"></span>
+                    <span x-text="$store.currentAugment.augment1.desc"></span>
+                </div>
+
+                <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                    <template x-for="augment in augmentMap">
+                        <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment1.id }" x-data="augment" @click="$store.currentAugment.selectAugment1(augment.id); showSelect=false" >
+                            <img class="augment-image" x-bind:src="augment.srcPath">
+                            <span x-text="augment.name"></span>
+                            <span x-text="augment.desc"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+            
+            <div class="augment-select" x-data="{showSelect: false}">
+                <div class="current-augment augment-2" x-data="$store.currentAugment.augment2" @click="showSelect=true">
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment2.srcPath">
+                    <span x-text="$store.currentAugment.augment2.name"></span>
+                    <span x-text="$store.currentAugment.augment2.desc"></span>
+                </div>
+
+                <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                    <template x-for="augment in augmentMap">
+                        <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment2.id }" x-data="augment" @click="$store.currentAugment.selectAugment2(augment.id); showSelect=false" >
+                            <img class="augment-image" x-bind:src="augment.srcPath">
+                            <span x-text="augment.name"></span>
+                            <span x-text="augment.desc"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
+
+            <div class="augment-select" x-data="{showSelect: false}">
+                <div class="current-augment augment-3" x-data="$store.currentAugment.augment3" @click="showSelect=true">
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment3.srcPath">
+                    <span x-text="$store.currentAugment.augment3.name"></span>
+                    <span x-text="$store.currentAugment.augment3.desc"></span>
+                </div>
+
+                <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                    <template x-for="augment in augmentMap">
+                        <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment3.id }" x-data="augment" @click="$store.currentAugment.selectAugment3(augment.id); showSelect=false" >
+                            <img class="augment-image" x-bind:src="augment.srcPath">
+                            <span x-text="augment.name"></span>
+                            <span x-text="augment.desc"></span>
+                        </div>
+                    </template>
+                </div>
+            </div>
         </div>
 
         <div class="trait-selects-wrapper">
@@ -2722,4 +2788,3460 @@
         "mana_onhit": 0
     }
 ]
+</script>
+
+<script type="application/json" id="augmentsStatsData">
+[
+  {
+    "name": "A Cut Above",
+    "id": "51",
+    "desc": "Gain a Deathblade. Champions with Deathblade have a 40% chance to drop 1 gold on kill.",
+    "srcPath": "public/images/augments/A Cut Above.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Adrenaline Rush",
+    "id": "52",
+    "desc": "Your Juggernaut units deal 10% extra damage, increased to 25% for the rest of combat when they fall below 50% Health. Gain 2 Juggernauts.",
+    "srcPath": "public/images/augments/Adrenaline Rush.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "AFK",
+    "id": "1",
+    "desc": "You cannot perform actions for the next 3 rounds. Afterwards, gain 18 gold.",
+    "srcPath": "public/images/augments/AFK.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "All Natural I",
+    "id": "2",
+    "desc": "Your Champions with no items equipped gain 120 Health and heal for 1% of their max Health each second.",
+    "srcPath": "public/images/augments/All Natural I.png",
+    "stats": {
+      "health": 120,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "All Natural II",
+    "id": "53",
+    "desc": "Your units with no items equipped gain 150 Health and heal for 2% of their max Health each second.",
+    "srcPath": "public/images/augments/All Natural II.png",
+    "stats": {
+      "health": 150,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "All That Shimmers",
+    "id": "54",
+    "desc": "Gain a Shimmerscale Item armory that offers 3 options. Shimmerscale items aid gold generation.",
+    "srcPath": "public/images/augments/All That Shimmers.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Ancient Archives I",
+    "id": "55",
+    "desc": "Gain 1 Tome of Traits and 5 gold.",
+    "srcPath": "public/images/augments/Ancient Archives I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Ancient Archives II",
+    "id": "162",
+    "desc": "Gain 2 Tome of Traits and 3 gold.",
+    "srcPath": "public/images/augments/Ancient Archives II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Army Building",
+    "id": "3",
+    "desc": "Gain a Lesser Champion Duplicator. This happens a second time after 7 player combats.",
+    "srcPath": "public/images/augments/Army Building.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bastion Crest",
+    "id": "56",
+    "desc": "Gain a Bastion Emblem and a Kassadin.",
+    "srcPath": "public/images/augments/Bastion Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bastion Crown",
+    "id": "163",
+    "desc": "Gain a Bastion Emblem, a Sunfire Cape, and a Taric.",
+    "srcPath": "public/images/augments/Bastion Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bastion Heart",
+    "id": "4",
+    "desc": "Your team counts as having 1 additional Bastion. Gain a Kassadin.",
+    "srcPath": "public/images/augments/Bastion Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Binary Airdrop",
+    "id": "164",
+    "desc": "Your champions equipped with 2 items temporarily gain a random completed item at the start of combat. Gain @ItemComponents@ random item components.",
+    "srcPath": "public/images/augments/Binary Airdrop.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Birthday Present",
+    "id": "165",
+    "desc": "Gain a 2-star champion and 1 gold every time you level up. The champion&#039;s tier is your level minus 4 (min: Tier 1).",
+    "srcPath": "public/images/augments/Birthday Present.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Blinding Speed",
+    "id": "166",
+    "desc": "Gain a Rapid Firecannon and a Guinsoo&#039;s Rageblade.",
+    "srcPath": "public/images/augments/Blinding Speed.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Blood Money",
+    "id": "5",
+    "desc": "Gain 1 gold per 3 Health your Tactician loses.",
+    "srcPath": "public/images/augments/Blood Money.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Branching Out",
+    "id": "6",
+    "desc": "Gain a random Emblem and a Reforger.",
+    "srcPath": "public/images/augments/Branching Out.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bronze Ticket",
+    "id": "7",
+    "desc": "Every 4 Shop refreshes, gain a free refresh.",
+    "srcPath": "public/images/augments/Bronze Ticket.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bruiser Crest",
+    "id": "57",
+    "desc": "Gain a Bruiser Emblem and a Vi.",
+    "srcPath": "public/images/augments/Bruiser Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bruiser Crown",
+    "id": "167",
+    "desc": "Gain a Bruiser Emblem, a Redemption, and a Rek&#039;Sai.",
+    "srcPath": "public/images/augments/Bruiser Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Bruiser Heart",
+    "id": "8",
+    "desc": "Your team counts as having 1 additional Bruiser. Gain a Vi.",
+    "srcPath": "public/images/augments/Bruiser Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Built Different II",
+    "id": "58",
+    "desc": "Your units with no Traits active gain 175-340 Health and 30-50% Attack Speed (based on current Stage).",
+    "srcPath": "public/images/augments/Built Different II.png",
+    "stats": {
+      "health": 340,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 50
+    }
+  },
+  {
+    "name": "Built Different III",
+    "id": "168",
+    "desc": "Your units with no Traits active gain 240-570 Health and 35-55% Attack Speed (based on current Stage).",
+    "srcPath": "public/images/augments/Built Different III.png",
+    "stats": {
+      "health": 570,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 55
+    }
+  },
+  {
+    "name": "Buried Treasures I",
+    "id": "9",
+    "desc": "At the start of the next 2 rounds, gain a random item component.",
+    "srcPath": "public/images/augments/Buried Treasures I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Buried Treasures II",
+    "id": "59",
+    "desc": "At the start of the next 3 rounds, gain a random item component.",
+    "srcPath": "public/images/augments/Buried Treasures II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Buried Treasures III",
+    "id": "169",
+    "desc": "At the start of the next 5 rounds, gain a random item component.",
+    "srcPath": "public/images/augments/Buried Treasures III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Capricious Forge",
+    "id": "60",
+    "desc": "Gain a Blacksmith&#039;s Gloves, which equips two temporary Ornn Artifacts each round.",
+    "srcPath": "public/images/augments/Capricious Forge.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Caretaker&#039;s Ally",
+    "id": "10",
+    "desc": "When you reach Level 6, gain a 2-star Tier 3 unit.",
+    "srcPath": "public/images/augments/Caretaker&#039;s Ally.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Caretaker&#039;s Chosen",
+    "id": "170",
+    "desc": "When you reach Level 5, open an Armory and choose 1 of 5 unique Radiant items. At level 9, gain this effect again, and gain an Item Remover.",
+    "srcPath": "public/images/augments/Caretaker&#039;s Chosen.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Caretaker&#039;s Favor",
+    "id": "61",
+    "desc": "When you reach Level 6, gain 3 random components. Then when you reach Level 8, gain 2 more random components.",
+    "srcPath": "public/images/augments/Caretaker&#039;s Favor.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Challenger Crest",
+    "id": "62",
+    "desc": "Gain a Challenger Emblem and a Warwick.",
+    "srcPath": "public/images/augments/Challenger Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Challenger Crown",
+    "id": "171",
+    "desc": "Gain a Challenger Emblem, a Rapid Firecannon, and a Kalista.",
+    "srcPath": "public/images/augments/Challenger Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Challenger Heart",
+    "id": "11",
+    "desc": "Your team counts as having 1 additional Challenger. Gain a Warwick.",
+    "srcPath": "public/images/augments/Challenger Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Chemtech Enhancements",
+    "id": "63",
+    "desc": "Your Chem Modded units gain 500 Health. Allies that start combat adjacent to them gain 100 Health. Gain 2 Zaun units.",
+    "srcPath": "public/images/augments/Chemtech Enhancements.png",
+    "stats": {
+      "health": 100,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Combat Caster",
+    "id": "64",
+    "desc": "Your units gain a 90-170 (based on current Stage) health shield for 6 seconds after casting their spell.",
+    "srcPath": "public/images/augments/Combat Caster.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Component Buffet",
+    "id": "12",
+    "desc": "Gain a random component. Whenever you would get a random component, instead gain a component anvil.",
+    "srcPath": "public/images/augments/Component Buffet.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Consistency",
+    "id": "13",
+    "desc": "Gain double win and loss streak gold.",
+    "srcPath": "public/images/augments/Consistency.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Contagion",
+    "id": "65",
+    "desc": "Combat Start: Infect the highest health enemy, increasing their damage taken by 20%. Every 5 seconds or on death, the infection spreads to 2 nearby units.",
+    "srcPath": "public/images/augments/Contagion.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cruel Pact",
+    "id": "172",
+    "desc": "Buying XP costs 5 Health instead of gold. Heal 2 Health before each player combat.",
+    "srcPath": "public/images/augments/Cruel Pact.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cursed Crown",
+    "id": "173",
+    "desc": "Gain +2 maximum team size, but take 100% increased player damage.",
+    "srcPath": "public/images/augments/Cursed Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cutting Corners",
+    "id": "14",
+    "desc": "Leveling up costs 3 XP less. You can now reach Level 10.",
+    "srcPath": "public/images/augments/Cutting Corners.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Bulk I",
+    "id": "15",
+    "desc": "Your champions holding an item gain 250 health.",
+    "srcPath": "public/images/augments/Cybernetic Bulk I.png",
+    "stats": {
+      "health": 250,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Bulk II",
+    "id": "66",
+    "desc": "Your champions holding an item gain 350 health.",
+    "srcPath": "public/images/augments/Cybernetic Bulk II.png",
+    "stats": {
+      "health": 350,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Bulk III",
+    "id": "174",
+    "desc": "Your champions holding an item gain 500 health.",
+    "srcPath": "public/images/augments/Cybernetic Bulk III.png",
+    "stats": {
+      "health": 500,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Leech I",
+    "id": "16",
+    "desc": "Your units holding an item gain 80 Health and 13% Omnivamp.",
+    "srcPath": "public/images/augments/Cybernetic Leech I.png",
+    "stats": {
+      "health": 80,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Leech II",
+    "id": "67",
+    "desc": "Your units holding an item gain 120 Health and 18% Omnivamp.",
+    "srcPath": "public/images/augments/Cybernetic Leech II.png",
+    "stats": {
+      "health": 120,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Cybernetic Leech III",
+    "id": "175",
+    "desc": "Your units holding an item gain 225 Health and 25% Omnivamp.",
+    "srcPath": "public/images/augments/Cybernetic Leech III.png",
+    "stats": {
+      "health": 225,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Deadeye Crest",
+    "id": "68",
+    "desc": "Gain a Deadeye Emblem and an Ashe.",
+    "srcPath": "public/images/augments/Deadeye Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Deadeye Crown",
+    "id": "176",
+    "desc": "Gain a Deadeye Emblem, a Guinsoo&#039;s Rageblade, and an Akshan.",
+    "srcPath": "public/images/augments/Deadeye Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Deadeye Heart",
+    "id": "17",
+    "desc": "Your team counts as having 1 additional Deadeye. Gain an Ashe.",
+    "srcPath": "public/images/augments/Deadeye Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Dedication",
+    "id": "69",
+    "desc": "The first time you field at least 5 distinct units of the same trait in a player combat, gain an Emblem for that trait.",
+    "srcPath": "public/images/augments/Dedication.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Defensive Dash",
+    "id": "70",
+    "desc": "Combat Start and on takedown: Your Challenger units gain a 75-225 health shield for 2.5 seconds (based on current Stage). Gain 2 Challenger units.",
+    "srcPath": "public/images/augments/Defensive Dash.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Demacia Crest",
+    "id": "71",
+    "desc": "Gain a Demacia Emblem and a Galio.",
+    "srcPath": "public/images/augments/Demacia Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Demacia Crown",
+    "id": "177",
+    "desc": "Gain a Demacia Emblem, a Gargoyle&#039;s Stoneplate, and a Garen.",
+    "srcPath": "public/images/augments/Demacia Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Double Trouble II",
+    "id": "72",
+    "desc": "When you field exactly 2 copies of a champion, they both gain 33% Attack Damage and 33 Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
+    "srcPath": "public/images/augments/Double Trouble II.png",
+    "stats": {
+      "health": 0,
+      "armor": 33,
+      "resistance": 33,
+      "mana": 0,
+      "ap": 33,
+      "attack": 33,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Double Trouble III",
+    "id": "178",
+    "desc": "When you field exactly 2 copies of a champion, they both gain 44% Attack Damage and 44 Ability Power, Armor, and Magic Resist. When you 3-star, gain a 2-star copy.",
+    "srcPath": "public/images/augments/Double Trouble III.png",
+    "stats": {
+      "health": 0,
+      "armor": 44,
+      "resistance": 44,
+      "mana": 0,
+      "ap": 44,
+      "attack": 44,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Dueling Gunners",
+    "id": "73",
+    "desc": "Your Gunner units gain 10% Attack Speed, plus 2% per Gunner stack. Gain 2 Gunners.",
+    "srcPath": "public/images/augments/Dueling Gunners.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 10
+    }
+  },
+  {
+    "name": "Early Education",
+    "id": "74",
+    "desc": "Your champions permanently gain 1 Ability Power whenever they kill an enemy. Champions start with 15 bonus Ability Power.",
+    "srcPath": "public/images/augments/Early Education.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 15,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Endless Hordes",
+    "id": "179",
+    "desc": "Gain +3 maximum team size, but your units can only hold 1 item and their total health is reduced by 40%. Gain 2 gold.",
+    "srcPath": "public/images/augments/Endless Hordes.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Endurance Training",
+    "id": "75",
+    "desc": "Your champions permanently gain 18 Health every time they kill an enemy. Champions start with 100 bonus Health.",
+    "srcPath": "public/images/augments/Endurance Training.png",
+    "stats": {
+      "health": 18,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Escort Quest",
+    "id": "76",
+    "desc": "Gain a Training Dummy. Each round, if it survives combat, gain 3 gold.",
+    "srcPath": "public/images/augments/Escort Quest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Final Reserves",
+    "id": "180",
+    "desc": "The first time you would be eliminated or reduced to 1 Health, instead remain alive. After this effect triggers, at the beginning of your next planning phase gain 80 XP and 40 Gold.",
+    "srcPath": "public/images/augments/Final Reserves.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Freljord Heart",
+    "id": "77",
+    "desc": "Your team counts as having 1 additional Freljord. Gain an Ashe.",
+    "srcPath": "public/images/augments/Freljord Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Freljord Soul",
+    "id": "181",
+    "desc": "Your team counts as having 1 additional Freljord. Gain an Archangel&#039;s Staff and a Lissandra.",
+    "srcPath": "public/images/augments/Freljord Soul.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Frequent Flier",
+    "id": "78",
+    "desc": "After you refresh your shop 10 times, your refreshes cost 1 for the rest of the game.",
+    "srcPath": "public/images/augments/Frequent Flier.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gargantuan Resolve",
+    "id": "79",
+    "desc": "Gain a Titan&#039;s Resolve. Your Titan&#039;s Resolves can continue stacking to 35 instead of 25.",
+    "srcPath": "public/images/augments/Gargantuan Resolve.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gifts From Above",
+    "id": "182",
+    "desc": "At the start of combat, distribute 4 temporary completed items to the champions with the fewest items.",
+    "srcPath": "public/images/augments/Gifts From Above.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gifts from the Fallen",
+    "id": "80",
+    "desc": "Your units gain 4% Attack Damage, 4 Ability Power, 4 Armor, and 4 Magic Resist. When one of your units dies, all your units gain these stats again.",
+    "srcPath": "public/images/augments/Gifts from the Fallen.png",
+    "stats": {
+      "health": 0,
+      "armor": 4,
+      "resistance": 4,
+      "mana": 0,
+      "ap": 4,
+      "attack": 4,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Glacial Breeze",
+    "id": "81",
+    "desc": "When your Freljordian Storm strikes, your units are shielded for 15% of their maximum Health and gain 8% Attack Speed. Gain 2 Freljord units.",
+    "srcPath": "public/images/augments/Glacial Breeze.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 8
+    }
+  },
+  {
+    "name": "Golden Ticket",
+    "id": "183",
+    "desc": "Each time your Shop is refreshed, you have a 50% chance to gain a free refresh.",
+    "srcPath": "public/images/augments/Golden Ticket.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gunner Crest",
+    "id": "82",
+    "desc": "Gain a Gunner Emblem and a Jinx.",
+    "srcPath": "public/images/augments/Gunner Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gunner Crown",
+    "id": "184",
+    "desc": "Gain a Gunner Emblem, a Runann&#039;s Hurricane, and a Jayce.",
+    "srcPath": "public/images/augments/Gunner Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Gunner Heart",
+    "id": "18",
+    "desc": "Your team counts as having 1 additional Gunner. Gain a Jinx.",
+    "srcPath": "public/images/augments/Gunner Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Harmacist I",
+    "id": "19",
+    "desc": "Your units heal for 10% of the damage they deal, and they convert 20% of excess healing to true damage on their next attack.",
+    "srcPath": "public/images/augments/Harmacist I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Harmacist II",
+    "id": "83",
+    "desc": "Your units heal for 15% of the damage they deal, and they convert 25% of excess healing to true damage on their next attack.",
+    "srcPath": "public/images/augments/Harmacist II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Harmacist III",
+    "id": "185",
+    "desc": "Your units heal for 25% of the damage they deal, and they convert 30% of excess healing to true damage on their next attack.",
+    "srcPath": "public/images/augments/Harmacist III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Haunted Shell",
+    "id": "84",
+    "desc": "If Shadow Isles is active, your units gain 10 Armor and Magic Resistance for the rest of combat each time an ally dies. Gain 2 Shadow Isles units.",
+    "srcPath": "public/images/augments/Haunted Shell.png",
+    "stats": {
+      "health": 0,
+      "armor": 10,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Healing Orbs I",
+    "id": "20",
+    "desc": "When an enemy dies, the nearest allied unit is healed for 300.",
+    "srcPath": "public/images/augments/Healing Orbs I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Healing Orbs II",
+    "id": "85",
+    "desc": "When an enemy dies, the nearest allied unit is healed for 500.",
+    "srcPath": "public/images/augments/Healing Orbs II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Hedge Fund",
+    "id": "186",
+    "desc": "You have no interest cap. Gain 22 gold. You have no interest cap. Gain 32 gold. You have no interest cap. Gain 44 gold.",
+    "srcPath": "public/images/augments/Hedge Fund.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Hedge Fund+",
+    "id": "187",
+    "desc": "You have no interest cap. Gain 32 gold. You have no interest cap. Gain 44 gold.",
+    "srcPath": "public/images/augments/Hedge Fund+.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Hedge Fund++",
+    "id": "188",
+    "desc": "You have no interest cap. Gain 44 gold.",
+    "srcPath": "public/images/augments/Hedge Fund++.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "High End Sector",
+    "id": "189",
+    "desc": "Gain 1 gold per round. When you level up, gain a number of free shop refreshes equal to your level.",
+    "srcPath": "public/images/augments/High End Sector.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Hustler",
+    "id": "86",
+    "desc": "Instead of having no interest, you get 3 golds at the beginning of player combat rounds.",
+    "srcPath": "public/images/augments/Hustler.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Idealism",
+    "id": "87",
+    "desc": "Gain a Hand of Justice. Champions with a Hand of Justice deal 13% increased damage.",
+    "srcPath": "public/images/augments/Idealism.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Impenetrable Bulwark",
+    "id": "190",
+    "desc": "Gain a Bramble Vest and a Dragon&#039;s Claw.",
+    "srcPath": "public/images/augments/Impenetrable Bulwark.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Inconsistency",
+    "id": "21",
+    "desc": "If your streak is less than 2, gain 2 gold.",
+    "srcPath": "public/images/augments/Inconsistency.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Indomitable Will",
+    "id": "88",
+    "desc": "When your units score a Takedown they shed all negative effects and become immune to Crowd Control for 10 seconds.",
+    "srcPath": "public/images/augments/Indomitable Will.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Infernal Contract",
+    "id": "191",
+    "desc": "Your max level is 7. Gain 85 Gold.",
+    "srcPath": "public/images/augments/Infernal Contract.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Infusion",
+    "id": "89",
+    "desc": "Your team restores 20 Mana every 5 seconds.",
+    "srcPath": "public/images/augments/Infusion.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 20,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Invoker Crest",
+    "id": "90",
+    "desc": "Gain an Invoker Emblem and a Soraka.",
+    "srcPath": "public/images/augments/Invoker Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Invoker Crown",
+    "id": "192",
+    "desc": "Gain a Invoker Emblem, a Jeweled Gauntlet, and a Karma.",
+    "srcPath": "public/images/augments/Invoker Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Invoker Heart",
+    "id": "22",
+    "desc": "Your team counts as having 1 additional Invoker. Gain a Soraka.",
+    "srcPath": "public/images/augments/Invoker Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Ionia Crest",
+    "id": "91",
+    "desc": "Gain a Ionia Emblem and a Sett.",
+    "srcPath": "public/images/augments/Ionia Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Ionia Crown",
+    "id": "193",
+    "desc": "Gain an Ionia Emblem, a Guardbreaker, and a Karma.",
+    "srcPath": "public/images/augments/Ionia Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Iron Assets",
+    "id": "23",
+    "desc": "Gain a Component Anvil and 2 Gold.",
+    "srcPath": "public/images/augments/Iron Assets.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Jeweled Lotus I",
+    "id": "24",
+    "desc": "Combat Start: Your strongest unit gains 25% critical strike chance and their spells can critically strike.",
+    "srcPath": "public/images/augments/Jeweled Lotus I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Jeweled Lotus II",
+    "id": "92",
+    "desc": "Your units&#039; Abilities can critically strike. Your units gain 10% Critical Strike chance.",
+    "srcPath": "public/images/augments/Jeweled Lotus II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Jeweled Lotus III",
+    "id": "194",
+    "desc": "Your units&#039; Abilities can critically strike. Your units gain 45% Critical Strike chance.",
+    "srcPath": "public/images/augments/Jeweled Lotus III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Juggernaut Crest",
+    "id": "93",
+    "desc": "Gain an Juggernaut Emblem and a Sett.",
+    "srcPath": "public/images/augments/Juggernaut Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Juggernaut Crown",
+    "id": "195",
+    "desc": "Gain an Juggernaut Emblem, a Titan&#039;s Resolve, and a Darius.",
+    "srcPath": "public/images/augments/Juggernaut Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Juggernaut Heart",
+    "id": "25",
+    "desc": "Your team counts as having 1 additional Juggernaut. Gain a Sett.",
+    "srcPath": "public/images/augments/Juggernaut Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Know Your Enemy",
+    "id": "94",
+    "desc": "After the first enemy dies each round, your units deal 25% Increased damage.",
+    "srcPath": "public/images/augments/Know Your Enemy.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Last Stand",
+    "id": "95",
+    "desc": "The first time you would be eliminated or reduced to 1 Health, instead remain alive. After this effect triggers, your units permanently gain 180 Health, 18 Armor and Magic Resist, and 18% Omnivamp.",
+    "srcPath": "public/images/augments/Last Stand.png",
+    "stats": {
+      "health": 180,
+      "armor": 18,
+      "resistance": 18,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Lategame Specialist",
+    "id": "26",
+    "desc": "When you reach Level 9, gain 44 gold.",
+    "srcPath": "public/images/augments/Lategame Specialist.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Latent Forge",
+    "id": "27",
+    "desc": "Gain an Ornn Item Anvil after 7 player combats.",
+    "srcPath": "public/images/augments/Latent Forge.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Level Up!",
+    "id": "196",
+    "desc": "When you buy XP, gain an additional 3. Gain 4 immediately. You can now reach level 10.",
+    "srcPath": "public/images/augments/Level Up!.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Library Card",
+    "id": "96",
+    "desc": "Gain a Tome of Traits and a Component Anvil",
+    "srcPath": "public/images/augments/Library Card.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Living Forge",
+    "id": "197",
+    "desc": "Gain an Ornn Item Anvil now and after every 10 player combats.",
+    "srcPath": "public/images/augments/Living Forge.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Long Distance Pals II",
+    "id": "97",
+    "desc": "Combat start: Your two furthest champions form a bond, sharing 30% of their Armor, Magic Resist, Attack Damage, and Ability Power with each other.",
+    "srcPath": "public/images/augments/Long Distance Pals II.png",
+    "stats": {
+      "health": 0,
+      "armor": 30,
+      "resistance": 30,
+      "mana": 0,
+      "ap": 30,
+      "attack": 30,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Loving Invocation",
+    "id": "98",
+    "desc": "Your team gains 2.5% Ability Power until the end of combat each time your Invoker units cast their Abilities. Gain 2 Invokers.",
+    "srcPath": "public/images/augments/Loving Invocation.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 2.5,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Lucky Gloves",
+    "id": "198",
+    "desc": "Thief&#039;s Gloves will always give your champions ideal items. Gain 2 Sparring Gloves.",
+    "srcPath": "public/images/augments/Lucky Gloves.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Magic Wand",
+    "id": "99",
+    "desc": "Gain a Needlessly Large Rod. Your units gain 20% Ability Power.",
+    "srcPath": "public/images/augments/Magic Wand.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 20,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Mana Burn",
+    "id": "100",
+    "desc": "Gain a Shroud of Stillness. All enemies take 3% of their maximum health as true damage each second until the first time they cast their spell. No longer damages units without mana.",
+    "srcPath": "public/images/augments/Mana Burn.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "March of Progress",
+    "id": "199",
+    "desc": "Gain 3 XP now, and bonus XP equal to your level at the start of every player combat round. You can no longer use gold to level up.",
+    "srcPath": "public/images/augments/March of Progress.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Martyr",
+    "id": "101",
+    "desc": "Whenever one of your units dies, all allies heal for 10% of Maximum health",
+    "srcPath": "public/images/augments/Martyr.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Medium-End Shopping",
+    "id": "102",
+    "desc": "Gain a 3 gold. Champions appear in the first 3 slots of your Shop as if you were 1 level higher.",
+    "srcPath": "public/images/augments/Medium-End Shopping.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Metabolic Accelerator",
+    "id": "103",
+    "desc": "Your Tactician moves faster and heals 2 Health after a PvP round.",
+    "srcPath": "public/images/augments/Metabolic Accelerator.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Missed Connections",
+    "id": "28",
+    "desc": "Gain a copy of each Tier One champion.",
+    "srcPath": "public/images/augments/Missed Connections.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Morning Light",
+    "id": "104",
+    "desc": "When your Bastion units drop below 50% Health, they heal for 40% of their maximum Health over 4 seconds. Gain 2 Bastion units.",
+    "srcPath": "public/images/augments/Morning Light.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Multicaster Heart",
+    "id": "105",
+    "desc": "Your team counts as having 1 additional Multicaster. Gain a Taliyah.",
+    "srcPath": "public/images/augments/Multicaster Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Multicaster Soul",
+    "id": "200",
+    "desc": "Your team counts as having 1 additional Multicaster. Gain a Jeweled Gauntlet and a Vel&#039;Koz.",
+    "srcPath": "public/images/augments/Multicaster Soul.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Not Today",
+    "id": "106",
+    "desc": "Gain an Edge of Night. Allies holding Edge of Night gain 35% Attack Speed.",
+    "srcPath": "public/images/augments/Not Today.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 35
+    }
+  },
+  {
+    "name": "Noxus Crest",
+    "id": "107",
+    "desc": "Gain a Noxus Emblem and a Swain.",
+    "srcPath": "public/images/augments/Noxus Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Noxus Crown",
+    "id": "201",
+    "desc": "Gain a Noxus Emblem, an Infinity Edge, and a Darius.",
+    "srcPath": "public/images/augments/Noxus Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "On a Roll",
+    "id": "29",
+    "desc": "Whenever you star-up a champion, gain a free reroll.",
+    "srcPath": "public/images/augments/On a Roll.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "One Twos Three",
+    "id": "30",
+    "desc": "Gain 1 Tier one unit, 2 Tier two units, and 1 Tier three unit.",
+    "srcPath": "public/images/augments/One Twos Three.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "One, Two, Five!",
+    "id": "31",
+    "desc": "Gain 1 random component, 2 Gold, and 1 random Tier 5 champion(s).",
+    "srcPath": "public/images/augments/One, Two, Five!.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Overcharged Manafont",
+    "id": "108",
+    "desc": "Combat Start: Your Sorcerer units gain 10 mana. The first time each Sorcerer gets a take down each combat, they gain 20 mana. Gain 2 Sorcerers.",
+    "srcPath": "public/images/augments/Overcharged Manafont.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 20,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Overwhelming Force",
+    "id": "202",
+    "desc": "Gain a Deathblade and an Infinity Edge.",
+    "srcPath": "public/images/augments/Overwhelming Force.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Pandora&#039;s Bench",
+    "id": "32",
+    "desc": "Gain 2 gold. At the start of every round, champions on the 3 rightmost bench slots transform into random champions of the same cost.",
+    "srcPath": "public/images/augments/Pandora&#039;s Bench.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Pandora&#039;s Box",
+    "id": "203",
+    "desc": "Gain a random Radiant item. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora&#039;s Box.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Pandora&#039;s Items II",
+    "id": "109",
+    "desc": "Gain 2 random components. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora&#039;s Items II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Pandora&#039;s Items",
+    "id": "33",
+    "desc": "Gain a random component. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora&#039;s Items.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Parting Gifts",
+    "id": "110",
+    "desc": "When a unit dies, they pass a temporary copy of one of their items to the nearest ally with open slots and shield them for 40% of their maximum Health.",
+    "srcPath": "public/images/augments/Parting Gifts.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Patient Study",
+    "id": "111",
+    "desc": "After player combat, gain 2 XP if you won or 3 XP if you lost. You can now reach Level 10.",
+    "srcPath": "public/images/augments/Patient Study.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Perfected Repetition",
+    "id": "112",
+    "desc": "Each time your Multicaster units deal ability damage, they gain 10%% Ability power (Max: 60%%) until the end of combat. Gain 2 Multicasters.",
+    "srcPath": "public/images/augments/Perfected Repetition.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Petricite Shackles",
+    "id": "113",
+    "desc": "Your Demacians deal 15% more damage, increased to 30% against Noxians and enemies with 100 or more maximum Mana. Gain 3 Demacians.",
+    "srcPath": "public/images/augments/Petricite Shackles.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Phreaky Friday",
+    "id": "204",
+    "desc": "Gain an Infinity Force. After 5 Player combats, gain a second Infinity Force. Gain an Infinity Force. After 3 Player combats, gain a second Infinity Force.",
+    "srcPath": "public/images/augments/Phreaky Friday.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Phreaky Friday+",
+    "id": "205",
+    "desc": "Gain an Infinity Force. After 3 Player combats, gain a second Infinity Force.",
+    "srcPath": "public/images/augments/Phreaky Friday+.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Piltover Heart",
+    "id": "114",
+    "desc": "Your team counts as having 1 additional Piltover. Gain a Vi.",
+    "srcPath": "public/images/augments/Piltover Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Piltover Soul",
+    "id": "206",
+    "desc": "Your team counts as having 1 additional Piltover. Gain a Zeke&#039;s Herald and a Jayce.",
+    "srcPath": "public/images/augments/Piltover Soul.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Portable Forge",
+    "id": "115",
+    "desc": "Open an Armory and choose 1 of 3 unique Artifacts crafted by Ornn.",
+    "srcPath": "public/images/augments/Portable Forge.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Pumping Up I",
+    "id": "34",
+    "desc": "Your units gain 5% Attack Speed. Each round, increase this by 0.5%.",
+    "srcPath": "public/images/augments/Pumping Up I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 5
+    }
+  },
+  {
+    "name": "Pumping Up II",
+    "id": "116",
+    "desc": "Your units gain 10% Attack Speed. Each round, increase this by 1%.",
+    "srcPath": "public/images/augments/Pumping Up II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 10
+    }
+  },
+  {
+    "name": "Pumping Up III",
+    "id": "207",
+    "desc": "Your units gain 10% Attack Speed. Each round, increase this by 2%.",
+    "srcPath": "public/images/augments/Pumping Up III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 10
+    }
+  },
+  {
+    "name": "Radiant Relics",
+    "id": "208",
+    "desc": "Open an Armory and choose 1 of 5 unique Radiant items.",
+    "srcPath": "public/images/augments/Radiant Relics.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Recombobulator",
+    "id": "35",
+    "desc": "Champions on your board permanently transform into random champions 1 Tier higher. Gain @NumRemovers@ Magnetic Removers.",
+    "srcPath": "public/images/augments/Recombobulator.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Red Buff",
+    "id": "36",
+    "desc": "Your units&#039; attacks burn their targets for 8% of their maximum Health over 5 seconds and reduce their targets&#039; healing received by 50%.",
+    "srcPath": "public/images/augments/Red Buff.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Return on Investment",
+    "id": "117",
+    "desc": "After you refresh your shop 22 times, gain a Tactician&#039;s Crown.",
+    "srcPath": "public/images/augments/Return on Investment.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Rich Get Richer",
+    "id": "118",
+    "desc": "Gain 12 gold. Your maximum interest is increased to 7. Gain 18 gold. Your maximum interest is increased to 7.",
+    "srcPath": "public/images/augments/Rich Get Richer.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Rich Get Richer+",
+    "id": "119",
+    "desc": "Gain 18 gold. Your maximum interest is increased to 7.",
+    "srcPath": "public/images/augments/Rich Get Richer+.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Risky Moves",
+    "id": "37",
+    "desc": "Your Tactician loses 20 Health, but after 7 Player combats, gain 35 Gold.",
+    "srcPath": "public/images/augments/Risky Moves.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Rogue Crest",
+    "id": "120",
+    "desc": "Gain a Rogue Emblem and a Zed.",
+    "srcPath": "public/images/augments/Rogue Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Rogue Crown",
+    "id": "209",
+    "desc": "Gain a Rogue Emblem, a Hand of Justice, and a Katarina.",
+    "srcPath": "public/images/augments/Rogue Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Rogue Heart",
+    "id": "38",
+    "desc": "Your team counts as having 1 additional Rogue. Gain a Zed.",
+    "srcPath": "public/images/augments/Rogue Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Roll The Dice",
+    "id": "210",
+    "desc": "Gain a Radiant Thieves Gloves.",
+    "srcPath": "public/images/augments/Roll The Dice.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Salvage Bin",
+    "id": "121",
+    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown). Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown).",
+    "srcPath": "public/images/augments/Salvage Bin.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Salvage Bin+",
+    "id": "122",
+    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown).",
+    "srcPath": "public/images/augments/Salvage Bin+.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Scoped Weapons",
+    "id": "123",
+    "desc": "Your units that start combat in the back 2 rows gain +2 Attack Range and 15% Attack Speed.",
+    "srcPath": "public/images/augments/Scoped Weapons.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 15
+    }
+  },
+  {
+    "name": "Scrappy Inventions",
+    "id": "124",
+    "desc": "At the start of combat, maximum of 4 components on your champions turn into temporary items for the rest of combat. At the start of the next 1 stages, gain a component.",
+    "srcPath": "public/images/augments/Scrappy Inventions.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Sentinel&#039;s Spirit",
+    "id": "125",
+    "desc": "While in spirit form, your Ionia units gain 15% Attack Speed and shield themselves for 15% of their maximum Health. Gain 3 Ionians.",
+    "srcPath": "public/images/augments/Sentinel&#039;s Spirit.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 15
+    }
+  },
+  {
+    "name": "Shadow Isles Crest",
+    "id": "126",
+    "desc": "Gain a Shadow Isles Emblem, a Maokai, and 1 gold.",
+    "srcPath": "public/images/augments/Shadow Isles Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shadow Isles Crown",
+    "id": "211",
+    "desc": "Gain a Shadow Isles Emblem, a Bloodthirster, and a Kalista.",
+    "srcPath": "public/images/augments/Shadow Isles Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shadow Isles Heart",
+    "id": "39",
+    "desc": "Your team counts as having 1 additional Shadow Isles. Gain a Viego and 1 gold.",
+    "srcPath": "public/images/augments/Shadow Isles Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shimmering Inventors",
+    "id": "127",
+    "desc": "Your Piltover units gain 8% Attack Speed for every 10 gold you have (Max: 40%), and have a 33% chance to drop 1 gold at round start. Gain an Ekko.",
+    "srcPath": "public/images/augments/Shimmering Inventors.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 8
+    }
+  },
+  {
+    "name": "Shoplifting",
+    "id": "128",
+    "desc": "After your first shop refresh each turn, gain the highest cost champion for free.",
+    "srcPath": "public/images/augments/Shoplifting.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shurima Crest",
+    "id": "129",
+    "desc": "Gain a Shurima Emblem and a Taliyah.",
+    "srcPath": "public/images/augments/Shurima Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shurima Crown",
+    "id": "212",
+    "desc": "Gain a Shurima Emblem, a Bloodthirster, and a Akshan.",
+    "srcPath": "public/images/augments/Shurima Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Shurima&#039;s Legacy",
+    "id": "130",
+    "desc": "Once assembled, your Sun Disc attacks enemies for 180-900 Magic Damage every 2 seconds (based on current Stage). Gain 3 Shurimans.",
+    "srcPath": "public/images/augments/Shurima&#039;s Legacy.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Silver Spoon",
+    "id": "40",
+    "desc": "Gain 10 XP.",
+    "srcPath": "public/images/augments/Silver Spoon.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Silver Ticket",
+    "id": "131",
+    "desc": "Each time your Shop is refreshed, you have a 30% chance to gain a free refresh.",
+    "srcPath": "public/images/augments/Silver Ticket.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Slayer Crest",
+    "id": "132",
+    "desc": "Gain a Slayer Emblem and a Kled.",
+    "srcPath": "public/images/augments/Slayer Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Slayer Crown",
+    "id": "213",
+    "desc": "Gain a Slayer Emblem, a Deathblade, and a Kled.",
+    "srcPath": "public/images/augments/Slayer Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Slayer Heart",
+    "id": "41",
+    "desc": "Your team counts as having 1 additional Slayer. Gain a Kled.",
+    "srcPath": "public/images/augments/Slayer Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Slayer&#039;s Resolve",
+    "id": "133",
+    "desc": "When your Slayer units take or deal damage, they gain 2 Armor and Magic Resistance for the rest of combat (This can stack up to 25 times). Gain 2 Slayers.",
+    "srcPath": "public/images/augments/Slayer&#039;s Resolve.png",
+    "stats": {
+      "health": 0,
+      "armor": 2,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Sleight of Hand",
+    "id": "134",
+    "desc": "Gain a Thiefs Gloves. Your allies holding Thiefs Gloves gain 30% Attack Speed.",
+    "srcPath": "public/images/augments/Sleight of Hand.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 30
+    }
+  },
+  {
+    "name": "Social Distancing I",
+    "id": "42",
+    "desc": "Units that begin combat with no adjacent allies gain 12% Attack Damage and Ability Power.",
+    "srcPath": "public/images/augments/Social Distancing I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 12,
+      "attack": 12,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Social Distancing II",
+    "id": "135",
+    "desc": "Units that begin combat with no adjacent allies gain 20% Attack Damage and Ability Power.",
+    "srcPath": "public/images/augments/Social Distancing II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 20,
+      "attack": 20,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Social Distancing III",
+    "id": "214",
+    "desc": "Units that begin combat with no adjacent allies gain 30% Attack Damage and Ability Power.",
+    "srcPath": "public/images/augments/Social Distancing III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 30,
+      "attack": 30,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Sorcerer Crest",
+    "id": "136",
+    "desc": "Gain a Sorcerer Emblem and a Swain.",
+    "srcPath": "public/images/augments/Sorcerer Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Sorcerer Crown",
+    "id": "215",
+    "desc": "Gain a Sorcerer Emblem, a Spear of Shojin, and a Vel&#039;Koz.",
+    "srcPath": "public/images/augments/Sorcerer Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Sorcerer Heart",
+    "id": "43",
+    "desc": "Your team counts as having 1 additional Sorcerer. Gain a Swain.",
+    "srcPath": "public/images/augments/Sorcerer Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Spoils of War I",
+    "id": "44",
+    "desc": "When you kill an enemy unit, there&#039;s a 20% chance to drop loot.",
+    "srcPath": "public/images/augments/Spoils of War I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Spoils of War II",
+    "id": "137",
+    "desc": "When you kill an enemy unit, there&#039;s a 30% chance to drop loot.",
+    "srcPath": "public/images/augments/Spoils of War II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Spoils of War III",
+    "id": "216",
+    "desc": "When you kill an enemy unit, there&#039;s a 40% chance to drop amazing loot.",
+    "srcPath": "public/images/augments/Spoils of War III.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Stable Evolution",
+    "id": "138",
+    "desc": "Your Void units gain 80 Health and 8 Attack Damage and Ability Power for each star level they have. Gain 3 Void units.",
+    "srcPath": "public/images/augments/Stable Evolution.png",
+    "stats": {
+      "health": 80,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 8,
+      "attack": 8,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Stars are Born",
+    "id": "139",
+    "desc": "The first tier 1 unit and tier 2 unit you buy are upgraded to 2*.",
+    "srcPath": "public/images/augments/Stars are Born.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Starter Kit",
+    "id": "217",
+    "desc": "Gain a Tier 4 champion, and a 2-star Tier 1 champion that shares a trait with them. At the next 1 stages, gain the Tier 4 champion again.",
+    "srcPath": "public/images/augments/Starter Kit.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Stellacorn&#039;s Blessing",
+    "id": "140",
+    "desc": "While you have the Targon trait activated, your units gain 45% Attack Speed for 4 seconds after being healed or shielded. Gain 2 Targonians.",
+    "srcPath": "public/images/augments/Stellacorn&#039;s Blessing.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 45
+    }
+  },
+  {
+    "name": "Strategist Heart",
+    "id": "141",
+    "desc": "Your team counts as having 1 additional Strategist. Gain a Swain.",
+    "srcPath": "public/images/augments/Strategist Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Strategist Soul",
+    "id": "218",
+    "desc": "Your team counts as having 1 additional Strategist. Gain a Chalice of Power and a Swain.",
+    "srcPath": "public/images/augments/Strategist Soul.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Suppressing Fire",
+    "id": "142",
+    "desc": "The target of your Deadeye units&#039; shared attack is stunned for 4 seconds. Gain 2 Deadeyes.",
+    "srcPath": "public/images/augments/Suppressing Fire.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Tactical Superiority",
+    "id": "143",
+    "desc": "Your units gain 5% Attack Damage and Ability Power for each of their traits you have activated, doubled when you field a Strategist. Gain 2 Strategists.",
+    "srcPath": "public/images/augments/Tactical Superiority.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 5,
+      "attack": 5,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Tactician&#039;s Tools",
+    "id": "219",
+    "desc": "Gain two Spatulas.",
+    "srcPath": "public/images/augments/Tactician&#039;s Tools.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Targon Heart",
+    "id": "144",
+    "desc": "Your team counts as having 1 additional Targon. Gain a Soraka.",
+    "srcPath": "public/images/augments/Targon Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Targon Soul",
+    "id": "220",
+    "desc": "Your team counts as having 1 additional Targon. Gain a Redemption and a Taric.",
+    "srcPath": "public/images/augments/Targon Soul.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "The Golden Egg",
+    "id": "221",
+    "desc": "Gain a massive golden egg that hatches in 11 turns. Victorious player combats accelerate the hatch timer by an additional turn.",
+    "srcPath": "public/images/augments/The Golden Egg.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Think Fast",
+    "id": "222",
+    "desc": "Shop refreshes are free until the end of this round. Traits and other augments do not benefit from these free shops. Gain @Gold@ gold.",
+    "srcPath": "public/images/augments/Think Fast.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Three&#039;s a Crowd",
+    "id": "146",
+    "desc": "Your units gain 100 health for each Tier-3 unit you field.",
+    "srcPath": "public/images/augments/Three&#039;s a Crowd.png",
+    "stats": {
+      "health": 100,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Three&#039;s Company",
+    "id": "145",
+    "desc": "Gain 4 random Tier 3 champions.",
+    "srcPath": "public/images/augments/Three&#039;s Company.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Tiniest Titan",
+    "id": "223",
+    "desc": "Your tactician is small and speedy, heals 2 Health after a PVP round, and grants 2 Gold per round.",
+    "srcPath": "public/images/augments/Tiniest Titan.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Tiny Titans",
+    "id": "45",
+    "desc": "Your Tactician heals 30 Health, grows larger, and has 130 maximum Health.",
+    "srcPath": "public/images/augments/Tiny Titans.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Tons of Stats!",
+    "id": "148",
+    "desc": "Your team gains 55 Health, 5% Attack Damage, 5 Ability Power, 5 Armor, 5 Magic Resist, 5% Attack Speed, and 5 Mana.",
+    "srcPath": "public/images/augments/Tons of Stats!.png",
+    "stats": {
+      "health": 55,
+      "armor": 5,
+      "resistance": 5,
+      "mana": 5,
+      "ap": 5,
+      "attack": 5,
+      "speed": 5
+    }
+  },
+  {
+    "name": "Total Domination",
+    "id": "149",
+    "desc": "Attacks and Abilities of your Noxus units execute enemies below 8% of their maximum Health, increased by +1% for each player you&#039;ve Conquered. Gain 3 Noxians.",
+    "srcPath": "public/images/augments/Total Domination.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Trade Sector",
+    "id": "150",
+    "desc": "Gain a free Shop refresh each round.",
+    "srcPath": "public/images/augments/Trade Sector.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Transfusion I",
+    "id": "46",
+    "desc": "Your team gains 20 Health, plus 2 Health per missing Tactician Health.",
+    "srcPath": "public/images/augments/Transfusion I.png",
+    "stats": {
+      "health": 20,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Transfusion II",
+    "id": "151",
+    "desc": "Your team gains 80 Health, plus 3 Health per missing Tactician Health.",
+    "srcPath": "public/images/augments/Transfusion II.png",
+    "stats": {
+      "health": 80,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Transfusion III",
+    "id": "224",
+    "desc": "Your team gains 100 Health, plus 5 Health per missing Tactician Health.",
+    "srcPath": "public/images/augments/Transfusion III.png",
+    "stats": {
+      "health": 100,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Two Healthy",
+    "id": "152",
+    "desc": "Your units gain 111 health for each Tier-2 unit you field.",
+    "srcPath": "public/images/augments/Two Healthy.png",
+    "stats": {
+      "health": 111,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Unburdened I",
+    "id": "47",
+    "desc": "Your units without items equipped gain 30% Attack Speed.",
+    "srcPath": "public/images/augments/Unburdened I.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 30
+    }
+  },
+  {
+    "name": "Unburdened II",
+    "id": "153",
+    "desc": "Your units without items equipped gain 55% Attack Speed.",
+    "srcPath": "public/images/augments/Unburdened II.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 55
+    }
+  },
+  {
+    "name": "Unified Resistance I",
+    "id": "48",
+    "desc": "If you have 3 or more units in the same row at the start of combat, they all gain 20 Armor and Magic Resist.",
+    "srcPath": "public/images/augments/Unified Resistance I.png",
+    "stats": {
+      "health": 0,
+      "armor": 20,
+      "resistance": 20,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Unified Resistance II",
+    "id": "154",
+    "desc": "If you have 3 or more units in the same row at the start of combat, they all gain 30 Armor and Magic Resist.",
+    "srcPath": "public/images/augments/Unified Resistance II.png",
+    "stats": {
+      "health": 0,
+      "armor": 30,
+      "resistance": 30,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Unleashed Arcana",
+    "id": "225",
+    "desc": "Gain a Jeweled Gauntlet and a Rabadon&#039;s Deathcap.",
+    "srcPath": "public/images/augments/Unleashed Arcana.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Unstable Yordle Delivery",
+    "id": "155",
+    "desc": "Round Start: Gain a random Yordle or 1-5 gold (based on current Stage). Gain 3 Yordles.",
+    "srcPath": "public/images/augments/Unstable Yordle Delivery.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Vampiric Blades",
+    "id": "156",
+    "desc": "Your team gains 10% Omnivamp. Your Rogue units gain 20% instead. Gain 2 Rogues.",
+    "srcPath": "public/images/augments/Vampiric Blades.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Void Crest",
+    "id": "157",
+    "desc": "Gain a Void Emblem, Kassadin.",
+    "srcPath": "public/images/augments/Void Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Void Crown",
+    "id": "226",
+    "desc": "Gain a Void Emblem, Zz&#039;Rot Portal and a Rek&#039;Sai.",
+    "srcPath": "public/images/augments/Void Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Wandering Trainer",
+    "id": "227",
+    "desc": "Gain 4 gold and a Training Dummy. It has 3 random emblems equipped, which cannot be removed.",
+    "srcPath": "public/images/augments/Wandering Trainer.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Wellness Trust",
+    "id": "228",
+    "desc": "Round Start: Gain 3 gold. If you have at least 50 gold, your Tactician heals 2 Health.",
+    "srcPath": "public/images/augments/Wellness Trust.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "What Doesn&#039;t Kill You",
+    "id": "158",
+    "desc": "After losing your combat, gain 2 gold. Every 5 losses, gain a random component.",
+    "srcPath": "public/images/augments/What Doesn&#039;t Kill You.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "What The Forge",
+    "id": "229",
+    "desc": "All Completed items you own or receive are reforged into random Ornn Artifacts (excluding Tactician&#039;s Crown and Emblems). Units gain 160 Health per equipped Artifact.",
+    "srcPath": "public/images/augments/What The Forge.png",
+    "stats": {
+      "health": 160,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Woodland Charm",
+    "id": "230",
+    "desc": "Your highest Health champion is cloned. Clones cannot hold items.",
+    "srcPath": "public/images/augments/Woodland Charm.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "You Have My Bow",
+    "id": "159",
+    "desc": "Gain a Recurve Bow. Your units gain 15% Attack Speed.",
+    "srcPath": "public/images/augments/You Have My Bow.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 15
+    }
+  },
+  {
+    "name": "You Have My Sword",
+    "id": "160",
+    "desc": "Gain a B.F. Sword. Your units gain 18% Attack Damage.",
+    "srcPath": "public/images/augments/You Have My Sword.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 18,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Young and Wild and Free",
+    "id": "49",
+    "desc": "You can always move freely on Carousel rounds.",
+    "srcPath": "public/images/augments/Young and Wild and Free.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Zaun Crest",
+    "id": "161",
+    "desc": "Gain a Zaun Emblem and a Warwick.",
+    "srcPath": "public/images/augments/Zaun Crest.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Zaun Crown",
+    "id": "231",
+    "desc": "Gain a Zaun Emblem, a Guardbreaker, and an Ekko.",
+    "srcPath": "public/images/augments/Zaun Crown.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  },
+  {
+    "name": "Zaun Heart",
+    "id": "50",
+    "desc": "Your team counts as having 1 additional Zaun. Gain a Warwick.",
+    "srcPath": "public/images/augments/Zaun Heart.png",
+    "stats": {
+      "health": 0,
+      "armor": 0,
+      "resistance": 0,
+      "mana": 0,
+      "ap": 0,
+      "attack": 0,
+      "speed": 0
+    }
+  }
+]
+
 </script>

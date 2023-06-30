@@ -1,0 +1,35 @@
+.main-options .level-select {
+
+    margin-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 120px;
+    width: 1vw;
+
+    font-size: 1.3em;
+    line-height: 20px;
+    color: rgb(180, 180, 180);
+
+    cursor: pointer;
+
+    .level-star {
+        padding: 10px;
+        
+
+        &:hover {
+            font-size: 1.5em;
+        }
+    }
+
+    .gold-star {
+        font-size: 1.5em;
+        color: rgb(244, 187, 72);
+        text-shadow: 1px 1px 4px rgba(244, 187, 72, 0.6);
+
+        &:hover {
+            font-size: 1.3em;
+        }
+    }
+
+}

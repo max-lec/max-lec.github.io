@@ -1,32 +1,37 @@
 .main-options .item-selects-wrapper {
+
+    margin-left: 5vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     position: relative;
-    background-color: aqua;
     padding: 0;
     border: 0;
-    height: 50%;
-    width: 12vw;
-    color: rgb(239, 232, 216);
+    height: 60%;
 
     .item-image {
-        height: 40px;
-        width: 40px;
+        height: 2.5vw;
+        width: 2.5vw;
         padding-right: 10px;
+    }
+
+    .item-label {
+        width: 10vw;
     }
 
     .item-select {
         display: flex;
         position: relative;
         flex-direction: column;
-        background-color: blue;
-        padding: 5px 5px;
-        width: 90%;
+        background-color: rgb(55, 44, 107);
+        /* padding: 5px 5px; */
+        width: 14vw;
+        border: 2px ridge rgb(102, 82, 128);
 
         &:hover {
             cursor: pointer;
+            background-color: rgb(45, 36, 87);
         }
 
         .current-item {
@@ -34,7 +39,26 @@
             flex-direction: row;
             align-items: center;
             justify-content: left;
-            height: 40px;
+            height: 2.5vw;
+
+            .item-image-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                border: 2px groove rgb(244, 187, 72);
+                background-color: rgb(55, 44, 107);
+                height: 3.7vw;
+                min-width: 3.7vw;
+                overflow: hidden;
+                margin-right: 10px;
+
+                .item-image {
+                    height: 3.7vw;
+                    width: 3.7vw;
+                    padding: 0;
+                }
+            }
         }
 
         .item-list {
@@ -42,8 +66,8 @@
             flex-direction: column;
             align-items: left;
             position: absolute;
-            top: 40px;
-            left: 0;
+            top: 3.5vw;
+            left: -2px; /* because of rectangle border*/
             overflow-y: auto;
             z-index: 600;
 
@@ -53,6 +77,11 @@
                 align-items: center;
                 justify-content: left;
                 padding: 5px 5px;
+                padding-top: 7px;
+                border-bottom: 1px solid rgb(21, 17, 54);
+                &:hover {
+                    background-color: rgb(45, 36, 87);
+                }
             }
 
             .item-content-selected {
@@ -63,7 +92,6 @@
         .item-list.list-active {
             width: auto;
             height: 30vh;
-            padding: 10px;
             background-color: rgb(55, 44, 107);
         }
     }
