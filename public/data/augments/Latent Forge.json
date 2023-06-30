@@ -1,0 +1,15 @@
+{
+  "name": "Latent Forge",
+  "id": "27",
+  "desc": "Gain an Ornn Item Anvil after 7 player combats.",
+  "srcPath": "public/images/augments/Latent Forge.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Inconsistency",
+  "id": "21",
+  "desc": "If your streak is less than 2, gain 2 gold.",
+  "srcPath": "public/images/augments/Inconsistency.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

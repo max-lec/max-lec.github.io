@@ -1,0 +1,15 @@
+{
+  "name": "The Golden Egg",
+  "id": "221",
+  "desc": "",
+  "srcPath": "public/images/augments/The Golden Egg.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

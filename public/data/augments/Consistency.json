@@ -1,0 +1,15 @@
+{
+  "name": "Consistency",
+  "id": "13",
+  "desc": "Gain double win and loss streak gold.",
+  "srcPath": "public/images/augments/Consistency.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

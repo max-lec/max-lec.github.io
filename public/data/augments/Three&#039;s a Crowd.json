@@ -1,0 +1,15 @@
+{
+  "name": "Three&#039;s a Crowd",
+  "id": "146",
+  "desc": "",
+  "srcPath": "public/images/augments/Three&#039;s a Crowd.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

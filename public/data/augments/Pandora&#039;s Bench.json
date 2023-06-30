@@ -1,0 +1,15 @@
+{
+  "name": "Pandora&#039;s Bench",
+  "id": "32",
+  "desc": "Gain 2 gold. At the start of every round, champions on the 3 rightmost bench slots transform into random champions of the same cost.",
+  "srcPath": "public/images/augments/Pandora&#039;s Bench.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Double Trouble II",
+  "id": "72",
+  "desc": "",
+  "srcPath": "public/images/augments/Double Trouble II.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

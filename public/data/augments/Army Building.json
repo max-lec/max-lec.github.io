@@ -1,0 +1,15 @@
+{
+  "name": "Army Building",
+  "id": "3",
+  "desc": "Gain a Lesser Champion Duplicator. This happens a second time after 7 player combats.",
+  "srcPath": "public/images/augments/Army Building.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

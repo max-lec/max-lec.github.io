@@ -1,0 +1,15 @@
+{
+  "name": "One Twos Three",
+  "id": "30",
+  "desc": "Gain 1 Tier one unit, 2 Tier two units, and 1 Tier three unit.",
+  "srcPath": "public/images/augments/One Twos Three.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

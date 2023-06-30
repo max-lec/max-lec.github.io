@@ -1,0 +1,15 @@
+{
+  "name": "AFK",
+  "id": "1",
+  "desc": "You cannot perform actions for the next 3 rounds. Afterwards, gain 18 gold.",
+  "srcPath": "public/images/augments/AFK.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

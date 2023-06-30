@@ -1,0 +1,15 @@
+{
+  "name": "Lategame Specialist",
+  "id": "26",
+  "desc": "When you reach Level 9, gain 44 gold.",
+  "srcPath": "public/images/augments/Lategame Specialist.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

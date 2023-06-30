@@ -1,0 +1,15 @@
+{
+  "name": "Shadow Isles Heart",
+  "id": "39",
+  "desc": "Your team counts as having 1 additional Shadow Isles. Gain a Viego and 1 gold.",
+  "srcPath": "public/images/augments/Shadow Isles Heart.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

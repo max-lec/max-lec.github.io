@@ -1,0 +1,15 @@
+{
+  "name": "Tiny Titans",
+  "id": "45",
+  "desc": "Your Tactician heals 30 Health, grows larger, and has 130 maximum Health.",
+  "srcPath": "public/images/augments/Tiny Titans.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

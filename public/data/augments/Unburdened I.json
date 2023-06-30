@@ -1,0 +1,15 @@
+{
+  "name": "Unburdened I",
+  "id": "47",
+  "desc": "Your units without items equipped gain 30% Attack Speed.",
+  "srcPath": "public/images/augments/Unburdened I.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 30
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "One, Two, Five!",
+  "id": "31",
+  "desc": "Gain 1 random component, 2 Gold, and 1 random Tier 5 champion(s).",
+  "srcPath": "public/images/augments/One, Two, Five!.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

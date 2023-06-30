@@ -1,0 +1,15 @@
+{
+  "name": "Missed Connections",
+  "id": "28",
+  "desc": "Gain a copy of each Tier One champion.",
+  "srcPath": "public/images/augments/Missed Connections.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Risky Moves",
+  "id": "37",
+  "desc": "Your Tactician loses 20 Health, but after 7 Player combats, gain 35 Gold.",
+  "srcPath": "public/images/augments/Risky Moves.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

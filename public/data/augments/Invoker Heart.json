@@ -1,0 +1,15 @@
+{
+  "name": "Invoker Heart",
+  "id": "22",
+  "desc": "Your team counts as having 1 additional Invoker. Gain a Soraka.",
+  "srcPath": "public/images/augments/Invoker Heart.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

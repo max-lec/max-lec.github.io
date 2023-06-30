@@ -1,0 +1,15 @@
+{
+  "name": "Built Different II",
+  "id": "58",
+  "desc": "",
+  "srcPath": "public/images/augments/Built Different II.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Buried Treasures I",
+  "id": "9",
+  "desc": "At the start of the next 2 rounds, gain a random item component.",
+  "srcPath": "public/images/augments/Buried Treasures I.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

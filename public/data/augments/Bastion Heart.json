@@ -1,0 +1,15 @@
+{
+  "name": "Bastion Heart",
+  "id": "4",
+  "desc": "Your team counts as having 1 additional Bastion. Gain a Kassadin.",
+  "srcPath": "public/images/augments/Bastion Heart.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

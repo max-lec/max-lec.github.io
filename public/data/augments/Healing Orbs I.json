@@ -1,0 +1,15 @@
+{
+  "name": "Healing Orbs I",
+  "id": "20",
+  "desc": "When an enemy dies, the nearest allied unit is healed for 300.",
+  "srcPath": "public/images/augments/Healing Orbs I.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

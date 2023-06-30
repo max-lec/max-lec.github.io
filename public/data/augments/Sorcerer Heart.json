@@ -1,0 +1,15 @@
+{
+  "name": "Sorcerer Heart",
+  "id": "43",
+  "desc": "Your team counts as having 1 additional Sorcerer. Gain a Swain.",
+  "srcPath": "public/images/augments/Sorcerer Heart.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

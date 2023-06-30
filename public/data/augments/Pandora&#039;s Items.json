@@ -1,0 +1,15 @@
+{
+  "name": "Pandora&#039;s Items",
+  "id": "33",
+  "desc": "Gain a random component. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
+  "srcPath": "public/images/augments/Pandora&#039;s Items.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "Tactician&#039;s Tools",
+  "id": "219",
+  "desc": "",
+  "srcPath": "public/images/augments/Tactician&#039;s Tools.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

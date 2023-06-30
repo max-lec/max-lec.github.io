@@ -1,0 +1,15 @@
+{
+  "name": "Component Buffet",
+  "id": "12",
+  "desc": "Gain a random component. Whenever you would get a random component, instead gain a component anvil.",
+  "srcPath": "public/images/augments/Component Buffet.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

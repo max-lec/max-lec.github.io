@@ -1,0 +1,15 @@
+{
+  "name": "Bruiser Heart",
+  "id": "8",
+  "desc": "Your team counts as having 1 additional Bruiser. Gain a Vi.",
+  "srcPath": "public/images/augments/Bruiser Heart.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

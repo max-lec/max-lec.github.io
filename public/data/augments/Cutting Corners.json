@@ -1,0 +1,15 @@
+{
+  "name": "Cutting Corners",
+  "id": "14",
+  "desc": "Leveling up costs 3 XP less. You can now reach Level 10.",
+  "srcPath": "public/images/augments/Cutting Corners.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

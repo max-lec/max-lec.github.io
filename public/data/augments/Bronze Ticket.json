@@ -1,0 +1,15 @@
+{
+  "name": "Bronze Ticket",
+  "id": "7",
+  "desc": "Every 4 Shop refreshes, gain a free refresh.",
+  "srcPath": "public/images/augments/Bronze Ticket.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

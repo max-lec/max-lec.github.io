@@ -1,0 +1,15 @@
+{
+  "name": "Freljord Soul",
+  "id": "181",
+  "desc": "",
+  "srcPath": "public/images/augments/Freljord Soul.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

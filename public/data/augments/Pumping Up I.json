@@ -1,0 +1,15 @@
+{
+  "name": "Pumping Up I",
+  "id": "34",
+  "desc": "Your units gain 5% Attack Speed. Each round, increase this by 0.5%.",
+  "srcPath": "public/images/augments/Pumping Up I.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 5
+  }
+}

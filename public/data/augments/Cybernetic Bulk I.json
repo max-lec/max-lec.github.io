@@ -1,0 +1,15 @@
+{
+  "name": "Cybernetic Bulk I",
+  "id": "15",
+  "desc": "Your champions holding an item gain 250 health.",
+  "srcPath": "public/images/augments/Cybernetic Bulk I.png",
+  "stats": {
+    "health": 250,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

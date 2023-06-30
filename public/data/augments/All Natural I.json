@@ -1,0 +1,15 @@
+{
+  "name": "All Natural I",
+  "id": "2",
+  "desc": "Your Champions with no items equipped gain 120 Health and heal for 1% of their max Health each second.",
+  "srcPath": "public/images/augments/All Natural I.png",
+  "stats": {
+    "health": 120,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

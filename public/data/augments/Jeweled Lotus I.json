@@ -1,0 +1,15 @@
+{
+  "name": "Jeweled Lotus I",
+  "id": "24",
+  "desc": "Combat Start: Your strongest unit gains 25% critical strike chance and their spells can critically strike.",
+  "srcPath": "public/images/augments/Jeweled Lotus I.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}

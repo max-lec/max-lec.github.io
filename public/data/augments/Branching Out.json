@@ -1,0 +1,15 @@
+{
+  "name": "Branching Out",
+  "id": "6",
+  "desc": "Gain a random Emblem and a Reforger.",
+  "srcPath": "public/images/augments/Branching Out.png",
+  "stats": {
+    "health": 0,
+    "armor": 0,
+    "resistance": 0,
+    "mana": 0,
+    "ap": 0,
+    "attack": 0,
+    "speed": 0
+  }
+}
