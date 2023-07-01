@@ -1,13 +1,54 @@
-.main-options .trait-selects-wrapper {
+.main-options .trait-select {
     
-    margin-left: 6vw;
-    display: grid;
+    margin-left: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
     position: relative;
-    background-color: aqua;
     padding: 0;
     border: 0;
-    height: 70%;
-    width: 15vw;
-    font-size: 1.2em;
+    height: 18vw;
+    width: 17vw;
+    font-size: 1em;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    .trait-content {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        padding: 1vw;
+        background-color: rgb(55, 44, 107);
+
+        .level-content {
+            .trait-image {
+                width: 32px;
+                height: 32px;
+                padding-right: 0.7vw;
+
+                &:hover {
+                    cursor: pointer;
+                    opacity: 0.85;
+                }
+            }
+
+            .trait-active.trait-level-0 {
+                filter: brightness(70%) sepia(100) saturate(70) hue-rotate(36deg);
+            }
+            .trait-active.trait-level-1 {
+                filter: brightness(70%) sepia(0) saturate(100) hue-rotate(0deg);
+            }
+            .trait-active.trait-level-2 {
+                filter: brightness(100%) sepia(100) saturate(100) hue-rotate(-15deg);
+            }
+            .trait-active.trait-level-3, 
+            .trait-active.trait-level-4, 
+            .trait-active.trait-level-5 {
+                filter: brightness(105%);
+                background: radial-gradient(circle, rgba(134, 226, 245, 0.9) 0%, rgb(55 44 107) 70%);
+                background-position: bottom 1px right 6px;
+            }
+        }
+    }
 
 }

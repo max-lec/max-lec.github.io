@@ -26,40 +26,56 @@ document.addEventListener('alpine:init', () => {
 
 function getTotalHealth() {
     return Alpine.store('currentChampion').health
-    + Alpine.store('currentItem').getTotalItemHealth();
+    + Alpine.store('currentItem').getTotalItemHealth()
+    + Alpine.store('currentAugment').getTotalAugmentHealth()
+    ;
 }
 
 function getTotalArmor() {
     return Alpine.store('currentChampion').armor
-        + Alpine.store('currentItem').getTotalItemArmor();
+        + Alpine.store('currentItem').getTotalItemArmor()
+        + Alpine.store('currentAugment').getTotalAugmentArmor()
+        ;
 }
 
 function getTotalResistance() {
     return Alpine.store('currentChampion').resistance
-        + Alpine.store('currentItem').getTotalItemResistance();
+        + Alpine.store('currentItem').getTotalItemResistance()
+        + Alpine.store('currentAugment').getTotalAugmentResistance()
+        ;
 }
 
 function getTotalManaStart() {
     return Alpine.store('currentChampion').manaStart
-        + Alpine.store('currentItem').getTotalItemManaStart();
+        + Alpine.store('currentItem').getTotalItemManaStart()
+        + Alpine.store('currentAugment').getTotalAugmentManaStart()
+        ;
 }
 
 function getTotalAp() {
     return Alpine.store('currentChampion').ap
-        + Alpine.store('currentItem').getTotalItemAp();
+        + Alpine.store('currentItem').getTotalItemAp()
+        + Alpine.store('currentAugment').getTotalAugmentAp()
+        ;
 }
 
 function getTotalAttack() {
     return Alpine.store('currentChampion').attack
-        + Alpine.store('currentItem').getTotalItemAttack();
+        + Alpine.store('currentItem').getTotalItemAttack()
+        + Alpine.store('currentAugment').getTotalAugmentAttack()
+        ;
 }
 
 function getTotalSpeed() {
     return Alpine.store('currentChampion').speed
-        + Alpine.store('currentItem').getTotalItemSpeed();
+        + Alpine.store('currentItem').getTotalItemSpeed()
+        + Alpine.store('currentAugment').getTotalAugmentSpeed()
+        ;
 }
 
 function getTotalCriticalChance() {
     return Alpine.store('currentChampion').criticalChance
-        + Alpine.store('currentItem').getTotalItemCriticalChance();
+        + Alpine.store('currentItem').getTotalItemCriticalChance()
+        // + Alpine.store('currentAugment').getTotalAugmentHealth()
+        ;
 }

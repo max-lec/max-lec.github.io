@@ -23,6 +23,7 @@
 <script src="./scripts/items.js"></script>
 <script src="./scripts/augments.js"></script>
 <script src="./scripts/stats.js"></script>
+<script src="./scripts/traits.js"></script>
 
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
@@ -175,14 +176,29 @@
             </div>
         </div>
 
-        <div class="trait-selects-wrapper">
-            TRAITS
+        <div class="trait-select" x-data="{traitMap: getTraitsData()}">
+          <template x-for="trait in traitMap">
+              <div class="trait-content" x-data="trait">
+                <template x-for="level in trait.levels">
+                  <div class="level-content">
+                    <img class="trait-image" x-bind:src="trait.srcPath" 
+                      :class="['trait-level-' + trait.levels.findIndex(el => el.level == level.level), $store.currentTrait.isActive(trait.id, trait.levels.findIndex(el => el.level == level.level)) ? 'trait-active' : '']" 
+                      @click="$store.currentTrait.triggerTrait(trait.id, trait.levels.findIndex(el => el.level == level.level))">
+                    <div class="trait-tooltip" x-show="false">
+                      <span class="trait-name" x-text="trait.name"></span>
+                      <span class="trait-level" x-text="level.level"></span>
+                      <span class="trait-level-desc" x-text="level.desc"></span>
+                    </div>
+                  </div>
+                </template>
+              </div>
+          </template>
         </div>
     </div>
 
     <!-- additional options -->
     <div class="additional-options">
-        <span>spell multihit : 3</span>
+        <span>spell multihit : 3  </span>
         <span>target enemy : Jarvan</span>
     </div>
 
@@ -6240,6 +6256,432 @@
       "attack": 0,
       "speed": 0
     }
+  }
+]
+
+</script>
+
+<script type="application/json" id="traitsStatsData">
+  [
+  {
+    "name": "Bastion",
+    "id": "1",
+    "desc": "Bastion champions gain Armor and Magic Resist. This is increased by 100% for the first 10 seconds of combat.",
+    "srcPath": "public/images/traits/Bastion.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "+20 Armor, +20 Magic Resist"
+      },
+      {
+        "level": 4,
+        "desc": "+60 Armor, +60 Magic Resist"
+      },
+      {
+        "level": 6,
+        "desc": "+120 Armor, +120 Magic Resist"
+      },
+      {
+        "level": 8,
+        "desc": "+250 Armor, +250 Magic Resist"
+      }
+    ]
+  },
+  {
+    "name": "Bruiser",
+    "id": "2",
+    "desc": "Your units gain 100 Health. Bruisers gain additional maximum Health.",
+    "srcPath": "public/images/traits/Bruiser.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "10% max Health"
+      },
+      {
+        "level": 4,
+        "desc": "35% max Health"
+      },
+      {
+        "level": 6,
+        "desc": "70% max Health"
+      }
+    ]
+  },
+  {
+    "name": "Darkin",
+    "id": "3",
+    "desc": "",
+    "srcPath": "public/images/traits/Darkin.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "When Aatrox or the holder of the Darkin Blade dies, the Darkin Blade is equipped to the nearest ally champion, granting them 400 Health and 15% Omnivamp. After being equipped to a champion for 5 seconds, Aatrox will revive upon their death instead."
+      }
+    ]
+  },
+  {
+    "name": "Deadeye",
+    "id": "4",
+    "desc": "Innate: +1 Range Every 3 seconds, Deadeyes attack the enemy with the highest percent Health and deal bonus damage.",
+    "srcPath": "public/images/traits/Deadeye.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "20% Damage"
+      },
+      {
+        "level": 4,
+        "desc": "65% Damage"
+      },
+      {
+        "level": 6,
+        "desc": "140% Damage"
+      }
+    ]
+  },
+  {
+    "name": "Demacia",
+    "id": "5",
+    "desc": "Your strongest Demacians become Elite and equip a random Radiant item each combat. Elites grant Armor and Magic Resist to themselves and adjacent allies, but this does not stack.",
+    "srcPath": "public/images/traits/Demacia.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "1 Elite, +5 Armor, +5 Magic Resist "
+      },
+      {
+        "level": 5,
+        "desc": "2 Elites, +20 Armor, +20 Magic Resist "
+      },
+      {
+        "level": 7,
+        "desc": "3 Elites, +50 Armor, +50 Magic Resist "
+      },
+      {
+        "level": 9,
+        "desc": "5 Elites, +100 Armor, +100 Magic Resist"
+      }
+    ]
+  },
+  {
+    "name": "Empress",
+    "id": "6",
+    "desc": "",
+    "srcPath": "public/images/traits/Empress.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "When Bel'Veth kills an enemy, they leave behind Void Coral that she will consume. The first Coral increases her max Health by 50%, while further Coral heals her 20% maximum Health. When a Void Coral is consumed, she deals 10% maximum Health as magic damage to enemies within 2 hexes."
+      }
+    ]
+  },
+  {
+    "name": "Freljord",
+    "id": "7",
+    "desc": "After 8 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs. Sunder: Reduce Armor Shred: Reduce Magic Resist Mana Reave: Increase max Mana until the next cast",
+    "srcPath": "public/images/traits/Freljord.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds"
+      },
+      {
+        "level": 3,
+        "desc": "10% Health, enemies are also 35% Mana Reaved"
+      },
+      {
+        "level": 4,
+        "desc": "15% Health, enemies are also stunned for 1.5 seconds"
+      }
+    ]
+  },
+  {
+    "name": "Gunner",
+    "id": "8",
+    "desc": "When Gunner champions attack, they gain bonus Attack Damage, up to 8 stacks.",
+    "srcPath": "public/images/traits/Gunner.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "7% Attack Damage per Stack"
+      },
+      {
+        "level": 4,
+        "desc": "12% Attack Damage per Stack"
+      },
+      {
+        "level": 6,
+        "desc": "20% Attack Damage per Stack"
+      }
+    ]
+  },
+  {
+    "name": "Invoker",
+    "id": "9",
+    "desc": "Every 3 seconds, your units gain Mana. ",
+    "srcPath": "public/images/traits/Invoker.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "5 Mana"
+      },
+      {
+        "level": 4,
+        "desc": "Additional 15 to Invokers"
+      },
+      {
+        "level": 6,
+        "desc": "20 Mana to all, additional 15 to Invokers"
+      }
+    ]
+  },
+  {
+    "name": "Ionia",
+    "id": "10",
+    "desc": "Each Ionian has a unique bonus within their Ability. Every 4 seconds, a number of Ionians are enlightened to their spirit form, gaining 20 Mana and doubling stat bonuses for 4 seconds.",
+    "srcPath": "public/images/traits/Ionia.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "100% Ionian bonus, 1 enlightened "
+      },
+      {
+        "level": 6,
+        "desc": "200% Ionian bonus, 2 enlightened "
+      },
+      {
+        "level": 9,
+        "desc": "300% Ionian bonus, 3 enlightened "
+      }
+    ]
+  },
+  {
+    "name": "Noxus",
+    "id": "11",
+    "desc": "Noxus champions gain Health, Ability Power and Attack Damage. This is increased by 10% for each different opponent that either you have conquered in combat or is dead.",
+    "srcPath": "public/images/traits/Noxus.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "160 Health, 16 Ability Power, 16% Attack Damage"
+      },
+      {
+        "level": 6,
+        "desc": "300 Health, 28 Ability Power, 28% Attack Damage"
+      },
+      {
+        "level": 9,
+        "desc": "500 Health, 45 Ability Power, 45% Attack Damage"
+      }
+    ]
+  },
+  {
+    "name": "Piltover",
+    "id": "12",
+    "desc": "Gain the T-Hex. Every time you lose a player combat, the T-Hex gains Charges. Winning converts the Charges to Power for the T-Hex. You may also sell the T-Hex if it has any Power, resetting the T-Hex and converting its Power to loot.",
+    "srcPath": "public/images/traits/Piltover.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "Gain the T-Hex."
+      },
+      {
+        "level": 6,
+        "desc": "Gain bonus loot every round. Each loss counts as 2 losses instead."
+      }
+    ]
+  },
+  {
+    "name": "Redeemer",
+    "id": "13",
+    "desc": "",
+    "srcPath": "public/images/traits/Redeemer.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "Whenever an ally gains a Shield, grant them 8% stacking Attack Speed for the rest of combat. "
+      }
+    ]
+  },
+  {
+    "name": "Rogue",
+    "id": "14",
+    "desc": "",
+    "srcPath": "public/images/traits/Rogue.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "When a Rogue falls below 50% Health, they briefly become untargetable and dash to an enemy within 4 hexes (preferring enemy backline)."
+      },
+      {
+        "level": 4,
+        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
+      }
+    ]
+  },
+  {
+    "name": "Shurima",
+    "id": "15",
+    "desc": "Every 4 seconds, Shuriman heal 5% maximum Health. After 8 seconds, select Shuriman Ascend and gain 30% max Health and 45% Attack Speed.",
+    "srcPath": "public/images/traits/Shurima.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "The strongest Shuriman Ascends"
+      },
+      {
+        "level": 5,
+        "desc": "All Shurimans Ascend"
+      },
+      {
+        "level": 7,
+        "desc": "All Ascend at the Start of Combat "
+      },
+      {
+        "level": 9,
+        "desc": "+125% Ascension bonus"
+      }
+    ]
+  },
+  {
+    "name": "Slayer",
+    "id": "16",
+    "desc": "Slayers gain 15% Omnivamp. Slayers deal bonus damage, doubled against units below 60% Health. ",
+    "srcPath": "public/images/traits/Slayer.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "5% bonus damage"
+      },
+      {
+        "level": 3,
+        "desc": "10% bonus damage"
+      },
+      {
+        "level": 4,
+        "desc": "20% bonus damage"
+      },
+      {
+        "level": 5,
+        "desc": "30% bonus damage"
+      },
+      {
+        "level": 6,
+        "desc": "40% bonus damage"
+      }
+    ]
+  },
+  {
+    "name": "Sorcerer",
+    "id": "17",
+    "desc": "Sorcerers gain bonus Ability Power. When an enemy dies after being damaged by a Sorcerer, they deal a percentage of that enemy's maximum Health to another enemy.",
+    "srcPath": "public/images/traits/Sorcerer.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "25 Ability Power; 10% max Health "
+      },
+      {
+        "level": 4,
+        "desc": "50 Ability Power; 10% max Health "
+      },
+      {
+        "level": 6,
+        "desc": "80 Ability Power; 12% max Health to 2 enemies"
+      },
+      {
+        "level": 8,
+        "desc": "120 Ability Power; 20% max Health to 2 enemies"
+      }
+    ]
+  },
+  {
+    "name": "Targon",
+    "id": "18",
+    "desc": "All your unit's healing and shielding is improved.",
+    "srcPath": "public/images/traits/Targon.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "18% increased healing and shielding "
+      },
+      {
+        "level": 3,
+        "desc": "30% increased healing and shielding "
+      },
+      {
+        "level": 4,
+        "desc": "50% increased healing and shielding "
+      }
+    ]
+  },
+  {
+    "name": "Void",
+    "id": "19",
+    "desc": "Get a placeable void egg. At the start of combat, it hatches into an unspeakable horror and knocks up adjacent enemies. Each Void star level increases the horror's Health and Ability Power by 25%.</div> <div class=\"table-bonus-item\"> <div class=\"table-bonus-value\">Void Remora</div> ",
+    "srcPath": "public/images/traits/Void.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "Void Remora"
+      },
+      {
+        "level": 6,
+        "desc": "Rift Herald"
+      },
+      {
+        "level": 8,
+        "desc": "Baron Nashor"
+      }
+    ]
+  },
+  {
+    "name": "Wanderer",
+    "id": "20",
+    "desc": "",
+    "srcPath": "public/images/traits/Wanderer.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "Ryze's spell changes depending on the Region Portal playrs voted for at the start of the game."
+      }
+    ]
+  },
+  {
+    "name": "Yordle",
+    "id": "21",
+    "desc": "Your units gain 10% Attack Speed per star level. If you have 3-star champions, your Yordles can become 4-star, which gives their Ability a wacky upgrade!",
+    "srcPath": "public/images/traits/Yordle.png",
+    "levels": [
+      {
+        "level": 3,
+        "desc": "Your strongest 3-star Yordle"
+      },
+      {
+        "level": 5,
+        "desc": "Two 3-star Yordles"
+      }
+    ]
+  },
+  {
+    "name": "Zaun",
+    "id": "22",
+    "desc": "Zaun champions create random chem-mods that only they can use. Champions can be modded once, and mods can only be removed by selling the champion.",
+    "srcPath": "public/images/traits/Zaun.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "Gain 1 chem-mod"
+      },
+      {
+        "level": 4,
+        "desc": "Gain 2 chem-mods"
+      },
+      {
+        "level": 6,
+        "desc": "Gain 3 chem-mods and Overcharge them "
+      }
+    ]
   }
 ]
 

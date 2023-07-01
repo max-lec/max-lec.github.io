@@ -22,7 +22,7 @@ for trait in $(printf "%s\n" "${TRAITS_ARRAY[@]}" | sort -u); do
     TRAIT_ID=$(( TRAIT_ID + 1 ))
     TRAIT_DESC=$(grep -A35 "$trait" "${DATA_PATH}/tmp/tftactics.html.tmp" |  sed -n '/>'$trait'/,/table-bonus-item/p' | tr -d \\n | sed 's|\s\{2,\}| |g' | sed -n 's|.*table-bonus-heading">\(.*\)</div>.*|\1|p' )
     
-    TRAIT_IMAGE_SRC=$(grep -i "${trait}.png" "${DATA_PATH}/tmp/tftactics.html.tmp" | cut -d '"' -f 2)
+    TRAIT_IMAGE_SRC=$(grep -i "${trait}.png" "${DATA_PATH}/tmp/tftactics.html.tmp" | head -n 1 | cut -d '"' -f 2)
     TRAIT_IMAGE_PATH="$IMAGE_PATH/${trait}.png"
     curl -s "$TRAIT_IMAGE_SRC" --output "$SCRIPT_DIR/../$TRAIT_IMAGE_PATH"
 
@@ -52,5 +52,8 @@ for trait in $(printf "%s\n" "${TRAITS_ARRAY[@]}" | sort -u); do
                     levels: $levels
                     }' > "${DATA_PATH}/${trait}.json"
 
-    sleep 0.3
 done
+
+### Concat final stats file 
+
+jq -s . $DATA_PATH/*.json > $DATA_PATH/final/stats.json
