@@ -1,0 +1,24 @@
+{
+  "name": "Shurima",
+  "id": "15",
+  "desc": "Every 4 seconds, Shuriman heal 5% maximum Health. After 8 seconds, select Shuriman Ascend and gain 30% max Health and 45% Attack Speed.",
+  "srcPath": "public/images/traits/Shurima.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "The strongest Shuriman Ascends"
+    },
+    {
+      "level": 5,
+      "desc": "All Shurimans Ascend"
+    },
+    {
+      "level": 7,
+      "desc": "All Ascend at the Start of Combat "
+    },
+    {
+      "level": 9,
+      "desc": "+125% Ascension bonus"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Freljord",
+  "id": "7",
+  "desc": "After 8 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs. Sunder: Reduce Armor Shred: Reduce Magic Resist Mana Reave: Increase max Mana until the next cast",
+  "srcPath": "public/images/traits/Freljord.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds"
+    },
+    {
+      "level": 3,
+      "desc": "10% Health, enemies are also 35% Mana Reaved"
+    },
+    {
+      "level": 4,
+      "desc": "15% Health, enemies are also stunned for 1.5 seconds"
+    }
+  ]
+}

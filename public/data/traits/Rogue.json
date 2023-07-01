@@ -1,0 +1,16 @@
+{
+  "name": "Rogue",
+  "id": "14",
+  "desc": "",
+  "srcPath": "public/images/traits/Rogue.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "When a Rogue falls below 50% Health, they briefly become untargetable and dash to an enemy within 4 hexes (preferring enemy backline)."
+    },
+    {
+      "level": 4,
+      "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
+    }
+  ]
+}

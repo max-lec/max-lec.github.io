@@ -1,0 +1,20 @@
+{
+  "name": "Void",
+  "id": "19",
+  "desc": "Get a placeable void egg. At the start of combat, it hatches into an unspeakable horror and knocks up adjacent enemies. Each Void star level increases the horror's Health and Ability Power by 25%.</div> <div class=\"table-bonus-item\"> <div class=\"table-bonus-value\">Void Remora</div> ",
+  "srcPath": "public/images/traits/Void.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "Void Remora"
+    },
+    {
+      "level": 6,
+      "desc": "Rift Herald"
+    },
+    {
+      "level": 8,
+      "desc": "Baron Nashor"
+    }
+  ]
+}

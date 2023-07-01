@@ -1,0 +1,16 @@
+{
+  "name": "Yordle",
+  "id": "21",
+  "desc": "Your units gain 10% Attack Speed per star level. If you have 3-star champions, your Yordles can become 4-star, which gives their Ability a wacky upgrade!",
+  "srcPath": "public/images/traits/Yordle.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "Your strongest 3-star Yordle"
+    },
+    {
+      "level": 5,
+      "desc": "Two 3-star Yordles"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Wanderer",
+  "id": "20",
+  "desc": "",
+  "srcPath": "public/images/traits/Wanderer.png",
+  "levels": [
+    {
+      "level": 1,
+      "desc": "Ryze's spell changes depending on the Region Portal playrs voted for at the start of the game."
+    }
+  ]
+}

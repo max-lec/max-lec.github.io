@@ -34,7 +34,7 @@ for augment in "${AUGMENT_1_ARRAY[@]}"; do
     
     AUGMENT_IMAGE_SRC=$(grep -B 2 "$augment" "${DATA_PATH}/augments-1.html" | grep "img src" | cut -d '"' -f 2)
     AUGMENT_IMAGE_PATH="$IMAGE_PATH/${augment}.png"
-    curl -s "https:$AUGMENT_IMAGE_SRC" --output "./scrapper/../$AUGMENT_IMAGE_PATH"
+    curl -s "https:$AUGMENT_IMAGE_SRC" --output "$SCRIPT_DIR/../$AUGMENT_IMAGE_PATH"
 
     AUGMENT_STATS="{" 
     if grep -e "gain[s]* [0-9][0-9%.-]* [Hh]ealth" <(echo "$AUGMENT_DESC"); then
@@ -104,7 +104,7 @@ for augment in "${AUGMENT_2_ARRAY[@]}"; do
     
     AUGMENT_IMAGE_SRC=$(grep -B 2 "$augment" "${DATA_PATH}/augments-2.html" | grep "img src" | cut -d '"' -f 2)
     AUGMENT_IMAGE_PATH="$IMAGE_PATH/${augment}.png"
-    curl -s "https:$AUGMENT_IMAGE_SRC" --output "./scrapper/../$AUGMENT_IMAGE_PATH"
+    curl -s "https:$AUGMENT_IMAGE_SRC" --output "$SCRIPT_DIR/../$AUGMENT_IMAGE_PATH"
 
     AUGMENT_STATS="{" 
     if grep -e "gain[s]* [0-9][0-9%.-]* [Hh]ealth" <(echo "$AUGMENT_DESC"); then
@@ -172,7 +172,7 @@ for augment in "${AUGMENT_3_ARRAY[@]}"; do
     
     AUGMENT_IMAGE_SRC=$(grep -B 2 "$augment" "${DATA_PATH}/augments-3.html" | grep "img src" | cut -d '"' -f 2)
     AUGMENT_IMAGE_PATH="$IMAGE_PATH/${augment}.png"
-    curl -s "https:$AUGMENT_IMAGE_SRC" --output "./scrapper/../$AUGMENT_IMAGE_PATH"
+    curl -s "https:$AUGMENT_IMAGE_SRC" --output "$SCRIPT_DIR/../$AUGMENT_IMAGE_PATH"
 
     AUGMENT_STATS="{" 
     if grep -e "gain[s]* [0-9][0-9%.-]* [Hh]ealth" <(echo "$AUGMENT_DESC"); then

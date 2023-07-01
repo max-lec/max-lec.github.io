@@ -1,0 +1,20 @@
+{
+  "name": "Ionia",
+  "id": "10",
+  "desc": "Each Ionian has a unique bonus within their Ability. Every 4 seconds, a number of Ionians are enlightened to their spirit form, gaining 20 Mana and doubling stat bonuses for 4 seconds.",
+  "srcPath": "public/images/traits/Ionia.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "100% Ionian bonus, 1 enlightened "
+    },
+    {
+      "level": 6,
+      "desc": "200% Ionian bonus, 2 enlightened "
+    },
+    {
+      "level": 9,
+      "desc": "300% Ionian bonus, 3 enlightened "
+    }
+  ]
+}

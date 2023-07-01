@@ -1,0 +1,24 @@
+{
+  "name": "Bastion",
+  "id": "1",
+  "desc": "Bastion champions gain Armor and Magic Resist. This is increased by 100% for the first 10 seconds of combat.",
+  "srcPath": "public/images/traits/Bastion.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "+20 Armor, +20 Magic Resist"
+    },
+    {
+      "level": 4,
+      "desc": "+60 Armor, +60 Magic Resist"
+    },
+    {
+      "level": 6,
+      "desc": "+120 Armor, +120 Magic Resist"
+    },
+    {
+      "level": 8,
+      "desc": "+250 Armor, +250 Magic Resist"
+    }
+  ]
+}

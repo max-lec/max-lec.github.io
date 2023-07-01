@@ -1,0 +1,24 @@
+{
+  "name": "Sorcerer",
+  "id": "17",
+  "desc": "Sorcerers gain bonus Ability Power. When an enemy dies after being damaged by a Sorcerer, they deal a percentage of that enemy's maximum Health to another enemy.",
+  "srcPath": "public/images/traits/Sorcerer.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "25 Ability Power; 10% max Health "
+    },
+    {
+      "level": 4,
+      "desc": "50 Ability Power; 10% max Health "
+    },
+    {
+      "level": 6,
+      "desc": "80 Ability Power; 12% max Health to 2 enemies"
+    },
+    {
+      "level": 8,
+      "desc": "120 Ability Power; 20% max Health to 2 enemies"
+    }
+  ]
+}

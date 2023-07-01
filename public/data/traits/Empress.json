@@ -1,0 +1,12 @@
+{
+  "name": "Empress",
+  "id": "6",
+  "desc": "",
+  "srcPath": "public/images/traits/Empress.png",
+  "levels": [
+    {
+      "level": 1,
+      "desc": "When Bel'Veth kills an enemy, they leave behind Void Coral that she will consume. The first Coral increases her max Health by 50%, while further Coral heals her 20% maximum Health. When a Void Coral is consumed, she deals 10% maximum Health as magic damage to enemies within 2 hexes."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Noxus",
+  "id": "11",
+  "desc": "Noxus champions gain Health, Ability Power and Attack Damage. This is increased by 10% for each different opponent that either you have conquered in combat or is dead.",
+  "srcPath": "public/images/traits/Noxus.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "160 Health, 16 Ability Power, 16% Attack Damage"
+    },
+    {
+      "level": 6,
+      "desc": "300 Health, 28 Ability Power, 28% Attack Damage"
+    },
+    {
+      "level": 9,
+      "desc": "500 Health, 45 Ability Power, 45% Attack Damage"
+    }
+  ]
+}

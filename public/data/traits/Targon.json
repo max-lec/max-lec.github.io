@@ -1,0 +1,20 @@
+{
+  "name": "Targon",
+  "id": "18",
+  "desc": "All your unit's healing and shielding is improved.",
+  "srcPath": "public/images/traits/Targon.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "18% increased healing and shielding "
+    },
+    {
+      "level": 3,
+      "desc": "30% increased healing and shielding "
+    },
+    {
+      "level": 4,
+      "desc": "50% increased healing and shielding "
+    }
+  ]
+}

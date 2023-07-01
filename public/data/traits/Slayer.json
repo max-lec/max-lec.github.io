@@ -1,0 +1,28 @@
+{
+  "name": "Slayer",
+  "id": "16",
+  "desc": "Slayers gain 15% Omnivamp. Slayers deal bonus damage, doubled against units below 60% Health. ",
+  "srcPath": "public/images/traits/Slayer.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "5% bonus damage"
+    },
+    {
+      "level": 3,
+      "desc": "10% bonus damage"
+    },
+    {
+      "level": 4,
+      "desc": "20% bonus damage"
+    },
+    {
+      "level": 5,
+      "desc": "30% bonus damage"
+    },
+    {
+      "level": 6,
+      "desc": "40% bonus damage"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Redeemer",
+  "id": "13",
+  "desc": "",
+  "srcPath": "public/images/traits/Redeemer.png",
+  "levels": [
+    {
+      "level": 1,
+      "desc": "Whenever an ally gains a Shield, grant them 8% stacking Attack Speed for the rest of combat. "
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Darkin",
+  "id": "3",
+  "desc": "",
+  "srcPath": "public/images/traits/Darkin.png",
+  "levels": [
+    {
+      "level": 1,
+      "desc": "When Aatrox or the holder of the Darkin Blade dies, the Darkin Blade is equipped to the nearest ally champion, granting them 400 Health and 15% Omnivamp. After being equipped to a champion for 5 seconds, Aatrox will revive upon their death instead."
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Bruiser",
+  "id": "2",
+  "desc": "Your units gain 100 Health. Bruisers gain additional maximum Health.",
+  "srcPath": "public/images/traits/Bruiser.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "10% max Health"
+    },
+    {
+      "level": 4,
+      "desc": "35% max Health"
+    },
+    {
+      "level": 6,
+      "desc": "70% max Health"
+    }
+  ]
+}

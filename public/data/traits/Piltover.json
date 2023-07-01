@@ -1,0 +1,16 @@
+{
+  "name": "Piltover",
+  "id": "12",
+  "desc": "Gain the T-Hex. Every time you lose a player combat, the T-Hex gains Charges. Winning converts the Charges to Power for the T-Hex. You may also sell the T-Hex if it has any Power, resetting the T-Hex and converting its Power to loot.",
+  "srcPath": "public/images/traits/Piltover.png",
+  "levels": [
+    {
+      "level": 3,
+      "desc": "Gain the T-Hex."
+    },
+    {
+      "level": 6,
+      "desc": "Gain bonus loot every round. Each loss counts as 2 losses instead."
+    }
+  ]
+}

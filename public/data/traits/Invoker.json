@@ -1,0 +1,20 @@
+{
+  "name": "Invoker",
+  "id": "9",
+  "desc": "Every 3 seconds, your units gain Mana. ",
+  "srcPath": "public/images/traits/Invoker.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "5 Mana"
+    },
+    {
+      "level": 4,
+      "desc": "Additional 15 to Invokers"
+    },
+    {
+      "level": 6,
+      "desc": "20 Mana to all, additional 15 to Invokers"
+    }
+  ]
+}

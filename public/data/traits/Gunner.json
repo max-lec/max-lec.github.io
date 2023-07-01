@@ -1,0 +1,20 @@
+{
+  "name": "Gunner",
+  "id": "8",
+  "desc": "When Gunner champions attack, they gain bonus Attack Damage, up to 8 stacks.",
+  "srcPath": "public/images/traits/Gunner.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "7% Attack Damage per Stack"
+    },
+    {
+      "level": 4,
+      "desc": "12% Attack Damage per Stack"
+    },
+    {
+      "level": 6,
+      "desc": "20% Attack Damage per Stack"
+    }
+  ]
+}
