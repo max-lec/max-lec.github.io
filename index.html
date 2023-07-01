@@ -43,7 +43,7 @@
         <div class="champion-select" x-data="{showSelect: false}">
 
             <div class="current-champion" x-data="$store.currentChampion" @click="showSelect=true">
-                <img class="champion-image" x-bind:src="$store.currentChampion.srcPath" >
+                <img class="champion-image" x-bind:src="$store.currentChampion.srcPath" ondragstart="return false;">
             </div>
     
             <img class="champion-list-arrow" src="./public/icons/arrow-icon.png" @click="showSelect=true"/>
@@ -125,17 +125,16 @@
         <div class="augment-selects-wrapper">
             <div class="augment-select" x-data="{showSelect: false}">       
                 <div class="current-augment augment-1" x-data="$store.currentAugment.augment1" @click="showSelect=true">
-                    <img class="augment-image" x-bind:src="$store.currentAugment.augment1.srcPath">
-                    <span x-text="$store.currentAugment.augment1.name"></span>
-                    <span x-text="$store.currentAugment.augment1.desc"></span>
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment1.srcPath" x-show="$store.currentAugment.augment1.srcPath">
+                    <span class="augment-name" x-text="$store.currentAugment.augment1.name"></span>
+                    <span class="augment-desc" x-text="$store.currentAugment.augment1.desc"></span>
                 </div>
 
                 <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="augment in augmentMap">
                         <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment1.id }" x-data="augment" @click="$store.currentAugment.selectAugment1(augment.id); showSelect=false" >
                             <img class="augment-image" x-bind:src="augment.srcPath">
-                            <span x-text="augment.name"></span>
-                            <span x-text="augment.desc"></span>
+                            <span class="augment-name" x-text="augment.name"></span>
                         </div>
                     </template>
                 </div>
@@ -143,17 +142,16 @@
             
             <div class="augment-select" x-data="{showSelect: false}">
                 <div class="current-augment augment-2" x-data="$store.currentAugment.augment2" @click="showSelect=true">
-                    <img class="augment-image" x-bind:src="$store.currentAugment.augment2.srcPath">
-                    <span x-text="$store.currentAugment.augment2.name"></span>
-                    <span x-text="$store.currentAugment.augment2.desc"></span>
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment2.srcPath" x-show="$store.currentAugment.augment2.srcPath">
+                    <span class="augment-name" x-text="$store.currentAugment.augment2.name"></span>
+                    <span class="augment-desc" x-text="$store.currentAugment.augment2.desc"></span>
                 </div>
 
                 <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="augment in augmentMap">
                         <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment2.id }" x-data="augment" @click="$store.currentAugment.selectAugment2(augment.id); showSelect=false" >
                             <img class="augment-image" x-bind:src="augment.srcPath">
-                            <span x-text="augment.name"></span>
-                            <span x-text="augment.desc"></span>
+                            <span class="augment-name" x-text="augment.name"></span>
                         </div>
                     </template>
                 </div>
@@ -161,17 +159,16 @@
 
             <div class="augment-select" x-data="{showSelect: false}">
                 <div class="current-augment augment-3" x-data="$store.currentAugment.augment3" @click="showSelect=true">
-                    <img class="augment-image" x-bind:src="$store.currentAugment.augment3.srcPath">
-                    <span x-text="$store.currentAugment.augment3.name"></span>
-                    <span x-text="$store.currentAugment.augment3.desc"></span>
+                    <img class="augment-image" x-bind:src="$store.currentAugment.augment3.srcPath" x-show="$store.currentAugment.augment3.srcPath">
+                    <span class="augment-name" x-text="$store.currentAugment.augment3.name"></span>
+                    <span class="augment-desc" x-text="$store.currentAugment.augment3.desc"></span>
                 </div>
 
                 <div class="augment-list" :class="{'list-active' : showSelect }" x-data="{augmentMap: getAugmentsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="augment in augmentMap">
                         <div class="augment-content" :class="{'augment-content-selected' : augment.id == $store.currentAugment.augment3.id }" x-data="augment" @click="$store.currentAugment.selectAugment3(augment.id); showSelect=false" >
                             <img class="augment-image" x-bind:src="augment.srcPath">
-                            <span x-text="augment.name"></span>
-                            <span x-text="augment.desc"></span>
+                            <span class="augment-name" x-text="augment.name"></span>
                         </div>
                     </template>
                 </div>

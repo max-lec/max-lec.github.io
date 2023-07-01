@@ -13,7 +13,7 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 40vh;
+        height: 24vw;
     }
 
     .additional-options {
@@ -21,7 +21,7 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 10vh;
+        height: 10px;
     }
 
     .result-stats {
@@ -29,7 +29,7 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 40vh;
+        height: 24vw;
     }
 
     /* Scrollbar theme */

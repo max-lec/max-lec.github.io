@@ -1,16 +1,109 @@
 .main-options .augment-selects-wrapper {
     
-    margin-left: 7vw;
+    margin-left: 5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
     position: relative;
-    background-color: aqua;
     padding: 0;
     border: 0;
-    height: 70%;
-    width: 30vw;
+    height: 18vw;
+    width: 39vw;
     font-size: 1.2em;
+
+    .augment-select {
+        width: 12vw;
+        height: 18vw;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .current-augment {
+            width: 12vw;
+            height: 18vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(45, 85, 110);
+
+            text-shadow: 2px 2px black;
+            border: 1px ridge rgb(244,187,72);
+
+            &:hover {
+                background-color: rgb(27, 64, 87);
+                cursor: pointer;
+            }
+
+            .augment-image {
+                width: 4vw;
+                height: 4vw;
+                padding: 1vw;
+                padding-top: 2vw;
+            }
+
+            .augment-name {
+                padding-top: 1vw;
+                padding-bottom: 1vw;
+                font-size: 1em;
+            }
+
+            .augment-desc {
+                font-size: 0.7em;
+                text-align: center;
+                padding-bottom: 1vw;
+                padding-left: 1vw;
+                padding-right: 1vw;
+            }
+        }
+
+        .augment-list {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            position: absolute;
+            top: 18vw;
+            overflow-y: auto;
+            z-index: 600;
+
+            .augment-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: left;
+                padding: 5px 5px;
+                padding-top: 7px;
+                border-bottom: 1px solid rgb(21, 17, 54);
+
+                &:hover {
+                    background-color: rgb(45, 36, 87);
+                    cursor: pointer;
+                }
+
+                .augment-image {
+                    height: 40px;
+                    width: 40px;
+                    padding-right: 10px
+                }
+
+                .augment-name {
+                    font-size: 0.7em;
+                }
+            }
+
+            .augment-content-selected {
+                background-color: red;
+            }
+
+        }
+        
+
+        .augment-list.list-active {
+            height: 50vh;
+            background-color: rgb(55, 44, 107);
+        }
+    }
 
 }

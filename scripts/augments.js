@@ -106,7 +106,7 @@ function getAugmentsData() {
 
     for(var augment of augmentsStats){
         augmentData = { 
-            "id": augment.id, 
+            "id": Number(augment.id), 
             "name": augment.name, 
             "desc": augment.desc, 
             "srcPath": augment.srcPath
@@ -114,7 +114,7 @@ function getAugmentsData() {
         augmentMap.push(augmentData);
     }
 
-    return augmentMap;
+    return quicksort(augmentMap);
 }
 
 function getAugmentStats(id) {
