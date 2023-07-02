@@ -1,0 +1,13 @@
+{
+  "name": "Chain Vest",
+  "id": "3",
+  "desc": " +20 Armor ",
+  "srcPath": "public/items/traits/Chain Vest.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

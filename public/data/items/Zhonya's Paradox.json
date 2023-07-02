@@ -1,0 +1,13 @@
+{
+  "name": "Zhonya's Paradox",
+  "id": "126",
+  "desc": " Once per combat: At 40% Health, become invulnerable for 3 seconds.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Zhonya's Paradox.png",
+  "health": "0",
+  "armor": "30",
+  "resistance": "30",
+  "mana_start": "0",
+  "ap": "30",
+  "attack": "0",
+  "speed": "0"
+}

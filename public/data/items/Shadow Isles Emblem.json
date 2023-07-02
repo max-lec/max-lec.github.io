@@ -1,0 +1,13 @@
+{
+  "name": "Shadow Isles Emblem",
+  "id": "71",
+  "desc": " The holder gains the Shadow Isles Trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Shadow Isles Emblem.png",
+  "health": "150",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

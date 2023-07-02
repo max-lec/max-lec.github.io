@@ -1,0 +1,13 @@
+{
+  "name": "Giant Slayer",
+  "id": "11",
+  "desc": " Abilities and attacks deal 25% more damage to enemies with more than 1600 maximum Health. ",
+  "srcPath": "public/items/traits/Giant Slayer.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "20",
+  "attack": "30",
+  "speed": "10"
+}

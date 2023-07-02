@@ -1,0 +1,13 @@
+{
+  "name": "Zz'Rots Invitation",
+  "id": "95",
+  "desc": " Combat start: A Radiant Voidmother with bonus Health and Attack Damage arises and Taunts nearby enemies.<br><br>Taunt: enemies that are able and in range must attack the taunter ",
+  "srcPath": "public/items/traits/Zz'Rots Invitation.png",
+  "health": "150",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "+10 Attack Speed"
+}

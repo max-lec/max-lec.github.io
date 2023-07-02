@@ -1,0 +1,13 @@
+{
+  "name": "Dvarapala Stoneplate",
+  "id": "109",
+  "desc": " Grant 30 Armor and 30 Magic Resist for each enemy targeting holder.<br><br>Also, regenerate 2% maximum Health each second. ",
+  "srcPath": "public/items/traits/Dvarapala Stoneplate.png",
+  "health": "0",
+  "armor": "30",
+  "resistance": "30",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Demacia Emblem",
+  "id": "132",
+  "desc": " The holder gains the Demacia Trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Demacia Emblem.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "20",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

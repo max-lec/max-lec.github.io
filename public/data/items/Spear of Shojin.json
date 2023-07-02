@@ -1,0 +1,13 @@
+{
+  "name": "Spear of Shojin",
+  "id": "13",
+  "desc": " Attacks restore 5 additional Mana. ",
+  "srcPath": "public/items/traits/Spear of Shojin.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "30",
+  "ap": "25",
+  "attack": "10",
+  "speed": "0"
+}

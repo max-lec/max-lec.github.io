@@ -1,0 +1,13 @@
+{
+  "name": "Absolution",
+  "id": "106",
+  "desc": " Heal allies within 2 hexes for 25% of their missing Health every 5 seconds. They take 25% less multi-target damage for 5 seconds (damage reduction does not stack).<br><br>[Aura item] ",
+  "srcPath": "public/items/traits/Absolution.png",
+  "health": "300",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "15",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

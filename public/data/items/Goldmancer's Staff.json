@@ -1,0 +1,13 @@
+{
+  "name": "Goldmancer's Staff",
+  "id": "59",
+  "desc": " Grant 1 Ability Power per gold in your bank (up to 60 gold) and a 40% chance to drop 2 gold on enemy kill. ",
+  "srcPath": "public/items/traits/Goldmancer's Staff.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Blue Buff",
+  "id": "30",
+  "desc": " Abilities cost 10 less Mana to cast.<br><br>If the holder gets at least 1 takedown within 3 seconds of casting, gain 10 Mana.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Blue Buff.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "40",
+  "ap": "10",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Zephyr",
+  "id": "40",
+  "desc": " Combat start: Summon a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 5 seconds.<br><br>[Ignores crowd control immunity.]<br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Zephyr.png",
+  "health": "150",
+  "armor": "0",
+  "resistance": "20",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "15"
+}

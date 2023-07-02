@@ -1,0 +1,13 @@
+{
+  "name": "Tactician's Crown",
+  "id": "44",
+  "desc": " Your team gains +1 maximum team size. ",
+  "srcPath": "public/items/traits/Tactician's Crown.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

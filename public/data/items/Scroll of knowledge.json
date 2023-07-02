@@ -1,0 +1,13 @@
+{
+  "name": "Scroll of knowledge",
+  "id": "70",
+  "desc": " Use on a unit to open a special armory that offers every available emblem that matches that units inherent traits. ",
+  "srcPath": "public/items/traits/Scroll of knowledge.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

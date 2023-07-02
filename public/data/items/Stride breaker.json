@@ -1,0 +1,13 @@
+{
+  "name": "Stride breaker",
+  "id": "116",
+  "desc": " After damaging a shielded enemy, Abilities and attacks 50% deal more damage for 3 seconds. ",
+  "srcPath": "public/items/traits/Stride breaker.png",
+  "health": "150",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "40",
+  "attack": "40",
+  "speed": "0"
+}

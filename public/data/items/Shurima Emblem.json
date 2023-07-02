@@ -1,0 +1,13 @@
+{
+  "name": "Shurima Emblem",
+  "id": "129",
+  "desc": " The holder gains the Shurima trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Shurima Emblem.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "10",
+  "attack": "0",
+  "speed": "0"
+}

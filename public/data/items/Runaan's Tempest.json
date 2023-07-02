@@ -1,0 +1,13 @@
+{
+  "name": "Runaan's Tempest",
+  "id": "94",
+  "desc": " Attacks fire a bolt at another nearby enemy, dealing 100% Attack Damage as physical damage.<br><br>[Direct damage item] ",
+  "srcPath": "public/items/traits/Runaan's Tempest.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "20",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "20",
+  "speed": "10"
+}

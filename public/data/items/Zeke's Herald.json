@@ -1,0 +1,13 @@
+{
+  "name": "Zeke's Herald",
+  "id": "15",
+  "desc": " Combat start: Grant 15% Attack Speed to the holder and allies within 1 hex in the same row.<br><br>[Aura item] ",
+  "srcPath": "public/items/traits/Zeke's Herald.png",
+  "health": "250",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "25",
+  "speed": "0"
+}

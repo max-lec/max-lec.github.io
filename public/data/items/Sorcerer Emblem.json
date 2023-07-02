@@ -1,0 +1,13 @@
+{
+  "name": "Sorcerer Emblem",
+  "id": "130",
+  "desc": " The holder gains the Sorcerer trait. ",
+  "srcPath": "public/items/traits/Sorcerer Emblem.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "15",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

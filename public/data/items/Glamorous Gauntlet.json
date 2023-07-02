@@ -1,0 +1,13 @@
+{
+  "name": "Glamorous Gauntlet",
+  "id": "102",
+  "desc": " Damage from an Ability can critically strike. ",
+  "srcPath": "public/items/traits/Glamorous Gauntlet.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "50",
+  "attack": "0",
+  "speed": "0"
+}

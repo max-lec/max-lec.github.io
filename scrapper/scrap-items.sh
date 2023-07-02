@@ -1,0 +1,101 @@
+#!/bin/bash
+
+
+### Variables
+
+SCRIPT_DIR="$(dirname -- "$0")"
+DATA_PATH="$SCRIPT_DIR"/../public/data/items
+IMAGE_PATH="public/items/traits"
+
+# https://lolchess.gg/items/set9?hl=en
+# can't curl because JS needs enabling -> copy page html by hand
+# remove DUPLICATES
+
+ITEMS_LIST=$(grep '<span>' ${DATA_PATH}/html/lolchess.html  | cut -d '>' -f 2 | cut -d '<' -f 1)
+readarray -t ITEMS_ARRAY <<< $ITEMS_LIST
+
+
+ITEM_ID=0
+for item in "${ITEMS_ARRAY[@]}"; do
+    echo "$item"
+    ITEM_NAME="$item"
+    ITEM_ID=$(( ITEM_ID + 1 ))
+    
+    ITEM_IMAGE_SRC=$(grep -B 5 "$item" ${DATA_PATH}/html/lolchess.html | grep "<img src" | cut -d '"' -f 2)
+    ITEM_IMAGE_PATH="$IMAGE_PATH/${item}.png"
+    curl -s "https:${ITEM_IMAGE_SRC}" --output "$SCRIPT_DIR/../$ITEM_IMAGE_PATH"
+
+    DESC_URL=$(grep -A 2 -B 2 "$item" ${DATA_PATH}/html/lolchess.html | grep 'data-toggle="tooltip" data-tooltip-url=' | head -n 1 | cut -d '=' -f 3 | cut -d '"' -f 2)
+    curl -s "$DESC_URL" --output "${DATA_PATH}/html/${item}.html"
+
+    ITEM_EFFECT=$(sed -n '/<div>/,/<\/div>/p' "${DATA_PATH}/html/${item}.html" | sed "s|'||g" | xargs | sed 's|.*<div>\(.*\).*</div>.*|\1|' )
+    ITEM_STATS=$(grep -A 8 'line-height-1' "${DATA_PATH}/html/${item}.html" | sed 's|<br>|\n|g' | sed 's|<div>|\n|g' | sed 's|</div>|\n|g' | sed 's|,|\n|g' )
+
+    # basic stats for now
+    if grep -e "[Hh]ealth" <(echo "$ITEM_STATS"); then
+        HEALTH=$(echo "$ITEM_STATS" | grep -e "[Hh]ealth" | sed 's|+\(.*\) .*[Hh]ealth.*|\1|' | xargs)
+    else 
+        HEALTH=0
+    fi
+    if grep -e "[Aa]rmor" <(echo "$ITEM_STATS"); then
+        ARMOR=$(echo "$ITEM_STATS" | grep -e "[Aa]rmor" | sed 's|+\(.*\) .*[Aa]rmor.*|\1|' | xargs)
+    else 
+        ARMOR=0
+    fi
+    if grep -e "Magic [Rr]esist" <(echo "$ITEM_STATS"); then
+        RESISTANCE=$(echo "$ITEM_STATS" | grep -e "Magic [Rr]esist" | sed 's|+\(.*\) .*Magic [Rr]esist.*|\1|' | xargs)
+    else 
+        RESISTANCE=0
+    fi
+    if grep -e "[Mm]ana" <(echo "$ITEM_STATS"); then
+        MANA=$(echo "$ITEM_STATS" | grep -e "[Mm]ana" | sed 's|+\(.*\) .*[Mm]ana.*|\1|' | xargs)
+    else 
+        MANA=0
+    fi
+    if grep -e "Ability [Pp]ower" <(echo "$ITEM_STATS"); then
+        AP=$(echo "$ITEM_STATS" | grep -e "Ability [Pp]ower" | sed 's|+\(.*\) .*Ability [Pp]ower.*|\1|' | xargs)
+    else 
+        AP=0
+    fi
+    if grep -e "Attack [Dd]amage" <(echo "$ITEM_STATS"); then
+        ATTACK=$(echo "$ITEM_STATS" | grep -e "Attack [Dd]amage" | sed 's|+\(.*\)% .*Attack [Dd]amage.*|\1|' | xargs)
+    else 
+        ATTACK=0
+    fi
+    if grep -e "Attack [Ss]peed" <(echo "$ITEM_STATS"); then
+        SPEED=$(echo "$ITEM_STATS" | grep -e "Attack [Ss]peed" | sed 's|+\(.*\)% .*Attack [Ss]peed.*|\1|' | xargs)
+    else 
+        SPEED=0
+    fi
+    
+    jq -n \
+                  --arg name "$ITEM_NAME" \
+                  --arg id "$ITEM_ID" \
+                  --arg desc "$ITEM_EFFECT" \
+                  --arg srcPath "$ITEM_IMAGE_PATH" \
+                  --arg health "$HEALTH" \
+                  --arg armor "$ARMOR" \
+                  --arg resistance "$RESISTANCE" \
+                  --arg mana_start "$MANA" \
+                  --arg ap "$AP" \
+                  --arg attack "$ATTACK" \
+                  --arg speed "$SPEED" \
+                  '{ 
+                    name: $name, 
+                    id: $id, 
+                    desc: $desc,
+                    srcPath: $srcPath,
+                    health: $health,
+                    armor: $armor,
+                    resistance: $resistance,
+                    mana_start: $mana_start,
+                    ap: $ap,
+                    attack: $attack,
+                    speed: $speed
+                    }' > "${DATA_PATH}/${item}.json"
+
+done
+
+### Concat final stats file 
+
+jq -s . $DATA_PATH/*.json > $DATA_PATH/final/stats.json

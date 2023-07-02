@@ -1,0 +1,13 @@
+{
+  "name": "Hextech Gunblade",
+  "id": "12",
+  "desc": " Grant 22% Omnivamp. Damage heals the lowest percent Health ally for the same amount. ",
+  "srcPath": "public/items/traits/Hextech Gunblade.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "10",
+  "attack": "10",
+  "speed": "0"
+}

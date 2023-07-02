@@ -1,0 +1,13 @@
+{
+  "name": "Rapid Firecannon",
+  "id": "17",
+  "desc": " Grant 1 bonus Attack Range and your attacks cannot miss. ",
+  "srcPath": "public/items/traits/Rapid Firecannon.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "55"
+}

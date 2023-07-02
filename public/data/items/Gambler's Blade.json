@@ -1,0 +1,13 @@
+{
+  "name": "Gambler's Blade",
+  "id": "58",
+  "desc": " Grant 1% bonus Attack Speed per gold in your bank (up to 60 gold).Each attack has a 7% chance to drop 1 gold. ",
+  "srcPath": "public/items/traits/Gambler's Blade.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

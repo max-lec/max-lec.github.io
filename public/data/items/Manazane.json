@@ -1,0 +1,13 @@
+{
+  "name": "Manazane",
+  "id": "122",
+  "desc": " Once per combat: After casting an Ability, restore 120 mana over 5 seconds.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Manazane.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "30",
+  "ap": "0",
+  "attack": "+15 Attack Damage",
+  "speed": "15"
+}

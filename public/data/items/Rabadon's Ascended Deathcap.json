@@ -1,0 +1,13 @@
+{
+  "name": "Rabadon's Ascended Deathcap",
+  "id": "97",
+  "desc": " Its witnessed - and unleashed - miracles and calamities both. ",
+  "srcPath": "public/items/traits/Rabadon's Ascended Deathcap.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "125",
+  "attack": "0",
+  "speed": "0"
+}

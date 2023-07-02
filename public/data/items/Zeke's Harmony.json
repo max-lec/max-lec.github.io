@@ -1,0 +1,13 @@
+{
+  "name": "Zeke's Harmony",
+  "id": "88",
+  "desc": " Combat start: Grant 35% Attack Speed and 10% Omjnivamp to the holder and allies within 1 hex in the same row. ",
+  "srcPath": "public/items/traits/Zeke's Harmony.png",
+  "health": "350",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "35",
+  "speed": "0"
+}

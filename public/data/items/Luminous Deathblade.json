@@ -1,0 +1,13 @@
+{
+  "name": "Luminous Deathblade",
+  "id": "82",
+  "desc": " It glows in the presence of enemies. Or friends. Or anything alive, really. ",
+  "srcPath": "public/items/traits/Luminous Deathblade.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "120",
+  "speed": "0"
+}

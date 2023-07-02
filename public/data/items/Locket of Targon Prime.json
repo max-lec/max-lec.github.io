@@ -1,0 +1,13 @@
+{
+  "name": "Locket of Targon Prime",
+  "id": "99",
+  "desc": " When combat begins, the holder and all allies within 3 hexes in the same row gain a shield that blocks 200/250/300/350★ damage for 25 seconds.<br><br>Radiant Bonus: Grants 200 Health for all allies at the start of combat. ",
+  "srcPath": "public/items/traits/Locket of Targon Prime.png",
+  "health": "0",
+  "armor": "20",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "10",
+  "attack": "0",
+  "speed": "0"
+}

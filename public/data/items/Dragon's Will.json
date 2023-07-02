@@ -1,0 +1,13 @@
+{
+  "name": "Dragon's Will",
+  "id": "112",
+  "desc": " Every 1.5 seconds, regenerate 8% maximum Health. ",
+  "srcPath": "public/items/traits/Dragon's Will.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "140",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Piltover Emblem",
+  "id": "67",
+  "desc": " The holder gains the Piltover trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Piltover Emblem.png",
+  "health": "150",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

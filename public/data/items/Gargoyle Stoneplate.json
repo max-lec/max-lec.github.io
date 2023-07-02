@@ -1,0 +1,13 @@
+{
+  "name": "Gargoyle Stoneplate",
+  "id": "36",
+  "desc": " Grant 15 Armor and 15 Magic Resist for each enemy targeting the holder. ",
+  "srcPath": "public/items/traits/Gargoyle Stoneplate.png",
+  "health": "0",
+  "armor": "30",
+  "resistance": "30",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Diamond Hands",
+  "id": "55",
+  "desc": " Once per combat: At 50% Health, become invulnerable for 1.5 seconds and grant 2 gold. ",
+  "srcPath": "public/items/traits/Diamond Hands.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

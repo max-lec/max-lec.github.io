@@ -1,0 +1,13 @@
+{
+  "name": "Mogul's Mail",
+  "id": "65",
+  "desc": " Grants 1 Armor, 1 Magic Resist, and 8 Health when taking damage, stacking up to 40 times. At full stacks, grant 2 gold. ",
+  "srcPath": "public/items/traits/Mogul's Mail.png",
+  "health": "350",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

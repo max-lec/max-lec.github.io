@@ -1,0 +1,13 @@
+{
+  "name": "Sunlight Cape",
+  "id": "110",
+  "desc": " Every 1.5 seconds, a random enemy within 3 hexes is burned for 60% of their maximum Health as true damage over 30 seconds. Any healing they receive is reduced by 33%.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Sunlight Cape.png",
+  "health": "0",
+  "armor": "20",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

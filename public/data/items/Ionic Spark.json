@@ -1,0 +1,13 @@
+{
+  "name": "Ionic Spark",
+  "id": "27",
+  "desc": " 50% Shred enemies within 2 hexes. When enemies cast an Ability, they are also zapped for magic damage equal to 160% of their maximum Mana.<br><br>[Direct damage item]<br>Shred: reduce Magic Resist ",
+  "srcPath": "public/items/traits/Ionic Spark.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "20",
+  "mana_start": "0",
+  "ap": "10",
+  "attack": "0",
+  "speed": "0"
+}

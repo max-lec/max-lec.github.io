@@ -1,0 +1,13 @@
+{
+  "name": "Determined Investor",
+  "id": "54",
+  "desc": " After dying during combat 8 times, this item is destroyed. Upon destruction, grant the item Diamond Hands, 1 Champion Duplicator, and 10 gold. ",
+  "srcPath": "public/items/traits/Determined Investor.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Slayer Emblem",
+  "id": "134",
+  "desc": " The holder gains the Slayer trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Slayer Emblem.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

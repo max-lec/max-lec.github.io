@@ -1,0 +1,13 @@
+{
+  "name": "Locket of the Iron Solari",
+  "id": "26",
+  "desc": " Combat start: Shield the holder and allies within 2 hexes in the same row for 180/200/220/240★ damage for 4 seconds.<br><br>[Aura item] ",
+  "srcPath": "public/items/traits/Locket of the Iron Solari.png",
+  "health": "0",
+  "armor": "20",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "10",
+  "attack": "0",
+  "speed": "0"
+}

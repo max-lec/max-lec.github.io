@@ -1,0 +1,13 @@
+{
+  "name": "Chalice of Charity",
+  "id": "105",
+  "desc": " Combat start: Grant 45 Ability Power and 10% Omnivamp to the holder and allies within 1 hex in the same row.<br><br>[Aura item] ",
+  "srcPath": "public/items/traits/Chalice of Charity.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "45",
+  "mana_start": "45",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

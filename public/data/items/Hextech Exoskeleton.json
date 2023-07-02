@@ -1,0 +1,13 @@
+{
+  "name": "Hextech Exoskeleton",
+  "id": "61",
+  "desc": " Mod: Gain 30 armor and magic resistance. Every 5 seconds, cleanse all negative effects and heal for 10% of your max health.<br><br>Overcharge: Each time the wearer heals, deal 150% of the heal amount as damage to all nearby enemies. ",
+  "srcPath": "public/items/traits/Hextech Exoskeleton.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Edge of Night",
+  "id": "45",
+  "desc": " Once per combat: At 60% Health, briefly become untargetable and shed negative effects. Then, gain 15% bonus Attack Speed.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Edge of Night.png",
+  "health": "0",
+  "armor": "20",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "10",
+  "speed": "0"
+}

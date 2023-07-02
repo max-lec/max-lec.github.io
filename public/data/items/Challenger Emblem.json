@@ -1,0 +1,13 @@
+{
+  "name": "Challenger Emblem",
+  "id": "128",
+  "desc": " The holder gains the Challenger trait.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Challenger Emblem.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "10"
+}

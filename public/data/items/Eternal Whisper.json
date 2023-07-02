@@ -1,0 +1,13 @@
+{
+  "name": "Eternal Whisper",
+  "id": "96",
+  "desc": " Any physical damage dealt the 50% Sunders the target for the rest of combat. This effect does not stack.<br><br>[Unique - only one per champion]<br>Sunder: reduce Armor ",
+  "srcPath": "public/items/traits/Eternal Whisper.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "35",
+  "speed": "10"
+}

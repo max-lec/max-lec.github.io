@@ -1,0 +1,13 @@
+{
+  "name": "Deathfire Grasp",
+  "id": "53",
+  "desc": " Combat start: the holder fires a blast of energy at their target, marking them and dealing 20% of their maximum health as magic damage.<br><br>For the next 8 seconds, the holders abilities and attacks deal 50% increased damage to the marked target, and 25% increased damage to other targets.<br><br>[Unique - only 1 per champion] ",
+  "srcPath": "public/items/traits/Deathfire Grasp.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "30",
+  "ap": "50",
+  "attack": "0",
+  "speed": "0"
+}

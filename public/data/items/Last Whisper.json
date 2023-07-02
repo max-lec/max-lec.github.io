@@ -1,0 +1,13 @@
+{
+  "name": "Last Whisper",
+  "id": "23",
+  "desc": " Any physical damage dealt 50% Sunder the target for 3 seconds. This effect does not stack.<br><br>[Unique - Only One Per Champion]<br>Sunder: reduce Armor ",
+  "srcPath": "public/items/traits/Last Whisper.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "10",
+  "speed": "10"
+}

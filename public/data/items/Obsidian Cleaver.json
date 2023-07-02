@@ -1,0 +1,13 @@
+{
+  "name": "Obsidian Cleaver",
+  "id": "123",
+  "desc": " Attacks and Abilities shred enemy armor and magic resistance by 50% for 5 seconds.<br><br>[Unique - Only One Per Champion] ",
+  "srcPath": "public/items/traits/Obsidian Cleaver.png",
+  "health": "250",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "25",
+  "speed": "0"
+}

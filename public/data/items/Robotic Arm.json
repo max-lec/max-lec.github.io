@@ -1,0 +1,13 @@
+{
+  "name": "Robotic Arm",
+  "id": "68",
+  "desc": " Mod: Attacks have a 60% chance to trigger 1 additional attacks.<br><br>Overcharge: Attack deal 50% Attack Damage as bonus true damage. ",
+  "srcPath": "public/items/traits/Robotic Arm.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

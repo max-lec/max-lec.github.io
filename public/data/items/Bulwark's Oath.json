@@ -1,0 +1,13 @@
+{
+  "name": "Bulwark's Oath",
+  "id": "104",
+  "desc": " Once per combat: At 40% Health, gain a 70 Armor and Magic Resist for the rest of combat, and a 50% maximum Health shield that lasts up to 10 seconds. ",
+  "srcPath": "public/items/traits/Bulwark's Oath.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "60",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

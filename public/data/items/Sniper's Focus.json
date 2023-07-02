@@ -1,0 +1,13 @@
+{
+  "name": "Sniper's Focus",
+  "id": "73",
+  "desc": " The holders attacks and abilities deal 10% increased damage for each hex between them and their target. ",
+  "srcPath": "public/items/traits/Sniper's Focus.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "15",
+  "attack": "15",
+  "speed": "15"
+}

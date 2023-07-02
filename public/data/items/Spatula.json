@@ -1,0 +1,13 @@
+{
+  "name": "Spatula",
+  "id": "9",
+  "desc": " It must do something... ",
+  "srcPath": "public/items/traits/Spatula.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

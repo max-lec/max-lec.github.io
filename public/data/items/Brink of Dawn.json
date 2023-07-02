@@ -1,0 +1,13 @@
+{
+  "name": "Brink of Dawn",
+  "id": "86",
+  "desc": " Once per combat: At 60% Health and again at 30% Helath, briefly become untargetable and shed negative effects. Then, gain 50% bonus Attack Speed. This effect stacks. ",
+  "srcPath": "public/items/traits/Brink of Dawn.png",
+  "health": "0",
+  "armor": "30",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "30",
+  "speed": "0"
+}

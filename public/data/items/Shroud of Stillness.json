@@ -1,0 +1,13 @@
+{
+  "name": "Shroud of Stillness",
+  "id": "38",
+  "desc": " Combat start: Shoots a beam that 35% Mana Reaves enemies.<br><br>[Unique - Only One Per Champion]<br>Mana Reave: increase maximum Mana until the next cast ",
+  "srcPath": "public/items/traits/Shroud of Stillness.png",
+  "health": "250",
+  "armor": "20",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "0",
+  "attack": "0",
+  "speed": "0"
+}

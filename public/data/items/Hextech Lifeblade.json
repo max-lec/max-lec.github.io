@@ -1,0 +1,13 @@
+{
+  "name": "Hextech Lifeblade",
+  "id": "84",
+  "desc": " The holders damage heal them for 35% of the damage dealt. The holder also heals their lowest health ally for the same amount. ",
+  "srcPath": "public/items/traits/Hextech Lifeblade.png",
+  "health": "0",
+  "armor": "0",
+  "resistance": "0",
+  "mana_start": "0",
+  "ap": "Ability Power +40",
+  "attack": "Attack Damage +10%",
+  "speed": "0"
+}
