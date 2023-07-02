@@ -1,8 +1,8 @@
 {
-  "name": "Stellacorn&#039;s Blessing",
+  "name": "Stellacorn's Blessing",
   "id": "140",
   "desc": "While you have the Targon trait activated, your units gain 45% Attack Speed for 4 seconds after being healed or shielded. Gain 2 Targonians.",
-  "srcPath": "public/images/augments/Stellacorn&#039;s Blessing.png",
+  "srcPath": "public/images/augments/Stellacorn's Blessing.png",
   "stats": {
     "health": 0,
     "armor": 0,

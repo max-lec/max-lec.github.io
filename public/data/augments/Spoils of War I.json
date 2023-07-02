@@ -1,7 +1,7 @@
 {
   "name": "Spoils of War I",
   "id": "44",
-  "desc": "When you kill an enemy unit, there&#039;s a 20% chance to drop loot.",
+  "desc": "When you kill an enemy unit, there's a 20% chance to drop loot.",
   "srcPath": "public/images/augments/Spoils of War I.png",
   "stats": {
     "health": 0,

@@ -1,7 +1,7 @@
 {
   "name": "Gunner Crown",
   "id": "184",
-  "desc": "Gain a Gunner Emblem, a Runann&#039;s Hurricane, and a Jayce.",
+  "desc": "Gain a Gunner Emblem, a Runann's Hurricane, and a Jayce.",
   "srcPath": "public/images/augments/Gunner Crown.png",
   "stats": {
     "health": 0,

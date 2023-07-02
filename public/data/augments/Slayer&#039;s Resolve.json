@@ -1,8 +1,8 @@
 {
-  "name": "Slayer&#039;s Resolve",
+  "name": "Slayer's Resolve",
   "id": "133",
   "desc": "When your Slayer units take or deal damage, they gain 2 Armor and Magic Resistance for the rest of combat (This can stack up to 25 times). Gain 2 Slayers.",
-  "srcPath": "public/images/augments/Slayer&#039;s Resolve.png",
+  "srcPath": "public/images/augments/Slayer's Resolve.png",
   "stats": {
     "health": 0,
     "armor": 2,

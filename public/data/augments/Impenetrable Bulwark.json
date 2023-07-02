@@ -1,7 +1,7 @@
 {
   "name": "Impenetrable Bulwark",
   "id": "190",
-  "desc": "Gain a Bramble Vest and a Dragon&#039;s Claw.",
+  "desc": "Gain a Bramble Vest and a Dragon's Claw.",
   "srcPath": "public/images/augments/Impenetrable Bulwark.png",
   "stats": {
     "health": 0,

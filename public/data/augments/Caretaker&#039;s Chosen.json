@@ -1,8 +1,8 @@
 {
-  "name": "Caretaker&#039;s Chosen",
+  "name": "Caretaker's Chosen",
   "id": "170",
   "desc": "When you reach Level 5, open an Armory and choose 1 of 5 unique Radiant items. At level 9, gain this effect again, and gain an Item Remover.",
-  "srcPath": "public/images/augments/Caretaker&#039;s Chosen.png",
+  "srcPath": "public/images/augments/Caretaker's Chosen.png",
   "stats": {
     "health": 0,
     "armor": 0,

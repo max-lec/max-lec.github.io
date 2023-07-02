@@ -1,7 +1,7 @@
 {
   "name": "Multicaster Soul",
   "id": "200",
-  "desc": "Your team counts as having 1 additional Multicaster. Gain a Jeweled Gauntlet and a Vel&#039;Koz.",
+  "desc": "Your team counts as having 1 additional Multicaster. Gain a Jeweled Gauntlet and a Vel'Koz.",
   "srcPath": "public/images/augments/Multicaster Soul.png",
   "stats": {
     "health": 0,

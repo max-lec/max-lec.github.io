@@ -1,8 +1,8 @@
 {
-  "name": "Pandora&#039;s Items II",
+  "name": "Pandora's Items II",
   "id": "109",
-  "desc": "Gain 2 random components. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
-  "srcPath": "public/images/augments/Pandora&#039;s Items II.png",
+  "desc": "Gain 2 random components. Round Start: items on your bench are randomized (excluding Tactician's Crown, Spatula, and consumables).",
+  "srcPath": "public/images/augments/Pandora's Items II.png",
   "stats": {
     "health": 0,
     "armor": 0,

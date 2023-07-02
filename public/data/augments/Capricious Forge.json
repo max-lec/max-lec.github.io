@@ -1,7 +1,7 @@
 {
   "name": "Capricious Forge",
   "id": "60",
-  "desc": "Gain a Blacksmith&#039;s Gloves, which equips two temporary Ornn Artifacts each round.",
+  "desc": "Gain a Blacksmith's Gloves, which equips two temporary Ornn Artifacts each round.",
   "srcPath": "public/images/augments/Capricious Forge.png",
   "stats": {
     "health": 0,

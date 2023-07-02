@@ -1,7 +1,7 @@
 {
   "name": "Return on Investment",
   "id": "117",
-  "desc": "After you refresh your shop 22 times, gain a Tactician&#039;s Crown.",
+  "desc": "After you refresh your shop 22 times, gain a Tactician's Crown.",
   "srcPath": "public/images/augments/Return on Investment.png",
   "stats": {
     "health": 0,

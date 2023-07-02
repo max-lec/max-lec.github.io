@@ -1,8 +1,8 @@
 {
-  "name": "Tactician&#039;s Tools",
+  "name": "Tactician's Tools",
   "id": "219",
   "desc": "Gain two Spatulas.",
-  "srcPath": "public/images/augments/Tactician&#039;s Tools.png",
+  "srcPath": "public/images/augments/Tactician's Tools.png",
   "stats": {
     "health": 0,
     "armor": 0,

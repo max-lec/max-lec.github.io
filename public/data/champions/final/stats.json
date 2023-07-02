@@ -162,7 +162,7 @@
     "speed": "0.75"
   },
   {
-    "name": "Bel&#039;Veth",
+    "name": "Bel'Veth",
     "id": "7",
     "type": [
       "Void, Empress"
@@ -216,7 +216,7 @@
     "speed": "0.7"
   },
   {
-    "name": "Cho&#039;Gath",
+    "name": "Cho'Gath",
     "id": "9",
     "type": [
       "Void, Bruiser"
@@ -540,7 +540,7 @@
     "speed": "0.75"
   },
   {
-    "name": "Kai&#039;Sa",
+    "name": "Kai'Sa",
     "id": "21",
     "type": [
       "Void, Challenger"
@@ -729,7 +729,7 @@
     "speed": "0.75"
   },
   {
-    "name": "K&#039;Sante",
+    "name": "K'Sante",
     "id": "28",
     "type": [
       "Shurima, Bastion"
@@ -945,7 +945,7 @@
     "speed": "0.55"
   },
   {
-    "name": "Rek&#039;Sai",
+    "name": "Rek'Sai",
     "id": "36",
     "type": [
       "Void, Bruiser"
@@ -1404,7 +1404,7 @@
     "speed": "0.7"
   },
   {
-    "name": "Vel&#039;Koz",
+    "name": "Vel'Koz",
     "id": "53",
     "type": [
       "Void, Multicaster, Sorcerer"

@@ -1,7 +1,7 @@
 {
   "name": "Gargantuan Resolve",
   "id": "79",
-  "desc": "Gain a Titan&#039;s Resolve. Your Titan&#039;s Resolves can continue stacking to 35 instead of 25.",
+  "desc": "Gain a Titan's Resolve. Your Titan's Resolves can continue stacking to 35 instead of 25.",
   "srcPath": "public/images/augments/Gargantuan Resolve.png",
   "stats": {
     "health": 0,

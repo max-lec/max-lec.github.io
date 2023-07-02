@@ -1,8 +1,8 @@
 {
-  "name": "Caretaker&#039;s Ally",
+  "name": "Caretaker's Ally",
   "id": "10",
   "desc": "When you reach Level 6, gain a 2-star Tier 3 unit.",
-  "srcPath": "public/images/augments/Caretaker&#039;s Ally.png",
+  "srcPath": "public/images/augments/Caretaker's Ally.png",
   "stats": {
     "health": 0,
     "armor": 0,

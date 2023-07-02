@@ -1,7 +1,7 @@
 {
   "name": "Void Crown",
   "id": "226",
-  "desc": "Gain a Void Emblem, Zz&#039;Rot Portal and a Rek&#039;Sai.",
+  "desc": "Gain a Void Emblem, Zz'Rot Portal and a Rek'Sai.",
   "srcPath": "public/images/augments/Void Crown.png",
   "stats": {
     "health": 0,

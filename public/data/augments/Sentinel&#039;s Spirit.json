@@ -1,8 +1,8 @@
 {
-  "name": "Sentinel&#039;s Spirit",
+  "name": "Sentinel's Spirit",
   "id": "125",
   "desc": "While in spirit form, your Ionia units gain 15% Attack Speed and shield themselves for 15% of their maximum Health. Gain 3 Ionians.",
-  "srcPath": "public/images/augments/Sentinel&#039;s Spirit.png",
+  "srcPath": "public/images/augments/Sentinel's Spirit.png",
   "stats": {
     "health": 0,
     "armor": 0,

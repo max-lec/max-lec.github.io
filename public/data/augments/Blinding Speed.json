@@ -1,7 +1,7 @@
 {
   "name": "Blinding Speed",
   "id": "166",
-  "desc": "Gain a Rapid Firecannon and a Guinsoo&#039;s Rageblade.",
+  "desc": "Gain a Rapid Firecannon and a Guinsoo's Rageblade.",
   "srcPath": "public/images/augments/Blinding Speed.png",
   "stats": {
     "health": 0,

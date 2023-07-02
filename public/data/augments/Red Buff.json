@@ -1,7 +1,7 @@
 {
   "name": "Red Buff",
   "id": "36",
-  "desc": "Your units&#039; attacks burn their targets for 8% of their maximum Health over 5 seconds and reduce their targets&#039; healing received by 50%.",
+  "desc": "Your units' attacks burn their targets for 8% of their maximum Health over 5 seconds and reduce their targets' healing received by 50%.",
   "srcPath": "public/images/augments/Red Buff.png",
   "stats": {
     "health": 0,

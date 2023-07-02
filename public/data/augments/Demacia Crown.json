@@ -1,7 +1,7 @@
 {
   "name": "Demacia Crown",
   "id": "177",
-  "desc": "Gain a Demacia Emblem, a Gargoyle&#039;s Stoneplate, and a Garen.",
+  "desc": "Gain a Demacia Emblem, a Gargoyle's Stoneplate, and a Garen.",
   "srcPath": "public/images/augments/Demacia Crown.png",
   "stats": {
     "health": 0,

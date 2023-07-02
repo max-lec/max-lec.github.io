@@ -1,8 +1,8 @@
 {
-  "name": "Pandora&#039;s Box",
+  "name": "Pandora's Box",
   "id": "203",
-  "desc": "Gain a random Radiant item. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
-  "srcPath": "public/images/augments/Pandora&#039;s Box.png",
+  "desc": "Gain a random Radiant item. Round Start: items on your bench are randomized (excluding Tactician's Crown, Spatula, and consumables).",
+  "srcPath": "public/images/augments/Pandora's Box.png",
   "stats": {
     "health": 0,
     "armor": 0,

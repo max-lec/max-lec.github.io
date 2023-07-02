@@ -1,7 +1,7 @@
 {
   "name": "Freljord Soul",
   "id": "181",
-  "desc": "Your team counts as having 1 additional Freljord. Gain an Archangel&#039;s Staff and a Lissandra.",
+  "desc": "Your team counts as having 1 additional Freljord. Gain an Archangel's Staff and a Lissandra.",
   "srcPath": "public/images/augments/Freljord Soul.png",
   "stats": {
     "health": 0,

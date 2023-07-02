@@ -1,7 +1,7 @@
 {
   "name": "Jeweled Lotus III",
   "id": "194",
-  "desc": "Your units&#039; Abilities can critically strike. Your units gain 45% Critical Strike chance.",
+  "desc": "Your units' Abilities can critically strike. Your units gain 45% Critical Strike chance.",
   "srcPath": "public/images/augments/Jeweled Lotus III.png",
   "stats": {
     "health": 0,

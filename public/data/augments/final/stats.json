@@ -197,7 +197,7 @@
   {
     "name": "Birthday Present",
     "id": "165",
-    "desc": "Gain a 2-star champion and 1 gold every time you level up. The champion&#039;s tier is your level minus 4 (min: Tier 1).",
+    "desc": "Gain a 2-star champion and 1 gold every time you level up. The champion's tier is your level minus 4 (min: Tier 1).",
     "srcPath": "public/images/augments/Birthday Present.png",
     "stats": {
       "health": 0,
@@ -212,7 +212,7 @@
   {
     "name": "Blinding Speed",
     "id": "166",
-    "desc": "Gain a Rapid Firecannon and a Guinsoo&#039;s Rageblade.",
+    "desc": "Gain a Rapid Firecannon and a Guinsoo's Rageblade.",
     "srcPath": "public/images/augments/Blinding Speed.png",
     "stats": {
       "health": 0,
@@ -287,7 +287,7 @@
   {
     "name": "Bruiser Crown",
     "id": "167",
-    "desc": "Gain a Bruiser Emblem, a Redemption, and a Rek&#039;Sai.",
+    "desc": "Gain a Bruiser Emblem, a Redemption, and a Rek'Sai.",
     "srcPath": "public/images/augments/Bruiser Crown.png",
     "stats": {
       "health": 0,
@@ -392,7 +392,7 @@
   {
     "name": "Capricious Forge",
     "id": "60",
-    "desc": "Gain a Blacksmith&#039;s Gloves, which equips two temporary Ornn Artifacts each round.",
+    "desc": "Gain a Blacksmith's Gloves, which equips two temporary Ornn Artifacts each round.",
     "srcPath": "public/images/augments/Capricious Forge.png",
     "stats": {
       "health": 0,
@@ -405,10 +405,10 @@
     }
   },
   {
-    "name": "Caretaker&#039;s Ally",
+    "name": "Caretaker's Ally",
     "id": "10",
     "desc": "When you reach Level 6, gain a 2-star Tier 3 unit.",
-    "srcPath": "public/images/augments/Caretaker&#039;s Ally.png",
+    "srcPath": "public/images/augments/Caretaker's Ally.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -420,10 +420,10 @@
     }
   },
   {
-    "name": "Caretaker&#039;s Chosen",
+    "name": "Caretaker's Chosen",
     "id": "170",
     "desc": "When you reach Level 5, open an Armory and choose 1 of 5 unique Radiant items. At level 9, gain this effect again, and gain an Item Remover.",
-    "srcPath": "public/images/augments/Caretaker&#039;s Chosen.png",
+    "srcPath": "public/images/augments/Caretaker's Chosen.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -435,10 +435,10 @@
     }
   },
   {
-    "name": "Caretaker&#039;s Favor",
+    "name": "Caretaker's Favor",
     "id": "61",
     "desc": "When you reach Level 6, gain 3 random components. Then when you reach Level 8, gain 2 more random components.",
-    "srcPath": "public/images/augments/Caretaker&#039;s Favor.png",
+    "srcPath": "public/images/augments/Caretaker's Favor.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -722,7 +722,7 @@
   {
     "name": "Deadeye Crown",
     "id": "176",
-    "desc": "Gain a Deadeye Emblem, a Guinsoo&#039;s Rageblade, and an Akshan.",
+    "desc": "Gain a Deadeye Emblem, a Guinsoo's Rageblade, and an Akshan.",
     "srcPath": "public/images/augments/Deadeye Crown.png",
     "stats": {
       "health": 0,
@@ -797,7 +797,7 @@
   {
     "name": "Demacia Crown",
     "id": "177",
-    "desc": "Gain a Demacia Emblem, a Gargoyle&#039;s Stoneplate, and a Garen.",
+    "desc": "Gain a Demacia Emblem, a Gargoyle's Stoneplate, and a Garen.",
     "srcPath": "public/images/augments/Demacia Crown.png",
     "stats": {
       "health": 0,
@@ -947,7 +947,7 @@
   {
     "name": "Freljord Soul",
     "id": "181",
-    "desc": "Your team counts as having 1 additional Freljord. Gain an Archangel&#039;s Staff and a Lissandra.",
+    "desc": "Your team counts as having 1 additional Freljord. Gain an Archangel's Staff and a Lissandra.",
     "srcPath": "public/images/augments/Freljord Soul.png",
     "stats": {
       "health": 0,
@@ -977,7 +977,7 @@
   {
     "name": "Gargantuan Resolve",
     "id": "79",
-    "desc": "Gain a Titan&#039;s Resolve. Your Titan&#039;s Resolves can continue stacking to 35 instead of 25.",
+    "desc": "Gain a Titan's Resolve. Your Titan's Resolves can continue stacking to 35 instead of 25.",
     "srcPath": "public/images/augments/Gargantuan Resolve.png",
     "stats": {
       "health": 0,
@@ -1067,7 +1067,7 @@
   {
     "name": "Gunner Crown",
     "id": "184",
-    "desc": "Gain a Gunner Emblem, a Runann&#039;s Hurricane, and a Jayce.",
+    "desc": "Gain a Gunner Emblem, a Runann's Hurricane, and a Jayce.",
     "srcPath": "public/images/augments/Gunner Crown.png",
     "stats": {
       "health": 0,
@@ -1277,7 +1277,7 @@
   {
     "name": "Impenetrable Bulwark",
     "id": "190",
-    "desc": "Gain a Bramble Vest and a Dragon&#039;s Claw.",
+    "desc": "Gain a Bramble Vest and a Dragon's Claw.",
     "srcPath": "public/images/augments/Impenetrable Bulwark.png",
     "stats": {
       "health": 0,
@@ -1457,7 +1457,7 @@
   {
     "name": "Jeweled Lotus II",
     "id": "92",
-    "desc": "Your units&#039; Abilities can critically strike. Your units gain 10% Critical Strike chance.",
+    "desc": "Your units' Abilities can critically strike. Your units gain 10% Critical Strike chance.",
     "srcPath": "public/images/augments/Jeweled Lotus II.png",
     "stats": {
       "health": 0,
@@ -1472,7 +1472,7 @@
   {
     "name": "Jeweled Lotus III",
     "id": "194",
-    "desc": "Your units&#039; Abilities can critically strike. Your units gain 45% Critical Strike chance.",
+    "desc": "Your units' Abilities can critically strike. Your units gain 45% Critical Strike chance.",
     "srcPath": "public/images/augments/Jeweled Lotus III.png",
     "stats": {
       "health": 0,
@@ -1502,7 +1502,7 @@
   {
     "name": "Juggernaut Crown",
     "id": "195",
-    "desc": "Gain an Juggernaut Emblem, a Titan&#039;s Resolve, and a Darius.",
+    "desc": "Gain an Juggernaut Emblem, a Titan's Resolve, and a Darius.",
     "srcPath": "public/images/augments/Juggernaut Crown.png",
     "stats": {
       "health": 0,
@@ -1667,7 +1667,7 @@
   {
     "name": "Lucky Gloves",
     "id": "198",
-    "desc": "Thief&#039;s Gloves will always give your champions ideal items. Gain 2 Sparring Gloves.",
+    "desc": "Thief's Gloves will always give your champions ideal items. Gain 2 Sparring Gloves.",
     "srcPath": "public/images/augments/Lucky Gloves.png",
     "stats": {
       "health": 0,
@@ -1817,7 +1817,7 @@
   {
     "name": "Multicaster Soul",
     "id": "200",
-    "desc": "Your team counts as having 1 additional Multicaster. Gain a Jeweled Gauntlet and a Vel&#039;Koz.",
+    "desc": "Your team counts as having 1 additional Multicaster. Gain a Jeweled Gauntlet and a Vel'Koz.",
     "srcPath": "public/images/augments/Multicaster Soul.png",
     "stats": {
       "health": 0,
@@ -1950,10 +1950,10 @@
     }
   },
   {
-    "name": "Pandora&#039;s Bench",
+    "name": "Pandora's Bench",
     "id": "32",
     "desc": "Gain 2 gold. At the start of every round, champions on the 3 rightmost bench slots transform into random champions of the same cost.",
-    "srcPath": "public/images/augments/Pandora&#039;s Bench.png",
+    "srcPath": "public/images/augments/Pandora's Bench.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -1965,10 +1965,10 @@
     }
   },
   {
-    "name": "Pandora&#039;s Box",
+    "name": "Pandora's Box",
     "id": "203",
-    "desc": "Gain a random Radiant item. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
-    "srcPath": "public/images/augments/Pandora&#039;s Box.png",
+    "desc": "Gain a random Radiant item. Round Start: items on your bench are randomized (excluding Tactician's Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora's Box.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -1980,10 +1980,10 @@
     }
   },
   {
-    "name": "Pandora&#039;s Items II",
+    "name": "Pandora's Items II",
     "id": "109",
-    "desc": "Gain 2 random components. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
-    "srcPath": "public/images/augments/Pandora&#039;s Items II.png",
+    "desc": "Gain 2 random components. Round Start: items on your bench are randomized (excluding Tactician's Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora's Items II.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -1995,10 +1995,10 @@
     }
   },
   {
-    "name": "Pandora&#039;s Items",
+    "name": "Pandora's Items",
     "id": "33",
-    "desc": "Gain a random component. Round Start: items on your bench are randomized (excluding Tactician&#039;s Crown, Spatula, and consumables).",
-    "srcPath": "public/images/augments/Pandora&#039;s Items.png",
+    "desc": "Gain a random component. Round Start: items on your bench are randomized (excluding Tactician's Crown, Spatula, and consumables).",
+    "srcPath": "public/images/augments/Pandora's Items.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -2117,7 +2117,7 @@
   {
     "name": "Piltover Soul",
     "id": "206",
-    "desc": "Your team counts as having 1 additional Piltover. Gain a Zeke&#039;s Herald and a Jayce.",
+    "desc": "Your team counts as having 1 additional Piltover. Gain a Zeke's Herald and a Jayce.",
     "srcPath": "public/images/augments/Piltover Soul.png",
     "stats": {
       "health": 0,
@@ -2222,7 +2222,7 @@
   {
     "name": "Red Buff",
     "id": "36",
-    "desc": "Your units&#039; attacks burn their targets for 8% of their maximum Health over 5 seconds and reduce their targets&#039; healing received by 50%.",
+    "desc": "Your units' attacks burn their targets for 8% of their maximum Health over 5 seconds and reduce their targets' healing received by 50%.",
     "srcPath": "public/images/augments/Red Buff.png",
     "stats": {
       "health": 0,
@@ -2237,7 +2237,7 @@
   {
     "name": "Return on Investment",
     "id": "117",
-    "desc": "After you refresh your shop 22 times, gain a Tactician&#039;s Crown.",
+    "desc": "After you refresh your shop 22 times, gain a Tactician's Crown.",
     "srcPath": "public/images/augments/Return on Investment.png",
     "stats": {
       "health": 0,
@@ -2357,7 +2357,7 @@
   {
     "name": "Salvage Bin",
     "id": "121",
-    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown). Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown).",
+    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician's Crown). Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician's Crown).",
     "srcPath": "public/images/augments/Salvage Bin.png",
     "stats": {
       "health": 0,
@@ -2372,7 +2372,7 @@
   {
     "name": "Salvage Bin+",
     "id": "122",
-    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician&#039;s Crown).",
+    "desc": "Gain a random completed item now, and a component after @NumRounds@ player combats. Selling champions breaks apart their full items into components (excluding Tactician's Crown).",
     "srcPath": "public/images/augments/Salvage Bin+.png",
     "stats": {
       "health": 0,
@@ -2415,10 +2415,10 @@
     }
   },
   {
-    "name": "Sentinel&#039;s Spirit",
+    "name": "Sentinel's Spirit",
     "id": "125",
     "desc": "While in spirit form, your Ionia units gain 15% Attack Speed and shield themselves for 15% of their maximum Health. Gain 3 Ionians.",
-    "srcPath": "public/images/augments/Sentinel&#039;s Spirit.png",
+    "srcPath": "public/images/augments/Sentinel's Spirit.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -2535,10 +2535,10 @@
     }
   },
   {
-    "name": "Shurima&#039;s Legacy",
+    "name": "Shurima's Legacy",
     "id": "130",
     "desc": "Once assembled, your Sun Disc attacks enemies for 180-900 Magic Damage every 2 seconds (based on current Stage). Gain 3 Shurimans.",
-    "srcPath": "public/images/augments/Shurima&#039;s Legacy.png",
+    "srcPath": "public/images/augments/Shurima's Legacy.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -2625,10 +2625,10 @@
     }
   },
   {
-    "name": "Slayer&#039;s Resolve",
+    "name": "Slayer's Resolve",
     "id": "133",
     "desc": "When your Slayer units take or deal damage, they gain 2 Armor and Magic Resistance for the rest of combat (This can stack up to 25 times). Gain 2 Slayers.",
-    "srcPath": "public/images/augments/Slayer&#039;s Resolve.png",
+    "srcPath": "public/images/augments/Slayer's Resolve.png",
     "stats": {
       "health": 0,
       "armor": 2,
@@ -2717,7 +2717,7 @@
   {
     "name": "Sorcerer Crown",
     "id": "215",
-    "desc": "Gain a Sorcerer Emblem, a Spear of Shojin, and a Vel&#039;Koz.",
+    "desc": "Gain a Sorcerer Emblem, a Spear of Shojin, and a Vel'Koz.",
     "srcPath": "public/images/augments/Sorcerer Crown.png",
     "stats": {
       "health": 0,
@@ -2747,7 +2747,7 @@
   {
     "name": "Spoils of War I",
     "id": "44",
-    "desc": "When you kill an enemy unit, there&#039;s a 20% chance to drop loot.",
+    "desc": "When you kill an enemy unit, there's a 20% chance to drop loot.",
     "srcPath": "public/images/augments/Spoils of War I.png",
     "stats": {
       "health": 0,
@@ -2762,7 +2762,7 @@
   {
     "name": "Spoils of War II",
     "id": "137",
-    "desc": "When you kill an enemy unit, there&#039;s a 30% chance to drop loot.",
+    "desc": "When you kill an enemy unit, there's a 30% chance to drop loot.",
     "srcPath": "public/images/augments/Spoils of War II.png",
     "stats": {
       "health": 0,
@@ -2777,7 +2777,7 @@
   {
     "name": "Spoils of War III",
     "id": "216",
-    "desc": "When you kill an enemy unit, there&#039;s a 40% chance to drop amazing loot.",
+    "desc": "When you kill an enemy unit, there's a 40% chance to drop amazing loot.",
     "srcPath": "public/images/augments/Spoils of War III.png",
     "stats": {
       "health": 0,
@@ -2835,10 +2835,10 @@
     }
   },
   {
-    "name": "Stellacorn&#039;s Blessing",
+    "name": "Stellacorn's Blessing",
     "id": "140",
     "desc": "While you have the Targon trait activated, your units gain 45% Attack Speed for 4 seconds after being healed or shielded. Gain 2 Targonians.",
-    "srcPath": "public/images/augments/Stellacorn&#039;s Blessing.png",
+    "srcPath": "public/images/augments/Stellacorn's Blessing.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -2882,7 +2882,7 @@
   {
     "name": "Suppressing Fire",
     "id": "142",
-    "desc": "The target of your Deadeye units&#039; shared attack is stunned for 4 seconds. Gain 2 Deadeyes.",
+    "desc": "The target of your Deadeye units' shared attack is stunned for 4 seconds. Gain 2 Deadeyes.",
     "srcPath": "public/images/augments/Suppressing Fire.png",
     "stats": {
       "health": 0,
@@ -2910,10 +2910,10 @@
     }
   },
   {
-    "name": "Tactician&#039;s Tools",
+    "name": "Tactician's Tools",
     "id": "219",
     "desc": "Gain two Spatulas.",
-    "srcPath": "public/images/augments/Tactician&#039;s Tools.png",
+    "srcPath": "public/images/augments/Tactician's Tools.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -2985,10 +2985,10 @@
     }
   },
   {
-    "name": "Three&#039;s a Crowd",
+    "name": "Three's a Crowd",
     "id": "146",
     "desc": "Your units gain 100 health for each Tier-3 unit you field.",
-    "srcPath": "public/images/augments/Three&#039;s a Crowd.png",
+    "srcPath": "public/images/augments/Three's a Crowd.png",
     "stats": {
       "health": 100,
       "armor": 0,
@@ -3000,10 +3000,10 @@
     }
   },
   {
-    "name": "Three&#039;s Company",
+    "name": "Three's Company",
     "id": "145",
     "desc": "Gain 4 random Tier 3 champions.",
-    "srcPath": "public/images/augments/Three&#039;s Company.png",
+    "srcPath": "public/images/augments/Three's Company.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -3062,7 +3062,7 @@
   {
     "name": "Total Domination",
     "id": "149",
-    "desc": "Attacks and Abilities of your Noxus units execute enemies below 8% of their maximum Health, increased by +1% for each player you&#039;ve Conquered. Gain 3 Noxians.",
+    "desc": "Attacks and Abilities of your Noxus units execute enemies below 8% of their maximum Health, increased by +1% for each player you've Conquered. Gain 3 Noxians.",
     "srcPath": "public/images/augments/Total Domination.png",
     "stats": {
       "health": 0,
@@ -3212,7 +3212,7 @@
   {
     "name": "Unleashed Arcana",
     "id": "225",
-    "desc": "Gain a Jeweled Gauntlet and a Rabadon&#039;s Deathcap.",
+    "desc": "Gain a Jeweled Gauntlet and a Rabadon's Deathcap.",
     "srcPath": "public/images/augments/Unleashed Arcana.png",
     "stats": {
       "health": 0,
@@ -3272,7 +3272,7 @@
   {
     "name": "Void Crown",
     "id": "226",
-    "desc": "Gain a Void Emblem, Zz&#039;Rot Portal and a Rek&#039;Sai.",
+    "desc": "Gain a Void Emblem, Zz'Rot Portal and a Rek'Sai.",
     "srcPath": "public/images/augments/Void Crown.png",
     "stats": {
       "health": 0,
@@ -3315,10 +3315,10 @@
     }
   },
   {
-    "name": "What Doesn&#039;t Kill You",
+    "name": "What Doesn't Kill You",
     "id": "158",
     "desc": "After losing your combat, gain 2 gold. Every 5 losses, gain a random component.",
-    "srcPath": "public/images/augments/What Doesn&#039;t Kill You.png",
+    "srcPath": "public/images/augments/What Doesn't Kill You.png",
     "stats": {
       "health": 0,
       "armor": 0,
@@ -3332,7 +3332,7 @@
   {
     "name": "What The Forge",
     "id": "229",
-    "desc": "All Completed items you own or receive are reforged into random Ornn Artifacts (excluding Tactician&#039;s Crown and Emblems). Units gain 160 Health per equipped Artifact.",
+    "desc": "All Completed items you own or receive are reforged into random Ornn Artifacts (excluding Tactician's Crown and Emblems). Units gain 160 Health per equipped Artifact.",
     "srcPath": "public/images/augments/What The Forge.png",
     "stats": {
       "health": 160,
