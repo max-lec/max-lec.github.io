@@ -1,0 +1,37 @@
+.additional-options {
+
+    .additional-option {
+        height: 6vw;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        padding-right: 2vw;
+        padding-left: 2vw;
+        &:after {
+            content: "";
+            background: rgba(244, 187, 72, 0.7);
+            position: absolute;
+            right: 0;
+            height: 66%;
+            width: 1px;
+        }
+
+        &:first-of-type {
+            margin-left: 4vw;
+        }
+
+        .label-option {
+            padding: 1vw;
+            padding-left: 0;
+        }
+
+        .select-option {
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 1em;
+        }
+    }
+}

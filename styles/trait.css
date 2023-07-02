@@ -11,7 +11,7 @@
     height: 18vw;
     font-size: 1em;
     overflow-y: scroll;
-    background-color: rgb(33 26 64);
+    background-color: rgb(44, 39, 79);
 
     .trait-wrapper {
 
@@ -78,7 +78,7 @@
                     left: calc(79vw + 2px);
                     width: 15vw;
                     padding: 1vw;
-                    background-color: rgb(55, 44, 107);
+                    background-color: rgb(44, 39, 79);
                     border: 2px ridge rgb(102, 82, 128);
                     box-shadow: 0 3px 3px rgba(0,0,0, 0.5);
                 }

@@ -32,6 +32,9 @@
 <link href="./styles/augment.css" rel="stylesheet">
 <link href="./styles/trait.css" rel="stylesheet">
 <link href="./styles/level.css" rel="stylesheet">
+<link href="./styles/options.css" rel="stylesheet">
+<link href="./styles/stats.css" rel="stylesheet">
+
 
 </head>
 
@@ -198,26 +201,126 @@
         </div>
     </div>
 
+    <div class="section-separator"></div>
+
     <!-- additional options -->
     <div class="additional-options">
-        <span>spell multihit : 3  </span>
-        <span>target enemy : Jarvan</span>
+        <div class="additional-option">
+          <label for="multihit" class="label-option">Enemies hit : </label>
+          <select name="multihit" class="select-option">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+          </select>
+        </div>
+
+        <div class="additional-option">        
+          <label for="enemyChampion" class="label-option">Enemy champion stats : </label>
+          <select name="enemyChampion" class="select-option" x-data="{championMap: getChampionsData()}">
+            <template x-for="champion in championMap">
+                <option x-data="champion" value="champion.id">
+                    <span x-text="champion.name"></span>
+                </option>
+            </template>
+          </select>
+        </div>
     </div>
+
+    <div class="section-separator"></div>
 
     <!-- result stats -->
     <div class="result-stats">
-        <div class="total-stats" x-data="$store.stats" >
-        
-            <ul>
-                <li>Health: <span x-text="health"></span></li>
-                <li>Start Mana: <span x-text="manaStart"></span></li>
-                <li>Armor: <span x-text="armor"></li>
-                <li>MR: <span x-text="resistance"></li>
-                <li>Ability Power: <span x-text="ap"></li>
-                <li>Attack Damage: <span x-text="attack"></li>
-                <li>Atk Spd: <span x-text="speed"></li>
-                <li>Crit Rate: <span x-text="criticalChance"></li>
-            </ul>
+        <div class="total-stats" x-data="$store.stats">
+          <div class="total-stats-label">TOTAL STATS</div>
+          <div class="total-stats-list">
+            <div class="stat-line">
+              <div class="stat-label">Health: </div>
+              <span x-text="health"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Start Mana: </div>
+              <span x-text="manaStart"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Armor: </div>
+              <span x-text="armor"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">MR: </div>
+              <span x-text="resistance"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Ability Power: </div>
+              <span x-text="ap"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Attack Damage: </div>
+              <span x-text="attack"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Atk Spd: </div>
+              <span x-text="speed"></span>
+            </div>
+            <div class="stat-line">
+              <div class="stat-label">Crit Rate: </div>
+              <span x-text="criticalChance"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="damage-stats">
+          <div class="stat-line">
+            <div class="stat-label">DPS AUTOS : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">ABILITY DAMAGE : </div>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="cast-stats">
+          <div class="stat-line">
+            <div class="stat-label">FIRST CAST TIME : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">NEXT CAST TIME : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">CASTS / 15s: </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">CASTS / 30s : </div>
+            <span>0</span>
+          </div>
+        </div>
+
+        <div class="total-damage-stats">
+          <div class="stat-line">
+            <div class="stat-label">TOTAL DAMAGE / 15s : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">ENEMIES KILLED / 15s : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">TOTAL DAMAGE / 30s : </div>
+            <span>0</span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">ENEMIES KILLED / 30s : </div>
+            <span>0</span>
+          </div>
         </div>
     </div>
 

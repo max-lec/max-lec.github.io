@@ -24,7 +24,7 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        background-color: rgb(55, 44, 107);
+        background-color: rgb(44, 39, 79);
         /* padding: 5px 5px; */
         width: 14vw;
         border: 2px ridge rgb(102, 82, 128);
@@ -47,7 +47,7 @@
                 justify-content: center;
                 border-radius: 50%;
                 border: 2px groove rgb(244, 187, 72);
-                background-color: rgb(55, 44, 107);
+                background-color: rgb(44, 39, 79);
                 height: 3.7vw;
                 min-width: 3.7vw;
                 overflow: hidden;
@@ -89,14 +89,14 @@
             }
 
             .item-content-selected {
-                background-color: red;
+                background-color: rgb(165, 78, 124);
             }
         }
 
         .item-list.list-active {
             width: auto;
             height: 50vh;
-            background-color: rgb(55, 44, 107);
+            background-color: rgb(44, 39, 79);
         }
     }
 

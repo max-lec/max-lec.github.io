@@ -79,7 +79,7 @@
         }
 
         .champion-content-selected {
-            background-color: red;
+            background-color: rgb(165, 78, 124);
         }
 
     }
@@ -89,5 +89,5 @@
 .main-options .champion-list.list-active {
     width: 10vw;
     height: 50vh;
-    background-color: rgb(55, 44, 107);
+    background-color: rgb(44, 39, 79);
 }
