@@ -2,7 +2,7 @@
   "name": "Strategist Emblem",
   "id": "74",
   "desc": " The holder gains the Strategist trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Strategist Emblem.png",
+  "srcPath": "public/images/items/Strategist Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

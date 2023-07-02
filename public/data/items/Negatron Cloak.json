@@ -2,7 +2,7 @@
   "name": "Negatron Cloak",
   "id": "4",
   "desc": " +20 Magic Resist ",
-  "srcPath": "public/items/traits/Negatron Cloak.png",
+  "srcPath": "public/images/items/Negatron Cloak.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

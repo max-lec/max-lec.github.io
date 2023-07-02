@@ -2,7 +2,7 @@
   "name": "Rosethorn Vest",
   "id": "108",
   "desc": " Negates all bonus damage from incoming critical strikes. On being hit by an attack, deal 125/175/225★ magic damage to all nearby enemies (once every 2 seconds). ",
-  "srcPath": "public/items/traits/Rosethorn Vest.png",
+  "srcPath": "public/images/items/Rosethorn Vest.png",
   "health": "0",
   "armor": "120",
   "resistance": "0",

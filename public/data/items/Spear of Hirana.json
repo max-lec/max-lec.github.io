@@ -2,7 +2,7 @@
   "name": "Spear of Hirana",
   "id": "85",
   "desc": " Attack restore 8 additional Mana. ",
-  "srcPath": "public/items/traits/Spear of Hirana.png",
+  "srcPath": "public/images/items/Spear of Hirana.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

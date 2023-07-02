@@ -2,7 +2,7 @@
   "name": "Sunfire Cape",
   "id": "37",
   "desc": " Every 2 seconds, an enemy within 2 hexes is 10% Burned and 33% Wounded for 10 seconds.<br><br>[Unique - Only One Per Champion]<br>Burn: deals some of the targets maximum Health as true damage<br>Wound: reduces healing received ",
-  "srcPath": "public/items/traits/Sunfire Cape.png",
+  "srcPath": "public/images/items/Sunfire Cape.png",
   "health": "0",
   "armor": "20",
   "resistance": "0",

@@ -2,12 +2,12 @@
   "name": "Tricksters Glass",
   "id": "77",
   "desc": " Summon a clone with 70% maximum Health and 20% increased maximum Mana. You cannot equip items to the clone. ",
-  "srcPath": "public/items/traits/Tricksters Glass.png",
+  "srcPath": "public/images/items/Tricksters Glass.png",
   "health": "200",
   "armor": "15",
   "resistance": "15",
   "mana_start": "0",
   "ap": "0",
   "attack": "0",
-  "speed": "+15 Attack Speed"
+  "speed": "15"
 }

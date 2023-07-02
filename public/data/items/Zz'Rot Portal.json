@@ -2,7 +2,7 @@
   "name": "Zz'Rot Portal",
   "id": "22",
   "desc": " Combat start: Taunt.<br><br>On death, a Voidspawn arises, Taunting nearby enemies. The Voidspawn has massively reduced effectiveness when created by a summoned unit.<br><br>Taunt: enemies that are able and in range must attack the taunter ",
-  "srcPath": "public/items/traits/Zz'Rot Portal.png",
+  "srcPath": "public/images/items/Zz'Rot Portal.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

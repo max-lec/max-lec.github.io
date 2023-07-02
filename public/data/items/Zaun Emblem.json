@@ -2,7 +2,7 @@
   "name": "Zaun Emblem",
   "id": "81",
   "desc": " The holder gains the Zaun Trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Zaun Emblem.png",
+  "srcPath": "public/images/items/Zaun Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

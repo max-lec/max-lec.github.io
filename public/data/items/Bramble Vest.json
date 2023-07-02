@@ -2,7 +2,7 @@
   "name": "Bramble Vest",
   "id": "35",
   "desc": " Negates 75% bonus damage from incoming critical strikes. When struck by an attack, deal 75/100/150 ★ magic damage to all nearby enemies (once every 2 seconds).<br><br>[Direct damage item] ",
-  "srcPath": "public/items/traits/Bramble Vest.png",
+  "srcPath": "public/images/items/Bramble Vest.png",
   "health": "0",
   "armor": "70",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Hand of Justice",
   "id": "34",
   "desc": " Grant 2 effects:<br>- +15% Attack Damage and +15 Ability Power.<br>- 15% Omnivamp.<br><br>Each round, randomly double 1 of these effects.<br><br>Omnivamp: heal for a percentage of damage dealt ",
-  "srcPath": "public/items/traits/Hand of Justice.png",
+  "srcPath": "public/images/items/Hand of Justice.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

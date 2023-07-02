@@ -2,7 +2,7 @@
   "name": "Blessed Bloodthirster",
   "id": "87",
   "desc": " Grant: 40% Omnivamp.<br><br>Once per combat: At 40% Health, gain a 40% maximum Health shield that lasts up to 5 seconds. ",
-  "srcPath": "public/items/traits/Blessed Bloodthirster.png",
+  "srcPath": "public/images/items/Blessed Bloodthirster.png",
   "health": "0",
   "armor": "0",
   "resistance": "20",

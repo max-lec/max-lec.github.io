@@ -2,7 +2,7 @@
   "name": "Anima Visage",
   "id": "118",
   "desc": " Regenerates 2.5% maximum health each second. ",
-  "srcPath": "public/items/traits/Anima Visage.png",
+  "srcPath": "public/images/items/Anima Visage.png",
   "health": "500",
   "armor": "0",
   "resistance": "25",

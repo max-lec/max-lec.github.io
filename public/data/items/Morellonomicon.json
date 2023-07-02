@@ -2,7 +2,7 @@
   "name": "Morellonomicon",
   "id": "28",
   "desc": " Magic or true damage from an Ability 10% Burns and 33% Wounds enemies for the 10 seconds.<br><br>[Unique - Only One Per Champion]<br>Burn: deals some of the targets maximum Health as true damage<br>Wound: reduces healing received ",
-  "srcPath": "public/items/traits/Morellonomicon.png",
+  "srcPath": "public/images/items/Morellonomicon.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Unstable Chemtank",
   "id": "78",
   "desc": " Mod: Gain 33% bonus max health and explode on death, dealing 30% of your maximum health as magic damage to nearby enemies.<br><br>Overcharge: Explosion gets larger and damage increases to 45% of your maximum health. ",
-  "srcPath": "public/items/traits/Unstable Chemtank.png",
+  "srcPath": "public/images/items/Unstable Chemtank.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

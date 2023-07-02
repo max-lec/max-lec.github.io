@@ -2,12 +2,12 @@
   "name": "Titan's Vow",
   "id": "93",
   "desc": " Grant 3% Attack Damage 3 Ability Power when attacking or taking damage, stacking up to 25 times.<br><br>At full stacks, gain 50 Armor and Magic Resist. ",
-  "srcPath": "public/items/traits/Titan's Vow.png",
+  "srcPath": "public/images/items/Titan's Vow.png",
   "health": "0",
-  "armor": "Armor +30",
+  "armor": "30",
   "resistance": "0",
   "mana_start": "0",
   "ap": "0",
   "attack": "0",
-  "speed": "Attack speed +20%"
+  "speed": "20"
 }

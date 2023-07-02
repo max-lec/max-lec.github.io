@@ -2,7 +2,7 @@
   "name": "Draven's Axe",
   "id": "56",
   "desc": " Gain 1% Attack Damage per gold in your bank (up to 60 gold).Attacks grant 1 stack, up to 100 times. At full stacks, grant 10 gold. ",
-  "srcPath": "public/items/traits/Draven's Axe.png",
+  "srcPath": "public/images/items/Draven's Axe.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

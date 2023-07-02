@@ -2,7 +2,7 @@
   "name": "Guinsoo's Rageblade",
   "id": "18",
   "desc": " Attacks grant 4% bonus Attack Speed. This effect stacks. ",
-  "srcPath": "public/items/traits/Guinsoo's Rageblade.png",
+  "srcPath": "public/images/items/Guinsoo's Rageblade.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

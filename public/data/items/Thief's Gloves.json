@@ -2,7 +2,7 @@
   "name": "Thief's Gloves",
   "id": "46",
   "desc": " Each round: Equip 2 random items.<br><br>[Consumes 3 item slots.] ",
-  "srcPath": "public/items/traits/Thief's Gloves.png",
+  "srcPath": "public/images/items/Thief's Gloves.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

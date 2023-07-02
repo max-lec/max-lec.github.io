@@ -5,7 +5,7 @@
 
 SCRIPT_DIR="$(dirname -- "$0")"
 DATA_PATH="$SCRIPT_DIR"/../public/data/items
-IMAGE_PATH="public/items/traits"
+IMAGE_PATH="public/images/items"
 
 # https://lolchess.gg/items/set9?hl=en
 # can't curl because JS needs enabling -> copy page html by hand
@@ -21,11 +21,11 @@ for item in "${ITEMS_ARRAY[@]}"; do
     ITEM_NAME="$item"
     ITEM_ID=$(( ITEM_ID + 1 ))
     
-    ITEM_IMAGE_SRC=$(grep -B 5 "$item" ${DATA_PATH}/html/lolchess.html | grep "<img src" | cut -d '"' -f 2)
+    ITEM_IMAGE_SRC=$(grep -B 5 "$item" ${DATA_PATH}/html/lolchess.html | grep "<img src" | head -n 1 | cut -d '"' -f 2 | sed 's| |%20|g')
     ITEM_IMAGE_PATH="$IMAGE_PATH/${item}.png"
     curl -s "https:${ITEM_IMAGE_SRC}" --output "$SCRIPT_DIR/../$ITEM_IMAGE_PATH"
 
-    DESC_URL=$(grep -A 2 -B 2 "$item" ${DATA_PATH}/html/lolchess.html | grep 'data-toggle="tooltip" data-tooltip-url=' | head -n 1 | cut -d '=' -f 3 | cut -d '"' -f 2)
+    DESC_URL=$(grep -A 2 -B 2 "$item" ${DATA_PATH}/html/lolchess.html | grep 'data-toggle="tooltip" data-tooltip-url=' | head -n 1 | cut -d '=' -f 3 | cut -d '"' -f 2 | sed 's| |%20|g')
     curl -s "$DESC_URL" --output "${DATA_PATH}/html/${item}.html"
 
     ITEM_EFFECT=$(sed -n '/<div>/,/<\/div>/p' "${DATA_PATH}/html/${item}.html" | sed "s|'||g" | xargs | sed 's|.*<div>\(.*\).*</div>.*|\1|' )
@@ -58,12 +58,12 @@ for item in "${ITEMS_ARRAY[@]}"; do
         AP=0
     fi
     if grep -e "Attack [Dd]amage" <(echo "$ITEM_STATS"); then
-        ATTACK=$(echo "$ITEM_STATS" | grep -e "Attack [Dd]amage" | sed 's|+\(.*\)% .*Attack [Dd]amage.*|\1|' | xargs)
+        ATTACK=$(echo "$ITEM_STATS" | grep -e "Attack [Dd]amage" | sed 's|+\(.*\)%* .*Attack [Dd]amage.*|\1|' | xargs)
     else 
         ATTACK=0
     fi
     if grep -e "Attack [Ss]peed" <(echo "$ITEM_STATS"); then
-        SPEED=$(echo "$ITEM_STATS" | grep -e "Attack [Ss]peed" | sed 's|+\(.*\)% .*Attack [Ss]peed.*|\1|' | xargs)
+        SPEED=$(echo "$ITEM_STATS" | grep -e "Attack [Ss]peed" | sed 's|+\(.*\)%* .*Attack [Ss]peed.*|\1|' | xargs)
     else 
         SPEED=0
     fi
@@ -96,6 +96,6 @@ for item in "${ITEMS_ARRAY[@]}"; do
 
 done
 
-### Concat final stats file 
+## Concat final stats file 
 
 jq -s . $DATA_PATH/*.json > $DATA_PATH/final/stats.json

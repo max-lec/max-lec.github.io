@@ -2,7 +2,7 @@
   "name": "Rascal's Gloves",
   "id": "117",
   "desc": " Each round: Equip 2 random Radiant items.<br><br>[Consumes 3 item slots] ",
-  "srcPath": "public/items/traits/Rascal's Gloves.png",
+  "srcPath": "public/images/items/Rascal's Gloves.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

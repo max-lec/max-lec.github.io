@@ -2,12 +2,12 @@
   "name": "Demon Slayer",
   "id": "83",
   "desc": " Abilities and attacks deal 70% more damage to enemies with more than 1600 maximum Health. ",
-  "srcPath": "public/items/traits/Demon Slayer.png",
+  "srcPath": "public/images/items/Demon Slayer.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",
   "mana_start": "0",
   "ap": "40",
   "attack": "50",
-  "speed": "+10 Attack Speed"
+  "speed": "10"
 }

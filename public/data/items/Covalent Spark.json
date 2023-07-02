@@ -2,7 +2,7 @@
   "name": "Covalent Spark",
   "id": "100",
   "desc": " 50% Shred enemies within 3 hexes. When enemies cast an Ability, they are alsol zapped for magic damage equal to 250% of their maximum Mana.<br><br>Also, regenerate 1% maximum Health per second ",
-  "srcPath": "public/items/traits/Covalent Spark.png",
+  "srcPath": "public/images/items/Covalent Spark.png",
   "health": "0",
   "armor": "0",
   "resistance": "20",

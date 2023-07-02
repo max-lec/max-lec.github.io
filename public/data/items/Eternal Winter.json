@@ -2,7 +2,7 @@
   "name": "Eternal Winter",
   "id": "120",
   "desc": " Enemies who damage the holder have their Attack Speed slowed by 20% for 1.5 seconds. After being slowed this way 7 times, the attacker is Stunned instead, but only once every 15 seconds.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Eternal Winter.png",
+  "srcPath": "public/images/items/Eternal Winter.png",
   "health": "500",
   "armor": "25",
   "resistance": "0",

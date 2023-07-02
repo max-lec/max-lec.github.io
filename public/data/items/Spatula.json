@@ -2,7 +2,7 @@
   "name": "Spatula",
   "id": "9",
   "desc": " It must do something... ",
-  "srcPath": "public/items/traits/Spatula.png",
+  "srcPath": "public/images/items/Spatula.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

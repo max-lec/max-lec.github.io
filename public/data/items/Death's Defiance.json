@@ -2,7 +2,7 @@
   "name": "Death's Defiance",
   "id": "119",
   "desc": " 50% of the damage the holder receives is instead dealt over 4 seconds as non-lethal damage. The holders Attacks and Abilities also heal for 25% of damage dealt.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Death's Defiance.png",
+  "srcPath": "public/images/items/Death's Defiance.png",
   "health": "0",
   "armor": "30",
   "resistance": "0",

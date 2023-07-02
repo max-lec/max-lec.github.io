@@ -2,7 +2,7 @@
   "name": "Sparring Gloves",
   "id": "8",
   "desc": " +20% Critical Strike Chance ",
-  "srcPath": "public/items/traits/Sparring Gloves.png",
+  "srcPath": "public/images/items/Sparring Gloves.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "More More-ellonomicon",
   "id": "101",
   "desc": " Magic or true damage from the holders Ability 60% Burns and 33% Wounds enemies for 30 seconds.<br><br>[Unique - only 1 per champion]<br>Burn: deals some of the targets maximum Health as true damage<br>Wound: reduces healing received ",
-  "srcPath": "public/items/traits/More More-ellonomicon.png",
+  "srcPath": "public/images/items/More More-ellonomicon.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Shimmer Injector",
   "id": "72",
   "desc": " Mod: Gain 25% attack speed. The first time you would be reduced to 1 heath, increase the attack speed by 100% and heal for 35% of your max health.<br><br>Overcharge: Instead increase the attack speed 400% and heal 100% of your max health. ",
-  "srcPath": "public/items/traits/Shimmer Injector.png",
+  "srcPath": "public/images/items/Shimmer Injector.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

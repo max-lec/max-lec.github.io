@@ -2,7 +2,7 @@
   "name": "Rabadon's Deathcap",
   "id": "24",
   "desc": "+10 Ability Power",
-  "srcPath": "public/items/traits/Rabadon's Deathcap.png",
+  "srcPath": "public/images/items/Rabadon's Deathcap.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

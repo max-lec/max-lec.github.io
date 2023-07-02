@@ -2,7 +2,7 @@
   "name": "Master work upgrade",
   "id": "64",
   "desc": " Use on a unit to open an armory containing Radiant versions of that units craftable completed items. Upgrade the item you choose to its Radiant equivalent, and unequip it. ",
-  "srcPath": "public/items/traits/Master work upgrade.png",
+  "srcPath": "public/images/items/Master work upgrade.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

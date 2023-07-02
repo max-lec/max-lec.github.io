@@ -2,7 +2,7 @@
   "name": "Protector's Vow",
   "id": "31",
   "desc": " Once per combat: At 40% Health, gain a 25% maximum Health shield that lasts up to 5 seconds and 25 Armor and Magic Resist for the rest of combat.<br><br>​​[Aura item] ",
-  "srcPath": "public/items/traits/Protector's Vow.png",
+  "srcPath": "public/images/items/Protector's Vow.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Infinity Force",
   "id": "121",
   "desc": " Health +250, Mana +25, Attack Damage +25%, Ability Power +25, Armor +25, Magic Resist +25, Attack Speed +25% ",
-  "srcPath": "public/items/traits/Infinity Force.png",
+  "srcPath": "public/images/items/Infinity Force.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

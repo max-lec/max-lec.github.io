@@ -2,7 +2,7 @@
   "name": "Quicksilver",
   "id": "41",
   "desc": " Combat start: Grant immunity to crowd control for 18 seconds.<br><br>[Unique - only 1 per champion] ",
-  "srcPath": "public/items/traits/Quicksilver.png",
+  "srcPath": "public/images/items/Quicksilver.png",
   "health": "0",
   "armor": "0",
   "resistance": "30",

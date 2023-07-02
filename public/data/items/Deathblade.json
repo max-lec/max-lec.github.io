@@ -2,7 +2,7 @@
   "name": "Deathblade",
   "id": "10",
   "desc": "+10% Attack Damage",
-  "srcPath": "public/items/traits/Deathblade.png",
+  "srcPath": "public/images/items/Deathblade.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

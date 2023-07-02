@@ -2,7 +2,7 @@
   "name": "Giant's Belt",
   "id": "7",
   "desc": " +150 Health ",
-  "srcPath": "public/items/traits/Giant's Belt.png",
+  "srcPath": "public/images/items/Giant's Belt.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

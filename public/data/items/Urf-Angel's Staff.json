@@ -2,7 +2,7 @@
   "name": "Urf-Angel's Staff",
   "id": "98",
   "desc": " Combat start: Gain 30 Ability Power every 4 seconds. ",
-  "srcPath": "public/items/traits/Urf-Angel's Staff.png",
+  "srcPath": "public/images/items/Urf-Angel's Staff.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

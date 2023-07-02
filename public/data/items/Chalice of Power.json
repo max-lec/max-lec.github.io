@@ -2,7 +2,7 @@
   "name": "Chalice of Power",
   "id": "32",
   "desc": " Combat start: Grant 20 Ability Power to the holder and allies within 1 hex in the same row.<br><br>[Aura item] ",
-  "srcPath": "public/items/traits/Chalice of Power.png",
+  "srcPath": "public/images/items/Chalice of Power.png",
   "health": "0",
   "armor": "0",
   "resistance": "45",

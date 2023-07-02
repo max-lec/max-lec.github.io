@@ -2,7 +2,7 @@
   "name": "Bloodthirster",
   "id": "14",
   "desc": " Grant 20% Omnivamp.<br><br>Once per combat: At 40% Health, gain a 25% maximum Health shield that lasts up to 5 seconds.<br><br>Omnivamp: heal for a percentage of damage dealt ",
-  "srcPath": "public/items/traits/Bloodthirster.png",
+  "srcPath": "public/images/items/Bloodthirster.png",
   "health": "0",
   "armor": "0",
   "resistance": "20",

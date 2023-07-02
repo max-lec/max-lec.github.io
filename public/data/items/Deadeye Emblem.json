@@ -2,7 +2,7 @@
   "name": "Deadeye Emblem",
   "id": "52",
   "desc": " The holder gains the Deadeye trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Deadeye Emblem.png",
+  "srcPath": "public/images/items/Deadeye Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

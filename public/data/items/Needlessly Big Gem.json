@@ -2,7 +2,7 @@
   "name": "Needlessly Big Gem",
   "id": "66",
   "desc": " Once per combat: If the holder is alive after 15 seconds of combat, grant 1 gold per 2 living allies, and each living ally deals 1% more damage per gold in your bank (up to 60 gold). ",
-  "srcPath": "public/items/traits/Needlessly Big Gem.png",
+  "srcPath": "public/images/items/Needlessly Big Gem.png",
   "health": "500",
   "armor": "0",
   "resistance": "0",

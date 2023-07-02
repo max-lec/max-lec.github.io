@@ -2,7 +2,7 @@
   "name": "Warmog's Armor",
   "id": "42",
   "desc": "+150 Health",
-  "srcPath": "public/items/traits/Warmog's Armor.png",
+  "srcPath": "public/images/items/Warmog's Armor.png",
   "health": "150 150",
   "armor": "0",
   "resistance": "0",

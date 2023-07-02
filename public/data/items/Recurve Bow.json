@@ -2,7 +2,7 @@
   "name": "Recurve Bow",
   "id": "2",
   "desc": " +10% Attack Speed ",
-  "srcPath": "public/items/traits/Recurve Bow.png",
+  "srcPath": "public/images/items/Recurve Bow.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

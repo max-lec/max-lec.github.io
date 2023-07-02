@@ -2,7 +2,7 @@
   "name": "Rapid Lightcannon",
   "id": "90",
   "desc": " Grant 2 bonus Attack Range and 125% Attack Speed, your attacks cannot miss. ",
-  "srcPath": "public/items/traits/Rapid Lightcannon.png",
+  "srcPath": "public/images/items/Rapid Lightcannon.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

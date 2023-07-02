@@ -2,7 +2,7 @@
   "name": "Ionia Emblem",
   "id": "127",
   "desc": " The holder gains the Ionia trait.<br><br>Ionia Bonus: 33% Attack Speed.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Ionia Emblem.png",
+  "srcPath": "public/images/items/Ionia Emblem.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

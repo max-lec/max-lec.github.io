@@ -2,7 +2,7 @@
   "name": "Statikk Shiv",
   "id": "19",
   "desc": " Every 3rd attack unleashes chain lightning that bounces to 4 enemies, dealing 30 magic damage and 50% Shredding them for 5 seconds.<br><br>[Direct damage item]<br>Shred: reduce Magic Resist ",
-  "srcPath": "public/items/traits/Statikk Shiv.png",
+  "srcPath": "public/images/items/Statikk Shiv.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

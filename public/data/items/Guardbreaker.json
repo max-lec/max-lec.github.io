@@ -2,7 +2,7 @@
   "name": "Guardbreaker",
   "id": "43",
   "desc": " After damaging a shielded enemy, Abilities and attacks deal 25% more damage for 3 seconds. ",
-  "srcPath": "public/items/traits/Guardbreaker.png",
+  "srcPath": "public/images/items/Guardbreaker.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

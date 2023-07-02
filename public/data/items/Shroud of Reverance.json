@@ -2,7 +2,7 @@
   "name": "Shroud of Reverance",
   "id": "111",
   "desc": " Combat start: Shoot a wider beam that 50% Mana Reaves enemies. Your team gains 25 starting Mana.<br><br>[Unique - only 1 per champion]<br>Mana Reave: increase maximum Mana until the next cast ",
-  "srcPath": "public/items/traits/Shroud of Reverance.png",
+  "srcPath": "public/images/items/Shroud of Reverance.png",
   "health": "400",
   "armor": "20",
   "resistance": "0",

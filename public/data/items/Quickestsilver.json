@@ -2,7 +2,7 @@
   "name": "Quickestsilver",
   "id": "114",
   "desc": " Combat start: Grant immunity to crowd control for 30 seconds.<br><br>[Unique - only 1 per champion] ",
-  "srcPath": "public/items/traits/Quickestsilver.png",
+  "srcPath": "public/images/items/Quickestsilver.png",
   "health": "0",
   "armor": "0",
   "resistance": "40",

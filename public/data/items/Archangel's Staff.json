@@ -2,7 +2,7 @@
   "name": "Archangel's Staff",
   "id": "25",
   "desc": " Combat start: Grant 20 Ability Power every 5 seconds. ",
-  "srcPath": "public/items/traits/Archangel's Staff.png",
+  "srcPath": "public/images/items/Archangel's Staff.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

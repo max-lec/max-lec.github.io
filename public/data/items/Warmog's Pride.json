@@ -2,7 +2,7 @@
   "name": "Warmog's Pride",
   "id": "115",
   "desc": " Regenerate 1% max Health per second ",
-  "srcPath": "public/items/traits/Warmog's Pride.png",
+  "srcPath": "public/images/items/Warmog's Pride.png",
   "health": "1300",
   "armor": "0",
   "resistance": "0",

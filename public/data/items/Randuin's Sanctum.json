@@ -2,7 +2,7 @@
   "name": "Randuin's Sanctum",
   "id": "124",
   "desc": " Combat start: Grant 40 Armor and 40 Magic Resistance to the holder and their adjacent allies.<br><br>[Aura item] ",
-  "srcPath": "public/items/traits/Randuin's Sanctum.png",
+  "srcPath": "public/images/items/Randuin's Sanctum.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

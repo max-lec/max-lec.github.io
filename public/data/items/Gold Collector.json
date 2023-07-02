@@ -2,7 +2,7 @@
   "name": "Gold Collector",
   "id": "125",
   "desc": " Attacks and Abilities execute enemies below 12% of their maximum Health. Executions have a 40% chance to drop 1 gold .<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Gold Collector.png",
+  "srcPath": "public/images/items/Gold Collector.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

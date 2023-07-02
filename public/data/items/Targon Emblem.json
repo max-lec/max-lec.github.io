@@ -2,7 +2,7 @@
   "name": "Targon Emblem",
   "id": "75",
   "desc": " The holder gains the Targon Trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Targon Emblem.png",
+  "srcPath": "public/images/items/Targon Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Bastion Emblem",
   "id": "48",
   "desc": " The holder gains the Bastion trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Bastion Emblem.png",
+  "srcPath": "public/images/items/Bastion Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

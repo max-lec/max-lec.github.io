@@ -2,7 +2,7 @@
   "name": "Invoker Emblem",
   "id": "63",
   "desc": " The holder gains the Invoker trait.<br><br>[Unique - Only One Per Champion] ",
-  "srcPath": "public/items/traits/Invoker Emblem.png",
+  "srcPath": "public/images/items/Invoker Emblem.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

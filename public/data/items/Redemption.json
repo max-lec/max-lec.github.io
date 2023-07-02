@@ -2,7 +2,7 @@
   "name": "Redemption",
   "id": "33",
   "desc": " Heal allies within 1 hex for 15% of their missing Health every 5 seconds. They also take 25% less multi-target damage for 5 seconds (damage reduction does not stack).<br><br>[Aura item] ",
-  "srcPath": "public/items/traits/Redemption.png",
+  "srcPath": "public/images/items/Redemption.png",
   "health": "150",
   "armor": "0",
   "resistance": "0",

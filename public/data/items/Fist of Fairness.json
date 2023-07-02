@@ -2,7 +2,7 @@
   "name": "Fist of Fairness",
   "id": "107",
   "desc": " Grant 2 effects:<br> +50% Attack Damage and +50 Ability Power.<br>30% Omnivamp.<br><br>Omnivamp: heal for some of damage dealt ",
-  "srcPath": "public/items/traits/Fist of Fairness.png",
+  "srcPath": "public/images/items/Fist of Fairness.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

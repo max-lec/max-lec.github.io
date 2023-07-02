@@ -2,7 +2,7 @@
   "name": "Zenith Edge",
   "id": "89",
   "desc": " Damage from an Ability can critically strike. ",
-  "srcPath": "public/items/traits/Zenith Edge.png",
+  "srcPath": "public/images/items/Zenith Edge.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

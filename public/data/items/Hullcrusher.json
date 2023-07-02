@@ -2,7 +2,7 @@
   "name": "Hullcrusher",
   "id": "62",
   "desc": " If this unit has no adjacent allies at combat start, gain an additional 600 Health. ",
-  "srcPath": "public/items/traits/Hullcrusher.png",
+  "srcPath": "public/images/items/Hullcrusher.png",
   "health": "0",
   "armor": "30",
   "resistance": "30",

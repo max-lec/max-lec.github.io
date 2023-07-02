@@ -2,7 +2,7 @@
   "name": "Mistral",
   "id": "113",
   "desc": " Combat start: Summon a whirlwind on the opposite side of the arena that removes the closest enemy from combat for 8 seconds.<br>Your team gains 15% Attack Speed.<br><br>[Ignores crowd control immunity]<br>[Unique - only 1 per champion] ",
-  "srcPath": "public/items/traits/Mistral.png",
+  "srcPath": "public/images/items/Mistral.png",
   "health": "300",
   "armor": "0",
   "resistance": "20",

@@ -2,7 +2,7 @@
   "name": "Guinsoo's Reckoning",
   "id": "91",
   "desc": " Attacks grant +10% bonus Attack Speed. This effect stacks. ",
-  "srcPath": "public/items/traits/Guinsoo's Reckoning.png",
+  "srcPath": "public/images/items/Guinsoo's Reckoning.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

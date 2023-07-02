@@ -2,7 +2,7 @@
   "name": "Blacksmith's Gloves",
   "id": "49",
   "desc": " Each round: Equip 2 random Ornn items.<br><br>[Consumes 3 item slots] ",
-  "srcPath": "public/items/traits/Blacksmith's Gloves.png",
+  "srcPath": "public/images/items/Blacksmith's Gloves.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

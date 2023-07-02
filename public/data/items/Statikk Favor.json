@@ -2,7 +2,7 @@
   "name": "Statikk Favor",
   "id": "92",
   "desc": " Every third attack unleashes chain lightning that bounces to 8 enemies, dealing 65 magic damage and reducing their Magic Resist by 50% for 5 seconds. ",
-  "srcPath": "public/items/traits/Statikk Favor.png",
+  "srcPath": "public/images/items/Statikk Favor.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

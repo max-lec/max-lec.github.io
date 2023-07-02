@@ -2,7 +2,7 @@
   "name": "Jeweled Gauntlet",
   "id": "29",
   "desc": " Damage from an Ability can critically strike. ",
-  "srcPath": "public/items/traits/Jeweled Gauntlet.png",
+  "srcPath": "public/images/items/Jeweled Gauntlet.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

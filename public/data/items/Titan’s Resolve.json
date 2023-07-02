@@ -2,7 +2,7 @@
   "name": "Titan’s Resolve",
   "id": "20",
   "desc": " Grant 2% Attack Damage and 2 Ability Power when attacking or taking damage, stacking up to 25 times.<br><br>At full stacks, grant 25 Armor and Magic Resist. ",
-  "srcPath": "public/items/traits/Titan’s Resolve.png",
+  "srcPath": "public/images/items/Titan’s Resolve.png",
   "health": "0",
   "armor": "20",
   "resistance": "0",

@@ -145,29 +145,29 @@ function getItemsData() {
 
     for(var item of itemsStats){
         itemData = { 
-            "id": item.id, 
+            "id": Number(item.id), 
             "name": item.name, 
-            "srcPath": getItemSrcPath(item.srcPath)
+            "srcPath": item.srcPath
         };
         itemMap.push(itemData);
     }
 
-    return itemMap;
+    return quicksort(itemMap);
 }
 
 function getItemStats(id) {
     itemStats = Alpine.store('itemsStatsData').itemsStats.find(itemStats => itemStats.id == id);
     item = {}
     item.name = itemStats.name;
-    item.srcPath = getItemSrcPath(itemStats.srcPath);
-    item.id = itemStats.id;
-    item.health = itemStats.health;
-    item.armor = itemStats.armor;
-    item.resistance = itemStats.resistance;
-    item.manaStart = itemStats.mana_start;
-    item.ap = itemStats.ap;
-    item.attack = itemStats.attack;
-    item.speed = itemStats.speed;
+    item.srcPath = itemStats.srcPath;
+    item.id = Number(itemStats.id);
+    item.health = Number(itemStats.health);
+    item.armor = Number(itemStats.armor);
+    item.resistance = Number(itemStats.resistance);
+    item.manaStart = Number(itemStats.mana_start);
+    item.ap = Number(itemStats.ap);
+    item.attack = Number(itemStats.attack);
+    item.speed = Number(itemStats.speed);
     item.flatShield = itemStats.flat_shield;
     item.percentShield = itemStats.percent_shield;
     item.percentDamage = itemStats.percent_damage;
@@ -186,5 +186,5 @@ function getItemStats(id) {
 }
 
 function getItemSrcPath(itemSrcPath) {
-    return "public/images/items/" + itemSrcPath;
+    return itemSrcPath;
 }

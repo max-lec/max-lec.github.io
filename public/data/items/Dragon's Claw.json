@@ -2,7 +2,7 @@
   "name": "Dragon's Claw",
   "id": "39",
   "desc": " Every 2 seconds, regenerate 4% maximum Health. ",
-  "srcPath": "public/items/traits/Dragon's Claw.png",
+  "srcPath": "public/images/items/Dragon's Claw.png",
   "health": "0",
   "armor": "0",
   "resistance": "70",

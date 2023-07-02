@@ -2,7 +2,7 @@
   "name": "TheDarkinBlade",
   "id": "76",
   "desc": " If the holder of this item gets a takedown, they will be consumed and Aatrox will be reborn! ",
-  "srcPath": "public/items/traits/TheDarkinBlade.png",
+  "srcPath": "public/images/items/TheDarkinBlade.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

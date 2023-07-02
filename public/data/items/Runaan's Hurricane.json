@@ -2,7 +2,7 @@
   "name": "Runaan's Hurricane",
   "id": "21",
   "desc": " Attacks fire a bolt at a nearby enemy, dealing 50% Attack Damage as physical damage.<br><br>[Direct damage item] ",
-  "srcPath": "public/items/traits/Runaan's Hurricane.png",
+  "srcPath": "public/images/items/Runaan's Hurricane.png",
   "health": "0",
   "armor": "0",
   "resistance": "20",

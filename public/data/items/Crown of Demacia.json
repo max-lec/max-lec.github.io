@@ -2,7 +2,7 @@
   "name": "Crown of Demacia",
   "id": "51",
   "desc": " If the wearer starts combat in the front 2 rows, regenerate 2-7% maximum Health per second (based on stage). If they start in the back 2 rows, gain 1-7% AD and AP every second instead. If the wearer of this item dies, you instantly lose the fight.You can remove this item by benching the wearer. ",
-  "srcPath": "public/items/traits/Crown of Demacia.png",
+  "srcPath": "public/images/items/Crown of Demacia.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",

@@ -2,7 +2,7 @@
   "name": "Tear of the Goddess",
   "id": "6",
   "desc": " +15 Mana ",
-  "srcPath": "public/items/traits/Tear of the Goddess.png",
+  "srcPath": "public/images/items/Tear of the Goddess.png",
   "health": "0",
   "armor": "0",
   "resistance": "0",
