@@ -7,48 +7,133 @@
     position: relative;
     padding: 0;
     border: 0;
-    height: 18vw;
     width: 17vw;
+    height: 18vw;
     font-size: 1em;
     overflow-y: scroll;
-    overflow-x: hidden;
+    background-color: rgb(33 26 64);
 
-    .trait-content {
+    .trait-wrapper {
+
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: left;
-        padding: 1vw;
-        background-color: rgb(55, 44, 107);
+        padding-top: 0.7vw;
+        padding-bottom: 1.3vw;
+        border-bottom: 3px solid rgb(9, 7, 27);
 
-        .level-content {
-            .trait-image {
-                width: 32px;
-                height: 32px;
-                padding-right: 0.7vw;
+        .trait-name {
+            text-align: center;
+            padding-bottom: 1vw;
+        }
 
-                &:hover {
-                    cursor: pointer;
-                    opacity: 0.85;
+        .trait-content {
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            .level-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                background-color: rgb(70, 70, 70);
+                width: 40px;
+                height: 28px;
+                margin-left: 1vw;
+
+                &:before, &:after {
+                    left: 0;
+                    right: 0;
+                    content: "";
+                    border-left: 20px solid transparent;
+                    border-right: 20px solid transparent;
+                    position: absolute;
+                }
+                &:before {
+                    top: -8px;
+                    border-bottom: 8px solid rgb(70, 70, 70);
+                }
+                &:after {
+                    bottom: -8px;
+                    border-top: 8px solid rgb(70, 70, 70);
+                }
+
+                .trait-image {
+                    width: 21px;
+                    height: 21px;
+                    filter: brightness(70%) sepia(0) saturate(100) hue-rotate(0deg);
+                }
+    
+                .trait-tooltip {
+                    display: block;
+                    position: fixed;
+                    z-index: 600;
+                    top: 22vw;
+                    left: calc(79vw + 2px);
+                    width: 15vw;
+                    padding: 1vw;
+                    background-color: rgb(55, 44, 107);
+                    border: 2px ridge rgb(102, 82, 128);
+                    box-shadow: 0 3px 3px rgba(0,0,0, 0.5);
                 }
             }
 
-            .trait-active.trait-level-0 {
-                filter: brightness(70%) sepia(100) saturate(70) hue-rotate(36deg);
+            .level-content.trait-active {
+                .trait-image {
+                    filter: brightness(10%);
+                }
             }
-            .trait-active.trait-level-1 {
-                filter: brightness(70%) sepia(0) saturate(100) hue-rotate(0deg);
+
+            .level-content.trait-active.trait-level-0 {
+                background: rgb(196,142,48);
+                background: linear-gradient(180deg, rgb(132, 96, 34) 0%, rgb(111, 65, 25) 100%);
+                &:before {
+                    border-bottom: 8px solid rgb(132, 96, 34);
+                }
+                &:after {
+                    border-top: 8px solid rgb(111, 65, 25);
+                }
             }
-            .trait-active.trait-level-2 {
-                filter: brightness(100%) sepia(100) saturate(100) hue-rotate(-15deg);
+
+            .level-content.trait-active.trait-level-1 {
+                background: rgb(196,142,48);
+                background: linear-gradient(180deg, rgb(186, 186, 186) 0%, rgb(145, 145, 145) 100%);
+                &:before {
+                    border-bottom: 8px solid rgb(186, 186, 186);
+                }
+                &:after {
+                    border-top: 8px solid rgb(145, 145, 145);
+                }
             }
-            .trait-active.trait-level-3, 
-            .trait-active.trait-level-4, 
-            .trait-active.trait-level-5 {
-                filter: brightness(105%);
-                background: radial-gradient(circle, rgba(134, 226, 245, 0.9) 0%, rgb(55 44 107) 70%);
-                background-position: bottom 1px right 6px;
+
+            .level-content.trait-active.trait-level-2 {
+                background: rgb(196,142,48);
+                background: linear-gradient(180deg, rgb(255, 201, 73) 0%, rgb(214, 161, 38) 100%);
+                &:before {
+                    border-bottom: 8px solid rgb(255, 201, 73);
+                }
+                &:after {
+                    border-top: 8px solid rgb(214, 161, 38);
+                }
+            }
+
+            .level-content.trait-active.trait-level-3,
+            .level-content.trait-active.trait-level-4 {
+                background: rgb(196,142,48);
+                background: linear-gradient(180deg, rgb(207, 249, 255) 0%, rgb(240, 185, 251) 100%);
+                &:before {
+                    border-bottom: 8px solid rgb(207, 249, 255);
+                }
+                &:after {
+                    border-top: 8px solid rgb(240, 185, 251);
+                }
             }
         }
     }
-
 }

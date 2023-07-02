@@ -178,20 +178,22 @@
 
         <div class="trait-select" x-data="{traitMap: getTraitsData()}">
           <template x-for="trait in traitMap">
-              <div class="trait-content" x-data="trait">
+            <div class="trait-wrapper" x-data="trait">
+              <span class="trait-name" x-text="trait.name"></span>
+              <div class="trait-content">
                 <template x-for="level in trait.levels">
-                  <div class="level-content">
-                    <img class="trait-image" x-bind:src="trait.srcPath" 
-                      :class="['trait-level-' + trait.levels.findIndex(el => el.level == level.level), $store.currentTrait.isActive(trait.id, trait.levels.findIndex(el => el.level == level.level)) ? 'trait-active' : '']" 
-                      @click="$store.currentTrait.triggerTrait(trait.id, trait.levels.findIndex(el => el.level == level.level))">
-                    <div class="trait-tooltip" x-show="false">
-                      <span class="trait-name" x-text="trait.name"></span>
-                      <span class="trait-level" x-text="level.level"></span>
+                  <div class="level-content" x-data="{showTooltip: false}" 
+                  :class="['trait-level-' + trait.levels.findIndex(el => el.level == level.level), $store.currentTrait.isActive(trait.id, trait.levels.findIndex(el => el.level == level.level)) ? 'trait-active' : '']"  
+                  @click="$store.currentTrait.triggerTrait(trait.id, trait.levels.findIndex(el => el.level == level.level))"
+                  @mouseover="showTooltip = true" @mouseleave="showTooltip = false">
+                    <img class="trait-image" x-bind:src="trait.srcPath">
+                    <div class="trait-tooltip" x-show="showTooltip">
                       <span class="trait-level-desc" x-text="level.desc"></span>
                     </div>
                   </div>
                 </template>
               </div>
+            </div>
           </template>
         </div>
     </div>
