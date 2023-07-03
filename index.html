@@ -230,6 +230,19 @@
             </template>
           </select>
         </div>
+
+        <div class="additional-option">
+          <label for="noxus-takedowns" class="label-option">Noxus takedowns : </label>
+          <select name="noxus-takedowns" class="select-option">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+          </select>
+        </div>
     </div>
 
     <div class="section-separator"></div>
@@ -7137,19 +7150,35 @@
     "levels": [
       {
         "level": 2,
-        "desc": "+20 Armor, +20 Magic Resist"
+        "desc": "+20 Armor, +20 Magic Resist",
+        "trait": {
+          "armor": 20,
+          "resistance": 20
+        }
       },
       {
         "level": 4,
-        "desc": "+60 Armor, +60 Magic Resist"
+        "desc": "+60 Armor, +60 Magic Resist",
+        "trait": {
+          "armor": 60,
+          "resistance": 60
+        }
       },
       {
         "level": 6,
-        "desc": "+120 Armor, +120 Magic Resist"
+        "desc": "+120 Armor, +120 Magic Resist",
+        "trait": {
+          "armor": 120,
+          "resistance": 120
+        }
       },
       {
         "level": 8,
-        "desc": "+250 Armor, +250 Magic Resist"
+        "desc": "+250 Armor, +250 Magic Resist",
+        "trait": {
+          "armor": 250,
+          "resistance": 250
+        }
       }
     ]
   },
@@ -7161,15 +7190,33 @@
     "levels": [
       {
         "level": 2,
-        "desc": "10% max Health"
+        "desc": "10% max Health",
+        "trait": {
+          "maxHealth": 10
+        },
+        "all": {
+          "health": 100
+        }
       },
       {
         "level": 4,
-        "desc": "35% max Health"
+        "desc": "35% max Health",
+        "trait": {
+          "maxHealth": 35
+        },
+        "all": {
+          "health": 100
+        }
       },
       {
         "level": 6,
-        "desc": "70% max Health"
+        "desc": "70% max Health",
+        "trait": {
+          "maxHealth": 70
+        },
+        "all": {
+          "health": 100
+        }
       }
     ]
   },
@@ -7181,7 +7228,11 @@
     "levels": [
       {
         "level": 1,
-        "desc": "When Aatrox or the holder of the Darkin Blade dies, the Darkin Blade is equipped to the nearest ally champion, granting them 400 Health and 15% Omnivamp. After being equipped to a champion for 5 seconds, Aatrox will revive upon their death instead."
+        "desc": "When Aatrox or the holder of the Darkin Blade dies, the Darkin Blade is equipped to the nearest ally champion, granting them 400 Health and 15% Omnivamp. After being equipped to a champion for 5 seconds, Aatrox will revive upon their death instead.",
+        "all": {
+          	"health": 400,
+            "omnivamp": 15
+        }
       }
     ]
   },
@@ -7193,15 +7244,30 @@
     "levels": [
       {
         "level": 2,
-        "desc": "20% Damage"
+        "desc": "20% Damage",
+        "trait": {
+          "period": 3,
+          "duration": 1,
+          "percentDamage": 20
+        }
       },
       {
         "level": 4,
-        "desc": "65% Damage"
+        "desc": "65% Damage",
+        "trait": {
+          "period": 3,
+          "duration": 1,
+          "percentDamage": 65
+        }
       },
       {
         "level": 6,
-        "desc": "140% Damage"
+        "desc": "140% Damage",
+        "trait": {
+          "period": 3,
+          "duration": 1,
+          "percentDamage": 140
+        }
       }
     ]
   },
@@ -7213,19 +7279,35 @@
     "levels": [
       {
         "level": 3,
-        "desc": "1 Elite, +5 Armor, +5 Magic Resist "
+        "desc": "1 Elite, +5 Armor, +5 Magic Resist ",
+        "all": {
+          "armor": 5,
+          "resistance": 5 
+        }
       },
       {
         "level": 5,
-        "desc": "2 Elites, +20 Armor, +20 Magic Resist "
+        "desc": "2 Elites, +20 Armor, +20 Magic Resist ",
+        "all": {
+          "armor": 20,
+          "resistance": 20 
+        }
       },
       {
         "level": 7,
-        "desc": "3 Elites, +50 Armor, +50 Magic Resist "
+        "desc": "3 Elites, +50 Armor, +50 Magic Resist ",
+        "all": {
+          "armor": 50,
+          "resistance": 50
+        }
       },
       {
         "level": 9,
-        "desc": "5 Elites, +100 Armor, +100 Magic Resist"
+        "desc": "5 Elites, +100 Armor, +100 Magic Resist",
+        "all": {
+          "armor": 100,
+          "resistance": 100 
+        }
       }
     ]
   },
@@ -7233,6 +7315,7 @@
     "name": "Empress",
     "id": "6",
     "desc": "",
+    "ignore": true,
     "srcPath": "public/images/traits/Empress.png",
     "levels": [
       {
@@ -7249,15 +7332,33 @@
     "levels": [
       {
         "level": 2,
-        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds"
+        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds",
+        "all": {
+          "delay": 8,
+          "duration": 10,
+          "sunder": 40,
+          "shred": 40 
+        }
       },
       {
         "level": 3,
-        "desc": "10% Health, enemies are also 35% Mana Reaved"
+        "desc": "10% Health, enemies are also 35% Mana Reaved",
+        "all": {
+          "delay": 8,
+          "duration": 10,
+          "sunder": 40,
+          "shred": 40 
+        }
       },
       {
         "level": 4,
-        "desc": "15% Health, enemies are also stunned for 1.5 seconds"
+        "desc": "15% Health, enemies are also stunned for 1.5 seconds",
+        "all": {
+          "delay": 8,
+          "duration": 10,
+          "sunder": 40,
+          "shred": 40 
+        }
       }
     ]
   },
@@ -7269,15 +7370,24 @@
     "levels": [
       {
         "level": 2,
-        "desc": "7% Attack Damage per Stack"
+        "desc": "7% Attack Damage per Stack",
+        "trait": {
+          "attack_onhit": 7
+        }
       },
       {
         "level": 4,
-        "desc": "12% Attack Damage per Stack"
+        "desc": "12% Attack Damage per Stack",
+        "trait": {
+          "attack_onhit": 12
+        }
       },
       {
         "level": 6,
-        "desc": "20% Attack Damage per Stack"
+        "desc": "20% Attack Damage per Stack",
+        "trait": {
+          "attack_onhit": 20
+        }
       }
     ]
   },
@@ -7289,15 +7399,34 @@
     "levels": [
       {
         "level": 2,
-        "desc": "5 Mana"
+        "desc": "5 Mana",
+        "all": {
+          "period": 3,
+          "mana_gen": 5
+        }
       },
       {
         "level": 4,
-        "desc": "Additional 15 to Invokers"
+        "desc": "Additional 15 to Invokers",
+        "trait": {
+          "mana_gen": 15
+        },
+        "all": {
+          "period": 3,
+          "mana_gen": 5
+        }
       },
       {
         "level": 6,
-        "desc": "20 Mana to all, additional 15 to Invokers"
+        "desc": "20 Mana to all, additional 15 to Invokers",
+        "trait": {
+          "period": 3,
+          "mana_gen": 15
+        },
+        "all": {
+          "period": 3,
+          "mana_gen": 20
+        }
       }
     ]
   },
@@ -7309,15 +7438,33 @@
     "levels": [
       {
         "level": 3,
-        "desc": "100% Ionian bonus, 1 enlightened "
+        "desc": "100% Ionian bonus, 1 enlightened ",
+        "trait": {
+          "period": 4,
+          "duration": 4,
+          "mana_start": 20,
+          "ionia_bonus": 100
+        }
       },
       {
         "level": 6,
-        "desc": "200% Ionian bonus, 2 enlightened "
+        "desc": "200% Ionian bonus, 2 enlightened ",
+        "trait": {
+          "period": 4,
+          "duration": 4,
+          "mana_start": 20,
+          "ionia_bonus": 200
+        }
       },
       {
         "level": 9,
-        "desc": "300% Ionian bonus, 3 enlightened "
+        "desc": "300% Ionian bonus, 3 enlightened ",
+        "trait": {
+          "period": 4,
+          "duration": 4,
+          "mana_start": 20,
+          "ionia_bonus": 300
+        }
       }
     ]
   },
@@ -7329,21 +7476,37 @@
     "levels": [
       {
         "level": 3,
-        "desc": "160 Health, 16 Ability Power, 16% Attack Damage"
+        "desc": "160 Health, 16 Ability Power, 16% Attack Damage",
+        "trait": {
+          "health": 160,
+          "ap": 16,
+          "attack": 16
+        }
       },
       {
         "level": 6,
-        "desc": "300 Health, 28 Ability Power, 28% Attack Damage"
+        "desc": "300 Health, 28 Ability Power, 28% Attack Damage",
+        "trait": {
+          "health": 300,
+          "ap": 28,
+          "attack": 28
+        }
       },
       {
         "level": 9,
-        "desc": "500 Health, 45 Ability Power, 45% Attack Damage"
+        "desc": "500 Health, 45 Ability Power, 45% Attack Damage",
+        "trait": {
+          "health": 500,
+          "ap": 45,
+          "attack": 45
+        }
       }
     ]
   },
   {
     "name": "Piltover",
     "id": "12",
+    "ignore": true,
     "desc": "Gain the T-Hex. Every time you lose a player combat, the T-Hex gains Charges. Winning converts the Charges to Power for the T-Hex. You may also sell the T-Hex if it has any Power, resetting the T-Hex and converting its Power to loot.",
     "srcPath": "public/images/traits/Piltover.png",
     "levels": [
@@ -7361,6 +7524,7 @@
     "name": "Redeemer",
     "id": "13",
     "desc": "",
+    "ignore": true,
     "srcPath": "public/images/traits/Redeemer.png",
     "levels": [
       {
@@ -7381,7 +7545,10 @@
       },
       {
         "level": 4,
-        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
+        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds.",
+        "trait": {
+          "burn": 30
+        }
       }
     ]
   },
@@ -7393,47 +7560,85 @@
     "levels": [
       {
         "level": 3,
-        "desc": "The strongest Shuriman Ascends"
+        "desc": "The strongest Shuriman Ascends",
+        "trait": {
+          "delay": 8,
+          "maxHealth": 30,
+          "speed": 45
+        }
       },
       {
         "level": 5,
-        "desc": "All Shurimans Ascend"
+        "desc": "All Shurimans Ascend",
+        "trait": {
+          "delay": 8,
+          "maxHealth": 30,
+          "speed": 45
+        }
       },
       {
         "level": 7,
-        "desc": "All Ascend at the Start of Combat "
+        "desc": "All Ascend at the Start of Combat ",
+        "trait": {
+          "maxHealth": 30,
+          "speed": 45
+        }
       },
       {
         "level": 9,
-        "desc": "+125% Ascension bonus"
+        "desc": "+125% Ascension bonus",
+        "trait": {
+          "maxHealth": 67.5,
+          "speed": 101
+        }
       }
     ]
   },
   {
     "name": "Slayer",
     "id": "16",
-    "desc": "Slayers gain 15% Omnivamp. Slayers deal bonus damage, doubled against units below 60% Health. ",
+    "desc": "Slayers gain 15% Omnivamp. Slayers deal bonus damage, doubled against units below 75% Health. ",
     "srcPath": "public/images/traits/Slayer.png",
     "levels": [
       {
         "level": 2,
-        "desc": "5% bonus damage"
+        "desc": "5% bonus damage",
+        "trait": {
+          "omnivamp": 15,
+          "percentDamage": 8.75
+        }
       },
       {
         "level": 3,
-        "desc": "10% bonus damage"
+        "desc": "10% bonus damage",
+        "trait": {
+          "omnivamp": 15,
+          "percentDamage": 17.5
+        }
       },
       {
         "level": 4,
-        "desc": "20% bonus damage"
+        "desc": "20% bonus damage",
+        "trait": {
+          "omnivamp": 15,
+          "percentDamage": 35
+        }
       },
       {
         "level": 5,
-        "desc": "30% bonus damage"
+        "desc": "30% bonus damage",
+        "trait": {
+          "omnivamp": 15,
+          "percentDamage": 52.5
+        }
       },
       {
         "level": 6,
-        "desc": "40% bonus damage"
+        "desc": "40% bonus damage",
+        "trait": {
+          "omnivamp": 15,
+          "percentDamage": 70
+        }
       }
     ]
   },
@@ -7445,19 +7650,35 @@
     "levels": [
       {
         "level": 2,
-        "desc": "25 Ability Power; 10% max Health "
+        "desc": "25 Ability Power; 10% max Health ",
+        "trait": {
+          "ap": 25,
+          "burn": 10
+        }
       },
       {
         "level": 4,
-        "desc": "50 Ability Power; 10% max Health "
+        "desc": "50 Ability Power; 10% max Health ",
+        "trait": {
+          "ap": 50,
+          "burn": 10
+        }
       },
       {
         "level": 6,
-        "desc": "80 Ability Power; 12% max Health to 2 enemies"
+        "desc": "80 Ability Power; 12% max Health to 2 enemies",
+        "trait": {
+          "ap": 80,
+          "burn": 24
+        }
       },
       {
         "level": 8,
-        "desc": "120 Ability Power; 20% max Health to 2 enemies"
+        "desc": "120 Ability Power; 20% max Health to 2 enemies",
+        "trait": {
+          "ap": 120,
+          "burn": 40
+        }
       }
     ]
   },
@@ -7469,21 +7690,34 @@
     "levels": [
       {
         "level": 2,
-        "desc": "18% increased healing and shielding "
+        "desc": "18% increased healing and shielding ",
+        "all": {
+          "healBonus": 18,
+          "shieldBonus": 18
+        }
       },
       {
         "level": 3,
-        "desc": "30% increased healing and shielding "
+        "desc": "30% increased healing and shielding ",
+        "all": {
+          "healBonus": 30,
+          "shieldBonus": 30
+        }
       },
       {
         "level": 4,
-        "desc": "50% increased healing and shielding "
+        "desc": "50% increased healing and shielding ",
+        "all": {
+          "healBonus": 50,
+          "shieldBonus": 50
+        }
       }
     ]
   },
   {
     "name": "Void",
     "id": "19",
+    "ignore": true,
     "desc": "Get a placeable void egg. At the start of combat, it hatches into an unspeakable horror and knocks up adjacent enemies. Each Void star level increases the horror's Health and Ability Power by 25%.</div> <div class=\"table-bonus-item\"> <div class=\"table-bonus-value\">Void Remora</div> ",
     "srcPath": "public/images/traits/Void.png",
     "levels": [
@@ -7504,6 +7738,7 @@
   {
     "name": "Wanderer",
     "id": "20",
+    "ignore": true,
     "desc": "",
     "srcPath": "public/images/traits/Wanderer.png",
     "levels": [
@@ -7521,11 +7756,19 @@
     "levels": [
       {
         "level": 3,
-        "desc": "Your strongest 3-star Yordle"
+        "desc": "Your strongest 3-star Yordle",
+        "all": {
+          "speedOnLevel": 10,
+          "yordle": true
+        }
       },
       {
         "level": 5,
-        "desc": "Two 3-star Yordles"
+        "desc": "Two 3-star Yordles",
+        "all": {
+          "speedOnLevel": 10,
+          "yordle": true
+        }
       }
     ]
   },
@@ -7537,15 +7780,27 @@
     "levels": [
       {
         "level": 2,
-        "desc": "Gain 1 chem-mod"
+        "desc": "Gain 1 chem-mod",
+        "trait": {
+          "mods": 1,
+          "overcharge": false
+        }
       },
       {
         "level": 4,
-        "desc": "Gain 2 chem-mods"
+        "desc": "Gain 2 chem-mods",
+        "trait": {
+          "mods": 2,
+          "overcharge": false
+        }
       },
       {
         "level": 6,
-        "desc": "Gain 3 chem-mods and Overcharge them "
+        "desc": "Gain 3 chem-mods and Overcharge them ",
+        "trait": {
+          "mods": 3,
+          "overcharge": true
+        }
       }
     ]
   }

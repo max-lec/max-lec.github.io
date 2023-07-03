@@ -65,8 +65,12 @@ document.addEventListener('alpine:init', () => {
             this.augment3 = getAugmentStats(id)
         },
 
-        getTotalAugmentHealth(){
+        getTotalHealth(){
             return this.augment1.health + this.augment2.health + this.augment3.health;
+        },
+        getTotalMaxHealth(){
+            // TODO
+            return 0;
         },
         getTotalAugmentArmor(){
             return this.augment1.armor + this.augment2.armor + this.augment3.armor;

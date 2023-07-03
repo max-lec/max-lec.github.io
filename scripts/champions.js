@@ -13,6 +13,7 @@ document.addEventListener('alpine:init', () => {
         id: 0,
         name: "",
         srcPath: "",
+        type: [],
         level: 1,
         health: 0,
         armor: 0,
@@ -33,6 +34,7 @@ document.addEventListener('alpine:init', () => {
             championStats = getChampionStats(id)
             this.name = decodeHtmlEntity(championStats.name);
             this.srcPath = getChampionSrcPath(this.name)
+            this.type = championStats.type[0];
             this.health = championStats.health.length >= this.level ? Number(championStats.health[this.level - 1]) : championStats.health[0]
             this.armor = championStats.armor.length >= this.level ? Number(championStats.armor[this.level - 1]) : championStats.armor[0]
             this.resistance = championStats.resistance.length >= this.level ? Number(championStats.resistance[this.level - 1]) : championStats.resistance[0]
@@ -82,6 +84,10 @@ function getChampionsData() {
 
 function getChampionStats(id) {
     return Alpine.store('championsStatsData').championsStats.find(champ => champ.id == id);
+}
+
+function hasCurrentChampionTrait(traitName){
+    return Alpine.store('currentChampion').type.includes(traitName);
 }
 
 function getChampionSrcPath(championName) {

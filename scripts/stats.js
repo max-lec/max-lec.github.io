@@ -13,6 +13,7 @@ document.addEventListener('alpine:init', () => {
 
         updateCurrentStats() {
             this.health = getTotalHealth();
+            this.health = this.health + (this.health * getTotalMaxHealth() /100);
             this.armor = getTotalArmor();
             this.resistance = getTotalResistance();
             this.manaStart = getTotalManaStart();
@@ -26,8 +27,16 @@ document.addEventListener('alpine:init', () => {
 
 function getTotalHealth() {
     return Alpine.store('currentChampion').health
-    + Alpine.store('currentItem').getTotalItemHealth()
-    + Alpine.store('currentAugment').getTotalAugmentHealth()
+    + Alpine.store('currentItem').getTotalHealth()
+    + Alpine.store('currentAugment').getTotalHealth()
+    + Alpine.store('currentTrait').getTotalHealth()
+    ;
+}
+
+function getTotalMaxHealth() {
+    return Alpine.store('currentItem').getTotalMaxHealth()
+    + Alpine.store('currentAugment').getTotalMaxHealth()
+    + Alpine.store('currentTrait').getTotalMaxHealth()
     ;
 }
 

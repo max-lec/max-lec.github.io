@@ -101,8 +101,12 @@ document.addEventListener('alpine:init', () => {
             this.item3 = getItemStats(id)
         },
 
-        getTotalItemHealth(){
+        getTotalHealth(){
             return this.item1.health + this.item2.health + this.item3.health;
+        },
+        getTotalMaxHealth(){
+            // TODO
+            return 0;
         },
         getTotalItemArmor(){
             return this.item1.armor + this.item2.armor + this.item3.armor;
