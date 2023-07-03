@@ -26,7 +26,7 @@ document.addEventListener('alpine:init', () => {
 })
 
 function getTotalHealth() {
-    return Alpine.store('currentChampion').health
+    return Alpine.store('currentChampion').stats.health
     + Alpine.store('currentItem').getTotalHealth()
     + Alpine.store('currentAugment').getTotalHealth()
     + Alpine.store('currentTrait').getTotalHealth()
@@ -41,7 +41,7 @@ function getTotalMaxHealth() {
 }
 
 function getTotalArmor() {
-    return Alpine.store('currentChampion').armor
+    return Alpine.store('currentChampion').stats.armor
         + Alpine.store('currentItem').getTotalArmor()
         + Alpine.store('currentAugment').getTotalArmor()
         + Alpine.store('currentTrait').getTotalArmor()
@@ -49,7 +49,7 @@ function getTotalArmor() {
 }
 
 function getTotalResistance() {
-    return Alpine.store('currentChampion').resistance
+    return Alpine.store('currentChampion').stats.resistance
         + Alpine.store('currentItem').getTotalResistance()
         + Alpine.store('currentAugment').getTotalResistance()
         + Alpine.store('currentTrait').getTotalResistance()
@@ -57,7 +57,7 @@ function getTotalResistance() {
 }
 
 function getTotalManaStart() {
-    return Alpine.store('currentChampion').manaStart
+    return Alpine.store('currentChampion').stats.manaStart
         + Alpine.store('currentItem').getTotalManaStart()
         + Alpine.store('currentAugment').getTotalManaStart()
         + Alpine.store('currentTrait').getTotalManaStart()
@@ -65,7 +65,7 @@ function getTotalManaStart() {
 }
 
 function getTotalAp() {
-    return Alpine.store('currentChampion').ap
+    return Alpine.store('currentChampion').stats.ap
         + Alpine.store('currentItem').getTotalAp()
         + Alpine.store('currentAugment').getTotalAp()
         + Alpine.store('currentTrait').getTotalAp()
@@ -73,7 +73,7 @@ function getTotalAp() {
 }
 
 function getTotalAttack() {
-    return Alpine.store('currentChampion').attack
+    return Alpine.store('currentChampion').stats.attack
         + Alpine.store('currentItem').getTotalAttack()
         + Alpine.store('currentAugment').getTotalAttack()
         + Alpine.store('currentTrait').getTotalAttack()
@@ -81,7 +81,7 @@ function getTotalAttack() {
 }
 
 function getTotalSpeed() {
-    return Alpine.store('currentChampion').speed
+    return Alpine.store('currentChampion').stats.speed
         + Alpine.store('currentItem').getTotalSpeed()
         + Alpine.store('currentAugment').getTotalSpeed()
         + Alpine.store('currentTrait').getTotalSpeed()
@@ -89,7 +89,7 @@ function getTotalSpeed() {
 }
 
 function getTotalCriticalChance() {
-    return Alpine.store('currentChampion').criticalChance
+    return Alpine.store('currentChampion').stats.criticalChance
         + Alpine.store('currentItem').getTotalItemCriticalChance()
         // + Alpine.store('currentAugment').getTotalAugmentHealth()
         ;

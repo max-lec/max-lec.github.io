@@ -15,15 +15,24 @@ document.addEventListener('alpine:init', () => {
         srcPath: "",
         type: [],
         level: 1,
-        health: 0,
-        armor: 0,
-        resistance: 0,
-        manaStart: 0,
-        ap: 0,
-        attack: 0,
-        speed: 0,
-        criticalChance: 25,
-        criticalDamage: 1.3,
+        stats: {
+            health: 0,
+            armor: 0,
+            resistance: 0,
+            manaStart: 0,
+            ap: 0,
+            attack: 0,
+            speed: 0,
+            criticalChance: 25,
+            criticalDamage: 1.3
+        },
+        spellDesc: "",
+        spells: 
+            {
+                ad: true,
+                ap: false,
+                damagePercent: [0, 0, 0]
+            },
 
         init() {
             this.id = 19; //inits to jhin
@@ -31,17 +40,15 @@ document.addEventListener('alpine:init', () => {
         },
 
         setChampionStats(id) {
-            championStats = getChampionStats(id)
+            championStats = getChampionStats(id);
+
             this.name = decodeHtmlEntity(championStats.name);
-            this.srcPath = getChampionSrcPath(this.name)
+            this.srcPath = getChampionSrcPath(this.name);
             this.type = championStats.type[0];
-            this.health = championStats.health.length >= this.level ? Number(championStats.health[this.level - 1]) : championStats.health[0]
-            this.armor = championStats.armor.length >= this.level ? Number(championStats.armor[this.level - 1]) : championStats.armor[0]
-            this.resistance = championStats.resistance.length >= this.level ? Number(championStats.resistance[this.level - 1]) : championStats.resistance[0]
-            this.manaStart = Number(championStats.mana_start) ?? 0
-            this.ap = Number(championStats.ap)
-            this.attack = championStats.attack.length >= this.level ? Number(championStats.attack[this.level - 1]) : championStats.attack[0]
-            this.speed = Number(championStats.speed) * 100
+            this.spellDesc = championStats.spell_desc;
+
+            this.stats = mapChampionStats(championStats);
+            this.spell = mapChampionSpellData(championStats);
         },
 
         selectChampion(id) {
@@ -84,6 +91,28 @@ function getChampionsData() {
 
 function getChampionStats(id) {
     return Alpine.store('championsStatsData').championsStats.find(champ => champ.id == id);
+}
+
+function mapChampionStats(championStats){
+    let stats = {};
+    stats.health = championStats.health.length >= this.level ? Number(championStats.health[this.level - 1]) : championStats.health[0];
+    stats.armor = championStats.armor.length >= this.level ? Number(championStats.armor[this.level - 1]) : championStats.armor[0];
+    stats.resistance = championStats.resistance.length >= this.level ? Number(championStats.resistance[this.level - 1]) : championStats.resistance[0];
+    stats.manaStart = Number(championStats.mana_start) ?? 0;
+    stats.ap = Number(championStats.ap);
+    stats.attack = championStats.attack.length >= this.level ? Number(championStats.attack[this.level - 1]) : championStats.attack[0];
+    stats.speed = Number(championStats.speed) * 100;
+    return stats;
+}
+
+function mapChampionSpellData(championStats) {
+    spell = {};
+    spellSteps = championStats.spell_desc;
+    spell.ad = spellSteps.includes("physical damage");
+    spell.ap = spellSteps.includes("magic damage");
+    spell.damagePercent = championStats.spell.find(data => data.key.includes("Damage")).stats;
+    spell.damagePercent = spell.damagePercent.map(val => Number(val.replace('%', '')));
+    return spell;
 }
 
 function hasCurrentChampionTrait(traitName){

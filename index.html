@@ -25,6 +25,7 @@
 <script src="./scripts/total_stats.js"></script>
 <script src="./scripts/damage_stats.js"></script>
 <script src="./scripts/traits.js"></script>
+<script src="./scripts/options.js"></script>
 
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
@@ -205,10 +206,10 @@
     <div class="section-separator"></div>
 
     <!-- additional options -->
-    <div class="additional-options">
+    <div class="additional-options" x-data>
         <div class="additional-option">
           <label for="multihit" class="label-option">Enemies hit : </label>
-          <select name="multihit" class="select-option">
+          <select name="multihit" class="select-option" x-model="$store.options.multihit">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -335,6 +336,13 @@
             <div class="stat-label">ENEMIES KILLED / 30s : </div>
             <span>0</span>
           </div>
+        </div>
+
+        <div class="" x-data style="width:200px">
+          <span class="" x-text="$store.currentChampion.spellDesc"></span>
+          <span>Damage: </span><span x-text="$store.currentChampion.spell.damagePercent"></span>
+          <span x-show="$store.currentChampion.spell.ad"> %AD</span>
+          <span x-show="$store.currentChampion.spell.ap"> %AP</span>
         </div>
     </div>
 
