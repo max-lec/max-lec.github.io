@@ -108,10 +108,10 @@ document.addEventListener('alpine:init', () => {
             // TODO
             return 0;
         },
-        getTotalItemArmor(){
+        getTotalArmor(){
             return this.item1.armor + this.item2.armor + this.item3.armor;
         },
-        getTotalItemResistance(){
+        getTotalResistance(){
             return this.item1.resistance + this.item2.resistance + this.item3.resistance;
         },
         getTotalItemManaStart(){

@@ -72,10 +72,10 @@ document.addEventListener('alpine:init', () => {
             // TODO
             return 0;
         },
-        getTotalAugmentArmor(){
+        getTotalArmor(){
             return this.augment1.armor + this.augment2.armor + this.augment3.armor;
         },
-        getTotalAugmentResistance(){
+        getTotalResistance(){
             return this.augment1.resistance + this.augment2.resistance + this.augment3.resistance;
         },
         getTotalAugmentManaStart(){

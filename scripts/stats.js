@@ -42,15 +42,17 @@ function getTotalMaxHealth() {
 
 function getTotalArmor() {
     return Alpine.store('currentChampion').armor
-        + Alpine.store('currentItem').getTotalItemArmor()
-        + Alpine.store('currentAugment').getTotalAugmentArmor()
+        + Alpine.store('currentItem').getTotalArmor()
+        + Alpine.store('currentAugment').getTotalArmor()
+        + Alpine.store('currentTrait').getTotalArmor()
         ;
 }
 
 function getTotalResistance() {
     return Alpine.store('currentChampion').resistance
-        + Alpine.store('currentItem').getTotalItemResistance()
-        + Alpine.store('currentAugment').getTotalAugmentResistance()
+        + Alpine.store('currentItem').getTotalResistance()
+        + Alpine.store('currentAugment').getTotalResistance()
+        + Alpine.store('currentTrait').getTotalResistance()
         ;
 }
 

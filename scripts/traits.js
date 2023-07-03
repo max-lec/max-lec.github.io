@@ -59,6 +59,32 @@ document.addEventListener('alpine:init', () => {
             });
             return total;
         },
+
+        getTotalArmor(){
+            let total = 0;
+            // flat armor
+            this.activeTraits.forEach(activeTuple => {
+                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                total += traitStats?.all?.armor ?? 0;
+                if (hasCurrentChampionTrait(traitStats.name)){
+                    total += traitStats?.trait?.armor ?? 0;
+                }
+            });
+            return total;
+        },
+
+        getTotalResistance(){
+            let total = 0;
+            // flat MR
+            this.activeTraits.forEach(activeTuple => {
+                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                total += traitStats?.all?.resistance ?? 0;
+                if (hasCurrentChampionTrait(traitStats.name)){
+                    total += traitStats?.trait?.resistance ?? 0;
+                }
+            });
+            return total;
+        },
     });
 
 });
