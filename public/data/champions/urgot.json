@@ -4,6 +4,39 @@
   "type": [
     "Zaun, Deadeye"
   ],
+  "spell_desc": "Passive: Whenever an enemy enters attack range, fire a blast from the leg facing that direction, dealing physical damage to them. Each of Urgots 6 legs has a 4 second cooldown.\n\nActive: Gain Shield for 5 seconds and dash behind the current target. Reset all leg colldowns.",
+  "spell": [
+    {
+      "key": "Base Damage",
+      "stats": [
+        "50%",
+        "75%",
+        "500%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "275% AD + AP"
+      ]
+    },
+    {
+      "key": "Leg colldown",
+      "stats": [
+        "4",
+        "4",
+        "1"
+      ]
+    },
+    {
+      "key": "Shield",
+      "stats": [
+        "400%",
+        "500%",
+        "1500%"
+      ]
+    }
+  ],
   "health": [
     1000,
     1800,

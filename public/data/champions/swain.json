@@ -4,6 +4,25 @@
   "type": [
     "Noxus, Sorcerer, Strategist"
   ],
+  "spell_desc": "Transform and gain max Health for 6 seconds. While transformed, deal magic damage to enemies within 2 hexes every second.",
+  "spell": [
+    {
+      "key": "Health Bonus",
+      "stats": [
+        "425%",
+        "450%",
+        "480%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "25%",
+        "40%",
+        "60%"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

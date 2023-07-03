@@ -4,6 +4,27 @@
   "type": [
     "Demacia, Yordle, Bastion"
   ],
+  "spell_desc": "Gain Shield for 3 seconds. Deal magic damage to the current target.\n\n4 Star Upgrade: Knock the target into the largest clump of enemies, dealing 33% of the targets max Health as magic damage to the target and 15% of that amount to the clump. Stun them for 1 seconds.",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "290%",
+        "310%",
+        "330%",
+        "350%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "140%",
+        "210%",
+        "315%",
+        "315%"
+      ]
+    }
+  ],
   "health": [
     600,
     1080,

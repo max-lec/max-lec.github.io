@@ -1,8 +1,27 @@
 {
   "name": "Heimerdinger",
-  "id": 15,
+  "id": "15",
   "type": [
     "Piltover, Yordle, Technogenius"
+  ],
+  "spell_desc": "Hurl a grenade towards the largest group of enemies, dealing magic damage to enemies in a large area and Stunning them for 1.5 seconds.\n\n4 Star Upgrade: YES YES YES, IT WORKS!!!",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "150%",
+        "225%",
+        "3141%"
+      ]
+    },
+    {
+      "key": "Stun Duration",
+      "stats": [
+        "1.5",
+        "2",
+        "15"
+      ]
+    }
   ],
   "health": [
     750,
@@ -15,13 +34,13 @@
   "resistance": [
     30
   ],
-  "mana_start": 80,
-  "mana_cost": 160,
-  "ap": 100,
+  "mana_start": "80",
+  "mana_cost": "160",
+  "ap": "100",
   "attack": [
     40,
     60,
     90
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

@@ -66,22 +66,25 @@ function getTotalManaStart() {
 
 function getTotalAp() {
     return Alpine.store('currentChampion').ap
-        + Alpine.store('currentItem').getTotalItemAp()
-        + Alpine.store('currentAugment').getTotalAugmentAp()
+        + Alpine.store('currentItem').getTotalAp()
+        + Alpine.store('currentAugment').getTotalAp()
+        + Alpine.store('currentTrait').getTotalAp()
         ;
 }
 
 function getTotalAttack() {
     return Alpine.store('currentChampion').attack
-        + Alpine.store('currentItem').getTotalItemAttack()
-        + Alpine.store('currentAugment').getTotalAugmentAttack()
+        + Alpine.store('currentItem').getTotalAttack()
+        + Alpine.store('currentAugment').getTotalAttack()
+        + Alpine.store('currentTrait').getTotalAttack()
         ;
 }
 
 function getTotalSpeed() {
     return Alpine.store('currentChampion').speed
-        + Alpine.store('currentItem').getTotalItemSpeed()
-        + Alpine.store('currentAugment').getTotalAugmentSpeed()
+        + Alpine.store('currentItem').getTotalSpeed()
+        + Alpine.store('currentAugment').getTotalSpeed()
+        + Alpine.store('currentTrait').getTotalSpeed()
         ;
 }
 

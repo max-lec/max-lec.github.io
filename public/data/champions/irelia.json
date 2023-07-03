@@ -1,8 +1,27 @@
 {
   "name": "Irelia",
-  "id": 16,
+  "id": "16",
   "type": [
     "Ionia, Challenger"
+  ],
+  "spell_desc": "Enter a defensive stance and gain Shield that rapidly decays over 3 seconds. When it breaks, deal magic damage + 30% of the damage absorbed to enemies around and in front of Irelia.\n\nIonia Bonus: +25 Armor and Magic Resist",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "350%",
+        "400%",
+        "450%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "70%",
+        "100%",
+        "150%"
+      ]
+    }
   ],
   "health": [
     700,
@@ -15,13 +34,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 40,
-  "mana_cost": 80,
-  "ap": 100,
+  "mana_start": "40",
+  "mana_cost": "80",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.65
+  "speed": "0.65"
 }

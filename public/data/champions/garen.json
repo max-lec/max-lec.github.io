@@ -1,8 +1,31 @@
 {
   "name": "Garen",
-  "id": 13,
+  "id": "13",
   "type": [
     "Demacia, Juggernaut"
+  ],
+  "spell_desc": "Spin times every second for the next 4 seconds. Each spin deals physical damage to adjacent enemies.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "70%",
+        "72%",
+        "75%"
+      ]
+    },
+    {
+      "key": "Number of Spins",
+      "stats": [
+        "1.8 + 1 per 55% bonus AS"
+      ]
+    },
+    {
+      "key": "Duration",
+      "stats": [
+        "4% AP"
+      ]
+    }
   ],
   "health": [
     850,
@@ -15,13 +38,13 @@
   "resistance": [
     45
   ],
-  "mana_start": 0,
-  "mana_cost": 80,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "80",
+  "ap": "100",
   "attack": [
     70,
     105,
     158
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

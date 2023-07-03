@@ -4,6 +4,25 @@
   "type": [
     "Piltover, Sorcerer"
   ],
+  "spell_desc": "Grant the lowest Health ally Shield for 4 seconds. When the Shield expires, it deals magic damage to adjacent enemies and Chills them for 3 seconds.\n\nChill: Reduced Attack Speed by 30%",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "225%",
+        "250%",
+        "325%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "190%",
+        "285%",
+        "430%"
+      ]
+    }
+  ],
   "health": [
     500,
     900,

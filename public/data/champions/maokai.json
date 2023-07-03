@@ -4,6 +4,17 @@
   "type": [
     "Shadow Isles, Bastion"
   ],
+  "spell_desc": "Passive: Whenever an enemy uses their ability, gain 5 Mana.\n\nActive: On Maokais next attack, heal.",
+  "spell": [
+    {
+      "key": "Heal",
+      "stats": [
+        "220",
+        "260",
+        "300"
+      ]
+    }
+  ],
   "health": [
     700,
     1260,

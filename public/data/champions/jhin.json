@@ -1,8 +1,19 @@
 {
   "name": "Jhin",
-  "id": 19,
+  "id": "19",
   "type": [
     "Ionia, Deadeye"
+  ],
+  "spell_desc": "Take aim at the current target and deal physical damage to enemies in a line; each hit reduces damage by 40%.\n\nIonia Bonus: +30% Attack Damage",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "60%",
+        "90%",
+        "135%"
+      ]
+    }
   ],
   "health": [
     504,
@@ -15,13 +26,13 @@
   "resistance": [
     14
   ],
-  "mana_start": 44,
-  "mana_cost": 144,
-  "ap": 100,
+  "mana_start": "44",
+  "mana_cost": "144",
+  "ap": "100",
   "attack": [
     54,
     81,
     122
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }

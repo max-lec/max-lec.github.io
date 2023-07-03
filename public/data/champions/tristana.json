@@ -4,6 +4,33 @@
   "type": [
     "Yordle, Gunner"
   ],
+  "spell_desc": "Gain 50% Attack Speed for 4 seconds. For the duration, attacks explode on impact and deal physical damage to enemies within 1 hex.\n\n4 Star Upgrade: Every 10th attack deals bonus physical damage and ricochets to the largest clump of enemies, dealing physical damage to enemies within 1 hex.",
+  "spell": [
+    {
+      "key": "Attack Speed Bonus",
+      "stats": [
+        "70%"
+      ]
+    },
+    {
+      "key": "Shrapnel Damage",
+      "stats": [
+        "60% AD"
+      ]
+    },
+    {
+      "key": "4 Star Shot Damage",
+      "stats": [
+        "100% AD"
+      ]
+    },
+    {
+      "key": "Ricochet Explosion",
+      "stats": [
+        "50% AD"
+      ]
+    }
+  ],
   "health": [
     400,
     720,

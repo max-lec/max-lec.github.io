@@ -1,8 +1,39 @@
 {
   "name": "Bel'Veth",
-  "id": 7,
+  "id": "7",
   "type": [
     "Void, Empress"
+  ],
+  "spell_desc": "Lash out at the lowest Health enemy in range 6 times. Each lash deals physical damage and 2% of the targets max Health as true damage.",
+  "spell": [
+    {
+      "key": "Number of Lashes",
+      "stats": [
+        "6",
+        "6",
+        "30"
+      ]
+    },
+    {
+      "key": "Number of Lashes",
+      "stats": [
+        "6 per 100% bonus"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "20%",
+        "30%",
+        "50%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "75% AD + 20% AP"
+      ]
+    }
   ],
   "health": [
     1100,
@@ -15,13 +46,13 @@
   "resistance": [
     50
   ],
-  "mana_start": 0,
-  "mana_cost": 55,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "55",
+  "ap": "100",
   "attack": [
     80,
     120,
     180
   ],
-  "speed": 0.85
+  "speed": "0.85"
 }

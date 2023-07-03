@@ -10,7 +10,12 @@
         "desc": "+20 Armor, +20 Magic Resist",
         "trait": {
           "armor": 20,
-          "resistance": 20
+          "resistance": 20,
+          "special": {
+            "duration": 10,
+            "armor": 20,
+            "resistance": 20
+          }
         }
       },
       {
@@ -18,7 +23,12 @@
         "desc": "+60 Armor, +60 Magic Resist",
         "trait": {
           "armor": 60,
-          "resistance": 60
+          "resistance": 60,
+          "special": {
+            "duration": 10,
+            "armor": 60,
+            "resistance": 60
+          }
         }
       },
       {
@@ -26,7 +36,12 @@
         "desc": "+120 Armor, +120 Magic Resist",
         "trait": {
           "armor": 120,
-          "resistance": 120
+          "resistance": 120,
+          "special": {
+            "duration": 10,
+            "armor": 120,
+            "resistance": 120
+          }
         }
       },
       {
@@ -34,7 +49,12 @@
         "desc": "+250 Armor, +250 Magic Resist",
         "trait": {
           "armor": 250,
-          "resistance": 250
+          "resistance": 250,
+          "special": {
+            "duration": 10,
+            "armor": 250,
+            "resistance": 250
+          }
         }
       }
     ]
@@ -103,27 +123,33 @@
         "level": 2,
         "desc": "20% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 20
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 20
+          }
         }
       },
       {
         "level": 4,
         "desc": "65% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 65
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 65
+          }
         }
       },
       {
         "level": 6,
         "desc": "140% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 140
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 140
+          }
         }
       }
     ]
@@ -184,38 +210,21 @@
   {
     "name": "Freljord",
     "id": "7",
+    "ignore": true,
     "desc": "After 8 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs. Sunder: Reduce Armor Shred: Reduce Magic Resist Mana Reave: Increase max Mana until the next cast",
     "srcPath": "public/images/traits/Freljord.png",
     "levels": [
       {
         "level": 2,
-        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds"
       },
       {
         "level": 3,
-        "desc": "10% Health, enemies are also 35% Mana Reaved",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "10% Health, enemies are also 35% Mana Reaved"
       },
       {
         "level": 4,
-        "desc": "15% Health, enemies are also stunned for 1.5 seconds",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "15% Health, enemies are also stunned for 1.5 seconds"
       }
     ]
   },
@@ -229,21 +238,27 @@
         "level": 2,
         "desc": "7% Attack Damage per Stack",
         "trait": {
-          "attackOnHit": 7
+          "special": {
+            "attackOnHit": 7
+          }
         }
       },
       {
         "level": 4,
         "desc": "12% Attack Damage per Stack",
         "trait": {
-          "attackOnHit": 12
+          "special": {
+            "attackOnHit": 12
+          }
         }
       },
       {
         "level": 6,
         "desc": "20% Attack Damage per Stack",
         "trait": {
-          "attackOnHit": 20
+          "special": {
+            "attackOnHit": 20
+          }
         }
       }
     ]
@@ -258,31 +273,42 @@
         "level": 2,
         "desc": "5 Mana",
         "all": {
-          "period": 3,
-          "manaGen": 5
+          "special": {
+            "period": 3,
+            "manaGen": 5
+          }
         }
       },
       {
         "level": 4,
         "desc": "Additional 15 to Invokers",
         "trait": {
-          "manaGen": 15
+          "special": {
+            "period": 3,
+            "manaGen": 15
+          }
         },
         "all": {
-          "period": 3,
-          "manaGen": 5
+          "special": {
+            "period": 3,
+            "manaGen": 5
+          }
         }
       },
       {
         "level": 6,
         "desc": "20 Mana to all, additional 15 to Invokers",
         "trait": {
-          "period": 3,
-          "manaGen": 15
+          "special": {
+            "period": 3,
+            "manaGen": 15
+          }
         },
         "all": {
-          "period": 3,
-          "manaGen": 20
+          "special": {
+            "period": 3,
+            "manaGen": 20
+          }
         }
       }
     ]
@@ -297,30 +323,36 @@
         "level": 3,
         "desc": "100% Ionian bonus, 1 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "manaGen": 20,
-          "ioniaBonus": 100
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 100
+          }
         }
       },
       {
         "level": 6,
         "desc": "200% Ionian bonus, 2 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "manaGen": 20,
-          "ioniaBonus": 200
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 200
+          }
         }
       },
       {
         "level": 9,
         "desc": "300% Ionian bonus, 3 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "manaGen": 20,
-          "ioniaBonus": 300
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 300
+          }
         }
       }
     ]
@@ -394,6 +426,7 @@
     "name": "Rogue",
     "id": "14",
     "desc": "",
+    "ignore": true,
     "srcPath": "public/images/traits/Rogue.png",
     "levels": [
       {
@@ -402,10 +435,7 @@
       },
       {
         "level": 4,
-        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds.",
-        "trait": {
-          "burn": 30
-        }
+        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
       }
     ]
   },
@@ -419,34 +449,44 @@
         "level": 3,
         "desc": "The strongest Shuriman Ascends",
         "trait": {
-          "delay": 8,
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 5,
         "desc": "All Shurimans Ascend",
         "trait": {
-          "delay": 8,
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 7,
         "desc": "All Ascend at the Start of Combat ",
         "trait": {
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 9,
         "desc": "+125% Ascension bonus",
         "trait": {
-          "maxHealth": 67.5,
-          "speed": 101
+          "special": {
+            "delay": 8,
+            "maxHealth": 67.5,
+            "speed": 101
+          }
         }
       }
     ]
@@ -510,7 +550,9 @@
         "desc": "25 Ability Power; 10% max Health ",
         "trait": {
           "ap": 25,
-          "burn": 10
+          "special": {
+            "onKillBurn": 10
+          }
         }
       },
       {
@@ -518,7 +560,9 @@
         "desc": "50 Ability Power; 10% max Health ",
         "trait": {
           "ap": 50,
-          "burn": 10
+          "special": {
+            "onKillBurn": 10
+          }
         }
       },
       {
@@ -526,7 +570,9 @@
         "desc": "80 Ability Power; 12% max Health to 2 enemies",
         "trait": {
           "ap": 80,
-          "burn": 24
+          "special": {
+            "onKillBurn": 24
+          }
         }
       },
       {
@@ -534,7 +580,9 @@
         "desc": "120 Ability Power; 20% max Health to 2 enemies",
         "trait": {
           "ap": 120,
-          "burn": 40
+          "special": {
+            "onKillBurn": 40
+          }
         }
       }
     ]
@@ -616,7 +664,9 @@
         "desc": "Your strongest 3-star Yordle",
         "all": {
           "speedOnLevel": 10,
-          "yordle": true
+          "special": {
+            "yordle": true
+          }
         }
       },
       {
@@ -624,7 +674,9 @@
         "desc": "Two 3-star Yordles",
         "all": {
           "speedOnLevel": 10,
-          "yordle": true
+          "special": {
+            "yordle": true
+          }
         }
       }
     ]
@@ -639,24 +691,30 @@
         "level": 2,
         "desc": "Gain 1 chem-mod",
         "trait": {
-          "mods": 1,
-          "overcharge": false
+          "special": {
+            "mods": 1,
+            "overcharge": false
+          }
         }
       },
       {
         "level": 4,
         "desc": "Gain 2 chem-mods",
         "trait": {
-          "mods": 2,
-          "overcharge": false
+          "special": {
+            "mods": 2,
+            "overcharge": false
+          }
         }
       },
       {
         "level": 6,
         "desc": "Gain 3 chem-mods and Overcharge them ",
         "trait": {
-          "mods": 3,
-          "overcharge": true
+          "special": {
+            "mods": 3,
+            "overcharge": true
+          }
         }
       }
     ]

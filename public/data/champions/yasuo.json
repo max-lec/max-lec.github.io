@@ -4,6 +4,45 @@
   "type": [
     "Ionia, Challenger"
   ],
+  "spell_desc": "Send a whirlwind at the furthest enemy within 3 hexes, Stunning all enemies hit. Dash to and slash the original target, dealing physical damage to them. Slam them into the ground and deal physical damage to enemies within 1 hex.\n\nIonia Bonus: +15% Omnivamp",
+  "spell": [
+    {
+      "key": "Slash Damage AD",
+      "stats": [
+        "500%",
+        "500%",
+        "1500%"
+      ]
+    },
+    {
+      "key": "Slash Damage AP",
+      "stats": [
+        "50%",
+        "75%",
+        "300%"
+      ]
+    },
+    {
+      "key": "Slash Damage",
+      "stats": [
+        "AD + AP"
+      ]
+    },
+    {
+      "key": "Slam Damage",
+      "stats": [
+        "300%",
+        "300%",
+        "750%"
+      ]
+    },
+    {
+      "key": "Range",
+      "stats": [
+        "2 + Attack Range"
+      ]
+    }
+  ],
   "health": [
     950,
     1710,

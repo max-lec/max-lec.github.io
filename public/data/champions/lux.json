@@ -4,6 +4,33 @@
   "type": [
     "Demacia, Sorcerer"
   ],
+  "spell_desc": "Channel a barrage of light at the current target that deals magic damage over a few seconds, reducing their Magic Resistance every seconds. If they die, shift to a new target.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "750%",
+        "1125%",
+        "3333%"
+      ]
+    },
+    {
+      "key": "Reduce Magic Resist",
+      "stats": [
+        "15",
+        "15",
+        "50"
+      ]
+    },
+    {
+      "key": "Duration",
+      "stats": [
+        "3",
+        "3",
+        "3"
+      ]
+    }
+  ],
   "health": [
     750,
     1350,

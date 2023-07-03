@@ -1,8 +1,27 @@
 {
   "name": "Kai'Sa",
-  "id": 21,
+  "id": "21",
   "type": [
     "Void, Challenger"
+  ],
+  "spell_desc": "Dash away from all enemies, then fire missiles split across the 4 nearest enemies. Each missile deal magic damage.",
+  "spell": [
+    {
+      "key": "Number of Missiles",
+      "stats": [
+        "15",
+        "15",
+        "25"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "75%",
+        "111%",
+        "300%"
+      ]
+    }
   ],
   "health": [
     850,
@@ -15,13 +34,13 @@
   "resistance": [
     35
   ],
-  "mana_start": 40,
-  "mana_cost": 110,
-  "ap": 100,
+  "mana_start": "40",
+  "mana_cost": "110",
+  "ap": "100",
   "attack": [
     45,
     68,
     101
   ],
-  "speed": 0.8
+  "speed": "0.8"
 }

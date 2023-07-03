@@ -4,6 +4,25 @@
   "type": [
     "Shadow Isles, Gunner, Redeemer"
   ],
+  "spell_desc": "Fire a massive beam at the furthest enemy, dealing physical damage to all enemies hit. Any allies hit gain Shield for 4 seconds.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "190%",
+        "200%",
+        "2000%"
+      ]
+    },
+    {
+      "key": "Shield",
+      "stats": [
+        "250%",
+        "325%",
+        "4000%"
+      ]
+    }
+  ],
   "health": [
     900,
     1620,

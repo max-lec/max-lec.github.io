@@ -4,6 +4,25 @@
   "type": [
     "Shadow Isles, Rogue"
   ],
+  "spell_desc": "Deal magic damage to the current target. For the rest of combat, Viegos attacks deal bonus stacking magic damage.",
+  "spell": [
+    {
+      "key": "Stab Damage",
+      "stats": [
+        "125%",
+        "185%",
+        "280%"
+      ]
+    },
+    {
+      "key": "Stacking Damage",
+      "stats": [
+        "20%",
+        "30%",
+        "45%"
+      ]
+    }
+  ],
   "health": [
     600,
     1080,

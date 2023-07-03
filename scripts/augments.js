@@ -81,13 +81,13 @@ document.addEventListener('alpine:init', () => {
         getTotalManaStart(){
             return this.augment1.manaStart + this.augment2.manaStart + this.augment3.manaStart;
         },
-        getTotalAugmentAp(){
+        getTotalAp(){
             return this.augment1.ap + this.augment2.ap + this.augment3.ap;
         },
-        getTotalAugmentAttack(){
+        getTotalAttack(){
             return this.augment1.attack + this.augment2.attack + this.augment3.attack;
         },
-        getTotalAugmentSpeed(){
+        getTotalSpeed(){
             return this.augment1.speed + this.augment2.speed + this.augment3.speed;
         },
     });

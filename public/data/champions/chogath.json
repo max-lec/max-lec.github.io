@@ -1,8 +1,25 @@
 {
   "name": "Cho'Gath",
-  "id": 9,
+  "id": "9",
   "type": [
     "Void, Bruiser"
+  ],
+  "spell_desc": "Deal magic damage to the lowest adjacent Health enemy. If this kills them, devour them and permanetly gain max Health.",
+  "spell": [
+    {
+      "key": "Devour Health Bonus",
+      "stats": [
+        "30"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "10% Health + 250%",
+        "335%",
+        "450% AP"
+      ]
+    }
   ],
   "health": [
     700,
@@ -15,13 +32,13 @@
   "resistance": [
     30
   ],
-  "mana_start": 30,
-  "mana_cost": 90,
-  "ap": 100,
+  "mana_start": "30",
+  "mana_cost": "90",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.5
+  "speed": "0.5"
 }

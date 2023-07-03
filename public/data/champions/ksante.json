@@ -1,8 +1,41 @@
 {
   "name": "K'Sante",
-  "id": 28,
+  "id": "28",
   "type": [
     "Shurima, Bastion"
+  ],
+  "spell_desc": "Slam the ground, knocking the current target into the air. Then smash them away towards the edge of the battlefield, dealing magic damage and Stunning them for 2 seconds. Briefly stun and deal magic damage to enemies that collide with the target while they are being knocked back or who are adjacent to where the target lands.\n\nIf the target cannot be pushed back any further, they are knocked off the battlefield.\n\nIf the target is still alive, KSante will chase after them.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "250%",
+        "400%",
+        "1000%"
+      ]
+    },
+    {
+      "key": "Stun Duration",
+      "stats": [
+        "2",
+        "2.5",
+        "10"
+      ]
+    },
+    {
+      "key": "Collision Damage",
+      "stats": [
+        "50% of Damage"
+      ]
+    },
+    {
+      "key": "Collision Stun Duration",
+      "stats": [
+        "1",
+        "1.25",
+        "5"
+      ]
+    }
   ],
   "health": [
     1000,
@@ -15,13 +48,13 @@
   "resistance": [
     60
   ],
-  "mana_start": 0,
-  "mana_cost": 60,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "60",
+  "ap": "100",
   "attack": [
     60,
     90,
     135
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }

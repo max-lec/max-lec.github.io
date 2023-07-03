@@ -4,6 +4,18 @@
   "type": [
     "Yordle, Multicaster, Strategist"
   ],
+  "spell_desc": "Hurl an explosive mushroom at the current target. When it detonates, enemies within 1 hex are Wounded and take magic damage over 3 seconds.\n\n4 Star Upgrade: Increase the explosion radius by 1 hex.\n\nWounded: Reduced healing received by 50%",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "200%",
+        "300%",
+        "465%",
+        "465%"
+      ]
+    }
+  ],
   "health": [
     500,
     900,

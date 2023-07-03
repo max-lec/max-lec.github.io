@@ -1,8 +1,19 @@
 {
   "name": "Karma",
-  "id": 23,
+  "id": "23",
   "type": [
     "Ionia, Invoker"
+  ],
+  "spell_desc": "Fire a burst of energy at Karmas target that explodes upon impact, dealing magic damage to adjacent enemies. Every third cast launches 3 bursts of energy.\n\nIonia Bonus: +30% Ability Power",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "135%",
+        "200%",
+        "340%"
+      ]
+    }
   ],
   "health": [
     700,
@@ -15,13 +26,13 @@
   "resistance": [
     25
   ],
-  "mana_start": 0,
-  "mana_cost": 50,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "50",
+  "ap": "100",
   "attack": [
     45,
     68,
     101
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }

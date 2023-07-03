@@ -4,6 +4,25 @@
   "type": [
     "Zaun, Challenger, Juggernaut"
   ],
+  "spell_desc": "Passive: Warwicks attacks to be converted on-hit magic damage.\n\nActive: For the next 2.5 seconds, the passive healing is increased by 50%. After, Stun adjacent enemies for 1.25 seconds.",
+  "spell": [
+    {
+      "key": "Heal",
+      "stats": [
+        "25%",
+        "30%",
+        "35%"
+      ]
+    },
+    {
+      "key": "Stun Duration",
+      "stats": [
+        "1.25",
+        "1.5",
+        "2"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

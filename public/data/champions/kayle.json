@@ -1,0 +1,38 @@
+{
+  "name": "Kayle",
+  "id": "26",
+  "type": [
+    "Demacia, Slayer"
+  ],
+  "spell_desc": "Passive: Kayle gains new Passive effects as your Tactician levels up.\nLevel 1: Attacks deal bonus magic damage.\nLevel 6: Every 3rd attack launches a wave that deals magic damage and Shreds enemies for 3 seconds.\nLevel 9: Every attack launches a wave and they travel farther.",
+  "spell": [
+    {
+      "key": "Magic Damage",
+      "stats": [
+        "33%",
+        "44%",
+        "66%"
+      ]
+    }
+  ],
+  "health": [
+    500,
+    900,
+    1620
+  ],
+  "armor": [
+    15
+  ],
+  "resistance": [
+    15
+  ],
+  "mana_start": "No cost",
+  "mana_cost": "No cost",
+  "ap": "100",
+  "attack": [
+    25,
+    38,
+    56
+  ],
+  "speed": "0.75"
+}

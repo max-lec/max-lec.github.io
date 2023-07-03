@@ -1,8 +1,19 @@
 {
   "name": "Kalista",
-  "id": 22,
+  "id": "22",
   "type": [
     "Shadow Isles, Challenger"
+  ],
+  "spell_desc": "Passive : Attacks impale a spear in the target, which deals true damage when removed. Kalista rips the spears out if it would kill the target.\n\nActive: Impale 6 spears in the current target.",
+  "spell": [
+    {
+      "key": "Spear Damage",
+      "stats": [
+        "16%",
+        "24%",
+        "40%"
+      ]
+    }
   ],
   "health": [
     650,
@@ -15,13 +26,13 @@
   "resistance": [
     25
   ],
-  "mana_start": 0,
-  "mana_cost": 80,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "80",
+  "ap": "100",
   "attack": [
     45,
     68,
     101
   ],
-  "speed": 0.85
+  "speed": "0.85"
 }

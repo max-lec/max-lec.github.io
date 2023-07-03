@@ -4,6 +4,23 @@
   "type": [
     "Piltover, Bruiser"
   ],
+  "spell_desc": "Gain Shield for 4 seconds. Deal physical damage to enemies within 1 hex of the current target and Sunder them for 4 seconds.\n\nSunder: Reduced Armor by 40%",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "325%",
+        "350%",
+        "400%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "200% AD"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

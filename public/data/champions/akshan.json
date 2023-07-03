@@ -1,8 +1,19 @@
 {
   "name": "Akshan",
-  "id": 3,
+  "id": "3",
   "type": [
     "Shurima, Deadeye"
+  ],
+  "spell_desc": "Lock on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals physical damage to the first enemy hit.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "20%",
+        "35%",
+        "60%"
+      ]
+    }
   ],
   "health": [
     700,
@@ -15,13 +26,13 @@
   "resistance": [
     25
   ],
-  "mana_start": 30,
-  "mana_cost": 90,
-  "ap": 100,
+  "mana_start": "30",
+  "mana_cost": "90",
+  "ap": "100",
   "attack": [
     65,
     98,
     146
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

@@ -4,6 +4,25 @@
   "type": [
     "Shurima, Multicaster"
   ],
+  "spell_desc": "Passive: Whenever an enemy is knocked up by anything, throw a boulder at them, which deals magic damage.\n\nActive: Knock up the current target for 2 seconds.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "125%",
+        "190%",
+        "290%"
+      ]
+    },
+    {
+      "key": "Cast Knockup Damage",
+      "stats": [
+        "150%",
+        "225%",
+        "350%"
+      ]
+    }
+  ],
   "health": [
     550,
     990,

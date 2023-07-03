@@ -4,6 +4,33 @@
   "type": [
     "Ionia, Bastion, Invoker"
   ],
+  "spell_desc": "Gain Shield and grant Shield to the 2 lowest Health allies for 4 seconds. After shielding his allies, Shens shield refreshes with a burst, dealing magic damage to adjacent enemies.\n\nIonia Bonus: +10% Damage Reduction",
+  "spell": [
+    {
+      "key": "Self Shield",
+      "stats": [
+        "350%",
+        "450%",
+        "2000%"
+      ]
+    },
+    {
+      "key": "Ally Shield",
+      "stats": [
+        "275%",
+        "350%",
+        "1800%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "240%",
+        "360%",
+        "2000%"
+      ]
+    }
+  ],
   "health": [
     1000,
     1800,

@@ -4,6 +4,31 @@
   "type": [
     "Zaun, Gunner"
   ],
+  "spell_desc": "Passive: Execute enemies below 12% Health. Kills reset the duration of Surge.\n\nActive: For the next 6 seconds, attacks chain lightning to 3 additional enemies, dealing physical damage.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "50%",
+        "50%",
+        "100%"
+      ]
+    },
+    {
+      "key": "Execute Threshold",
+      "stats": [
+        "12% AP"
+      ]
+    },
+    {
+      "key": "Chain Lightning Enemies",
+      "stats": [
+        "3",
+        "3",
+        "5"
+      ]
+    }
+  ],
   "health": [
     750,
     1350,

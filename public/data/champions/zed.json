@@ -4,6 +4,37 @@
   "type": [
     "Ionia, Rogue, Slayer"
   ],
+  "spell_desc": "Create a shadow at the furthest enemy within 3 hexes. Zed and his shadow slash adjacent enemies, dealing physical damage.\n\nIonia Bonus: +15% Crit Chance and Crit Damage",
+  "spell": [
+    {
+      "key": "AD",
+      "stats": [
+        "120%",
+        "120%",
+        "125%"
+      ]
+    },
+    {
+      "key": "AP",
+      "stats": [
+        "20%",
+        "30%",
+        "50%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "AD + AP"
+      ]
+    },
+    {
+      "key": "Shadow Range",
+      "stats": [
+        "2 + Range"
+      ]
+    }
+  ],
   "health": [
     600,
     1080,

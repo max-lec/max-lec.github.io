@@ -1,8 +1,31 @@
 {
   "name": "Aatrox",
-  "id": 1,
+  "id": "1",
   "type": [
     "Darkin, Juggernaut, Slayer"
+  ],
+  "spell_desc": "Transform for 10 seconds, gaining 15% and converting all bonus Attack Speed to Attack Damage. While transformed, attacks deal physical damage.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "250%",
+        "250%",
+        "2500%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "80% bonus Attack speed + AD"
+      ]
+    },
+    {
+      "key": "Omnivamp",
+      "stats": [
+        "15% AP"
+      ]
+    }
   ],
   "health": [
     1100,
@@ -15,13 +38,13 @@
   "resistance": [
     60
   ],
-  "mana_start": 0,
-  "mana_cost": 60,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "60",
+  "ap": "100",
   "attack": [
     80,
     120,
     180
   ],
-  "speed": 0.8
+  "speed": "0.8"
 }

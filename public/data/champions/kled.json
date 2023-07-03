@@ -1,8 +1,26 @@
 {
   "name": "Kled",
-  "id": 27,
+  "id": "27",
   "type": [
     "Noxus, Yordle, Slayer"
+  ],
+  "spell_desc": "Passive: Start combat with Shield. When it breaks, dismount and gain stacking Attack Speed for the rest of combat.\n\nActive: Remount and gain Shield.\n\n4 Star Upgrade: Execute enemies under 25% Health.",
+  "spell": [
+    {
+      "key": "Attack Speed Bonus",
+      "stats": [
+        "60%",
+        "65%",
+        "70%",
+        "75%"
+      ]
+    },
+    {
+      "key": "Shield",
+      "stats": [
+        "30% Health (max)"
+      ]
+    }
   ],
   "health": [
     550,
@@ -15,13 +33,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 0,
-  "mana_cost": 175,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "175",
+  "ap": "100",
   "attack": [
     58,
     87,
     131
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

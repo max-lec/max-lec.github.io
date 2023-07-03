@@ -1,8 +1,19 @@
 {
   "name": "Ekko",
-  "id": 11,
+  "id": "11",
   "type": [
     "Piltover, Zaun, Rogue"
+  ],
+  "spell_desc": "Heal 20% of damage taken in the last 4 seconds and deal magic damage to the current target.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "290%",
+        "435%",
+        "710%"
+      ]
+    }
   ],
   "health": [
     800,
@@ -15,13 +26,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 0,
-  "mana_cost": 45,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "45",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.8
+  "speed": "0.8"
 }

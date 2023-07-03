@@ -1,8 +1,41 @@
 {
   "name": "Aphelios",
-  "id": 4,
+  "id": "4",
   "type": [
     "Targon, Deadeye"
+  ],
+  "spell_desc": "Fire a moon blast at the largest group of enemies that deals physical damage to enemies within 2 hexes. Equip 3 Chakram, plus 1 more for each enemy hit by the moon blast.\n\nFor 7 seconds, attacks deal bonus physical damage for each Chakram equipped. 50% of damage dealt by Chakrams heals Aphelios.",
+  "spell": [
+    {
+      "key": "Moon Blast",
+      "stats": [
+        "200%",
+        "200%",
+        "550%"
+      ]
+    },
+    {
+      "key": "Chakram Damage",
+      "stats": [
+        "8%",
+        "8%",
+        "40%"
+      ]
+    },
+    {
+      "key": "Max Chakrams",
+      "stats": [
+        "10",
+        "12",
+        "20"
+      ]
+    },
+    {
+      "key": "Heal",
+      "stats": [
+        "50% AP"
+      ]
+    }
   ],
   "health": [
     750,
@@ -15,13 +48,13 @@
   "resistance": [
     30
   ],
-  "mana_start": 70,
-  "mana_cost": 140,
-  "ap": 100,
+  "mana_start": "70",
+  "mana_cost": "140",
+  "ap": "100",
   "attack": [
     60,
     90,
     135
   ],
-  "speed": 0.8
+  "speed": "0.8"
 }

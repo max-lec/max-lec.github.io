@@ -4,6 +4,25 @@
   "type": [
     "Demacia, Multicaster"
   ],
+  "spell_desc": "Send a wave of sound at the largest clump of enemies and deal magic damage to enemies hit. Allies hit by the wave gain Attack Speed for 5 seconds.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "105%",
+        "155%",
+        "255%"
+      ]
+    },
+    {
+      "key": "Attack Speed %",
+      "stats": [
+        "30%",
+        "35%",
+        "40%"
+      ]
+    }
+  ],
   "health": [
     700,
     1260,

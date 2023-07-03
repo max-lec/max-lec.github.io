@@ -4,6 +4,29 @@
   "type": [
     "Void, Bruiser"
   ],
+  "spell_desc": "Deal physical damage to the current target. If they are below 60% Health, this damage is converted to true damage.\n\nIf this kills the target, rip through them 1 hex and heal Health.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "300%",
+        "300%",
+        "315%"
+      ]
+    },
+    {
+      "key": "Heal Percent",
+      "stats": [
+        "15% AP"
+      ]
+    },
+    {
+      "key": "Heal",
+      "stats": [
+        "15% Health"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

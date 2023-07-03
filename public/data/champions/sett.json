@@ -4,6 +4,25 @@
   "type": [
     "Ionia, Juggernaut"
   ],
+  "spell_desc": "Pull in an enemy on either side and slam them together, dealing magic damage and Stunning them.\n\nIf only one enemy is grabbed, the damage and Stun duration are increased by 50%.\n\nIonia Bonus: +200 max Health",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "200%",
+        "300%",
+        "465%"
+      ]
+    },
+    {
+      "key": "Stun Duration",
+      "stats": [
+        "1.25",
+        "1.5",
+        "2"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

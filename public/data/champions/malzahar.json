@@ -4,6 +4,17 @@
   "type": [
     "Void, Sorcerer"
   ],
+  "spell_desc": "Open two portals near the current target. Destroy 35% of shields and deal magic damage to all enemies caught between the portals.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "175%",
+        "260%",
+        "395%"
+      ]
+    }
+  ],
   "health": [
     500,
     900,

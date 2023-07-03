@@ -4,6 +4,25 @@
   "type": [
     "Targon, Invoker"
   ],
+  "spell_desc": "Heal the lowest health ally. If the ally is below 50% Health, increase the amount healed by 50%.\n\nThe ally is infused for 5 seconds, calling down 5 stars over the duration that deal magic damage to the closest enemy.",
+  "spell": [
+    {
+      "key": "Heal",
+      "stats": [
+        "200",
+        "225",
+        "250"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "100%",
+        "150%",
+        "235%"
+      ]
+    }
+  ],
   "health": [
     700,
     1260,

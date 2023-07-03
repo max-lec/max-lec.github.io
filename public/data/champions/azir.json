@@ -1,8 +1,25 @@
 {
   "name": "Azir",
-  "id": 6,
+  "id": "6",
   "type": [
     "Shurima, Strategist"
+  ],
+  "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
+  "spell": [
+    {
+      "key": "Soldier Damage",
+      "stats": [
+        "105%",
+        "165%",
+        "800%"
+      ]
+    },
+    {
+      "key": "Max Soldier Strike",
+      "stats": [
+        "85% of Soldier Damage"
+      ]
+    }
   ],
   "health": [
     750,
@@ -15,13 +32,13 @@
   "resistance": [
     30
   ],
-  "mana_start": 30,
-  "mana_cost": 60,
-  "ap": 100,
+  "mana_start": "30",
+  "mana_cost": "60",
+  "ap": "100",
   "attack": [
     40,
     60,
     90
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

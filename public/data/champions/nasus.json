@@ -4,6 +4,47 @@
   "type": [
     "Shurima, Juggernaut"
   ],
+  "spell_desc": "Steal max Health, 10% Attack Damage, and Defenses from the nearest enemies for 8 seconds.\n\nWhile empowered, every third attack deals physical damage.",
+  "spell": [
+    {
+      "key": "Max Health Steal",
+      "stats": [
+        "5%",
+        "5%",
+        "15%"
+      ]
+    },
+    {
+      "key": "Defense Steal",
+      "stats": [
+        "5",
+        "5",
+        "30"
+      ]
+    },
+    {
+      "key": "Number of Targets",
+      "stats": [
+        "4",
+        "5",
+        "9"
+      ]
+    },
+    {
+      "key": "Duration",
+      "stats": [
+        "8% AP"
+      ]
+    },
+    {
+      "key": "Empowered Attacks",
+      "stats": [
+        "350%",
+        "350%",
+        "700%"
+      ]
+    }
+  ],
   "health": [
     1000,
     1800,

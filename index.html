@@ -22,7 +22,8 @@
 <script src="./scripts/champions.js"></script>
 <script src="./scripts/items.js"></script>
 <script src="./scripts/augments.js"></script>
-<script src="./scripts/stats.js"></script>
+<script src="./scripts/total_stats.js"></script>
+<script src="./scripts/damage_stats.js"></script>
 <script src="./scripts/traits.js"></script>
 
 <!-- compiled css here -->
@@ -340,1601 +341,2817 @@
 </body>
 
 <script type="application/json" id="championsStatsData">
-    [
-    {
-      "name": "Aatrox",
-      "id": "1",
-      "type": [
-        "Darkin, Juggernaut, Slayer"
-      ],
-      "health": [
-        1100,
-        1980,
-        3564
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "0",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        80,
-        120,
-        180
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Ahri",
-      "id": "2",
-      "type": [
-        "Ionia, Sorcerer"
-      ],
-      "health": [
-        850,
-        1530,
-        2754
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.85"
-    },
-    {
-      "name": "Akshan",
-      "id": "3",
-      "type": [
-        "Shurima, Deadeye"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "30",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        65,
-        98,
-        146
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Aphelios",
-      "id": "4",
-      "type": [
-        "Targon, Deadeye"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "70",
-      "mana_cost": "140",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Ashe",
-      "id": "5",
-      "type": [
-        "Freljord, Deadeye"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        20
-      ],
-      "resistance": [
-        20
-      ],
-      "mana_start": "30",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Azir",
-      "id": "6",
-      "type": [
-        "Shurima, Strategist"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "30",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Bel'Veth",
-      "id": "7",
-      "type": [
-        "Void, Empress"
-      ],
-      "health": [
-        1100,
-        1980,
-        3564
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "0",
-      "mana_cost": "55",
-      "ap": "100",
-      "attack": [
-        80,
-        120,
-        180
-      ],
-      "speed": "0.85"
-    },
-    {
-      "name": "Cassiopeia",
-      "id": "8",
-      "type": [
-        "Noxus, Shurima, Invoker"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        20
-      ],
-      "resistance": [
-        20
-      ],
-      "mana_start": "0",
-      "mana_cost": "40",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Cho'Gath",
-      "id": "9",
-      "type": [
-        "Void, Bruiser"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "30",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.5"
-    },
-    {
-      "name": "Darius",
-      "id": "10",
-      "type": [
-        "Noxus, Juggernaut"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "30",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        70,
-        105,
-        158
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Ekko",
-      "id": "11",
-      "type": [
-        "Piltover, Zaun, Rogue"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "0",
-      "mana_cost": "45",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Galio",
-      "id": "12",
-      "type": [
-        "Demacia, Invoker"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        45
-      ],
-      "resistance": [
-        45
-      ],
-      "mana_start": "80",
-      "mana_cost": "140",
-      "ap": "100",
-      "attack": [
-        70,
-        105,
-        158
-      ],
-      "speed": "0.5"
-    },
-    {
-      "name": "Garen",
-      "id": "13",
-      "type": [
-        "Demacia, Juggernaut"
-      ],
-      "health": [
-        850,
-        1530,
-        2754
-      ],
-      "armor": [
-        45
-      ],
-      "resistance": [
-        45
-      ],
-      "mana_start": "0",
-      "mana_cost": "80",
-      "ap": "100",
-      "attack": [
-        70,
-        105,
-        158
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Gwen",
-      "id": "14",
-      "type": [
-        "Shadow Isles, Slayer"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "0",
-      "mana_cost": "35",
-      "ap": "100",
-      "attack": [
-        55,
-        83,
-        124
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Heimerdinger",
-      "id": "15",
-      "type": [
-        "Piltover, Yordle, Technogenius"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "80",
-      "mana_cost": "160",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Irelia",
-      "id": "16",
-      "type": [
-        "Ionia, Challenger"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "40",
-      "mana_cost": "80",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.65"
-    },
-    {
-      "name": "Jarvan IV",
-      "id": "17",
-      "type": [
-        "Demacia, Strategist"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "100",
-      "mana_cost": "180",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.65"
-    },
-    {
-      "name": "Jayce",
-      "id": "18",
-      "type": [
-        "Piltover, Gunner"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "40",
-      "mana_cost": "120",
-      "ap": "100",
-      "attack": [
-        65,
-        98,
-        146
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Jhin",
-      "id": "19",
-      "type": [
-        "Ionia, Deadeye"
-      ],
-      "health": [
-        504,
-        907,
-        1633
-      ],
-      "armor": [
-        14
-      ],
-      "resistance": [
-        14
-      ],
-      "mana_start": "44",
-      "mana_cost": "144",
-      "ap": "100",
-      "attack": [
-        54,
-        81,
-        122
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Jinx",
-      "id": "20",
-      "type": [
-        "Zaun, Gunner"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        20
-      ],
-      "resistance": [
-        20
-      ],
-      "mana_start": "0",
-      "mana_cost": "75",
-      "ap": "100",
-      "attack": [
-        55,
-        83,
-        124
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Kai'Sa",
-      "id": "21",
-      "type": [
-        "Void, Challenger"
-      ],
-      "health": [
-        850,
-        1530,
-        2754
-      ],
-      "armor": [
-        35
-      ],
-      "resistance": [
-        35
-      ],
-      "mana_start": "40",
-      "mana_cost": "110",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Kalista",
-      "id": "22",
-      "type": [
-        "Shadow Isles, Challenger"
-      ],
-      "health": [
-        650,
-        1170,
-        2106
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "0",
-      "mana_cost": "80",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.85"
-    },
-    {
-      "name": "Karma",
-      "id": "23",
-      "type": [
-        "Ionia, Invoker"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Kassadin",
-      "id": "24",
-      "type": [
-        "Void, Bastion"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        45
-      ],
-      "resistance": [
-        45
-      ],
-      "mana_start": "50",
-      "mana_cost": "100",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Katarina",
-      "id": "25",
-      "type": [
-        "Noxus, Rogue"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "20",
-      "mana_cost": "80",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Kayle",
-      "id": "26",
-      "type": [
-        "Demacia, Slayer"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        15
-      ],
-      "resistance": [
-        15
-      ],
-      "mana_start": "No cost",
-      "mana_cost": "No cost",
-      "ap": "100",
-      "attack": [
-        25,
-        38,
-        56
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Kled",
-      "id": "27",
-      "type": [
-        "Noxus, Yordle, Slayer"
-      ],
-      "health": [
-        550,
-        990,
-        1782
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "0",
-      "mana_cost": "175",
-      "ap": "100",
-      "attack": [
-        58,
-        87,
-        131
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "K'Sante",
-      "id": "28",
-      "type": [
-        "Shurima, Bastion"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "0",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Lissandra",
-      "id": "29",
-      "type": [
-        "Freljord, Invoker"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "30",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Lux",
-      "id": "30",
-      "type": [
-        "Demacia, Sorcerer"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "25",
-      "mana_cost": "45",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Malzahar",
-      "id": "31",
-      "type": [
-        "Void, Sorcerer"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        15
-      ],
-      "resistance": [
-        15
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Maokai",
-      "id": "32",
-      "type": [
-        "Shadow Isles, Bastion"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "50",
-      "mana_cost": "125",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.5"
-    },
-    {
-      "name": "Nasus",
-      "id": "33",
-      "type": [
-        "Shurima, Juggernaut"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "70",
-      "mana_cost": "150",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Orianna",
-      "id": "34",
-      "type": [
-        "Piltover, Sorcerer"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        15
-      ],
-      "resistance": [
-        15
-      ],
-      "mana_start": "50",
-      "mana_cost": "100",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Poppy",
-      "id": "35",
-      "type": [
-        "Demacia, Yordle, Bastion"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "90",
-      "mana_cost": "150",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.55"
-    },
-    {
-      "name": "Rek'Sai",
-      "id": "36",
-      "type": [
-        "Void, Bruiser"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        40
-      ],
-      "resistance": [
-        40
-      ],
-      "mana_start": "30",
-      "mana_cost": "75",
-      "ap": "100",
-      "attack": [
-        65,
-        98,
-        146
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Renekton",
-      "id": "37",
-      "type": [
-        "Shurima, Bruiser"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        45
-      ],
-      "resistance": [
-        45
-      ],
-      "mana_start": "50",
-      "mana_cost": "120",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Ryze",
-      "id": "38",
-      "type": [
-        "Wanderer, Invoker"
-      ],
-      "health": [
-        1111,
-        2000,
-        3600
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "0",
-      "mana_cost": "99",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.85"
-    },
-    {
-      "name": "Samira",
-      "id": "39",
-      "type": [
-        "Noxus, Challenger"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        15
-      ],
-      "resistance": [
-        15
-      ],
-      "mana_start": "0",
-      "mana_cost": "40",
-      "ap": "100",
-      "attack": [
-        50,
-        75,
-        113
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Sejuani",
-      "id": "40",
-      "type": [
-        "Freljord, Bruiser"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "60",
-      "mana_cost": "120",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Senna",
-      "id": "41",
-      "type": [
-        "Shadow Isles, Gunner, Redeemer"
-      ],
-      "health": [
-        900,
-        1620,
-        2916
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "75",
-      "mana_cost": "100",
-      "ap": "100",
-      "attack": [
-        65,
-        98,
-        146
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Sett",
-      "id": "42",
-      "type": [
-        "Ionia, Juggernaut"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "40",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Shen",
-      "id": "43",
-      "type": [
-        "Ionia, Bastion, Invoker"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "70",
-      "mana_cost": "140",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Sion",
-      "id": "44",
-      "type": [
-        "Noxus, Bruiser"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "70",
-      "mana_cost": "160",
-      "ap": "100",
-      "attack": [
-        70,
-        105,
-        158
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Sona",
-      "id": "45",
-      "type": [
-        "Demacia, Multicaster"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "40",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.65"
-    },
-    {
-      "name": "Soraka",
-      "id": "46",
-      "type": [
-        "Targon, Invoker"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "30",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        55,
-        83,
-        124
-      ],
-      "speed": "0.65"
-    },
-    {
-      "name": "Swain",
-      "id": "47",
-      "type": [
-        "Noxus, Sorcerer, Strategist"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "50",
-      "mana_cost": "100",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.65"
-    },
-    {
-      "name": "Taliyah",
-      "id": "48",
-      "type": [
-        "Shurima, Multicaster"
-      ],
-      "health": [
-        550,
-        990,
-        1782
-      ],
-      "armor": [
-        20
-      ],
-      "resistance": [
-        20
-      ],
-      "mana_start": "20",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Taric",
-      "id": "49",
-      "type": [
-        "Targon, Bastion, Sorcerer"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "40",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Teemo",
-      "id": "50",
-      "type": [
-        "Yordle, Multicaster, Strategist"
-      ],
-      "health": [
-        500,
-        900,
-        1620
-      ],
-      "armor": [
-        20
-      ],
-      "resistance": [
-        20
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Tristana",
-      "id": "51",
-      "type": [
-        "Yordle, Gunner"
-      ],
-      "health": [
-        400,
-        720,
-        1296
-      ],
-      "armor": [
-        15
-      ],
-      "resistance": [
-        15
-      ],
-      "mana_start": "0",
-      "mana_cost": "40",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Urgot",
-      "id": "52",
-      "type": [
-        "Zaun, Deadeye"
-      ],
-      "health": [
-        1000,
-        1800,
-        3240
-      ],
-      "armor": [
-        60
-      ],
-      "resistance": [
-        60
-      ],
-      "mana_start": "0",
-      "mana_cost": "100",
-      "ap": "100",
-      "attack": [
-        75,
-        113,
-        169
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Vel'Koz",
-      "id": "53",
-      "type": [
-        "Void, Multicaster, Sorcerer"
-      ],
-      "health": [
-        700,
-        1260,
-        2268
-      ],
-      "armor": [
-        30
-      ],
-      "resistance": [
-        30
-      ],
-      "mana_start": "0",
-      "mana_cost": "60",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Vi",
-      "id": "54",
-      "type": [
-        "Piltover, Bruiser"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "0",
-      "mana_cost": "80",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.6"
-    },
-    {
-      "name": "Viego",
-      "id": "55",
-      "type": [
-        "Shadow Isles, Rogue"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        45,
-        68,
-        101
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Warwick",
-      "id": "56",
-      "type": [
-        "Zaun, Challenger, Juggernaut"
-      ],
-      "health": [
-        800,
-        1440,
-        2592
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "40",
-      "mana_cost": "90",
-      "ap": "100",
-      "attack": [
-        40,
-        60,
-        90
-      ],
-      "speed": "0.75"
-    },
-    {
-      "name": "Yasuo",
-      "id": "57",
-      "type": [
-        "Ionia, Challenger"
-      ],
-      "health": [
-        950,
-        1710,
-        3078
-      ],
-      "armor": [
-        50
-      ],
-      "resistance": [
-        50
-      ],
-      "mana_start": "50",
-      "mana_cost": "110",
-      "ap": "100",
-      "attack": [
-        75,
-        113,
-        169
-      ],
-      "speed": "0.8"
-    },
-    {
-      "name": "Zed",
-      "id": "58",
-      "type": [
-        "Ionia, Rogue, Slayer"
-      ],
-      "health": [
-        600,
-        1080,
-        1944
-      ],
-      "armor": [
-        35
-      ],
-      "resistance": [
-        35
-      ],
-      "mana_start": "0",
-      "mana_cost": "70",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.7"
-    },
-    {
-      "name": "Zeri",
-      "id": "59",
-      "type": [
-        "Zaun, Gunner"
-      ],
-      "health": [
-        750,
-        1350,
-        2430
-      ],
-      "armor": [
-        25
-      ],
-      "resistance": [
-        25
-      ],
-      "mana_start": "0",
-      "mana_cost": "50",
-      "ap": "100",
-      "attack": [
-        60,
-        90,
-        135
-      ],
-      "speed": "0.8"
-    }
-  ]
+  [
+  {
+    "name": "Aatrox",
+    "id": "1",
+    "type": [
+      "Darkin, Juggernaut, Slayer"
+    ],
+    "spell_desc": "Transform for 10 seconds, gaining 15% and converting all bonus Attack Speed to Attack Damage. While transformed, attacks deal physical damage.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "250%",
+          "250%",
+          "2500%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "80% bonus Attack speed + AD"
+        ]
+      },
+      {
+        "key": "Omnivamp",
+        "stats": [
+          "15% AP"
+        ]
+      }
+    ],
+    "health": [
+      1100,
+      1980,
+      3564
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      80,
+      120,
+      180
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Ahri",
+    "id": "2",
+    "type": [
+      "Ionia, Sorcerer"
+    ],
+    "spell_desc": "Steal essence from enemies around her target, dealing magic damage and 35% Mana Reaving them.\n\nEvery 3 casts, instead, unleash a wave that deals magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.\n\nlonia Bonus: +3 Mana per second",
+    "spell": [
+      {
+        "key": "Essence Steal",
+        "stats": [
+          "115%",
+          "170%",
+          "1000%"
+        ]
+      },
+      {
+        "key": "Wave Damage",
+        "stats": [
+          "250%",
+          "375%",
+          "3000%"
+        ]
+      }
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Akshan",
+    "id": "3",
+    "type": [
+      "Shurima, Deadeye"
+    ],
+    "spell_desc": "Lock on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals physical damage to the first enemy hit.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "20%",
+          "35%",
+          "60%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Aphelios",
+    "id": "4",
+    "type": [
+      "Targon, Deadeye"
+    ],
+    "spell_desc": "Fire a moon blast at the largest group of enemies that deals physical damage to enemies within 2 hexes. Equip 3 Chakram, plus 1 more for each enemy hit by the moon blast.\n\nFor 7 seconds, attacks deal bonus physical damage for each Chakram equipped. 50% of damage dealt by Chakrams heals Aphelios.",
+    "spell": [
+      {
+        "key": "Moon Blast",
+        "stats": [
+          "200%",
+          "200%",
+          "550%"
+        ]
+      },
+      {
+        "key": "Chakram Damage",
+        "stats": [
+          "8%",
+          "8%",
+          "40%"
+        ]
+      },
+      {
+        "key": "Max Chakrams",
+        "stats": [
+          "10",
+          "12",
+          "20"
+        ]
+      },
+      {
+        "key": "Heal",
+        "stats": [
+          "50% AP"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "70",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Ashe",
+    "id": "5",
+    "type": [
+      "Freljord, Deadeye"
+    ],
+    "spell_desc": "Fire 8 arrows in a cone, each dealing physical damage to the first enemy hit and Chilling them for a few seconds.\n\nChill: Reduced Attack Speed by 30%",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "125%",
+          "125%",
+          "130% AD"
+        ]
+      },
+      {
+        "key": "Duration",
+        "stats": [
+          "2% AP"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "30",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Azir",
+    "id": "6",
+    "type": [
+      "Shurima, Strategist"
+    ],
+    "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
+    "spell": [
+      {
+        "key": "Soldier Damage",
+        "stats": [
+          "105%",
+          "165%",
+          "800%"
+        ]
+      },
+      {
+        "key": "Max Soldier Strike",
+        "stats": [
+          "85% of Soldier Damage"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "30",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Bel'Veth",
+    "id": "7",
+    "type": [
+      "Void, Empress"
+    ],
+    "spell_desc": "Lash out at the lowest Health enemy in range 6 times. Each lash deals physical damage and 2% of the targets max Health as true damage.",
+    "spell": [
+      {
+        "key": "Number of Lashes",
+        "stats": [
+          "6",
+          "6",
+          "30"
+        ]
+      },
+      {
+        "key": "Number of Lashes",
+        "stats": [
+          "6 per 100% bonus"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "20%",
+          "30%",
+          "50%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "75% AD + 20% AP"
+        ]
+      }
+    ],
+    "health": [
+      1100,
+      1980,
+      3564
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "55",
+    "ap": "100",
+    "attack": [
+      80,
+      120,
+      180
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Cassiopeia",
+    "id": "8",
+    "type": [
+      "Noxus, Shurima, Invoker"
+    ],
+    "spell_desc": "Deal magic damage to the current target and Wound them for 5 seconds. If they are already Wounded, deal bonus magic damage.\n\nWound: Reduce healing received by 50%",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "200%",
+          "300%",
+          "450%"
+        ]
+      },
+      {
+        "key": "Bonus Damage",
+        "stats": [
+          "30% of Damage"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Cho'Gath",
+    "id": "9",
+    "type": [
+      "Void, Bruiser"
+    ],
+    "spell_desc": "Deal magic damage to the lowest adjacent Health enemy. If this kills them, devour them and permanetly gain max Health.",
+    "spell": [
+      {
+        "key": "Devour Health Bonus",
+        "stats": [
+          "30"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "10% Health + 250%",
+          "335%",
+          "450% AP"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Darius",
+    "id": "10",
+    "type": [
+      "Noxus, Juggernaut"
+    ],
+    "spell_desc": "Deal physical damage to the current target. If they die, immediately cast this again with damage.",
+    "spell": [
+      {
+        "key": "Recast Effectiveness",
+        "stats": [
+          "82%",
+          "85%",
+          "90%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "350% AD + 100%",
+          "120%",
+          "150% AP"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Ekko",
+    "id": "11",
+    "type": [
+      "Piltover, Zaun, Rogue"
+    ],
+    "spell_desc": "Heal 20% of damage taken in the last 4 seconds and deal magic damage to the current target.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "290%",
+          "435%",
+          "710%"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "45",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Galio",
+    "id": "12",
+    "type": [
+      "Demacia, Invoker"
+    ],
+    "spell_desc": "Reduce damage taken and heal for over 4 seconds. After, deal magic damage to adjacent enemies.",
+    "spell": [
+      {
+        "key": "Reduce damage",
+        "stats": [
+          "20%",
+          "20%",
+          "25%"
+        ]
+      },
+      {
+        "key": "Heal",
+        "stats": [
+          "275%",
+          "300%",
+          "325%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "200%",
+          "300%",
+          "450%"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "80",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Garen",
+    "id": "13",
+    "type": [
+      "Demacia, Juggernaut"
+    ],
+    "spell_desc": "Spin times every second for the next 4 seconds. Each spin deals physical damage to adjacent enemies.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "70%",
+          "72%",
+          "75%"
+        ]
+      },
+      {
+        "key": "Number of Spins",
+        "stats": [
+          "1.8 + 1 per 55% bonus AS"
+        ]
+      },
+      {
+        "key": "Duration",
+        "stats": [
+          "4% AP"
+        ]
+      }
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Gwen",
+    "id": "14",
+    "type": [
+      "Shadow Isles, Slayer"
+    ],
+    "spell_desc": "Dash around the current target and snip 3 times in a cone, each dealing magic damage to enemies hit.\n\nEvery 3 casts, Armor and Magic resist for 2 seconds.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "100%",
+          "150%",
+          "500%"
+        ]
+      },
+      {
+        "key": "Bonus Defense Duration",
+        "stats": [
+          "2",
+          "2.5",
+          "4"
+        ]
+      },
+      {
+        "key": "Resists",
+        "stats": [
+          "120",
+          "120",
+          "300"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "35",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Heimerdinger",
+    "id": "15",
+    "type": [
+      "Piltover, Yordle, Technogenius"
+    ],
+    "spell_desc": "Hurl a grenade towards the largest group of enemies, dealing magic damage to enemies in a large area and Stunning them for 1.5 seconds.\n\n4 Star Upgrade: YES YES YES, IT WORKS!!!",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "150%",
+          "225%",
+          "3141%"
+        ]
+      },
+      {
+        "key": "Stun Duration",
+        "stats": [
+          "1.5",
+          "2",
+          "15"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "80",
+    "mana_cost": "160",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Irelia",
+    "id": "16",
+    "type": [
+      "Ionia, Challenger"
+    ],
+    "spell_desc": "Enter a defensive stance and gain Shield that rapidly decays over 3 seconds. When it breaks, deal magic damage + 30% of the damage absorbed to enemies around and in front of Irelia.\n\nIonia Bonus: +25 Armor and Magic Resist",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "350%",
+          "400%",
+          "450%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "70%",
+          "100%",
+          "150%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "40",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Jarvan IV",
+    "id": "17",
+    "type": [
+      "Demacia, Strategist"
+    ],
+    "spell_desc": "Mightily leap on a nearby enemy. Deal magic damage to enemies within 2 hexes and Stun them.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "140%",
+          "210%",
+          "800%"
+        ]
+      },
+      {
+        "key": "StunDuration",
+        "stats": [
+          "1.75",
+          "2.25",
+          "8"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "100",
+    "mana_cost": "180",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Jayce",
+    "id": "18",
+    "type": [
+      "Piltover, Gunner"
+    ],
+    "spell_desc": "Grant Attack Speed to Jayce and adjacent allies on his left and right for 3 seconds. Fire a blast at the current target, which explodes on the first enemy hit, dealing physical damage to enemies near the blast.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "240%",
+          "240%",
+          "250%"
+        ]
+      },
+      {
+        "key": "Attack Speed Bonus",
+        "stats": [
+          "20% AP"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "40",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Jhin",
+    "id": "19",
+    "type": [
+      "Ionia, Deadeye"
+    ],
+    "spell_desc": "Take aim at the current target and deal physical damage to enemies in a line; each hit reduces damage by 40%.\n\nIonia Bonus: +30% Attack Damage",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "60%",
+          "90%",
+          "135%"
+        ]
+      }
+    ],
+    "health": [
+      504,
+      907,
+      1633
+    ],
+    "armor": [
+      14
+    ],
+    "resistance": [
+      14
+    ],
+    "mana_start": "44",
+    "mana_cost": "144",
+    "ap": "100",
+    "attack": [
+      54,
+      81,
+      122
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Jinx",
+    "id": "20",
+    "type": [
+      "Zaun, Gunner"
+    ],
+    "spell_desc": "Fire 5 rockets at random enemies within 2 hexes of the current target. Each rocket deals physical damage.",
+    "spell": [
+      {
+        "key": "Physical Damage",
+        "stats": [
+          "133%",
+          "133%",
+          "140%"
+        ]
+      },
+      {
+        "key": "Magic Damage",
+        "stats": [
+          "10%",
+          "15%",
+          "25%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "AD + AP"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "75",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kai'Sa",
+    "id": "21",
+    "type": [
+      "Void, Challenger"
+    ],
+    "spell_desc": "Dash away from all enemies, then fire missiles split across the 4 nearest enemies. Each missile deal magic damage.",
+    "spell": [
+      {
+        "key": "Number of Missiles",
+        "stats": [
+          "15",
+          "15",
+          "25"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "75%",
+          "111%",
+          "300%"
+        ]
+      }
+    ],
+    "health": [
+      850,
+      1530,
+      2754
+    ],
+    "armor": [
+      35
+    ],
+    "resistance": [
+      35
+    ],
+    "mana_start": "40",
+    "mana_cost": "110",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Kalista",
+    "id": "22",
+    "type": [
+      "Shadow Isles, Challenger"
+    ],
+    "spell_desc": "Passive : Attacks impale a spear in the target, which deals true damage when removed. Kalista rips the spears out if it would kill the target.\n\nActive: Impale 6 spears in the current target.",
+    "spell": [
+      {
+        "key": "Spear Damage",
+        "stats": [
+          "16%",
+          "24%",
+          "40%"
+        ]
+      }
+    ],
+    "health": [
+      650,
+      1170,
+      2106
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Karma",
+    "id": "23",
+    "type": [
+      "Ionia, Invoker"
+    ],
+    "spell_desc": "Fire a burst of energy at Karmas target that explodes upon impact, dealing magic damage to adjacent enemies. Every third cast launches 3 bursts of energy.\n\nIonia Bonus: +30% Ability Power",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "135%",
+          "200%",
+          "340%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Kassadin",
+    "id": "24",
+    "type": [
+      "Void, Bastion"
+    ],
+    "spell_desc": "Gain Shield for 4 seconds. Deal magic damage to enemies in a cone and Disarm them for a while.\n\nDisarm: Cannot move or attack, but CAN cast spells",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "250%",
+          "300%",
+          "400%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "150%",
+          "225%",
+          "325%"
+        ]
+      },
+      {
+        "key": "Disarm Duration",
+        "stats": [
+          "1.5",
+          "1.75",
+          "2"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Katarina",
+    "id": "25",
+    "type": [
+      "Noxus, Rogue"
+    ],
+    "spell_desc": "Throw three daggers that land next to enemies within two hexes. Then, teleport to each to deal magic damage to adjacent enemies and Wound them for 6 seconds.\n\nWound: Reduce healing received by 50%",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "145%",
+          "220%",
+          "360%"
+        ]
+      },
+      {
+        "key": "Range",
+        "stats": [
+          "1 + Range"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "20",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kayle",
+    "id": "26",
+    "type": [
+      "Demacia, Slayer"
+    ],
+    "spell_desc": "Passive: Kayle gains new Passive effects as your Tactician levels up.\nLevel 1: Attacks deal bonus magic damage.\nLevel 6: Every 3rd attack launches a wave that deals magic damage and Shreds enemies for 3 seconds.\nLevel 9: Every attack launches a wave and they travel farther.",
+    "spell": [
+      {
+        "key": "Magic Damage",
+        "stats": [
+          "33%",
+          "44%",
+          "66%"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "No cost",
+    "mana_cost": "No cost",
+    "ap": "100",
+    "attack": [
+      25,
+      38,
+      56
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Kled",
+    "id": "27",
+    "type": [
+      "Noxus, Yordle, Slayer"
+    ],
+    "spell_desc": "Passive: Start combat with Shield. When it breaks, dismount and gain stacking Attack Speed for the rest of combat.\n\nActive: Remount and gain Shield.\n\n4 Star Upgrade: Execute enemies under 25% Health.",
+    "spell": [
+      {
+        "key": "Attack Speed Bonus",
+        "stats": [
+          "60%",
+          "65%",
+          "70%",
+          "75%"
+        ]
+      },
+      {
+        "key": "Shield",
+        "stats": [
+          "30% Health (max)"
+        ]
+      }
+    ],
+    "health": [
+      550,
+      990,
+      1782
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "0",
+    "mana_cost": "175",
+    "ap": "100",
+    "attack": [
+      58,
+      87,
+      131
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "K'Sante",
+    "id": "28",
+    "type": [
+      "Shurima, Bastion"
+    ],
+    "spell_desc": "Slam the ground, knocking the current target into the air. Then smash them away towards the edge of the battlefield, dealing magic damage and Stunning them for 2 seconds. Briefly stun and deal magic damage to enemies that collide with the target while they are being knocked back or who are adjacent to where the target lands.\n\nIf the target cannot be pushed back any further, they are knocked off the battlefield.\n\nIf the target is still alive, KSante will chase after them.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "250%",
+          "400%",
+          "1000%"
+        ]
+      },
+      {
+        "key": "Stun Duration",
+        "stats": [
+          "2",
+          "2.5",
+          "10"
+        ]
+      },
+      {
+        "key": "Collision Damage",
+        "stats": [
+          "50% of Damage"
+        ]
+      },
+      {
+        "key": "Collision Stun Duration",
+        "stats": [
+          "1",
+          "1.25",
+          "5"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Lissandra",
+    "id": "29",
+    "type": [
+      "Freljord, Invoker"
+    ],
+    "spell_desc": "Stun the current target for 2 seconds and deal magic damage to enemies within 2 hexes of them. They take 10% more damage for the next 4 seconds.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "160%",
+          "240%",
+          "400%"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Lux",
+    "id": "30",
+    "type": [
+      "Demacia, Sorcerer"
+    ],
+    "spell_desc": "Channel a barrage of light at the current target that deals magic damage over a few seconds, reducing their Magic Resistance every seconds. If they die, shift to a new target.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "750%",
+          "1125%",
+          "3333%"
+        ]
+      },
+      {
+        "key": "Reduce Magic Resist",
+        "stats": [
+          "15",
+          "15",
+          "50"
+        ]
+      },
+      {
+        "key": "Duration",
+        "stats": [
+          "3",
+          "3",
+          "3"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "25",
+    "mana_cost": "45",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Malzahar",
+    "id": "31",
+    "type": [
+      "Void, Sorcerer"
+    ],
+    "spell_desc": "Open two portals near the current target. Destroy 35% of shields and deal magic damage to all enemies caught between the portals.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "175%",
+          "260%",
+          "395%"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Maokai",
+    "id": "32",
+    "type": [
+      "Shadow Isles, Bastion"
+    ],
+    "spell_desc": "Passive: Whenever an enemy uses their ability, gain 5 Mana.\n\nActive: On Maokais next attack, heal.",
+    "spell": [
+      {
+        "key": "Heal",
+        "stats": [
+          "220",
+          "260",
+          "300"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "50",
+    "mana_cost": "125",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.5"
+  },
+  {
+    "name": "Nasus",
+    "id": "33",
+    "type": [
+      "Shurima, Juggernaut"
+    ],
+    "spell_desc": "Steal max Health, 10% Attack Damage, and Defenses from the nearest enemies for 8 seconds.\n\nWhile empowered, every third attack deals physical damage.",
+    "spell": [
+      {
+        "key": "Max Health Steal",
+        "stats": [
+          "5%",
+          "5%",
+          "15%"
+        ]
+      },
+      {
+        "key": "Defense Steal",
+        "stats": [
+          "5",
+          "5",
+          "30"
+        ]
+      },
+      {
+        "key": "Number of Targets",
+        "stats": [
+          "4",
+          "5",
+          "9"
+        ]
+      },
+      {
+        "key": "Duration",
+        "stats": [
+          "8% AP"
+        ]
+      },
+      {
+        "key": "Empowered Attacks",
+        "stats": [
+          "350%",
+          "350%",
+          "700%"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "150",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Orianna",
+    "id": "34",
+    "type": [
+      "Piltover, Sorcerer"
+    ],
+    "spell_desc": "Grant the lowest Health ally Shield for 4 seconds. When the Shield expires, it deals magic damage to adjacent enemies and Chills them for 3 seconds.\n\nChill: Reduced Attack Speed by 30%",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "225%",
+          "250%",
+          "325%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "190%",
+          "285%",
+          "430%"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Poppy",
+    "id": "35",
+    "type": [
+      "Demacia, Yordle, Bastion"
+    ],
+    "spell_desc": "Gain Shield for 3 seconds. Deal magic damage to the current target.\n\n4 Star Upgrade: Knock the target into the largest clump of enemies, dealing 33% of the targets max Health as magic damage to the target and 15% of that amount to the clump. Stun them for 1 seconds.",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "290%",
+          "310%",
+          "330%",
+          "350%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "140%",
+          "210%",
+          "315%",
+          "315%"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "90",
+    "mana_cost": "150",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.55"
+  },
+  {
+    "name": "Rek'Sai",
+    "id": "36",
+    "type": [
+      "Void, Bruiser"
+    ],
+    "spell_desc": "Deal physical damage to the current target. If they are below 60% Health, this damage is converted to true damage.\n\nIf this kills the target, rip through them 1 hex and heal Health.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "300%",
+          "300%",
+          "315%"
+        ]
+      },
+      {
+        "key": "Heal Percent",
+        "stats": [
+          "15% AP"
+        ]
+      },
+      {
+        "key": "Heal",
+        "stats": [
+          "15% Health"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      40
+    ],
+    "resistance": [
+      40
+    ],
+    "mana_start": "30",
+    "mana_cost": "75",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Renekton",
+    "id": "37",
+    "type": [
+      "Shurima, Bruiser"
+    ],
+    "spell_desc": "Deal magic damage to adjacent enemies. Heal for the first enemy hit and another for each additional one.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "180%",
+          "270%",
+          "400%"
+        ]
+      },
+      {
+        "key": "Initial Heal",
+        "stats": [
+          "220%",
+          "270%",
+          "320%"
+        ]
+      },
+      {
+        "key": "Bonus Heal",
+        "stats": [
+          "30% AP"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      45
+    ],
+    "resistance": [
+      45
+    ],
+    "mana_start": "50",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Ryze",
+    "id": "38",
+    "type": [
+      "Wanderer, Invoker"
+    ],
+    "spell_desc": "Wanderers spells change depending on the Region Portal players voted for at the start of the game.<br tooltip-break=true>\nBandle City\nRyze creates a portal to Bandle City underneath a random unit on your bench. After a brief delay, they arrive on the battlefield with bonus mana and are...slightly smaller?\n\nDemacia\nRyze creates a portal to Demacia underneath a cluster of injured allies, granting Shield for 2 seconds. If an ally leaves the safety of the portal, they are healed for Health. When the portal expires, enemies within are dealt magic damage.\n\nFreljord\nRyze creates a portal to the Freljord underneath a random group of enemies for 3 seconds. The freezing winds deal magic damage to enemies within two hexes over the duration and apply Permafrost, a permanent Chill.\nIf enemies are already affected by Permafrost, they are instead Stunned for the duration.\nChill: Reduce Attack Speed by 30%\n\nIonia\nRyze creates a portal to Ionia, summoning forth a Spirit Tree that affects the closest units. Allies are invigorated, gaining Attack Speed for 6 seconds and restoring Health over the duration. Enemies are pacified, causing them to dance.\n\nNoxus\nRyze creates a portal to Noxus armory that spews out a torrent of weapons and armor, granting completed items to random allies with open slots, and throwing Axes towards random enemies that deal magic damage each.\nIf any ally would recieve an item while all slots are full, they instead gain a stacking 40% damage increase for the rest of combat.\n\nPiltover\nRyze summons a portal to Piltover that launches out an enforcer grenade towards his target, dealing magic damage to enemies within two hexes and creating a containment area for seconds. Enemies are unable to leave the area, and of the damage dealt to them is also dealt to all other enemies within.\n\nShadow Isles\nRyze creates a portal to the Shadow Isles, reclaiming lost allys souls. They return to the battlefield, with % of their maximum Health.\nIf no allies have died yet, the portal remains open, waiting for an ally to die. Ryze cannot resurrect himself.\n\nShurima\nRyze creates a portal to Shurima, summoning a gigantic sand tornado that travels across the battlefield, dealing magic damage to enemies hit and knocking them up briefly.\nThe tornado has chance to unearthed burried treasures and gold as it travels.\n\nTargon\nRyze creates a portal to the skies above Mount Targon that beckons his target. After a few seconds, they descend from the heavens as a meteor towards the largest cluster of enemies, dealing % of the the initial targets maximum Health as magic damage and knocking up enemies in the epicenter.\n\nZaun\nOpen portals to Zuan, causing hired guns to fire a torrent of munitions at a nearby enemy that deal magic damage and apply 50% Wound, 40% Shred, and 40% Sunder for 6 seconds. The more gold you have, the more power the portals become.\n25 Gold: +1 Portal. Portals fire a rocket that deals 50% damage in a one-hex radius\n50 Gold: Double the portals. Summon +2 additional portals for every 15 Gold more.",
+    "spell": [
+      {
+        "key": "",
+        "stats": [
+          ""
+        ]
+      }
+    ],
+    "health": [
+      1111,
+      2000,
+      3600
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "0",
+    "mana_cost": "99",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.85"
+  },
+  {
+    "name": "Samira",
+    "id": "39",
+    "type": [
+      "Noxus, Challenger"
+    ],
+    "spell_desc": "Shoot at the current target and deal to the first enemy hit. Reduce their Armor by 10.",
+    "spell": [
+      {
+        "key": "Armor Reduction",
+        "stats": [
+          "20",
+          "25",
+          "30"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "200% AD"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      50,
+      75,
+      113
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Sejuani",
+    "id": "40",
+    "type": [
+      "Freljord, Bruiser"
+    ],
+    "spell_desc": "Passive: Whenever an ally attacks a Chilled enemy, they deal bonus true damage.\n\nActive: Gain Shield for 4 seconds. Deal magic damage to nearby enemies and Chill them for 4 seconds.\n\nChill: Reduced Attack Speed by 30%",
+    "spell": [
+      {
+        "key": "Magic damage",
+        "stats": [
+          "160%",
+          "240%",
+          "1200%"
+        ]
+      },
+      {
+        "key": "Shield",
+        "stats": [
+          "600%",
+          "700%",
+          "2000% of AP"
+        ]
+      },
+      {
+        "key": "Bonus Damage",
+        "stats": [
+          "최대 체력의 1.5%",
+          "1.5%",
+          "10%"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "60",
+    "mana_cost": "120",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Senna",
+    "id": "41",
+    "type": [
+      "Shadow Isles, Gunner, Redeemer"
+    ],
+    "spell_desc": "Fire a massive beam at the furthest enemy, dealing physical damage to all enemies hit. Any allies hit gain Shield for 4 seconds.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "190%",
+          "200%",
+          "2000%"
+        ]
+      },
+      {
+        "key": "Shield",
+        "stats": [
+          "250%",
+          "325%",
+          "4000%"
+        ]
+      }
+    ],
+    "health": [
+      900,
+      1620,
+      2916
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "75",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      65,
+      98,
+      146
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Sett",
+    "id": "42",
+    "type": [
+      "Ionia, Juggernaut"
+    ],
+    "spell_desc": "Pull in an enemy on either side and slam them together, dealing magic damage and Stunning them.\n\nIf only one enemy is grabbed, the damage and Stun duration are increased by 50%.\n\nIonia Bonus: +200 max Health",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "200%",
+          "300%",
+          "465%"
+        ]
+      },
+      {
+        "key": "Stun Duration",
+        "stats": [
+          "1.25",
+          "1.5",
+          "2"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Shen",
+    "id": "43",
+    "type": [
+      "Ionia, Bastion, Invoker"
+    ],
+    "spell_desc": "Gain Shield and grant Shield to the 2 lowest Health allies for 4 seconds. After shielding his allies, Shens shield refreshes with a burst, dealing magic damage to adjacent enemies.\n\nIonia Bonus: +10% Damage Reduction",
+    "spell": [
+      {
+        "key": "Self Shield",
+        "stats": [
+          "350%",
+          "450%",
+          "2000%"
+        ]
+      },
+      {
+        "key": "Ally Shield",
+        "stats": [
+          "275%",
+          "350%",
+          "1800%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "240%",
+          "360%",
+          "2000%"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "140",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Sion",
+    "id": "44",
+    "type": [
+      "Noxus, Bruiser"
+    ],
+    "spell_desc": "Passive: Upon death, reanimate with 100% Health, decaying at max Health per second. Sion can no longer use his abilityo, but is immune to Crowd Control and gains Attack Speed.\n\nActive: Charge towards the most enemies within 3 hexes. Deal to any enemies along the way and Stun them for 1.5 seconds.",
+    "spell": [
+      {
+        "key": "Reanimation Health Decay",
+        "stats": [
+          "12%",
+          "8%",
+          "0%"
+        ]
+      },
+      {
+        "key": "Reanimated Attack Speed",
+        "stats": [
+          "150% AP"
+        ]
+      },
+      {
+        "key": "Charge Range",
+        "stats": [
+          "3 + Range"
+        ]
+      },
+      {
+        "key": "Charge Damage",
+        "stats": [
+          "225%",
+          "235%",
+          "500%"
+        ]
+      },
+      {
+        "key": "Stun Duration",
+        "stats": [
+          "1.25",
+          "1.5",
+          "15"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "70",
+    "mana_cost": "160",
+    "ap": "100",
+    "attack": [
+      70,
+      105,
+      158
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Sona",
+    "id": "45",
+    "type": [
+      "Demacia, Multicaster"
+    ],
+    "spell_desc": "Send a wave of sound at the largest clump of enemies and deal magic damage to enemies hit. Allies hit by the wave gain Attack Speed for 5 seconds.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "105%",
+          "155%",
+          "255%"
+        ]
+      },
+      {
+        "key": "Attack Speed %",
+        "stats": [
+          "30%",
+          "35%",
+          "40%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Soraka",
+    "id": "46",
+    "type": [
+      "Targon, Invoker"
+    ],
+    "spell_desc": "Heal the lowest health ally. If the ally is below 50% Health, increase the amount healed by 50%.\n\nThe ally is infused for 5 seconds, calling down 5 stars over the duration that deal magic damage to the closest enemy.",
+    "spell": [
+      {
+        "key": "Heal",
+        "stats": [
+          "200",
+          "225",
+          "250"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "100%",
+          "150%",
+          "235%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "30",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      55,
+      83,
+      124
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Swain",
+    "id": "47",
+    "type": [
+      "Noxus, Sorcerer, Strategist"
+    ],
+    "spell_desc": "Transform and gain max Health for 6 seconds. While transformed, deal magic damage to enemies within 2 hexes every second.",
+    "spell": [
+      {
+        "key": "Health Bonus",
+        "stats": [
+          "425%",
+          "450%",
+          "480%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "25%",
+          "40%",
+          "60%"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "50",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.65"
+  },
+  {
+    "name": "Taliyah",
+    "id": "48",
+    "type": [
+      "Shurima, Multicaster"
+    ],
+    "spell_desc": "Passive: Whenever an enemy is knocked up by anything, throw a boulder at them, which deals magic damage.\n\nActive: Knock up the current target for 2 seconds.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "125%",
+          "190%",
+          "290%"
+        ]
+      },
+      {
+        "key": "Cast Knockup Damage",
+        "stats": [
+          "150%",
+          "225%",
+          "350%"
+        ]
+      }
+    ],
+    "health": [
+      550,
+      990,
+      1782
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "20",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Taric",
+    "id": "49",
+    "type": [
+      "Targon, Bastion, Sorcerer"
+    ],
+    "spell_desc": "Gain Shield for 6 seconds. It absorbs damage received by adjacent allies.",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "400%",
+          "475%",
+          "550%"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Teemo",
+    "id": "50",
+    "type": [
+      "Yordle, Multicaster, Strategist"
+    ],
+    "spell_desc": "Hurl an explosive mushroom at the current target. When it detonates, enemies within 1 hex are Wounded and take magic damage over 3 seconds.\n\n4 Star Upgrade: Increase the explosion radius by 1 hex.\n\nWounded: Reduced healing received by 50%",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "200%",
+          "300%",
+          "465%",
+          "465%"
+        ]
+      }
+    ],
+    "health": [
+      500,
+      900,
+      1620
+    ],
+    "armor": [
+      20
+    ],
+    "resistance": [
+      20
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Tristana",
+    "id": "51",
+    "type": [
+      "Yordle, Gunner"
+    ],
+    "spell_desc": "Gain 50% Attack Speed for 4 seconds. For the duration, attacks explode on impact and deal physical damage to enemies within 1 hex.\n\n4 Star Upgrade: Every 10th attack deals bonus physical damage and ricochets to the largest clump of enemies, dealing physical damage to enemies within 1 hex.",
+    "spell": [
+      {
+        "key": "Attack Speed Bonus",
+        "stats": [
+          "70%"
+        ]
+      },
+      {
+        "key": "Shrapnel Damage",
+        "stats": [
+          "60% AD"
+        ]
+      },
+      {
+        "key": "4 Star Shot Damage",
+        "stats": [
+          "100% AD"
+        ]
+      },
+      {
+        "key": "Ricochet Explosion",
+        "stats": [
+          "50% AD"
+        ]
+      }
+    ],
+    "health": [
+      400,
+      720,
+      1296
+    ],
+    "armor": [
+      15
+    ],
+    "resistance": [
+      15
+    ],
+    "mana_start": "0",
+    "mana_cost": "40",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Urgot",
+    "id": "52",
+    "type": [
+      "Zaun, Deadeye"
+    ],
+    "spell_desc": "Passive: Whenever an enemy enters attack range, fire a blast from the leg facing that direction, dealing physical damage to them. Each of Urgots 6 legs has a 4 second cooldown.\n\nActive: Gain Shield for 5 seconds and dash behind the current target. Reset all leg colldowns.",
+    "spell": [
+      {
+        "key": "Base Damage",
+        "stats": [
+          "50%",
+          "75%",
+          "500%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "275% AD + AP"
+        ]
+      },
+      {
+        "key": "Leg colldown",
+        "stats": [
+          "4",
+          "4",
+          "1"
+        ]
+      },
+      {
+        "key": "Shield",
+        "stats": [
+          "400%",
+          "500%",
+          "1500%"
+        ]
+      }
+    ],
+    "health": [
+      1000,
+      1800,
+      3240
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "100",
+    "ap": "100",
+    "attack": [
+      75,
+      113,
+      169
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Vel'Koz",
+    "id": "53",
+    "type": [
+      "Void, Multicaster, Sorcerer"
+    ],
+    "spell_desc": "Fire a plasma bolt towards the current target that deals to the first enemy hit. It then splits in two, dealing 50% less damage whenever it passes through an enemy.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "210%",
+          "315%",
+          "520%"
+        ]
+      }
+    ],
+    "health": [
+      700,
+      1260,
+      2268
+    ],
+    "armor": [
+      30
+    ],
+    "resistance": [
+      30
+    ],
+    "mana_start": "0",
+    "mana_cost": "60",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Vi",
+    "id": "54",
+    "type": [
+      "Piltover, Bruiser"
+    ],
+    "spell_desc": "Gain Shield for 4 seconds. Deal physical damage to enemies within 1 hex of the current target and Sunder them for 4 seconds.\n\nSunder: Reduced Armor by 40%",
+    "spell": [
+      {
+        "key": "Shield",
+        "stats": [
+          "325%",
+          "350%",
+          "400%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "200% AD"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "0",
+    "mana_cost": "80",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.6"
+  },
+  {
+    "name": "Viego",
+    "id": "55",
+    "type": [
+      "Shadow Isles, Rogue"
+    ],
+    "spell_desc": "Deal magic damage to the current target. For the rest of combat, Viegos attacks deal bonus stacking magic damage.",
+    "spell": [
+      {
+        "key": "Stab Damage",
+        "stats": [
+          "125%",
+          "185%",
+          "280%"
+        ]
+      },
+      {
+        "key": "Stacking Damage",
+        "stats": [
+          "20%",
+          "30%",
+          "45%"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      45,
+      68,
+      101
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Warwick",
+    "id": "56",
+    "type": [
+      "Zaun, Challenger, Juggernaut"
+    ],
+    "spell_desc": "Passive: Warwicks attacks to be converted on-hit magic damage.\n\nActive: For the next 2.5 seconds, the passive healing is increased by 50%. After, Stun adjacent enemies for 1.25 seconds.",
+    "spell": [
+      {
+        "key": "Heal",
+        "stats": [
+          "25%",
+          "30%",
+          "35%"
+        ]
+      },
+      {
+        "key": "Stun Duration",
+        "stats": [
+          "1.25",
+          "1.5",
+          "2"
+        ]
+      }
+    ],
+    "health": [
+      800,
+      1440,
+      2592
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "40",
+    "mana_cost": "90",
+    "ap": "100",
+    "attack": [
+      40,
+      60,
+      90
+    ],
+    "speed": "0.75"
+  },
+  {
+    "name": "Yasuo",
+    "id": "57",
+    "type": [
+      "Ionia, Challenger"
+    ],
+    "spell_desc": "Send a whirlwind at the furthest enemy within 3 hexes, Stunning all enemies hit. Dash to and slash the original target, dealing physical damage to them. Slam them into the ground and deal physical damage to enemies within 1 hex.\n\nIonia Bonus: +15% Omnivamp",
+    "spell": [
+      {
+        "key": "Slash Damage AD",
+        "stats": [
+          "500%",
+          "500%",
+          "1500%"
+        ]
+      },
+      {
+        "key": "Slash Damage AP",
+        "stats": [
+          "50%",
+          "75%",
+          "300%"
+        ]
+      },
+      {
+        "key": "Slash Damage",
+        "stats": [
+          "AD + AP"
+        ]
+      },
+      {
+        "key": "Slam Damage",
+        "stats": [
+          "300%",
+          "300%",
+          "750%"
+        ]
+      },
+      {
+        "key": "Range",
+        "stats": [
+          "2 + Attack Range"
+        ]
+      }
+    ],
+    "health": [
+      950,
+      1710,
+      3078
+    ],
+    "armor": [
+      50
+    ],
+    "resistance": [
+      50
+    ],
+    "mana_start": "50",
+    "mana_cost": "110",
+    "ap": "100",
+    "attack": [
+      75,
+      113,
+      169
+    ],
+    "speed": "0.8"
+  },
+  {
+    "name": "Zed",
+    "id": "58",
+    "type": [
+      "Ionia, Rogue, Slayer"
+    ],
+    "spell_desc": "Create a shadow at the furthest enemy within 3 hexes. Zed and his shadow slash adjacent enemies, dealing physical damage.\n\nIonia Bonus: +15% Crit Chance and Crit Damage",
+    "spell": [
+      {
+        "key": "AD",
+        "stats": [
+          "120%",
+          "120%",
+          "125%"
+        ]
+      },
+      {
+        "key": "AP",
+        "stats": [
+          "20%",
+          "30%",
+          "50%"
+        ]
+      },
+      {
+        "key": "Damage",
+        "stats": [
+          "AD + AP"
+        ]
+      },
+      {
+        "key": "Shadow Range",
+        "stats": [
+          "2 + Range"
+        ]
+      }
+    ],
+    "health": [
+      600,
+      1080,
+      1944
+    ],
+    "armor": [
+      35
+    ],
+    "resistance": [
+      35
+    ],
+    "mana_start": "0",
+    "mana_cost": "70",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.7"
+  },
+  {
+    "name": "Zeri",
+    "id": "59",
+    "type": [
+      "Zaun, Gunner"
+    ],
+    "spell_desc": "Passive: Execute enemies below 12% Health. Kills reset the duration of Surge.\n\nActive: For the next 6 seconds, attacks chain lightning to 3 additional enemies, dealing physical damage.",
+    "spell": [
+      {
+        "key": "Damage",
+        "stats": [
+          "50%",
+          "50%",
+          "100%"
+        ]
+      },
+      {
+        "key": "Execute Threshold",
+        "stats": [
+          "12% AP"
+        ]
+      },
+      {
+        "key": "Chain Lightning Enemies",
+        "stats": [
+          "3",
+          "3",
+          "5"
+        ]
+      }
+    ],
+    "health": [
+      750,
+      1350,
+      2430
+    ],
+    "armor": [
+      25
+    ],
+    "resistance": [
+      25
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      60,
+      90,
+      135
+    ],
+    "speed": "0.8"
+  }
+]
+
 </script>
 
 <script type="application/json" id="itemsStatsData">[
@@ -7153,7 +8370,12 @@
         "desc": "+20 Armor, +20 Magic Resist",
         "trait": {
           "armor": 20,
-          "resistance": 20
+          "resistance": 20,
+          "special": {
+            "duration": 10,
+            "armor": 20,
+            "resistance": 20
+          }
         }
       },
       {
@@ -7161,7 +8383,12 @@
         "desc": "+60 Armor, +60 Magic Resist",
         "trait": {
           "armor": 60,
-          "resistance": 60
+          "resistance": 60,
+          "special": {
+            "duration": 10,
+            "armor": 60,
+            "resistance": 60
+          }
         }
       },
       {
@@ -7169,7 +8396,12 @@
         "desc": "+120 Armor, +120 Magic Resist",
         "trait": {
           "armor": 120,
-          "resistance": 120
+          "resistance": 120,
+          "special": {
+            "duration": 10,
+            "armor": 120,
+            "resistance": 120
+          }
         }
       },
       {
@@ -7177,7 +8409,12 @@
         "desc": "+250 Armor, +250 Magic Resist",
         "trait": {
           "armor": 250,
-          "resistance": 250
+          "resistance": 250,
+          "special": {
+            "duration": 10,
+            "armor": 250,
+            "resistance": 250
+          }
         }
       }
     ]
@@ -7246,27 +8483,33 @@
         "level": 2,
         "desc": "20% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 20
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 20
+          }
         }
       },
       {
         "level": 4,
         "desc": "65% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 65
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 65
+          }
         }
       },
       {
         "level": 6,
         "desc": "140% Damage",
         "trait": {
-          "period": 3,
-          "duration": 1,
-          "percentDamage": 140
+          "special": {
+            "period": 3,
+            "duration": 1,
+            "percentDamage": 140
+          }
         }
       }
     ]
@@ -7327,38 +8570,21 @@
   {
     "name": "Freljord",
     "id": "7",
+    "ignore": true,
     "desc": "After 8 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs. Sunder: Reduce Armor Shred: Reduce Magic Resist Mana Reave: Increase max Mana until the next cast",
     "srcPath": "public/images/traits/Freljord.png",
     "levels": [
       {
         "level": 2,
-        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "5% Health, enemies are 40% Sundered and Shredded for 10 seconds"
       },
       {
         "level": 3,
-        "desc": "10% Health, enemies are also 35% Mana Reaved",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "10% Health, enemies are also 35% Mana Reaved"
       },
       {
         "level": 4,
-        "desc": "15% Health, enemies are also stunned for 1.5 seconds",
-        "all": {
-          "delay": 8,
-          "duration": 10,
-          "sunder": 40,
-          "shred": 40 
-        }
+        "desc": "15% Health, enemies are also stunned for 1.5 seconds"
       }
     ]
   },
@@ -7372,21 +8598,27 @@
         "level": 2,
         "desc": "7% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 7
+          "special": {
+            "attackOnHit": 7
+          }
         }
       },
       {
         "level": 4,
         "desc": "12% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 12
+          "special": {
+            "attackOnHit": 12
+          }
         }
       },
       {
         "level": 6,
         "desc": "20% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 20
+          "special": {
+            "attackOnHit": 20
+          }
         }
       }
     ]
@@ -7401,31 +8633,42 @@
         "level": 2,
         "desc": "5 Mana",
         "all": {
-          "period": 3,
-          "mana_gen": 5
+          "special": {
+            "period": 3,
+            "manaGen": 5
+          }
         }
       },
       {
         "level": 4,
         "desc": "Additional 15 to Invokers",
         "trait": {
-          "mana_gen": 15
+          "special": {
+            "period": 3,
+            "manaGen": 15
+          }
         },
         "all": {
-          "period": 3,
-          "mana_gen": 5
+          "special": {
+            "period": 3,
+            "manaGen": 5
+          }
         }
       },
       {
         "level": 6,
         "desc": "20 Mana to all, additional 15 to Invokers",
         "trait": {
-          "period": 3,
-          "mana_gen": 15
+          "special": {
+            "period": 3,
+            "manaGen": 15
+          }
         },
         "all": {
-          "period": 3,
-          "mana_gen": 20
+          "special": {
+            "period": 3,
+            "manaGen": 20
+          }
         }
       }
     ]
@@ -7440,30 +8683,36 @@
         "level": 3,
         "desc": "100% Ionian bonus, 1 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 100
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 100
+          }
         }
       },
       {
         "level": 6,
         "desc": "200% Ionian bonus, 2 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 200
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 200
+          }
         }
       },
       {
         "level": 9,
         "desc": "300% Ionian bonus, 3 enlightened ",
         "trait": {
-          "period": 4,
-          "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 300
+          "special": {
+            "period": 4,
+            "duration": 4,
+            "manaGen": 20,
+            "ioniaBonus": 300
+          }
         }
       }
     ]
@@ -7537,6 +8786,7 @@
     "name": "Rogue",
     "id": "14",
     "desc": "",
+    "ignore": true,
     "srcPath": "public/images/traits/Rogue.png",
     "levels": [
       {
@@ -7545,10 +8795,7 @@
       },
       {
         "level": 4,
-        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds.",
-        "trait": {
-          "burn": 30
-        }
+        "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
       }
     ]
   },
@@ -7562,34 +8809,44 @@
         "level": 3,
         "desc": "The strongest Shuriman Ascends",
         "trait": {
-          "delay": 8,
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 5,
         "desc": "All Shurimans Ascend",
         "trait": {
-          "delay": 8,
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 7,
         "desc": "All Ascend at the Start of Combat ",
         "trait": {
-          "maxHealth": 30,
-          "speed": 45
+          "special": {
+            "delay": 8,
+            "maxHealth": 30,
+            "speed": 45
+          }
         }
       },
       {
         "level": 9,
         "desc": "+125% Ascension bonus",
         "trait": {
-          "maxHealth": 67.5,
-          "speed": 101
+          "special": {
+            "delay": 8,
+            "maxHealth": 67.5,
+            "speed": 101
+          }
         }
       }
     ]
@@ -7653,7 +8910,9 @@
         "desc": "25 Ability Power; 10% max Health ",
         "trait": {
           "ap": 25,
-          "burn": 10
+          "special": {
+            "onKillBurn": 10
+          }
         }
       },
       {
@@ -7661,7 +8920,9 @@
         "desc": "50 Ability Power; 10% max Health ",
         "trait": {
           "ap": 50,
-          "burn": 10
+          "special": {
+            "onKillBurn": 10
+          }
         }
       },
       {
@@ -7669,7 +8930,9 @@
         "desc": "80 Ability Power; 12% max Health to 2 enemies",
         "trait": {
           "ap": 80,
-          "burn": 24
+          "special": {
+            "onKillBurn": 24
+          }
         }
       },
       {
@@ -7677,7 +8940,9 @@
         "desc": "120 Ability Power; 20% max Health to 2 enemies",
         "trait": {
           "ap": 120,
-          "burn": 40
+          "special": {
+            "onKillBurn": 40
+          }
         }
       }
     ]
@@ -7759,7 +9024,9 @@
         "desc": "Your strongest 3-star Yordle",
         "all": {
           "speedOnLevel": 10,
-          "yordle": true
+          "special": {
+            "yordle": true
+          }
         }
       },
       {
@@ -7767,7 +9034,9 @@
         "desc": "Two 3-star Yordles",
         "all": {
           "speedOnLevel": 10,
-          "yordle": true
+          "special": {
+            "yordle": true
+          }
         }
       }
     ]
@@ -7782,24 +9051,30 @@
         "level": 2,
         "desc": "Gain 1 chem-mod",
         "trait": {
-          "mods": 1,
-          "overcharge": false
+          "special": {
+            "mods": 1,
+            "overcharge": false
+          }
         }
       },
       {
         "level": 4,
         "desc": "Gain 2 chem-mods",
         "trait": {
-          "mods": 2,
-          "overcharge": false
+          "special": {
+            "mods": 2,
+            "overcharge": false
+          }
         }
       },
       {
         "level": 6,
         "desc": "Gain 3 chem-mods and Overcharge them ",
         "trait": {
-          "mods": 3,
-          "overcharge": true
+          "special": {
+            "mods": 3,
+            "overcharge": true
+          }
         }
       }
     ]

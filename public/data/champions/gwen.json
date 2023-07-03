@@ -1,8 +1,35 @@
 {
   "name": "Gwen",
-  "id": 14,
+  "id": "14",
   "type": [
     "Shadow Isles, Slayer"
+  ],
+  "spell_desc": "Dash around the current target and snip 3 times in a cone, each dealing magic damage to enemies hit.\n\nEvery 3 casts, Armor and Magic resist for 2 seconds.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "100%",
+        "150%",
+        "500%"
+      ]
+    },
+    {
+      "key": "Bonus Defense Duration",
+      "stats": [
+        "2",
+        "2.5",
+        "4"
+      ]
+    },
+    {
+      "key": "Resists",
+      "stats": [
+        "120",
+        "120",
+        "300"
+      ]
+    }
   ],
   "health": [
     1000,
@@ -15,13 +42,13 @@
   "resistance": [
     50
   ],
-  "mana_start": 0,
-  "mana_cost": 35,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "35",
+  "ap": "100",
   "attack": [
     55,
     83,
     124
   ],
-  "speed": 0.8
+  "speed": "0.8"
 }

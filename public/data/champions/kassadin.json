@@ -1,8 +1,35 @@
 {
   "name": "Kassadin",
-  "id": 24,
+  "id": "24",
   "type": [
     "Void, Bastion"
+  ],
+  "spell_desc": "Gain Shield for 4 seconds. Deal magic damage to enemies in a cone and Disarm them for a while.\n\nDisarm: Cannot move or attack, but CAN cast spells",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "250%",
+        "300%",
+        "400%"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "150%",
+        "225%",
+        "325%"
+      ]
+    },
+    {
+      "key": "Disarm Duration",
+      "stats": [
+        "1.5",
+        "1.75",
+        "2"
+      ]
+    }
   ],
   "health": [
     800,
@@ -15,13 +42,13 @@
   "resistance": [
     45
   ],
-  "mana_start": 50,
-  "mana_cost": 100,
-  "ap": 100,
+  "mana_start": "50",
+  "mana_cost": "100",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }

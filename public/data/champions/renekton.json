@@ -4,6 +4,31 @@
   "type": [
     "Shurima, Bruiser"
   ],
+  "spell_desc": "Deal magic damage to adjacent enemies. Heal for the first enemy hit and another for each additional one.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "180%",
+        "270%",
+        "400%"
+      ]
+    },
+    {
+      "key": "Initial Heal",
+      "stats": [
+        "220%",
+        "270%",
+        "320%"
+      ]
+    },
+    {
+      "key": "Bonus Heal",
+      "stats": [
+        "30% AP"
+      ]
+    }
+  ],
   "health": [
     600,
     1080,

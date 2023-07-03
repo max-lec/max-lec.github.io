@@ -4,6 +4,17 @@
   "type": [
     "Void, Multicaster, Sorcerer"
   ],
+  "spell_desc": "Fire a plasma bolt towards the current target that deals to the first enemy hit. It then splits in two, dealing 50% less damage whenever it passes through an enemy.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "210%",
+        "315%",
+        "520%"
+      ]
+    }
+  ],
   "health": [
     700,
     1260,

@@ -4,6 +4,17 @@
   "type": [
     "Targon, Bastion, Sorcerer"
   ],
+  "spell_desc": "Gain Shield for 6 seconds. It absorbs damage received by adjacent allies.",
+  "spell": [
+    {
+      "key": "Shield",
+      "stats": [
+        "400%",
+        "475%",
+        "550%"
+      ]
+    }
+  ],
   "health": [
     800,
     1440,

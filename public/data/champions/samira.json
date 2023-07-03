@@ -4,6 +4,23 @@
   "type": [
     "Noxus, Challenger"
   ],
+  "spell_desc": "Shoot at the current target and deal to the first enemy hit. Reduce their Armor by 10.",
+  "spell": [
+    {
+      "key": "Armor Reduction",
+      "stats": [
+        "20",
+        "25",
+        "30"
+      ]
+    },
+    {
+      "key": "Damage",
+      "stats": [
+        "200% AD"
+      ]
+    }
+  ],
   "health": [
     500,
     900,

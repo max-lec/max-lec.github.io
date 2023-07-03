@@ -1,8 +1,27 @@
 {
   "name": "Ahri",
-  "id": 2,
+  "id": "2",
   "type": [
     "Ionia, Sorcerer"
+  ],
+  "spell_desc": "Steal essence from enemies around her target, dealing magic damage and 35% Mana Reaving them.\n\nEvery 3 casts, instead, unleash a wave that deals magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.\n\nlonia Bonus: +3 Mana per second",
+  "spell": [
+    {
+      "key": "Essence Steal",
+      "stats": [
+        "115%",
+        "170%",
+        "1000%"
+      ]
+    },
+    {
+      "key": "Wave Damage",
+      "stats": [
+        "250%",
+        "375%",
+        "3000%"
+      ]
+    }
   ],
   "health": [
     850,
@@ -15,13 +34,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 0,
-  "mana_cost": 50,
-  "ap": 100,
+  "mana_start": "0",
+  "mana_cost": "50",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.85
+  "speed": "0.85"
 }

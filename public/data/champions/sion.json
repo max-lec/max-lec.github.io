@@ -4,6 +4,45 @@
   "type": [
     "Noxus, Bruiser"
   ],
+  "spell_desc": "Passive: Upon death, reanimate with 100% Health, decaying at max Health per second. Sion can no longer use his abilityo, but is immune to Crowd Control and gains Attack Speed.\n\nActive: Charge towards the most enemies within 3 hexes. Deal to any enemies along the way and Stun them for 1.5 seconds.",
+  "spell": [
+    {
+      "key": "Reanimation Health Decay",
+      "stats": [
+        "12%",
+        "8%",
+        "0%"
+      ]
+    },
+    {
+      "key": "Reanimated Attack Speed",
+      "stats": [
+        "150% AP"
+      ]
+    },
+    {
+      "key": "Charge Range",
+      "stats": [
+        "3 + Range"
+      ]
+    },
+    {
+      "key": "Charge Damage",
+      "stats": [
+        "225%",
+        "235%",
+        "500%"
+      ]
+    },
+    {
+      "key": "Stun Duration",
+      "stats": [
+        "1.25",
+        "1.5",
+        "15"
+      ]
+    }
+  ],
   "health": [
     1000,
     1800,

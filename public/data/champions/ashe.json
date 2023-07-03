@@ -1,8 +1,25 @@
 {
   "name": "Ashe",
-  "id": 5,
+  "id": "5",
   "type": [
     "Freljord, Deadeye"
+  ],
+  "spell_desc": "Fire 8 arrows in a cone, each dealing physical damage to the first enemy hit and Chilling them for a few seconds.\n\nChill: Reduced Attack Speed by 30%",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "125%",
+        "125%",
+        "130% AD"
+      ]
+    },
+    {
+      "key": "Duration",
+      "stats": [
+        "2% AP"
+      ]
+    }
   ],
   "health": [
     600,
@@ -15,13 +32,13 @@
   "resistance": [
     20
   ],
-  "mana_start": 30,
-  "mana_cost": 60,
-  "ap": 100,
+  "mana_start": "30",
+  "mana_cost": "60",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }

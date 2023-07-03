@@ -1,8 +1,25 @@
 {
   "name": "Jayce",
-  "id": 18,
+  "id": "18",
   "type": [
     "Piltover, Gunner"
+  ],
+  "spell_desc": "Grant Attack Speed to Jayce and adjacent allies on his left and right for 3 seconds. Fire a blast at the current target, which explodes on the first enemy hit, dealing physical damage to enemies near the blast.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "240%",
+        "240%",
+        "250%"
+      ]
+    },
+    {
+      "key": "Attack Speed Bonus",
+      "stats": [
+        "20% AP"
+      ]
+    }
   ],
   "health": [
     700,
@@ -15,13 +32,13 @@
   "resistance": [
     25
   ],
-  "mana_start": 40,
-  "mana_cost": 120,
-  "ap": 100,
+  "mana_start": "40",
+  "mana_cost": "120",
+  "ap": "100",
   "attack": [
     65,
     98,
     146
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

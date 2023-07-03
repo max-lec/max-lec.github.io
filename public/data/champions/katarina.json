@@ -1,8 +1,25 @@
 {
   "name": "Katarina",
-  "id": 25,
+  "id": "25",
   "type": [
     "Noxus, Rogue"
+  ],
+  "spell_desc": "Throw three daggers that land next to enemies within two hexes. Then, teleport to each to deal magic damage to adjacent enemies and Wound them for 6 seconds.\n\nWound: Reduce healing received by 50%",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "145%",
+        "220%",
+        "360%"
+      ]
+    },
+    {
+      "key": "Range",
+      "stats": [
+        "1 + Range"
+      ]
+    }
   ],
   "health": [
     800,
@@ -15,13 +32,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 20,
-  "mana_cost": 80,
-  "ap": 100,
+  "mana_start": "20",
+  "mana_cost": "80",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.75
+  "speed": "0.75"
 }

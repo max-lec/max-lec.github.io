@@ -1,8 +1,19 @@
 {
   "name": "Lissandra",
-  "id": 29,
+  "id": "29",
   "type": [
     "Freljord, Invoker"
+  ],
+  "spell_desc": "Stun the current target for 2 seconds and deal magic damage to enemies within 2 hexes of them. They take 10% more damage for the next 4 seconds.",
+  "spell": [
+    {
+      "key": "Damage",
+      "stats": [
+        "160%",
+        "240%",
+        "400%"
+      ]
+    }
   ],
   "health": [
     800,
@@ -15,13 +26,13 @@
   "resistance": [
     40
   ],
-  "mana_start": 30,
-  "mana_cost": 90,
-  "ap": 100,
+  "mana_start": "30",
+  "mana_cost": "90",
+  "ap": "100",
   "attack": [
     50,
     75,
     113
   ],
-  "speed": 0.7
+  "speed": "0.7"
 }
