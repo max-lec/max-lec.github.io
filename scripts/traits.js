@@ -85,6 +85,20 @@ document.addEventListener('alpine:init', () => {
             });
             return total;
         },
+
+        getTotalManaStart(){
+            let total = 0;
+            // flat MR
+            this.activeTraits.forEach(activeTuple => {
+                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                total += traitStats?.all?.manaStart ?? 0;
+                if (hasCurrentChampionTrait(traitStats.name)){
+                    total += traitStats?.trait?.manaStart ?? 0;
+                }
+            });
+            return total;
+        },
+
     });
 
 });

@@ -78,7 +78,7 @@ document.addEventListener('alpine:init', () => {
         getTotalResistance(){
             return this.augment1.resistance + this.augment2.resistance + this.augment3.resistance;
         },
-        getTotalAugmentManaStart(){
+        getTotalManaStart(){
             return this.augment1.manaStart + this.augment2.manaStart + this.augment3.manaStart;
         },
         getTotalAugmentAp(){

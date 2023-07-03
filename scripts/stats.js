@@ -58,8 +58,9 @@ function getTotalResistance() {
 
 function getTotalManaStart() {
     return Alpine.store('currentChampion').manaStart
-        + Alpine.store('currentItem').getTotalItemManaStart()
-        + Alpine.store('currentAugment').getTotalAugmentManaStart()
+        + Alpine.store('currentItem').getTotalManaStart()
+        + Alpine.store('currentAugment').getTotalManaStart()
+        + Alpine.store('currentTrait').getTotalManaStart()
         ;
 }
 

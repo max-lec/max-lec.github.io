@@ -229,21 +229,21 @@
         "level": 2,
         "desc": "7% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 7
+          "attackOnHit": 7
         }
       },
       {
         "level": 4,
         "desc": "12% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 12
+          "attackOnHit": 12
         }
       },
       {
         "level": 6,
         "desc": "20% Attack Damage per Stack",
         "trait": {
-          "attack_onhit": 20
+          "attackOnHit": 20
         }
       }
     ]
@@ -259,18 +259,18 @@
         "desc": "5 Mana",
         "all": {
           "period": 3,
-          "mana_gen": 5
+          "manaGen": 5
         }
       },
       {
         "level": 4,
         "desc": "Additional 15 to Invokers",
         "trait": {
-          "mana_gen": 15
+          "manaGen": 15
         },
         "all": {
           "period": 3,
-          "mana_gen": 5
+          "manaGen": 5
         }
       },
       {
@@ -278,11 +278,11 @@
         "desc": "20 Mana to all, additional 15 to Invokers",
         "trait": {
           "period": 3,
-          "mana_gen": 15
+          "manaGen": 15
         },
         "all": {
           "period": 3,
-          "mana_gen": 20
+          "manaGen": 20
         }
       }
     ]
@@ -299,8 +299,8 @@
         "trait": {
           "period": 4,
           "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 100
+          "manaGen": 20,
+          "ioniaBonus": 100
         }
       },
       {
@@ -309,8 +309,8 @@
         "trait": {
           "period": 4,
           "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 200
+          "manaGen": 20,
+          "ioniaBonus": 200
         }
       },
       {
@@ -319,8 +319,8 @@
         "trait": {
           "period": 4,
           "duration": 4,
-          "mana_start": 20,
-          "ionia_bonus": 300
+          "manaGen": 20,
+          "ioniaBonus": 300
         }
       }
     ]

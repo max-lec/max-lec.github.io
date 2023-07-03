@@ -114,7 +114,7 @@ document.addEventListener('alpine:init', () => {
         getTotalResistance(){
             return this.item1.resistance + this.item2.resistance + this.item3.resistance;
         },
-        getTotalItemManaStart(){
+        getTotalManaStart(){
             return this.item1.manaStart + this.item2.manaStart + this.item3.manaStart;
         },
         getTotalItemAp(){
@@ -148,12 +148,15 @@ function getItemsData() {
     itemMap = [];
 
     for(var item of itemsStats){
+
         itemData = { 
             "id": Number(item.id), 
             "name": item.name, 
             "srcPath": item.srcPath
         };
-        itemMap.push(itemData);
+        if(!isStatsEmpty(item)){
+            itemMap.push(itemData);
+        }
     }
 
     return quicksort(itemMap);
@@ -172,21 +175,18 @@ function getItemStats(id) {
     item.ap = Number(itemStats.ap);
     item.attack = Number(itemStats.attack);
     item.speed = Number(itemStats.speed);
-    item.flatShield = itemStats.flat_shield;
-    item.percentShield = itemStats.percent_shield;
-    item.percentDamage = itemStats.percent_damage;
-    item.percentDamageAd = itemStats.percent_damage_ad;
-    item.percentDamageAp = itemStats.percent_damage_ap;
-    item.flatDamageAd = itemStats.flat_damage_ad;
-    item.flatDamageAp = itemStats.flat_damage_ap;
-    item.criticalChance = itemStats.critical_chance;
-    item.sunder = itemStats.name;
-    item.shred = itemStats.name;
-    item.burn = itemStats.name;
-    item.spellcrit = itemStats.name;
-    item.manaOnhit = itemStats.mana_onhit;
-    item.speedOnhit = itemStats.speed_onhit ?? 0;
     return item;
+}
+
+function isStatsEmpty(item) {
+    let stats = Number(item.health) 
+    + Number(item.armor) 
+    + Number(item.resistance)
+    + Number(item.mana_start)
+    + Number(item.ap)
+    + Number(item.attack)
+    + Number(item.speed)
+    return stats < 1;
 }
 
 function getItemSrcPath(itemSrcPath) {
