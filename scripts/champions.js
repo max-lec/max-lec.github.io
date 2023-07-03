@@ -27,15 +27,30 @@ document.addEventListener('alpine:init', () => {
             criticalDamage: 1.3
         },
         spellDesc: "",
-        spells: 
+        spells: [
             {
-                ad: true,
-                ap: false,
-                damagePercent: [0, 0, 0]
+                type: "buff",
+                duration: 0,
+                apRatio: [0, 0, 0],
+                attackRatio: [0, 0, 0],
+                speed: 0,
+                omnivamp: 0,
+                flatAp: 0,
+                flatattack: 0,
+                switchSpellAfter: 0,
+                maxMultihit: 0,
+                sunder: 0,
+                shred: 0,
+                percentDamage: 0,
+                manaLock: false,
+                autoLock: true,
+                channel: false
             },
+        ],
 
         init() {
-            this.id = 19; //inits to jhin
+            this.id = 1; //inits to aatrox (jhin is 19)
+            this.level = 1;
             this.selectChampion(this.id);
         },
 
@@ -47,7 +62,7 @@ document.addEventListener('alpine:init', () => {
             this.type = championStats.type[0];
             this.spellDesc = championStats.spell_desc;
 
-            this.stats = mapChampionStats(championStats);
+            this.stats = mapChampionStats(championStats, this.level);
             this.spell = mapChampionSpellData(championStats);
         },
 
@@ -93,26 +108,27 @@ function getChampionStats(id) {
     return Alpine.store('championsStatsData').championsStats.find(champ => champ.id == id);
 }
 
-function mapChampionStats(championStats){
+function mapChampionStats(championStats, level){
     let stats = {};
-    stats.health = championStats.health.length >= this.level ? Number(championStats.health[this.level - 1]) : championStats.health[0];
-    stats.armor = championStats.armor.length >= this.level ? Number(championStats.armor[this.level - 1]) : championStats.armor[0];
-    stats.resistance = championStats.resistance.length >= this.level ? Number(championStats.resistance[this.level - 1]) : championStats.resistance[0];
+    stats.health = championStats.health.length >= level ? Number(championStats.health[level - 1]) : championStats.health[0];
+    stats.armor = championStats.armor.length >= level ? Number(championStats.armor[level - 1]) : championStats.armor[0];
+    stats.resistance = championStats.resistance.length >= level ? Number(championStats.resistance[level - 1]) : championStats.resistance[0];
     stats.manaStart = Number(championStats.mana_start) ?? 0;
     stats.ap = Number(championStats.ap);
-    stats.attack = championStats.attack.length >= this.level ? Number(championStats.attack[this.level - 1]) : championStats.attack[0];
+    stats.attack = championStats.attack.length >= level ? Number(championStats.attack[level - 1]) : championStats.attack[0];
     stats.speed = Number(championStats.speed) * 100;
     return stats;
 }
 
 function mapChampionSpellData(championStats) {
-    spell = {};
-    spellSteps = championStats.spell_desc;
-    spell.ad = spellSteps.includes("physical damage");
-    spell.ap = spellSteps.includes("magic damage");
-    spell.damagePercent = championStats.spell.find(data => data.key.includes("Damage")).stats;
-    spell.damagePercent = spell.damagePercent.map(val => Number(val.replace('%', '')));
-    return spell;
+    spells = [];
+    spellSteps = championStats.spell;
+
+    for(var step of spellSteps){
+        spells.push(step);
+    }
+    
+    return spells;
 }
 
 function hasCurrentChampionTrait(traitName){

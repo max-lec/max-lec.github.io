@@ -280,7 +280,7 @@
             </div>
             <div class="stat-line">
               <div class="stat-label">Atk Spd: </div>
-              <span x-text="speed"></span>
+              <span x-text="speed/100"></span>
             </div>
             <div class="stat-line">
               <div class="stat-label">Crit Rate: </div>
@@ -289,10 +289,10 @@
           </div>
         </div>
 
-        <div class="damage-stats">
+        <div class="damage-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">DPS AUTOS : </div>
-            <span>0</span>
+            <span x-text="computeAttackDPS('test')"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ABILITY DAMAGE : </div>
@@ -340,16 +340,15 @@
 
         <div class="" x-data style="width:200px">
           <span class="" x-text="$store.currentChampion.spellDesc"></span>
-          <span>Damage: </span><span x-text="$store.currentChampion.spell.damagePercent"></span>
-          <span x-show="$store.currentChampion.spell.ad"> %AD</span>
-          <span x-show="$store.currentChampion.spell.ap"> %AP</span>
+          Damage: 
+          <span x-text="$store.currentChampion.spell[0].attackRatio"></span> %AD
+          <span x-text="$store.currentChampion.spell[0].apRatio"></span> %AP
         </div>
     </div>
 
 </body>
 
-<script type="application/json" id="championsStatsData">
-  [
+<script type="application/json" id="championsStatsData">[
   {
     "name": "Aatrox",
     "id": "1",
@@ -358,25 +357,23 @@
     ],
     "spell_desc": "Transform for 10 seconds, gaining 15% and converting all bonus Attack Speed to Attack Damage. While transformed, attacks deal physical damage.",
     "spell": [
-      {
-        "key": "Damage",
-        "stats": [
-          "250%",
-          "250%",
-          "2500%"
-        ]
-      },
-      {
-        "key": "Damage",
-        "stats": [
-          "80% bonus Attack speed + AD"
-        ]
-      },
-      {
-        "key": "Omnivamp",
-        "stats": [
-          "15% AP"
-        ]
+        {
+          "type": "buff",
+          "duration": 10,
+          "apRatio": [0, 0, 0],
+          "attackRatio": [250, 250, 2500],
+          "speed": 0,
+          "omnivamp": 15,
+          "flatAp": 0,
+          "flatAttack": 0,
+          "switchSpellAfter": 0,
+          "maxMultihit": 1,
+          "sunder": 0,
+          "shred": 0,
+          "percentDamage": 0,
+          "manaLock": true,
+          "autoLock": false,
+          "channel": false
       }
     ],
     "health": [
@@ -408,22 +405,42 @@
     ],
     "spell_desc": "Steal essence from enemies around her target, dealing magic damage and 35% Mana Reaving them.\n\nEvery 3 casts, instead, unleash a wave that deals magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.\n\nlonia Bonus: +3 Mana per second",
     "spell": [
-      {
-        "key": "Essence Steal",
-        "stats": [
-          "115%",
-          "170%",
-          "1000%"
-        ]
+        {
+          "type": "damage",
+          "duration": 0.3,
+          "apRatio": [115, 170, 1000],
+          "attackRatio": [0, 0, 0],
+          "speed": 0,
+          "omnivamp": 0,
+          "flatAp": 0,
+          "flatAttack": 0,
+          "switchSpellAfter": 2,
+          "maxMultihit": 1,
+          "sunder": 0,
+          "shred": 0,
+          "percentDamage": 0,
+          "manaLock": true,
+          "autoLock": false,
+          "channel": false
       },
       {
-        "key": "Wave Damage",
-        "stats": [
-          "250%",
-          "375%",
-          "3000%"
-        ]
-      }
+        "type": "damage",
+        "duration": 2.3,
+        "apRatio": [250, 375, 3000],
+        "attackRatio": [0, 0, 0],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 1,
+        "maxMultihit": 9,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": true,
+        "autoLock": false,
+        "channel": false
+    }
     ],
     "health": [
       850,
@@ -455,12 +472,22 @@
     "spell_desc": "Lock on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals physical damage to the first enemy hit.",
     "spell": [
       {
-        "key": "Damage",
-        "stats": [
-          "20%",
-          "35%",
-          "60%"
-        ]
+        "type": "damage",
+        "duration": 3,
+        "apRatio": [20, 35, 60],
+        "attackRatio": [750, 750, 750],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 0,
+        "maxMultihit": 1,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": true,
+        "autoLock": true,
+        "channel": false
       }
     ],
     "health": [
@@ -493,34 +520,40 @@
     "spell_desc": "Fire a moon blast at the largest group of enemies that deals physical damage to enemies within 2 hexes. Equip 3 Chakram, plus 1 more for each enemy hit by the moon blast.\n\nFor 7 seconds, attacks deal bonus physical damage for each Chakram equipped. 50% of damage dealt by Chakrams heals Aphelios.",
     "spell": [
       {
-        "key": "Moon Blast",
-        "stats": [
-          "200%",
-          "200%",
-          "550%"
-        ]
+        "type": "damage",
+        "duration": 2.5,
+        "apRatio": [0, 0, 0],
+        "attackRatio": [200, 200, 550],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 1,
+        "maxMultihit": 9,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false,
+        "autoLock": true,
+        "channel": false
       },
       {
-        "key": "Chakram Damage",
-        "stats": [
-          "8%",
-          "8%",
-          "40%"
-        ]
-      },
-      {
-        "key": "Max Chakrams",
-        "stats": [
-          "10",
-          "12",
-          "20"
-        ]
-      },
-      {
-        "key": "Heal",
-        "stats": [
-          "50% AP"
-        ]
+        "type": "buff",
+        "duration": 7,
+        "apRatio": [0, 0, 0],
+        "attackRatio": [148, 148, 340],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 1,
+        "maxMultihit": 9,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false,
+        "autoLock": true,
+        "channel": false
       }
     ],
     "health": [
@@ -553,18 +586,22 @@
     "spell_desc": "Fire 8 arrows in a cone, each dealing physical damage to the first enemy hit and Chilling them for a few seconds.\n\nChill: Reduced Attack Speed by 30%",
     "spell": [
       {
-        "key": "Damage",
-        "stats": [
-          "125%",
-          "125%",
-          "130% AD"
-        ]
-      },
-      {
-        "key": "Duration",
-        "stats": [
-          "2% AP"
-        ]
+        "type": "damage",
+        "duration": 0.5,
+        "apRatio": [0, 0, 0],
+        "attackRatio": [125, 125, 130],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 1,
+        "maxMultihit": 8,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false,
+        "autoLock": false,
+        "channel": false
       }
     ],
     "health": [
@@ -597,18 +634,22 @@
     "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
     "spell": [
       {
-        "key": "Soldier Damage",
-        "stats": [
-          "105%",
-          "165%",
-          "800%"
-        ]
-      },
-      {
-        "key": "Max Soldier Strike",
-        "stats": [
-          "85% of Soldier Damage"
-        ]
+        "type": "buff",
+        "duration": 0,
+        "apRatio": [95, 140, 500],
+        "attackRatio": [0, 0, 0],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 3,
+        "maxMultihit": 1,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false,
+        "autoLock": false,
+        "channel": false
       }
     ],
     "health": [
@@ -3159,7 +3200,6 @@
     "speed": "0.8"
   }
 ]
-
 </script>
 
 <script type="application/json" id="itemsStatsData">[
