@@ -137,6 +137,22 @@ document.addEventListener('alpine:init', () => {
             });
             return total;
         },
+        getTotalManaBonus(){
+            let total = [0, 0];
+            
+            this.activeTraits.forEach(activeTuple => {
+                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                if (traitStats.name.includes("Invoker")){
+                    // only mana gen trait for now
+                    total[1] = 3;
+                    total[0] = traitStats.all.special.manaGen;
+                    if (hasCurrentChampionTrait(traitStats.name)){
+                        total[0] = traitStats.trait.special.manaGen;
+                    }
+                }
+            });
+            return total;
+        },
     });
 
 });

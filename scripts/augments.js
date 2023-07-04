@@ -79,7 +79,13 @@ document.addEventListener('alpine:init', () => {
             return this.augment1.resistance + this.augment2.resistance + this.augment3.resistance;
         },
         getTotalManaStart(){
-            return this.augment1.manaStart + this.augment2.manaStart + this.augment3.manaStart;
+            // only infusion this set (ignore sorcerer)
+            return 0;
+        },
+        getTotalManaBonus(){
+            // only infusion this set (ignore sorcerer)
+            let names = this.augment1.name + this.augment2.name + this.augment3.name;
+            return names.includes("Infusion") ? [20, 5] : [0, 0];
         },
         getTotalAp(){
             return this.augment1.ap + this.augment2.ap + this.augment3.ap;

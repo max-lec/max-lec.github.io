@@ -76,7 +76,7 @@ function getTotalManaCast() {
 
 function getTotalManaGen() {
     manaPerAuto = 10 + Alpine.store('currentItem').getManaPerAttack();
-    return Alpine.store('currentChampion').speed * manaPerAuto;
+    return [manaPerAuto, Alpine.store('currentChampion').stats.speed/100];
 }
 
 function getTotalAp() {
