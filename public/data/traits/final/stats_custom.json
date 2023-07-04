@@ -99,7 +99,7 @@
   },
   {
     "name": "Challenger",
-    "id": "3",
+    "id": "23",
     "desc": "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
     "srcPath": "public/images/traits/Challenger.png",
     "levels": [
@@ -394,7 +394,7 @@
     ]
   },{
     "name": "Juggernaut",
-    "id": "12",
+    "id": "24",
     "ignore": true,
     "desc": "Juggernaut champions take less damage as their Health decreases.",
     "srcPath": "public/images/traits/Juggernaut.png",
@@ -415,7 +415,7 @@
   },
   {
     "name": "Multicaster",
-    "id": "13",
+    "id": "25",
     "desc": "Multicasters cast their Ability multiple times. Bonus casts have 60% reduced effectiveness.",
     "srcPath": "public/images/traits/Multicaster.png",
     "levels": [
@@ -523,7 +523,7 @@
   },
   {
     "name": "Shadow Isles",
-    "id": "18",
+    "id": "26",
     "ignore": true,
     "desc": "",
     "srcPath": "public/images/traits/Shadow Isles.png",
@@ -692,7 +692,7 @@
   },
   {
     "name": "Strategist",
-    "id": "22",
+    "id": "28",
     "desc": "",
     "srcPath": "public/images/traits/Strategist.png",
     "levels": [
@@ -764,7 +764,7 @@
   },
   {
     "name": "Technogenius",
-    "id": "24",
+    "id": "29",
     "desc": "",
     "ignore": true,
     "srcPath": "public/images/traits/Technogenius.png",
