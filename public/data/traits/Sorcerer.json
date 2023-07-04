@@ -1,6 +1,6 @@
 {
   "name": "Sorcerer",
-  "id": "17",
+  "id": "21",
   "desc": "Sorcerers gain bonus Ability Power. When an enemy dies after being damaged by a Sorcerer, they deal a percentage of that enemy's maximum Health to another enemy.",
   "srcPath": "public/images/traits/Sorcerer.png",
   "levels": [

@@ -1,0 +1,20 @@
+{
+  "name": "Juggernaut",
+  "id": "12",
+  "desc": "Juggernaut champions take less damage as their Health decreases.",
+  "srcPath": "public/images/traits/Juggernaut.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "15% to 25% damage reduction"
+    },
+    {
+      "level": 4,
+      "desc": "25% to 35% damage reduction"
+    },
+    {
+      "level": 6,
+      "desc": "35% to 50% damage reduction"
+    }
+  ]
+}

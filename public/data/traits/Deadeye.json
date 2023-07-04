@@ -1,6 +1,6 @@
 {
   "name": "Deadeye",
-  "id": "4",
+  "id": "5",
   "desc": "Innate: +1 Range Every 3 seconds, Deadeyes attack the enemy with the highest percent Health and deal bonus damage.",
   "srcPath": "public/images/traits/Deadeye.png",
   "levels": [

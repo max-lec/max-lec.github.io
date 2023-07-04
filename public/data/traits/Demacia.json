@@ -1,6 +1,6 @@
 {
   "name": "Demacia",
-  "id": "5",
+  "id": "6",
   "desc": "Your strongest Demacians become Elite and equip a random Radiant item each combat. Elites grant Armor and Magic Resist to themselves and adjacent allies, but this does not stack.",
   "srcPath": "public/images/traits/Demacia.png",
   "levels": [

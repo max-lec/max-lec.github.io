@@ -1,6 +1,6 @@
 {
   "name": "Shurima",
-  "id": "15",
+  "id": "19",
   "desc": "Every 4 seconds, Shuriman heal 5% maximum Health. After 8 seconds, select Shuriman Ascend and gain 30% max Health and 45% Attack Speed.",
   "srcPath": "public/images/traits/Shurima.png",
   "levels": [

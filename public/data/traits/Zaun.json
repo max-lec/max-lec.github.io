@@ -1,6 +1,6 @@
 {
   "name": "Zaun",
-  "id": "22",
+  "id": "28",
   "desc": "Zaun champions create random chem-mods that only they can use. Champions can be modded once, and mods can only be removed by selling the champion.",
   "srcPath": "public/images/traits/Zaun.png",
   "levels": [

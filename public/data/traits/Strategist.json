@@ -1,0 +1,24 @@
+{
+  "name": "Strategist",
+  "id": "22",
+  "desc": "",
+  "srcPath": "public/images/traits/Strategist.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "200 shield; 20 Ability Power"
+    },
+    {
+      "level": 3,
+      "desc": "350 shield; 30 Ability Power"
+    },
+    {
+      "level": 4,
+      "desc": "500 shield; 45 Ability Power"
+    },
+    {
+      "level": 5,
+      "desc": "700 shield; 60 Ability Power"
+    }
+  ]
+}

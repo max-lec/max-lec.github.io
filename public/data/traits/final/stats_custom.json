@@ -98,6 +98,42 @@
     ]
   },
   {
+    "name": "Challenger",
+    "id": "3",
+    "desc": "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
+    "srcPath": "public/images/traits/Challenger.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "30% Attack Speed",
+        "trait": {
+          "speed": 30
+        }
+      },
+      {
+        "level": 4,
+        "desc": "60% Attack Speed",
+        "trait": {
+          "speed": 60
+        }
+      },
+      {
+        "level": 6,
+        "desc": "90% Attack Speed",
+        "trait": {
+          "speed": 90
+        }
+      },
+      {
+        "level": 8,
+        "desc": "125% Attack Speed",
+        "trait": {
+          "speed": 125
+        }
+      }
+    ]
+  },
+  {
     "name": "Darkin",
     "id": "3",
     "desc": "",
@@ -356,6 +392,52 @@
         }
       }
     ]
+  },{
+    "name": "Juggernaut",
+    "id": "12",
+    "ignore": true,
+    "desc": "Juggernaut champions take less damage as their Health decreases.",
+    "srcPath": "public/images/traits/Juggernaut.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "15% to 25% damage reduction"
+      },
+      {
+        "level": 4,
+        "desc": "25% to 35% damage reduction"
+      },
+      {
+        "level": 6,
+        "desc": "35% to 50% damage reduction"
+      }
+    ]
+  },
+  {
+    "name": "Multicaster",
+    "id": "13",
+    "desc": "Multicasters cast their Ability multiple times. Bonus casts have 60% reduced effectiveness.",
+    "srcPath": "public/images/traits/Multicaster.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "1 extra cast",
+        "trait": {
+          "special": {
+            "multihitBonus": 0.6
+          }
+        }
+      },
+      {
+        "level": 4,
+        "desc": "2 extra casts",
+        "trait": {
+          "special": {
+            "multihitBonus": 1.2
+          }
+        }
+      }
+    ]
   },
   {
     "name": "Noxus",
@@ -436,6 +518,27 @@
       {
         "level": 4,
         "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
+      }
+    ]
+  },
+  {
+    "name": "Shadow Isles",
+    "id": "18",
+    "ignore": true,
+    "desc": "",
+    "srcPath": "public/images/traits/Shadow Isles.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "40% Health Shield, 5 Mana"
+      },
+      {
+        "level": 4,
+        "desc": "80% Health Shield, 12 Mana"
+      },
+      {
+        "level": 6,
+        "desc": "125% Health Shield, 20 Mana"
       }
     ]
   },
@@ -588,6 +691,46 @@
     ]
   },
   {
+    "name": "Strategist",
+    "id": "22",
+    "desc": "",
+    "srcPath": "public/images/traits/Strategist.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "200 shield; 20 Ability Power",
+        "all": {
+          "shield": 200,
+          "ap": 20
+        }
+      },
+      {
+        "level": 3,
+        "desc": "350 shield; 30 Ability Power",
+        "all": {
+          "shield": 350,
+          "ap": 30
+        }
+      },
+      {
+        "level": 4,
+        "desc": "500 shield; 45 Ability Power",
+        "all": {
+          "shield": 500,
+          "ap": 45
+        }
+      },
+      {
+        "level": 5,
+        "desc": "700 shield; 60 Ability Power",
+        "all": {
+          "shield": 700,
+          "ap": 60
+        }
+      }
+    ]
+  },
+  {
     "name": "Targon",
     "id": "18",
     "desc": "All your unit's healing and shielding is improved.",
@@ -616,6 +759,19 @@
           "healBonus": 50,
           "shieldBonus": 50
         }
+      }
+    ]
+  },
+  {
+    "name": "Technogenius",
+    "id": "24",
+    "desc": "",
+    "ignore": true,
+    "srcPath": "public/images/traits/Technogenius.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "Gain a placeable Apex Turret with 3 upgrade slots. Upgrades to the Apex Turret will show up in your shop for 6 gold. The Apex Turret shares Heimerdinger's Attack Speed and Ability Power."
       }
     ]
   },

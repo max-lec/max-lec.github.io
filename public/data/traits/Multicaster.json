@@ -1,0 +1,16 @@
+{
+  "name": "Multicaster",
+  "id": "13",
+  "desc": "Multicasters cast their Ability multiple times. Bonus casts have 60% reduced effectiveness.",
+  "srcPath": "public/images/traits/Multicaster.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "1 extra cast"
+    },
+    {
+      "level": 4,
+      "desc": "2 extra casts"
+    }
+  ]
+}

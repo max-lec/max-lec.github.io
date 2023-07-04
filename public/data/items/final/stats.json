@@ -125,6 +125,7 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "50",
     "attack": "0",
     "speed": "0"
@@ -138,6 +139,7 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "10",
     "attack": "0",
     "speed": "0"

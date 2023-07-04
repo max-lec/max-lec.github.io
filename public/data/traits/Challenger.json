@@ -1,0 +1,24 @@
+{
+  "name": "Challenger",
+  "id": "3",
+  "desc": "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
+  "srcPath": "public/images/traits/Challenger.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "30% Attack Speed"
+    },
+    {
+      "level": 4,
+      "desc": "60% Attack Speed"
+    },
+    {
+      "level": 6,
+      "desc": "90% Attack Speed"
+    },
+    {
+      "level": 8,
+      "desc": "125% Attack Speed"
+    }
+  ]
+}

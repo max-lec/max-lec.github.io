@@ -11,22 +11,25 @@ IMAGE_PATH="public/images/traits"
 # can't curl because JS needs enabling -> copy page html by hand to DATA_PATH/tmp/tftactics.html.tmp
 # remove the first react-table to avoid DUPLICATES
 
-TRAITS_LIST=$(grep -A 2 'class="characters-item trait-table"' "${DATA_PATH}/tmp/tftactics.html.tmp" | grep "alt=" | cut -d '"' -f 4)
-readarray -t TRAITS_ARRAY <<< $TRAITS_LIST
-
+TRAITS_LIST=$(grep -A 3 'class="characters-item trait-table"' "${DATA_PATH}/tmp/tftactics.html.tmp" | grep "alt=" | sed -n 's|.*alt="\(.*\)".*|\1|p')
+readarray -t TRAITS_ARRAY_TMP <<< $TRAITS_LIST
+OLD_IFS=$IFS
+IFS=$'\n' 
+TRAITS_ARRAY=($(sort <<<"${TRAITS_ARRAY_TMP[*]}"))
+IFS=$OLD_IFS
 
 TRAIT_ID=0
-for trait in $(printf "%s\n" "${TRAITS_ARRAY[@]}" | sort -u); do
+for trait in "${TRAITS_ARRAY[@]}"; do
     echo "$trait"
     TRAIT_NAME="$trait"
     TRAIT_ID=$(( TRAIT_ID + 1 ))
-    TRAIT_DESC=$(grep -A35 "$trait" "${DATA_PATH}/tmp/tftactics.html.tmp" |  sed -n '/>'$trait'/,/table-bonus-item/p' | tr -d \\n | sed 's|\s\{2,\}| |g' | sed -n 's|.*table-bonus-heading">\(.*\)</div>.*|\1|p' )
+    TRAIT_DESC=$(grep -A35 "$trait" "${DATA_PATH}/tmp/tftactics.html.tmp" |  sed -n '/>'"$trait"'/,/table-bonus-item/p' | tr -d \\n | sed 's|\s\{2,\}| |g' | sed -n 's|.*table-bonus-heading">\(.*\)</div>.*|\1|p' )
     
     TRAIT_IMAGE_SRC=$(grep -i "${trait}.png" "${DATA_PATH}/tmp/tftactics.html.tmp" | head -n 1 | cut -d '"' -f 2)
     TRAIT_IMAGE_PATH="$IMAGE_PATH/${trait}.png"
     curl -s "$TRAIT_IMAGE_SRC" --output "$SCRIPT_DIR/../$TRAIT_IMAGE_PATH"
 
-    TRAIT_DATA_TMP=$(grep -A35 "$trait" "${DATA_PATH}/tmp/tftactics.html.tmp" | sed -n '/>'$trait'/,/table-images/p' | sed -n '/>'$trait'/,/rowgroup/p')
+    TRAIT_DATA_TMP=$(grep -A35 "$trait" "${DATA_PATH}/tmp/tftactics.html.tmp" | sed -n '/alt="'"$trait"'/,/table-images/p' | sed -n '/alt="'"$trait"'/,/rowgroup/p')
     TRAIT_LEVELS=$(echo "$TRAIT_DATA_TMP" | grep "table-bonus-count" | cut -d '>' -f 2 | cut -d '<' -f 1)
     TRAIT_LEVELS_JSON="["
     for level in $TRAIT_LEVELS; do

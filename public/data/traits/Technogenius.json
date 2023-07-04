@@ -1,0 +1,12 @@
+{
+  "name": "Technogenius",
+  "id": "24",
+  "desc": "",
+  "srcPath": "public/images/traits/Technogenius.png",
+  "levels": [
+    {
+      "level": 1,
+      "desc": "Gain a placeable Apex Turret with 3 upgrade slots. Upgrades to the Apex Turret will show up in your shop for 6 gold. The Apex Turret shares Heimerdinger's Attack Speed and Ability Power."
+    }
+  ]
+}

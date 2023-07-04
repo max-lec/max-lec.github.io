@@ -44,8 +44,32 @@
     ]
   },
   {
-    "name": "Darkin",
+    "name": "Challenger",
     "id": "3",
+    "desc": "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
+    "srcPath": "public/images/traits/Challenger.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "30% Attack Speed"
+      },
+      {
+        "level": 4,
+        "desc": "60% Attack Speed"
+      },
+      {
+        "level": 6,
+        "desc": "90% Attack Speed"
+      },
+      {
+        "level": 8,
+        "desc": "125% Attack Speed"
+      }
+    ]
+  },
+  {
+    "name": "Darkin",
+    "id": "4",
     "desc": "",
     "srcPath": "public/images/traits/Darkin.png",
     "levels": [
@@ -57,7 +81,7 @@
   },
   {
     "name": "Deadeye",
-    "id": "4",
+    "id": "5",
     "desc": "Innate: +1 Range Every 3 seconds, Deadeyes attack the enemy with the highest percent Health and deal bonus damage.",
     "srcPath": "public/images/traits/Deadeye.png",
     "levels": [
@@ -77,7 +101,7 @@
   },
   {
     "name": "Demacia",
-    "id": "5",
+    "id": "6",
     "desc": "Your strongest Demacians become Elite and equip a random Radiant item each combat. Elites grant Armor and Magic Resist to themselves and adjacent allies, but this does not stack.",
     "srcPath": "public/images/traits/Demacia.png",
     "levels": [
@@ -101,7 +125,7 @@
   },
   {
     "name": "Empress",
-    "id": "6",
+    "id": "7",
     "desc": "",
     "srcPath": "public/images/traits/Empress.png",
     "levels": [
@@ -113,7 +137,7 @@
   },
   {
     "name": "Freljord",
-    "id": "7",
+    "id": "8",
     "desc": "After 8 seconds, an ice storm strikes the battlefield. Enemies take a percentage of their maximum Health as true damage and gain debuffs. Sunder: Reduce Armor Shred: Reduce Magic Resist Mana Reave: Increase max Mana until the next cast",
     "srcPath": "public/images/traits/Freljord.png",
     "levels": [
@@ -133,7 +157,7 @@
   },
   {
     "name": "Gunner",
-    "id": "8",
+    "id": "9",
     "desc": "When Gunner champions attack, they gain bonus Attack Damage, up to 8 stacks.",
     "srcPath": "public/images/traits/Gunner.png",
     "levels": [
@@ -153,7 +177,7 @@
   },
   {
     "name": "Invoker",
-    "id": "9",
+    "id": "10",
     "desc": "Every 3 seconds, your units gain Mana. ",
     "srcPath": "public/images/traits/Invoker.png",
     "levels": [
@@ -173,7 +197,7 @@
   },
   {
     "name": "Ionia",
-    "id": "10",
+    "id": "11",
     "desc": "Each Ionian has a unique bonus within their Ability. Every 4 seconds, a number of Ionians are enlightened to their spirit form, gaining 20 Mana and doubling stat bonuses for 4 seconds.",
     "srcPath": "public/images/traits/Ionia.png",
     "levels": [
@@ -192,8 +216,44 @@
     ]
   },
   {
+    "name": "Juggernaut",
+    "id": "12",
+    "desc": "Juggernaut champions take less damage as their Health decreases.",
+    "srcPath": "public/images/traits/Juggernaut.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "15% to 25% damage reduction"
+      },
+      {
+        "level": 4,
+        "desc": "25% to 35% damage reduction"
+      },
+      {
+        "level": 6,
+        "desc": "35% to 50% damage reduction"
+      }
+    ]
+  },
+  {
+    "name": "Multicaster",
+    "id": "13",
+    "desc": "Multicasters cast their Ability multiple times. Bonus casts have 60% reduced effectiveness.",
+    "srcPath": "public/images/traits/Multicaster.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "1 extra cast"
+      },
+      {
+        "level": 4,
+        "desc": "2 extra casts"
+      }
+    ]
+  },
+  {
     "name": "Noxus",
-    "id": "11",
+    "id": "14",
     "desc": "Noxus champions gain Health, Ability Power and Attack Damage. This is increased by 10% for each different opponent that either you have conquered in combat or is dead.",
     "srcPath": "public/images/traits/Noxus.png",
     "levels": [
@@ -213,7 +273,7 @@
   },
   {
     "name": "Piltover",
-    "id": "12",
+    "id": "15",
     "desc": "Gain the T-Hex. Every time you lose a player combat, the T-Hex gains Charges. Winning converts the Charges to Power for the T-Hex. You may also sell the T-Hex if it has any Power, resetting the T-Hex and converting its Power to loot.",
     "srcPath": "public/images/traits/Piltover.png",
     "levels": [
@@ -229,7 +289,7 @@
   },
   {
     "name": "Redeemer",
-    "id": "13",
+    "id": "16",
     "desc": "",
     "srcPath": "public/images/traits/Redeemer.png",
     "levels": [
@@ -241,7 +301,7 @@
   },
   {
     "name": "Rogue",
-    "id": "14",
+    "id": "17",
     "desc": "",
     "srcPath": "public/images/traits/Rogue.png",
     "levels": [
@@ -256,8 +316,28 @@
     ]
   },
   {
+    "name": "Shadow Isles",
+    "id": "18",
+    "desc": "",
+    "srcPath": "public/images/traits/Shadow Isles.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "40% Health Shield, 5 Mana"
+      },
+      {
+        "level": 4,
+        "desc": "80% Health Shield, 12 Mana"
+      },
+      {
+        "level": 6,
+        "desc": "125% Health Shield, 20 Mana"
+      }
+    ]
+  },
+  {
     "name": "Shurima",
-    "id": "15",
+    "id": "19",
     "desc": "Every 4 seconds, Shuriman heal 5% maximum Health. After 8 seconds, select Shuriman Ascend and gain 30% max Health and 45% Attack Speed.",
     "srcPath": "public/images/traits/Shurima.png",
     "levels": [
@@ -281,7 +361,7 @@
   },
   {
     "name": "Slayer",
-    "id": "16",
+    "id": "20",
     "desc": "Slayers gain 15% Omnivamp. Slayers deal bonus damage, doubled against units below 60% Health. ",
     "srcPath": "public/images/traits/Slayer.png",
     "levels": [
@@ -309,7 +389,7 @@
   },
   {
     "name": "Sorcerer",
-    "id": "17",
+    "id": "21",
     "desc": "Sorcerers gain bonus Ability Power. When an enemy dies after being damaged by a Sorcerer, they deal a percentage of that enemy's maximum Health to another enemy.",
     "srcPath": "public/images/traits/Sorcerer.png",
     "levels": [
@@ -332,8 +412,32 @@
     ]
   },
   {
+    "name": "Strategist",
+    "id": "22",
+    "desc": "",
+    "srcPath": "public/images/traits/Strategist.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "200 shield; 20 Ability Power"
+      },
+      {
+        "level": 3,
+        "desc": "350 shield; 30 Ability Power"
+      },
+      {
+        "level": 4,
+        "desc": "500 shield; 45 Ability Power"
+      },
+      {
+        "level": 5,
+        "desc": "700 shield; 60 Ability Power"
+      }
+    ]
+  },
+  {
     "name": "Targon",
-    "id": "18",
+    "id": "23",
     "desc": "All your unit's healing and shielding is improved.",
     "srcPath": "public/images/traits/Targon.png",
     "levels": [
@@ -352,8 +456,20 @@
     ]
   },
   {
+    "name": "Technogenius",
+    "id": "24",
+    "desc": "",
+    "srcPath": "public/images/traits/Technogenius.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "Gain a placeable Apex Turret with 3 upgrade slots. Upgrades to the Apex Turret will show up in your shop for 6 gold. The Apex Turret shares Heimerdinger's Attack Speed and Ability Power."
+      }
+    ]
+  },
+  {
     "name": "Void",
-    "id": "19",
+    "id": "25",
     "desc": "Get a placeable void egg. At the start of combat, it hatches into an unspeakable horror and knocks up adjacent enemies. Each Void star level increases the horror's Health and Ability Power by 25%.</div> <div class=\"table-bonus-item\"> <div class=\"table-bonus-value\">Void Remora</div> ",
     "srcPath": "public/images/traits/Void.png",
     "levels": [
@@ -373,7 +489,7 @@
   },
   {
     "name": "Wanderer",
-    "id": "20",
+    "id": "26",
     "desc": "",
     "srcPath": "public/images/traits/Wanderer.png",
     "levels": [
@@ -385,7 +501,7 @@
   },
   {
     "name": "Yordle",
-    "id": "21",
+    "id": "27",
     "desc": "Your units gain 10% Attack Speed per star level. If you have 3-star champions, your Yordles can become 4-star, which gives their Ability a wacky upgrade!",
     "srcPath": "public/images/traits/Yordle.png",
     "levels": [
@@ -401,7 +517,7 @@
   },
   {
     "name": "Zaun",
-    "id": "22",
+    "id": "28",
     "desc": "Zaun champions create random chem-mods that only they can use. Champions can be modded once, and mods can only be removed by selling the champion.",
     "srcPath": "public/images/traits/Zaun.png",
     "levels": [

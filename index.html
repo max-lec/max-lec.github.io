@@ -22,10 +22,11 @@
 <script src="./scripts/champions.js"></script>
 <script src="./scripts/items.js"></script>
 <script src="./scripts/augments.js"></script>
-<script src="./scripts/total_stats.js"></script>
-<script src="./scripts/damage_stats.js"></script>
 <script src="./scripts/traits.js"></script>
 <script src="./scripts/options.js"></script>
+<script src="./scripts/total_stats.js"></script>
+<script src="./scripts/damage_stats.js"></script>
+<script src="./scripts/cast_stats.js"></script>
 
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
@@ -263,6 +264,10 @@
               <span x-text="manaStart"></span>
             </div>
             <div class="stat-line">
+              <div class="stat-label">Mana Cast: </div>
+              <span x-text="manaCast"></span>
+            </div>
+            <div class="stat-line">
               <div class="stat-label">Armor: </div>
               <span x-text="armor"></span>
             </div>
@@ -292,7 +297,7 @@
         <div class="damage-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">DPS AUTOS : </div>
-            <span x-text="computeAttackDPS('test')"></span>
+            <span x-text="computeAttackDPS()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ABILITY DAMAGE : </div>
@@ -300,10 +305,10 @@
           </div>
         </div>
 
-        <div class="cast-stats">
+        <div class="cast-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">FIRST CAST TIME : </div>
-            <span>0</span>
+            <span x-text="computeFirstCast()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">NEXT CAST TIME : </div>
@@ -356,10 +361,11 @@
       "Darkin, Juggernaut, Slayer"
     ],
     "spell_desc": "Transform for 10 seconds, gaining 15% and converting all bonus Attack Speed to Attack Damage. While transformed, attacks deal physical damage.",
-    "spell": [
+    "spells": [
         {
           "type": "buff",
           "duration": 10,
+          "manaCast": 60,
           "apRatio": [0, 0, 0],
           "attackRatio": [250, 250, 2500],
           "speed": 0,
@@ -404,10 +410,11 @@
       "Ionia, Sorcerer"
     ],
     "spell_desc": "Steal essence from enemies around her target, dealing magic damage and 35% Mana Reaving them.\n\nEvery 3 casts, instead, unleash a wave that deals magic damage to all enemies hit. This deals 33% more damage to enemies whose essence has been stolen.\n\nlonia Bonus: +3 Mana per second",
-    "spell": [
+    "spells": [
         {
           "type": "damage",
           "duration": 0.3,
+          "manaCast": 50,
           "apRatio": [115, 170, 1000],
           "attackRatio": [0, 0, 0],
           "speed": 0,
@@ -426,6 +433,7 @@
       {
         "type": "damage",
         "duration": 2.3,
+        "manaCast": 50,
         "apRatio": [250, 375, 3000],
         "attackRatio": [0, 0, 0],
         "speed": 0,
@@ -470,10 +478,11 @@
       "Shurima, Deadeye"
     ],
     "spell_desc": "Lock on to the farthest enemy and unleash a hail of 6 shots toward them. Each deals physical damage to the first enemy hit.",
-    "spell": [
+    "spells": [
       {
         "type": "damage",
         "duration": 3,
+        "manaCast": 90,
         "apRatio": [20, 35, 60],
         "attackRatio": [750, 750, 750],
         "speed": 0,
@@ -518,10 +527,11 @@
       "Targon, Deadeye"
     ],
     "spell_desc": "Fire a moon blast at the largest group of enemies that deals physical damage to enemies within 2 hexes. Equip 3 Chakram, plus 1 more for each enemy hit by the moon blast.\n\nFor 7 seconds, attacks deal bonus physical damage for each Chakram equipped. 50% of damage dealt by Chakrams heals Aphelios.",
-    "spell": [
+    "spells": [
       {
         "type": "damage",
         "duration": 2.5,
+        "manaCast": 140,
         "apRatio": [0, 0, 0],
         "attackRatio": [200, 200, 550],
         "speed": 0,
@@ -584,10 +594,11 @@
       "Freljord, Deadeye"
     ],
     "spell_desc": "Fire 8 arrows in a cone, each dealing physical damage to the first enemy hit and Chilling them for a few seconds.\n\nChill: Reduced Attack Speed by 30%",
-    "spell": [
+    "spells": [
       {
         "type": "damage",
         "duration": 0.5,
+        "manaCast": 60,
         "apRatio": [0, 0, 0],
         "attackRatio": [125, 125, 130],
         "speed": 0,
@@ -632,10 +643,11 @@
       "Shurima, Strategist"
     ],
     "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
-    "spell": [
+    "spells": [
       {
         "type": "buff",
         "duration": 0,
+        "manaCast": 50,
         "apRatio": [95, 140, 500],
         "attackRatio": [0, 0, 0],
         "speed": 0,
@@ -643,6 +655,25 @@
         "flatAp": 0,
         "flatAttack": 0,
         "switchSpellAfter": 3,
+        "maxMultihit": 1,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false,
+        "autoLock": false,
+        "channel": false
+      },
+      {
+        "type": "attack",
+        "duration": 0,
+        "manaCast": 50,
+        "apRatio": [200, 294, 1050],
+        "attackRatio": [100, 100, 100],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 0,
         "maxMultihit": 1,
         "sunder": 0,
         "shred": 0,
@@ -680,7 +711,7 @@
       "Void, Empress"
     ],
     "spell_desc": "Lash out at the lowest Health enemy in range 6 times. Each lash deals physical damage and 2% of the targets max Health as true damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Number of Lashes",
         "stats": [
@@ -738,7 +769,7 @@
       "Noxus, Shurima, Invoker"
     ],
     "spell_desc": "Deal magic damage to the current target and Wound them for 5 seconds. If they are already Wounded, deal bonus magic damage.\n\nWound: Reduce healing received by 50%",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -782,7 +813,7 @@
       "Void, Bruiser"
     ],
     "spell_desc": "Deal magic damage to the lowest adjacent Health enemy. If this kills them, devour them and permanetly gain max Health.",
-    "spell": [
+    "spells": [
       {
         "key": "Devour Health Bonus",
         "stats": [
@@ -826,7 +857,7 @@
       "Noxus, Juggernaut"
     ],
     "spell_desc": "Deal physical damage to the current target. If they die, immediately cast this again with damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Recast Effectiveness",
         "stats": [
@@ -872,7 +903,7 @@
       "Piltover, Zaun, Rogue"
     ],
     "spell_desc": "Heal 20% of damage taken in the last 4 seconds and deal magic damage to the current target.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -910,7 +941,7 @@
       "Demacia, Invoker"
     ],
     "spell_desc": "Reduce damage taken and heal for over 4 seconds. After, deal magic damage to adjacent enemies.",
-    "spell": [
+    "spells": [
       {
         "key": "Reduce damage",
         "stats": [
@@ -964,7 +995,7 @@
       "Demacia, Juggernaut"
     ],
     "spell_desc": "Spin times every second for the next 4 seconds. Each spin deals physical damage to adjacent enemies.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1014,7 +1045,7 @@
       "Shadow Isles, Slayer"
     ],
     "spell_desc": "Dash around the current target and snip 3 times in a cone, each dealing magic damage to enemies hit.\n\nEvery 3 casts, Armor and Magic resist for 2 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1068,7 +1099,7 @@
       "Piltover, Yordle, Technogenius"
     ],
     "spell_desc": "Hurl a grenade towards the largest group of enemies, dealing magic damage to enemies in a large area and Stunning them for 1.5 seconds.\n\n4 Star Upgrade: YES YES YES, IT WORKS!!!",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1114,7 +1145,7 @@
       "Ionia, Challenger"
     ],
     "spell_desc": "Enter a defensive stance and gain Shield that rapidly decays over 3 seconds. When it breaks, deal magic damage + 30% of the damage absorbed to enemies around and in front of Irelia.\n\nIonia Bonus: +25 Armor and Magic Resist",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -1160,7 +1191,7 @@
       "Demacia, Strategist"
     ],
     "spell_desc": "Mightily leap on a nearby enemy. Deal magic damage to enemies within 2 hexes and Stun them.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1206,7 +1237,7 @@
       "Piltover, Gunner"
     ],
     "spell_desc": "Grant Attack Speed to Jayce and adjacent allies on his left and right for 3 seconds. Fire a blast at the current target, which explodes on the first enemy hit, dealing physical damage to enemies near the blast.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1250,7 +1281,7 @@
       "Ionia, Deadeye"
     ],
     "spell_desc": "Take aim at the current target and deal physical damage to enemies in a line; each hit reduces damage by 40%.\n\nIonia Bonus: +30% Attack Damage",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1288,7 +1319,7 @@
       "Zaun, Gunner"
     ],
     "spell_desc": "Fire 5 rockets at random enemies within 2 hexes of the current target. Each rocket deals physical damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Physical Damage",
         "stats": [
@@ -1340,7 +1371,7 @@
       "Void, Challenger"
     ],
     "spell_desc": "Dash away from all enemies, then fire missiles split across the 4 nearest enemies. Each missile deal magic damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Number of Missiles",
         "stats": [
@@ -1386,7 +1417,7 @@
       "Shadow Isles, Challenger"
     ],
     "spell_desc": "Passive : Attacks impale a spear in the target, which deals true damage when removed. Kalista rips the spears out if it would kill the target.\n\nActive: Impale 6 spears in the current target.",
-    "spell": [
+    "spells": [
       {
         "key": "Spear Damage",
         "stats": [
@@ -1424,7 +1455,7 @@
       "Ionia, Invoker"
     ],
     "spell_desc": "Fire a burst of energy at Karmas target that explodes upon impact, dealing magic damage to adjacent enemies. Every third cast launches 3 bursts of energy.\n\nIonia Bonus: +30% Ability Power",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1462,7 +1493,7 @@
       "Void, Bastion"
     ],
     "spell_desc": "Gain Shield for 4 seconds. Deal magic damage to enemies in a cone and Disarm them for a while.\n\nDisarm: Cannot move or attack, but CAN cast spells",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -1516,7 +1547,7 @@
       "Noxus, Rogue"
     ],
     "spell_desc": "Throw three daggers that land next to enemies within two hexes. Then, teleport to each to deal magic damage to adjacent enemies and Wound them for 6 seconds.\n\nWound: Reduce healing received by 50%",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1560,7 +1591,7 @@
       "Demacia, Slayer"
     ],
     "spell_desc": "Passive: Kayle gains new Passive effects as your Tactician levels up.\nLevel 1: Attacks deal bonus magic damage.\nLevel 6: Every 3rd attack launches a wave that deals magic damage and Shreds enemies for 3 seconds.\nLevel 9: Every attack launches a wave and they travel farther.",
-    "spell": [
+    "spells": [
       {
         "key": "Magic Damage",
         "stats": [
@@ -1598,7 +1629,7 @@
       "Noxus, Yordle, Slayer"
     ],
     "spell_desc": "Passive: Start combat with Shield. When it breaks, dismount and gain stacking Attack Speed for the rest of combat.\n\nActive: Remount and gain Shield.\n\n4 Star Upgrade: Execute enemies under 25% Health.",
-    "spell": [
+    "spells": [
       {
         "key": "Attack Speed Bonus",
         "stats": [
@@ -1643,7 +1674,7 @@
       "Shurima, Bastion"
     ],
     "spell_desc": "Slam the ground, knocking the current target into the air. Then smash them away towards the edge of the battlefield, dealing magic damage and Stunning them for 2 seconds. Briefly stun and deal magic damage to enemies that collide with the target while they are being knocked back or who are adjacent to where the target lands.\n\nIf the target cannot be pushed back any further, they are knocked off the battlefield.\n\nIf the target is still alive, KSante will chase after them.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1703,7 +1734,7 @@
       "Freljord, Invoker"
     ],
     "spell_desc": "Stun the current target for 2 seconds and deal magic damage to enemies within 2 hexes of them. They take 10% more damage for the next 4 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1741,7 +1772,7 @@
       "Demacia, Sorcerer"
     ],
     "spell_desc": "Channel a barrage of light at the current target that deals magic damage over a few seconds, reducing their Magic Resistance every seconds. If they die, shift to a new target.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1795,7 +1826,7 @@
       "Void, Sorcerer"
     ],
     "spell_desc": "Open two portals near the current target. Destroy 35% of shields and deal magic damage to all enemies caught between the portals.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -1833,7 +1864,7 @@
       "Shadow Isles, Bastion"
     ],
     "spell_desc": "Passive: Whenever an enemy uses their ability, gain 5 Mana.\n\nActive: On Maokais next attack, heal.",
-    "spell": [
+    "spells": [
       {
         "key": "Heal",
         "stats": [
@@ -1871,7 +1902,7 @@
       "Shurima, Juggernaut"
     ],
     "spell_desc": "Steal max Health, 10% Attack Damage, and Defenses from the nearest enemies for 8 seconds.\n\nWhile empowered, every third attack deals physical damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Max Health Steal",
         "stats": [
@@ -1939,7 +1970,7 @@
       "Piltover, Sorcerer"
     ],
     "spell_desc": "Grant the lowest Health ally Shield for 4 seconds. When the Shield expires, it deals magic damage to adjacent enemies and Chills them for 3 seconds.\n\nChill: Reduced Attack Speed by 30%",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -1985,7 +2016,7 @@
       "Demacia, Yordle, Bastion"
     ],
     "spell_desc": "Gain Shield for 3 seconds. Deal magic damage to the current target.\n\n4 Star Upgrade: Knock the target into the largest clump of enemies, dealing 33% of the targets max Health as magic damage to the target and 15% of that amount to the clump. Stun them for 1 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -2033,7 +2064,7 @@
       "Void, Bruiser"
     ],
     "spell_desc": "Deal physical damage to the current target. If they are below 60% Health, this damage is converted to true damage.\n\nIf this kills the target, rip through them 1 hex and heal Health.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2083,7 +2114,7 @@
       "Shurima, Bruiser"
     ],
     "spell_desc": "Deal magic damage to adjacent enemies. Heal for the first enemy hit and another for each additional one.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2135,7 +2166,7 @@
       "Wanderer, Invoker"
     ],
     "spell_desc": "Wanderers spells change depending on the Region Portal players voted for at the start of the game.<br tooltip-break=true>\nBandle City\nRyze creates a portal to Bandle City underneath a random unit on your bench. After a brief delay, they arrive on the battlefield with bonus mana and are...slightly smaller?\n\nDemacia\nRyze creates a portal to Demacia underneath a cluster of injured allies, granting Shield for 2 seconds. If an ally leaves the safety of the portal, they are healed for Health. When the portal expires, enemies within are dealt magic damage.\n\nFreljord\nRyze creates a portal to the Freljord underneath a random group of enemies for 3 seconds. The freezing winds deal magic damage to enemies within two hexes over the duration and apply Permafrost, a permanent Chill.\nIf enemies are already affected by Permafrost, they are instead Stunned for the duration.\nChill: Reduce Attack Speed by 30%\n\nIonia\nRyze creates a portal to Ionia, summoning forth a Spirit Tree that affects the closest units. Allies are invigorated, gaining Attack Speed for 6 seconds and restoring Health over the duration. Enemies are pacified, causing them to dance.\n\nNoxus\nRyze creates a portal to Noxus armory that spews out a torrent of weapons and armor, granting completed items to random allies with open slots, and throwing Axes towards random enemies that deal magic damage each.\nIf any ally would recieve an item while all slots are full, they instead gain a stacking 40% damage increase for the rest of combat.\n\nPiltover\nRyze summons a portal to Piltover that launches out an enforcer grenade towards his target, dealing magic damage to enemies within two hexes and creating a containment area for seconds. Enemies are unable to leave the area, and of the damage dealt to them is also dealt to all other enemies within.\n\nShadow Isles\nRyze creates a portal to the Shadow Isles, reclaiming lost allys souls. They return to the battlefield, with % of their maximum Health.\nIf no allies have died yet, the portal remains open, waiting for an ally to die. Ryze cannot resurrect himself.\n\nShurima\nRyze creates a portal to Shurima, summoning a gigantic sand tornado that travels across the battlefield, dealing magic damage to enemies hit and knocking them up briefly.\nThe tornado has chance to unearthed burried treasures and gold as it travels.\n\nTargon\nRyze creates a portal to the skies above Mount Targon that beckons his target. After a few seconds, they descend from the heavens as a meteor towards the largest cluster of enemies, dealing % of the the initial targets maximum Health as magic damage and knocking up enemies in the epicenter.\n\nZaun\nOpen portals to Zuan, causing hired guns to fire a torrent of munitions at a nearby enemy that deal magic damage and apply 50% Wound, 40% Shred, and 40% Sunder for 6 seconds. The more gold you have, the more power the portals become.\n25 Gold: +1 Portal. Portals fire a rocket that deals 50% damage in a one-hex radius\n50 Gold: Double the portals. Summon +2 additional portals for every 15 Gold more.",
-    "spell": [
+    "spells": [
       {
         "key": "",
         "stats": [
@@ -2171,7 +2202,7 @@
       "Noxus, Challenger"
     ],
     "spell_desc": "Shoot at the current target and deal to the first enemy hit. Reduce their Armor by 10.",
-    "spell": [
+    "spells": [
       {
         "key": "Armor Reduction",
         "stats": [
@@ -2215,7 +2246,7 @@
       "Freljord, Bruiser"
     ],
     "spell_desc": "Passive: Whenever an ally attacks a Chilled enemy, they deal bonus true damage.\n\nActive: Gain Shield for 4 seconds. Deal magic damage to nearby enemies and Chill them for 4 seconds.\n\nChill: Reduced Attack Speed by 30%",
-    "spell": [
+    "spells": [
       {
         "key": "Magic damage",
         "stats": [
@@ -2269,7 +2300,7 @@
       "Shadow Isles, Gunner, Redeemer"
     ],
     "spell_desc": "Fire a massive beam at the furthest enemy, dealing physical damage to all enemies hit. Any allies hit gain Shield for 4 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2315,7 +2346,7 @@
       "Ionia, Juggernaut"
     ],
     "spell_desc": "Pull in an enemy on either side and slam them together, dealing magic damage and Stunning them.\n\nIf only one enemy is grabbed, the damage and Stun duration are increased by 50%.\n\nIonia Bonus: +200 max Health",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2361,7 +2392,7 @@
       "Ionia, Bastion, Invoker"
     ],
     "spell_desc": "Gain Shield and grant Shield to the 2 lowest Health allies for 4 seconds. After shielding his allies, Shens shield refreshes with a burst, dealing magic damage to adjacent enemies.\n\nIonia Bonus: +10% Damage Reduction",
-    "spell": [
+    "spells": [
       {
         "key": "Self Shield",
         "stats": [
@@ -2415,7 +2446,7 @@
       "Noxus, Bruiser"
     ],
     "spell_desc": "Passive: Upon death, reanimate with 100% Health, decaying at max Health per second. Sion can no longer use his abilityo, but is immune to Crowd Control and gains Attack Speed.\n\nActive: Charge towards the most enemies within 3 hexes. Deal to any enemies along the way and Stun them for 1.5 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Reanimation Health Decay",
         "stats": [
@@ -2481,7 +2512,7 @@
       "Demacia, Multicaster"
     ],
     "spell_desc": "Send a wave of sound at the largest clump of enemies and deal magic damage to enemies hit. Allies hit by the wave gain Attack Speed for 5 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2527,7 +2558,7 @@
       "Targon, Invoker"
     ],
     "spell_desc": "Heal the lowest health ally. If the ally is below 50% Health, increase the amount healed by 50%.\n\nThe ally is infused for 5 seconds, calling down 5 stars over the duration that deal magic damage to the closest enemy.",
-    "spell": [
+    "spells": [
       {
         "key": "Heal",
         "stats": [
@@ -2573,7 +2604,7 @@
       "Noxus, Sorcerer, Strategist"
     ],
     "spell_desc": "Transform and gain max Health for 6 seconds. While transformed, deal magic damage to enemies within 2 hexes every second.",
-    "spell": [
+    "spells": [
       {
         "key": "Health Bonus",
         "stats": [
@@ -2619,7 +2650,7 @@
       "Shurima, Multicaster"
     ],
     "spell_desc": "Passive: Whenever an enemy is knocked up by anything, throw a boulder at them, which deals magic damage.\n\nActive: Knock up the current target for 2 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2665,7 +2696,7 @@
       "Targon, Bastion, Sorcerer"
     ],
     "spell_desc": "Gain Shield for 6 seconds. It absorbs damage received by adjacent allies.",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -2703,7 +2734,7 @@
       "Yordle, Multicaster, Strategist"
     ],
     "spell_desc": "Hurl an explosive mushroom at the current target. When it detonates, enemies within 1 hex are Wounded and take magic damage over 3 seconds.\n\n4 Star Upgrade: Increase the explosion radius by 1 hex.\n\nWounded: Reduced healing received by 50%",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2742,7 +2773,7 @@
       "Yordle, Gunner"
     ],
     "spell_desc": "Gain 50% Attack Speed for 4 seconds. For the duration, attacks explode on impact and deal physical damage to enemies within 1 hex.\n\n4 Star Upgrade: Every 10th attack deals bonus physical damage and ricochets to the largest clump of enemies, dealing physical damage to enemies within 1 hex.",
-    "spell": [
+    "spells": [
       {
         "key": "Attack Speed Bonus",
         "stats": [
@@ -2796,7 +2827,7 @@
       "Zaun, Deadeye"
     ],
     "spell_desc": "Passive: Whenever an enemy enters attack range, fire a blast from the leg facing that direction, dealing physical damage to them. Each of Urgots 6 legs has a 4 second cooldown.\n\nActive: Gain Shield for 5 seconds and dash behind the current target. Reset all leg colldowns.",
-    "spell": [
+    "spells": [
       {
         "key": "Base Damage",
         "stats": [
@@ -2856,7 +2887,7 @@
       "Void, Multicaster, Sorcerer"
     ],
     "spell_desc": "Fire a plasma bolt towards the current target that deals to the first enemy hit. It then splits in two, dealing 50% less damage whenever it passes through an enemy.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -2894,7 +2925,7 @@
       "Piltover, Bruiser"
     ],
     "spell_desc": "Gain Shield for 4 seconds. Deal physical damage to enemies within 1 hex of the current target and Sunder them for 4 seconds.\n\nSunder: Reduced Armor by 40%",
-    "spell": [
+    "spells": [
       {
         "key": "Shield",
         "stats": [
@@ -2938,7 +2969,7 @@
       "Shadow Isles, Rogue"
     ],
     "spell_desc": "Deal magic damage to the current target. For the rest of combat, Viegos attacks deal bonus stacking magic damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Stab Damage",
         "stats": [
@@ -2984,7 +3015,7 @@
       "Zaun, Challenger, Juggernaut"
     ],
     "spell_desc": "Passive: Warwicks attacks to be converted on-hit magic damage.\n\nActive: For the next 2.5 seconds, the passive healing is increased by 50%. After, Stun adjacent enemies for 1.25 seconds.",
-    "spell": [
+    "spells": [
       {
         "key": "Heal",
         "stats": [
@@ -3030,7 +3061,7 @@
       "Ionia, Challenger"
     ],
     "spell_desc": "Send a whirlwind at the furthest enemy within 3 hexes, Stunning all enemies hit. Dash to and slash the original target, dealing physical damage to them. Slam them into the ground and deal physical damage to enemies within 1 hex.\n\nIonia Bonus: +15% Omnivamp",
-    "spell": [
+    "spells": [
       {
         "key": "Slash Damage AD",
         "stats": [
@@ -3096,7 +3127,7 @@
       "Ionia, Rogue, Slayer"
     ],
     "spell_desc": "Create a shadow at the furthest enemy within 3 hexes. Zed and his shadow slash adjacent enemies, dealing physical damage.\n\nIonia Bonus: +15% Crit Chance and Crit Damage",
-    "spell": [
+    "spells": [
       {
         "key": "AD",
         "stats": [
@@ -3154,7 +3185,7 @@
       "Zaun, Gunner"
     ],
     "spell_desc": "Passive: Execute enemies below 12% Health. Kills reset the duration of Surge.\n\nActive: For the next 6 seconds, attacks chain lightning to 3 additional enemies, dealing physical damage.",
-    "spell": [
+    "spells": [
       {
         "key": "Damage",
         "stats": [
@@ -3329,6 +3360,7 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "50",
     "attack": "0",
     "speed": "0"
@@ -3342,6 +3374,7 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "10",
     "attack": "0",
     "speed": "0"
@@ -8505,6 +8538,42 @@
     ]
   },
   {
+    "name": "Challenger",
+    "id": "3",
+    "desc": "Challengers gain bonus Attack Speed. When their target dies, Challengers dash to a new target and increase their Attack Speed bonus by 50% for 2.5 seconds.",
+    "srcPath": "public/images/traits/Challenger.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "30% Attack Speed",
+        "trait": {
+          "speed": 30
+        }
+      },
+      {
+        "level": 4,
+        "desc": "60% Attack Speed",
+        "trait": {
+          "speed": 60
+        }
+      },
+      {
+        "level": 6,
+        "desc": "90% Attack Speed",
+        "trait": {
+          "speed": 90
+        }
+      },
+      {
+        "level": 8,
+        "desc": "125% Attack Speed",
+        "trait": {
+          "speed": 125
+        }
+      }
+    ]
+  },
+  {
     "name": "Darkin",
     "id": "3",
     "desc": "",
@@ -8763,6 +8832,52 @@
         }
       }
     ]
+  },{
+    "name": "Juggernaut",
+    "id": "12",
+    "ignore": true,
+    "desc": "Juggernaut champions take less damage as their Health decreases.",
+    "srcPath": "public/images/traits/Juggernaut.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "15% to 25% damage reduction"
+      },
+      {
+        "level": 4,
+        "desc": "25% to 35% damage reduction"
+      },
+      {
+        "level": 6,
+        "desc": "35% to 50% damage reduction"
+      }
+    ]
+  },
+  {
+    "name": "Multicaster",
+    "id": "13",
+    "desc": "Multicasters cast their Ability multiple times. Bonus casts have 60% reduced effectiveness.",
+    "srcPath": "public/images/traits/Multicaster.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "1 extra cast",
+        "trait": {
+          "special": {
+            "multihitBonus": 0.6
+          }
+        }
+      },
+      {
+        "level": 4,
+        "desc": "2 extra casts",
+        "trait": {
+          "special": {
+            "multihitBonus": 1.2
+          }
+        }
+      }
+    ]
   },
   {
     "name": "Noxus",
@@ -8843,6 +8958,27 @@
       {
         "level": 4,
         "desc": "Additionally, a Rogue's first attack on an enemy bleeds them for 30% of their max Health as magic damage over 5 seconds."
+      }
+    ]
+  },
+  {
+    "name": "Shadow Isles",
+    "id": "18",
+    "ignore": true,
+    "desc": "",
+    "srcPath": "public/images/traits/Shadow Isles.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "40% Health Shield, 5 Mana"
+      },
+      {
+        "level": 4,
+        "desc": "80% Health Shield, 12 Mana"
+      },
+      {
+        "level": 6,
+        "desc": "125% Health Shield, 20 Mana"
       }
     ]
   },
@@ -8995,6 +9131,46 @@
     ]
   },
   {
+    "name": "Strategist",
+    "id": "22",
+    "desc": "",
+    "srcPath": "public/images/traits/Strategist.png",
+    "levels": [
+      {
+        "level": 2,
+        "desc": "200 shield; 20 Ability Power",
+        "all": {
+          "shield": 200,
+          "ap": 20
+        }
+      },
+      {
+        "level": 3,
+        "desc": "350 shield; 30 Ability Power",
+        "all": {
+          "shield": 350,
+          "ap": 30
+        }
+      },
+      {
+        "level": 4,
+        "desc": "500 shield; 45 Ability Power",
+        "all": {
+          "shield": 500,
+          "ap": 45
+        }
+      },
+      {
+        "level": 5,
+        "desc": "700 shield; 60 Ability Power",
+        "all": {
+          "shield": 700,
+          "ap": 60
+        }
+      }
+    ]
+  },
+  {
     "name": "Targon",
     "id": "18",
     "desc": "All your unit's healing and shielding is improved.",
@@ -9023,6 +9199,19 @@
           "healBonus": 50,
           "shieldBonus": 50
         }
+      }
+    ]
+  },
+  {
+    "name": "Technogenius",
+    "id": "24",
+    "desc": "",
+    "ignore": true,
+    "srcPath": "public/images/traits/Technogenius.png",
+    "levels": [
+      {
+        "level": 1,
+        "desc": "Gain a placeable Apex Turret with 3 upgrade slots. Upgrades to the Apex Turret will show up in your shop for 6 gold. The Apex Turret shares Heimerdinger's Attack Speed and Ability Power."
       }
     ]
   },

@@ -1,0 +1,20 @@
+{
+  "name": "Shadow Isles",
+  "id": "18",
+  "desc": "",
+  "srcPath": "public/images/traits/Shadow Isles.png",
+  "levels": [
+    {
+      "level": 2,
+      "desc": "40% Health Shield, 5 Mana"
+    },
+    {
+      "level": 4,
+      "desc": "80% Health Shield, 12 Mana"
+    },
+    {
+      "level": 6,
+      "desc": "125% Health Shield, 20 Mana"
+    }
+  ]
+}
