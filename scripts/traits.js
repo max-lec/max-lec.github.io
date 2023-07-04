@@ -88,7 +88,7 @@ document.addEventListener('alpine:init', () => {
 
         getTotalManaStart(){
             let total = 0;
-            // flat MR
+            
             this.activeTraits.forEach(activeTuple => {
                 traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.manaStart ?? 0;
@@ -101,7 +101,7 @@ document.addEventListener('alpine:init', () => {
 
         getTotalAp(){
             let total = 0;
-            // flat MR
+            
             this.activeTraits.forEach(activeTuple => {
                 traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.ap ?? 0;
@@ -114,7 +114,7 @@ document.addEventListener('alpine:init', () => {
 
         getTotalAttack(){
             let total = 0;
-            // flat MR
+            
             this.activeTraits.forEach(activeTuple => {
                 traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.attack ?? 0;
@@ -127,12 +127,12 @@ document.addEventListener('alpine:init', () => {
 
         getTotalSpeed(){
             let total = 0;
-            // flat MR
+            
             this.activeTraits.forEach(activeTuple => {
                 traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.speed ?? 0;
-                if (hasCurrentChampionTrait(traitStats.speed)){
-                    total += traitStats?.trait?.attack ?? 0;
+                if (hasCurrentChampionTrait(traitStats.name)){
+                    total += traitStats?.trait?.speed ?? 0;
                 }
             });
             return total;

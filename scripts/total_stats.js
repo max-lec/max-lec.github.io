@@ -6,6 +6,8 @@ document.addEventListener('alpine:init', () => {
         armor: 0,
         resistance: 0,
         manaStart: 0,
+        manaCast: 0,
+        manaGen: 0,
         ap: 0,
         attack: 0,
         speed: 0,
@@ -17,6 +19,8 @@ document.addEventListener('alpine:init', () => {
             this.armor = getTotalArmor();
             this.resistance = getTotalResistance();
             this.manaStart = getTotalManaStart();
+            this.manaCast = getTotalManaCast();
+            this.manaGen = getTotalManaGen();
             this.ap = getTotalAp();
             this.attack = getTotalAttack();
             this.speed = getTotalSpeed();
@@ -62,6 +66,17 @@ function getTotalManaStart() {
         + Alpine.store('currentAugment').getTotalManaStart()
         + Alpine.store('currentTrait').getTotalManaStart()
         ;
+}
+
+function getTotalManaCast() {
+    return Alpine.store('currentChampion').spells[0].manaCast
+        - Alpine.store('currentItem').getTotalManaCast()
+        ;
+}
+
+function getTotalManaGen() {
+    manaPerAuto = 10 + Alpine.store('currentItem').getManaPerAttack();
+    return Alpine.store('currentChampion').speed * manaPerAuto;
 }
 
 function getTotalAp() {

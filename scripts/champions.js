@@ -31,12 +31,13 @@ document.addEventListener('alpine:init', () => {
             {
                 type: "buff",
                 duration: 0,
+                manaCast: 0,
                 apRatio: [0, 0, 0],
                 attackRatio: [0, 0, 0],
                 speed: 0,
                 omnivamp: 0,
                 flatAp: 0,
-                flatattack: 0,
+                flatAttack: 0,
                 switchSpellAfter: 0,
                 maxMultihit: 0,
                 sunder: 0,
@@ -63,7 +64,7 @@ document.addEventListener('alpine:init', () => {
             this.spellDesc = championStats.spell_desc;
 
             this.stats = mapChampionStats(championStats, this.level);
-            this.spell = mapChampionSpellData(championStats);
+            this.spells = championStats.spells;
         },
 
         selectChampion(id) {
@@ -120,19 +121,8 @@ function mapChampionStats(championStats, level){
     return stats;
 }
 
-function mapChampionSpellData(championStats) {
-    spells = [];
-    spellSteps = championStats.spell;
-
-    for(var step of spellSteps){
-        spells.push(step);
-    }
-    
-    return spells;
-}
-
 function hasCurrentChampionTrait(traitName){
-    return Alpine.store('currentChampion').type.includes(traitName);
+    return Alpine.store('currentChampion').type.includes(traitName) || Alpine.store('currentItem').getItemNames().includes(traitName);
 }
 
 function getChampionSrcPath(championName) {

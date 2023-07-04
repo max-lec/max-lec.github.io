@@ -18,6 +18,7 @@ document.addEventListener('alpine:init', () => {
             armor:0,
             resistance:0,
             manaStart:0,
+            manaCast:0,
             ap:0,
             attack:0,
             speed:0,
@@ -44,6 +45,7 @@ document.addEventListener('alpine:init', () => {
             armor:0,
             resistance:0,
             manaStart:0,
+            manaCast:0,
             ap:0,
             attack:0,
             speed:0,
@@ -70,6 +72,7 @@ document.addEventListener('alpine:init', () => {
             armor:0,
             resistance:0,
             manaStart:0,
+            manaCast:0,
             ap:0,
             attack:0,
             speed:0,
@@ -101,6 +104,9 @@ document.addEventListener('alpine:init', () => {
             this.item3 = getItemStats(id)
         },
 
+        getItemNames(){
+            return this.item1.name + this.item2.name + this.item3.name;
+        },
         getTotalHealth(){
             return this.item1.health + this.item2.health + this.item3.health;
         },
@@ -117,6 +123,9 @@ document.addEventListener('alpine:init', () => {
         getTotalManaStart(){
             return this.item1.manaStart + this.item2.manaStart + this.item3.manaStart;
         },
+        getTotalManaCast(){
+            return this.item1.manaCast + this.item2.manaCast + this.item3.manaCast;
+        },
         getTotalAp(){
             return this.item1.ap + this.item2.ap + this.item3.ap;
         },
@@ -128,6 +137,13 @@ document.addEventListener('alpine:init', () => {
         },
         getTotalItemCriticalChance(){
             return this.item1.criticalChance + this.item2.criticalChance + this.item3.criticalChance;
+        },
+        getManaPerAttack(){
+            // shojin/hirana are the only items to change mana onhit
+            let itemNames = this.getItemNames();
+            let manaPerAttack = itemNames.includes("Shojin") ? 5 : 0;
+            manaPerAttack += itemNames.includes("Hirana") ? 8 : 0;
+            return manaPerAttack;
         },
     });
 })
@@ -172,6 +188,7 @@ function getItemStats(id) {
     item.armor = Number(itemStats.armor);
     item.resistance = Number(itemStats.resistance);
     item.manaStart = Number(itemStats.mana_start);
+    item.manaCast = Number(itemStats.mana_cast ?? 0);
     item.ap = Number(itemStats.ap);
     item.attack = Number(itemStats.attack);
     item.speed = Number(itemStats.speed);
