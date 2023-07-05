@@ -10,7 +10,6 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.store('currentTrait', {
         activeTraits: [
-            [1, 1]
         ],
         
         triggerTrait(id, level) {
