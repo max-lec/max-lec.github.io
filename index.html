@@ -303,6 +303,10 @@
             <div class="stat-label">ABILITY DAMAGE : </div>
             <span>0</span>
           </div>
+          <div class="stat-line">
+            <div class="stat-label">ABILITY BUFF : </div>
+            <span>0</span>
+          </div>
         </div>
 
         <div class="cast-stats" x-data>
@@ -343,7 +347,7 @@
           </div>
         </div>
 
-        <div class="" x-data style="width:200px">
+        <div class="" x-data style="width:200px; margin-left: 30px; margin-top:20px">
           <span class="" x-text="$store.currentChampion.spellDesc"></span>
           Damage: 
           <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD
@@ -427,7 +431,7 @@
           "shred": 0,
           "percentDamage": 0,
           "manaLock": true,
-          "autoLock": false,
+          "autoLock": true,
           "channel": false
       },
       {
@@ -446,7 +450,7 @@
         "shred": 0,
         "percentDamage": 0,
         "manaLock": true,
-        "autoLock": false,
+        "autoLock": true,
         "channel": false
     }
     ],
@@ -597,7 +601,7 @@
     "spells": [
       {
         "type": "damage",
-        "duration": 0.5,
+        "duration": 0.3,
         "manaCast": 60,
         "apRatio": [0, 0, 0],
         "attackRatio": [125, 125, 130],
