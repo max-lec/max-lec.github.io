@@ -75,6 +75,7 @@
           <br>- Noxus takedowns selector isn't used for now
           <br>- Spell description appearance
           <br>- Total damage and enemies killed not computed yet
+          <br>- Abilities that buff don't work yet
           <br><br><br>
           <br> Version 0.0.0
         </span>
@@ -335,65 +336,67 @@
         <div class="damage-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">DPS AUTOS : </div>
-            <span x-text="computeAttackDPS()"></span>
+            <span class="stat-result" x-text="computeAttackDPS()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">STATS BUFF FROM ABILITY : </div>
-            <span>0</span>
+            <span class="stat-result" >0</span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ABILITY DAMAGE : </div>
-            <span x-text="computeAbilityDamage()"></span>
+            <span class="stat-result" x-text="computeAbilityDamage()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">MULTIHIT DAMAGE : </div>
-            <span x-text="computeAbilityDamageMultihit()"></span>
+            <span class="stat-result" x-text="computeAbilityDamageMultihit()"></span>
           </div>
         </div>
 
         <div class="cast-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">FIRST CAST TIME : </div>
-            <span x-text="computeFirstCast()"></span>
+            <span class="stat-result" x-text="computeFirstCast()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">NEXT CAST TIME : (includes mana lock)</div>
-            <span x-text="computeNextCast()"></span>
+            <span class="stat-result" x-text="computeNextCast()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">CASTS / 15s: </div>
-            <span x-text="computeCastsPer15()"></span>
+            <span class="stat-result" x-text="computeCastsPer15()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">CASTS / 30s : </div>
-            <span x-text="computeCastsPer30()"></span>
+            <span class="stat-result" x-text="computeCastsPer30()"></span>
           </div>
         </div>
 
         <div class="total-damage-stats">
           <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 15s : </div>
-            <span>0</span>
+            <span class="stat-result" >0</span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ENEMIES KILLED / 15s : </div>
-            <span>0</span>
+            <span class="stat-result" >0</span>
           </div>
           <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 30s : </div>
-            <span>0</span>
+            <span class="stat-result" >0</span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ENEMIES KILLED / 30s : </div>
-            <span>0</span>
+            <span class="stat-result" >0</span>
           </div>
         </div>
 
-        <div class="" x-data style="width:200px; margin-left: 30px; margin-top:20px">
-          <span class="" x-text="$store.currentChampion.spellDesc"></span>
-          Damage: 
-          <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD
-          <span x-text="$store.currentChampion.spells[0].apRatio"></span> %AP
+        <div class="spell-desc" x-data>
+          <span class="stat-line" x-text="$store.currentChampion.spellDesc"></span>
+          <span>
+            Damage: <br>
+            <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD<br>
+            <span x-text="$store.currentChampion.spells[0].apRatio"></span> %AP<br>
+          </span>
         </div>
     </div>
 

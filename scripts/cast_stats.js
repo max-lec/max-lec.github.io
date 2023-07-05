@@ -44,7 +44,7 @@ function computeNextCast(){
         autoLockTime = Alpine.store('currentChampion').spells[0].duration;
     }
     
-    return waitFor + computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, autoLockTime*tickResolution);
+    return Math.round(waitFor + computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, autoLockTime*tickResolution)*10)/10;
 }
 
 function computeCastsPer15(){
