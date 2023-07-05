@@ -300,12 +300,16 @@
             <span x-text="computeAttackDPS()"></span>
           </div>
           <div class="stat-line">
-            <div class="stat-label">ABILITY DAMAGE : </div>
+            <div class="stat-label">STATS BUFF FROM ABILITY : </div>
             <span>0</span>
           </div>
           <div class="stat-line">
-            <div class="stat-label">ABILITY BUFF : </div>
-            <span>0</span>
+            <div class="stat-label">ABILITY DAMAGE : </div>
+            <span x-text="computeAbilityDamage()"></span>
+          </div>
+          <div class="stat-line">
+            <div class="stat-label">MULTIHIT DAMAGE : </div>
+            <span x-text="computeAbilityDamageMultihit()"></span>
           </div>
         </div>
 
@@ -668,7 +672,7 @@
         "channel": false
       },
       {
-        "type": "attack",
+        "type": "damage",
         "duration": 0,
         "manaCast": 50,
         "apRatio": [200, 294, 1050],
