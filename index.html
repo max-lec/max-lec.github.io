@@ -37,12 +37,51 @@
 <link href="./styles/level.css" rel="stylesheet">
 <link href="./styles/options.css" rel="stylesheet">
 <link href="./styles/stats.css" rel="stylesheet">
+<link href="./styles/notes.css" rel="stylesheet">
 
 
 </head>
 
 
 <body>
+
+
+    <div class="notes-section" x-data="{showNotes: false}">
+      <div class="show-notes-button" @click="showNotes=true">Click me !</div>
+      <div class="notes" x-show="showNotes" x-on:click.outside="showNotes=false">
+        <div class="close-button" @click="showNotes=false">x</div>
+        <span class="how-to">
+          <br><b>How it works</b>
+          <br>1. Select a champion (only A's work see "Broken" below)
+          <br>2. Select a star level
+          <br>3. Select items (effects don't work, only pure stat buffs, except for Blue Buff and Shojin)
+          <br>4. Select augments (effects don't work, only pure stat buffs)
+          <br>5. Select desired active traits :
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=>The selected champion must have the trait or have an emblem equipped to get the buff if the trait only applies to itself (e.g. challengers).</b>
+          <br>&nbsp;&nbsp;&nbsp;&nbsp;<b>=>Team wide buffs (e.g. bruiser) will work regardless.</b>
+          <br>6. Select number of enemies hit (multihit applies to the spell if it can hit multiple champions (e.g. Aphelios spell, not Akshan)
+          <br>Enjoy.
+        </span>
+        <span class="broken">
+          <br><b>Broken stuff</b>
+          <br>- Only champions starting with A have spell data for now, rest is updating
+          <br>- Item descriptions missing
+          <br>- Can't remove an item yet
+          <br>- Spell crit and crit rate on auto/spells not taken into account for now
+          <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
+          <br>- Augments effects are not computed (ex: Harmacist true damage)
+          <br>- Traits special effects are not computed (ex: multicaster)
+          <br>- Trait description incomplete
+          <br>- Enemy champion stats aren't used for now
+          <br>- Noxus takedowns selector isn't used for now
+          <br>- Spell description appearance
+          <br>- Total damage and enemies killed not computed yet
+          <br><br><br>
+          <br> Version 0.0.0
+        </span>
+      </div>
+    </div>
+
 
     <!-- configure options-->
     <div class="main-options" ondragstart="return false;">
@@ -319,7 +358,7 @@
             <span x-text="computeFirstCast()"></span>
           </div>
           <div class="stat-line">
-            <div class="stat-label">NEXT CAST TIME : </div>
+            <div class="stat-label">NEXT CAST TIME : (includes mana lock)</div>
             <span x-text="computeNextCast()"></span>
           </div>
           <div class="stat-line">

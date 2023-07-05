@@ -1,0 +1,53 @@
+.notes-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+
+    .show-notes-button {
+        padding: 1vh;
+        color: rgb(24 17 32);
+        background-color: rgb(246, 207, 116);
+        &:hover{
+            background-color: rgb(176, 159, 197);
+            cursor: pointer;
+        }
+    }
+
+    .notes {
+        background-color: rgb(24 17 32 / 86%);
+        border: 5px ridge rgb(176, 159, 197);
+        z-index: 900;
+        position: fixed;
+        width: 80vw;
+        left: 10vw;
+        height: 80vh;
+        top: 10vh;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        font-size: 1.2em;
+        line-height: 1.4em;
+
+        .close-button {
+            position: fixed;
+            z-index: 1001;
+            right: 11vw;
+            top: 12vh;
+            padding: 1vh;
+            background-color: rgb(246, 207, 116);
+            color: rgb(41 29 56 / 80%);
+            &:hover{
+                background-color: rgb(176, 159, 197);
+                cursor: pointer;
+            }
+        }
+        .how-to, .broken {
+            padding-left: 3vw;
+            padding-right: 3vw;
+            padding-top: 1vw;
+        }
+    }
+    
+}
