@@ -67,7 +67,6 @@
           <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
           <br>- Augments effects are not computed (ex: Harmacist true damage)
           <br>- Traits special effects are not computed (ex: multicaster)
-          <br>- Trait description incomplete
           <br>- Enemy champion stats aren't used for now
           <br>- Noxus takedowns selector isn't used for now
           <br>- Spell description appearance
@@ -261,6 +260,8 @@
                   @mouseover="showTooltip = true" @mouseleave="showTooltip = false">
                     <img class="trait-image" x-bind:src="trait.srcPath">
                     <div class="trait-tooltip" x-show="showTooltip">
+                      <span class="trait-desc" x-text="trait.desc"></span>
+                      <br><br>
                       <span class="trait-level-desc" x-text="level.desc"></span>
                     </div>
                   </div>
