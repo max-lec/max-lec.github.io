@@ -93,6 +93,29 @@
             }
         }
 
+
+        .item-tooltip-fixed {
+            position: fixed;
+            width: 10vw;
+            z-index: 800;
+            padding: 1vw;
+            border: 2px groove rgb(244, 187, 72);
+            background-color: rgb(44, 39, 79);           
+        }
+
+        .item-tooltip-fixed.item-1 {
+            top: 4.2vw;
+            left: 33vw;  
+        }
+        .item-tooltip-fixed.item-2 {
+            top: 10.1vw;
+            left: 33vw;  
+        }
+        .item-tooltip-fixed.item-3 {
+            top: 16vw;
+            left: 33vw;  
+        }
+
         .item-list.list-active {
             width: auto;
             height: 50vh;

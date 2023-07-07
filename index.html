@@ -109,58 +109,89 @@
         </div>
 
         <div class="item-selects-wrapper">
-            <div class="item-select" x-data="{showSelect: false}">
+
+            <div class="item-select" x-data="{showSelect: false, showItemTooltip: false}">
                 
-                <div class="current-item item-1" x-data="$store.currentItem.item1" @click="showSelect=true">
+                <div class="current-item item-1" x-data="$store.currentItem.item1" 
+                @click="showSelect=true" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                     <div class="item-image-wrapper">
                       <img class="item-image" x-bind:src="$store.currentItem.item1.srcPath" x-show="$store.currentItem.item1.srcPath">
                     </div>
                     <span class="item-label" x-text="$store.currentItem.item1.name"></span>
+                    
+                    <div class="item-tooltip-fixed item-1" x-show="showItemTooltip && $store.currentItem.item1.srcPath">
+                      <span class="item-tooltip-content" x-text="$store.currentItem.item1.desc"></span>
+                    </div>
                 </div>
 
-                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" 
+                x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
-                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item1.id }" x-data="item" @click="$store.currentItem.selectItem1(item.id); showSelect=false" >
+                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item1.id }" x-data="{item, showItemTooltip: false}" 
+                        @click="$store.currentItem.selectItem1(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                             <img class="item-image" x-bind:src="item.srcPath">
                             <span class="item-label"  x-text="item.name"></span>
+                            <div class="item-tooltip-fixed item-1" x-show="showItemTooltip">
+                              <span class="item-tooltip-content" x-text="item.desc"></span>
+                            </div>
                         </div>
                     </template>
                 </div>
+
             </div>
             
-            <div class="item-select" x-data="{showSelect: false}">
+            <div class="item-select" x-data="{showSelect: false, showItemTooltip: false}">
                             
-              <div class="current-item item-2" x-data="$store.currentItem.item2" @click="showSelect=true">
+              <div class="current-item item-2" x-data="$store.currentItem.item2" 
+              @click="showSelect=true" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                   <div class="item-image-wrapper">
                     <img class="item-image" x-bind:src="$store.currentItem.item2.srcPath" x-show="$store.currentItem.item2.srcPath">
                   </div>
                   <span class="item-label" x-text="$store.currentItem.item2.name"></span>
+                  <div class="item-tooltip-fixed item-2" x-show="showItemTooltip && $store.currentItem.item2.srcPath">
+                    <span class="item-tooltip-content" x-text="$store.currentItem.item2.desc"></span>
+                  </div>
               </div>
 
-                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" 
+                x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
-                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item2.id }" x-data="item" @click="$store.currentItem.selectItem2(item.id); showSelect=false" >
+                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item2.id }" x-data="{item, showItemTooltip: false}"
+                        @click="$store.currentItem.selectItem2(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                             <img class="item-image" x-bind:src="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
+                            <div class="item-tooltip-fixed item-2" x-show="showItemTooltip">
+                              <span class="item-tooltip-content" x-text="item.desc"></span>
+                            </div>
                         </div>
                     </template>
                 </div>
             </div>
 
-            <div class="item-select" x-data="{showSelect: false}">
+            <div class="item-select" x-data="{showSelect: false, showItemTooltip: false}">
                             
-              <div class="current-item item-3" x-data="$store.currentItem.item3" @click="showSelect=true">
+              <div class="current-item item-3" x-data="$store.currentItem.item3" 
+              @click="showSelect=true" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                   <div class="item-image-wrapper">
                     <img class="item-image" x-bind:src="$store.currentItem.item3.srcPath" x-show="$store.currentItem.item3.srcPath">
                   </div>
                   <span class="item-label" x-text="$store.currentItem.item3.name"></span>
+                  
+                  <div class="item-tooltip-fixed item-3" x-show="showItemTooltip && $store.currentItem.item3.srcPath">
+                    <span class="item-tooltip-content" x-text="$store.currentItem.item3.desc"></span>
+                  </div>
               </div>
 
-                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" x-show="showSelect" x-on:click.outside="showSelect=false" >
+                <div class="item-list" :class="{'list-active' : showSelect }" x-data="{itemMap: getItemsData()}" 
+                x-show="showSelect" x-on:click.outside="showSelect=false" >
                     <template x-for="item in itemMap">
-                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item3.id }" x-data="item" @click="$store.currentItem.selectItem3(item.id); showSelect=false" >
+                        <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item3.id }" x-data="{item, showItemTooltip: false}" 
+                        @click="$store.currentItem.selectItem3(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
                             <img class="item-image" x-bind:src="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
+                            <div class="item-tooltip-fixed item-3" x-show="showItemTooltip">
+                              <span class="item-tooltip-content" x-text="item.desc"></span>
+                            </div>
                         </div>
                     </template>
                 </div>

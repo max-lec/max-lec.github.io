@@ -14,6 +14,7 @@ document.addEventListener('alpine:init', () => {
             name: "Choose an item",
             srcPath: "",
             id: 0,
+            desc: "",
             health:0,
             armor:0,
             resistance:0,
@@ -41,6 +42,7 @@ document.addEventListener('alpine:init', () => {
             name: "Choose an item",
             srcPath: "",
             id: 0,
+            desc: "",
             health:0,
             armor:0,
             resistance:0,
@@ -68,6 +70,7 @@ document.addEventListener('alpine:init', () => {
             name: "Choose an item",
             srcPath: "",
             id: 0,
+            desc: "",
             health:0,
             armor:0,
             resistance:0,
@@ -168,7 +171,8 @@ function getItemsData() {
         itemData = { 
             "id": Number(item.id), 
             "name": item.name, 
-            "srcPath": item.srcPath
+            "srcPath": item.srcPath,
+            "desc": item.desc.replace(/<br>/g, "\n")
         };
         if(!isStatsEmpty(item)){
             itemMap.push(itemData);
@@ -183,6 +187,7 @@ function getItemStats(id) {
     item = {}
     item.name = itemStats.name;
     item.srcPath = itemStats.srcPath;
+    item.desc = itemStats.desc.replace(/<br>/g, "\n");
     item.id = Number(itemStats.id);
     item.health = Number(itemStats.health);
     item.armor = Number(itemStats.armor);
