@@ -9,5 +9,6 @@
   "mana_start": "0",
   "ap": "0",
   "attack": "0",
-  "speed": "+20 Attack Speed"
+  "speed": "20",
+  "critical_chance": "0"
 }

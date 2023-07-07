@@ -63,7 +63,6 @@
         <span class="broken">
           <br><b>Broken stuff</b>
           <br>- Only champions starting with A have spell data for now, rest is updating
-          <br>- Spell crit and crit rate on auto/spells not taken into account for now
           <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
           <br>- Augments effects are not computed (ex: Harmacist true damage)
           <br>- Traits special effects are not computed (ex: multicaster)
@@ -367,15 +366,19 @@
             <div class="stat-label">DPS AUTOS : </div>
             <span class="stat-result" x-text="computeAttackDPS()"></span>
           </div>
-          <div class="stat-line">
+          <div class="stat-line" x-show="hasBuffSpell()">
             <div class="stat-label">STATS BUFF FROM ABILITY : </div>
             <span class="stat-result" >0</span>
           </div>
-          <div class="stat-line">
+          <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">ABILITY DAMAGE : </div>
             <span class="stat-result" x-text="computeAbilityDamage().join(' ')"></span>
           </div>
-          <div class="stat-line">
+          <div class="stat-line" x-show="hasDamageSpell() && hasSpellCrit()">
+            <div class="stat-label">CRITICAL DAMAGE : </div>
+            <span class="stat-result" x-text="computeAbilityDamageCrit().join(' ')"></span>
+          </div>
+          <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">MULTIHIT DAMAGE : </div>
             <span class="stat-result" x-text="computeAbilityDamageMultihit().join(' ')"></span>
           </div>
@@ -400,7 +403,11 @@
           </div>
         </div>
 
-        <div class="total-damage-stats">
+        <div class="total-damage-stats" x-data>
+          <div class="stat-line" x-show="hasDamageSpell()">
+            <div class="stat-label">AVERAGE ABILITY DAMAGE : </div>
+            <span class="stat-result" x-text="computeAverageAbilityDamage().join(' ')"></span>
+          </div>
           <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 15s : </div>
             <span class="stat-result" >0</span>
@@ -3323,7 +3330,8 @@
     "mana_start": "15",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Adaptive Implant",
@@ -3336,7 +3344,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Anima Visage",
@@ -3349,7 +3358,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Archangel's Staff",
@@ -3362,7 +3372,8 @@
     "mana_start": "30",
     "ap": "20",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "B.F. Sword",
@@ -3375,7 +3386,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Bastion Emblem",
@@ -3388,7 +3400,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Blacksmith's Gloves",
@@ -3401,7 +3414,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Blessed Bloodthirster",
@@ -3413,8 +3427,9 @@
     "resistance": "20",
     "mana_start": "0",
     "ap": "0",
-    "attack": "40",
-    "speed": "0"
+    "attack": "40%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Bloodthirster",
@@ -3426,8 +3441,9 @@
     "resistance": "20",
     "mana_start": "0",
     "ap": "0",
-    "attack": "20",
-    "speed": "0"
+    "attack": "20%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Blue Blessing",
@@ -3438,10 +3454,10 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
-    "mana_cast": "10",
     "ap": "50",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Blue Buff",
@@ -3452,10 +3468,10 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
-    "mana_cast": "10",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Bramble Vest",
@@ -3468,7 +3484,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Brink of Dawn",
@@ -3480,8 +3497,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "30",
-    "speed": "0"
+    "attack": "30%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Bruiser Emblem",
@@ -3494,7 +3512,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Bulwark's Oath",
@@ -3507,7 +3526,8 @@
     "mana_start": "60",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Chain Vest",
@@ -3520,7 +3540,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Chalice of Charity",
@@ -3533,7 +3554,8 @@
     "mana_start": "45",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Chalice of Power",
@@ -3546,7 +3568,8 @@
     "mana_start": "45",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Challenger Emblem",
@@ -3559,7 +3582,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "10"
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Covalent Spark",
@@ -3572,7 +3596,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Crown of Demacia",
@@ -3585,7 +3610,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Deadeye Emblem",
@@ -3598,7 +3624,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Deathblade",
@@ -3610,8 +3637,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "66",
-    "speed": "0"
+    "attack": "10% 10%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Deathfire Grasp",
@@ -3624,7 +3652,8 @@
     "mana_start": "30",
     "ap": "50",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Death's Defiance",
@@ -3636,8 +3665,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "10",
-    "speed": "30"
+    "attack": "10%",
+    "speed": "30%",
+    "critical_chance": "0"
   },
   {
     "name": "Demacia Emblem",
@@ -3650,7 +3680,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Demon Slayer",
@@ -3662,8 +3693,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "40",
-    "attack": "50",
-    "speed": "10"
+    "attack": "50%",
+    "speed": "10",
+    "critical_chance": "0"
   },
   {
     "name": "Determined Investor",
@@ -3676,7 +3708,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Diamond Hands",
@@ -3689,7 +3722,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Dragon's Claw",
@@ -3702,7 +3736,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Dragon's Will",
@@ -3715,7 +3750,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Draven's Axe",
@@ -3728,7 +3764,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Dvarapala Stoneplate",
@@ -3741,7 +3778,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Edge of Night",
@@ -3753,8 +3791,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "10",
-    "speed": "0"
+    "attack": "10%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Eternal Whisper",
@@ -3766,8 +3805,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "35",
-    "speed": "10"
+    "attack": "35%",
+    "speed": "10%",
+    "critical_chance": "55%"
   },
   {
     "name": "Eternal Winter",
@@ -3780,7 +3820,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Fist of Fairness",
@@ -3793,7 +3834,8 @@
     "mana_start": "15",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "20%"
   },
   {
     "name": "Freljord Emblem",
@@ -3806,7 +3848,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Gambler's Blade",
@@ -3819,7 +3862,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Gargoyle Stoneplate",
@@ -3832,7 +3876,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Giant Slayer",
@@ -3844,8 +3889,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "20",
-    "attack": "30",
-    "speed": "10"
+    "attack": "30%",
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Giant's Belt",
@@ -3858,7 +3904,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Glamorous Gauntlet",
@@ -3871,7 +3918,8 @@
     "mana_start": "0",
     "ap": "50",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "75%"
   },
   {
     "name": "Gold Collector",
@@ -3883,8 +3931,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "20",
-    "speed": "0"
+    "attack": "20%",
+    "speed": "0",
+    "critical_chance": "30%"
   },
   {
     "name": "Goldmancer's Staff",
@@ -3897,7 +3946,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Guardbreaker",
@@ -3909,8 +3959,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "20",
-    "attack": "20",
-    "speed": "0"
+    "attack": "20%",
+    "speed": "0",
+    "critical_chance": "20%"
   },
   {
     "name": "Guinsoo's Rageblade",
@@ -3923,7 +3974,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "18"
+    "speed": "18%",
+    "critical_chance": "0"
   },
   {
     "name": "Guinsoo's Reckoning",
@@ -3936,7 +3988,8 @@
     "mana_start": "0",
     "ap": "8",
     "attack": "0",
-    "speed": "30"
+    "speed": "30%",
+    "critical_chance": "0"
   },
   {
     "name": "GunnerEmblem",
@@ -3949,7 +4002,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Hand of Justice",
@@ -3962,7 +4016,8 @@
     "mana_start": "15",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "20%"
   },
   {
     "name": "Hextech Exoskeleton",
@@ -3975,7 +4030,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Hextech Gunblade",
@@ -3987,8 +4043,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "10",
-    "attack": "10",
-    "speed": "0"
+    "attack": "10%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Hextech Lifeblade",
@@ -4001,7 +4058,8 @@
     "mana_start": "0",
     "ap": "Ability Power +40",
     "attack": "Attack Damage +10%",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Hullcrusher",
@@ -4014,7 +4072,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "30"
+    "speed": "30%",
+    "critical_chance": "0"
   },
   {
     "name": "Infinity Edge",
@@ -4026,8 +4085,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "30",
-    "speed": "0"
+    "attack": "30%",
+    "speed": "0",
+    "critical_chance": "35%"
   },
   {
     "name": "Infinity Force",
@@ -4040,7 +4100,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Invoker Emblem",
@@ -4053,7 +4114,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Ionia Emblem",
@@ -4065,8 +4127,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "10",
-    "speed": "0"
+    "attack": "10%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Ionic Spark",
@@ -4079,7 +4142,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Jeweled Gauntlet",
@@ -4092,7 +4156,8 @@
     "mana_start": "0",
     "ap": "30",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "35%"
   },
   {
     "name": "Juggernaut Emblem",
@@ -4105,7 +4170,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Last Whisper",
@@ -4117,8 +4183,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "10",
-    "speed": "10"
+    "attack": "10%",
+    "speed": "10%",
+    "critical_chance": "20%"
   },
   {
     "name": "Locket of Targon Prime",
@@ -4131,7 +4198,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Locket of the Iron Solari",
@@ -4144,7 +4212,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Luminous Deathblade",
@@ -4156,8 +4225,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "120",
-    "speed": "0"
+    "attack": "120%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Manazane",
@@ -4169,8 +4239,9 @@
     "resistance": "0",
     "mana_start": "30",
     "ap": "0",
-    "attack": "+15 Attack Damage",
-    "speed": "15"
+    "attack": "15",
+    "speed": "15%",
+    "critical_chance": "0"
   },
   {
     "name": "Master work upgrade",
@@ -4183,7 +4254,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Mistral",
@@ -4196,7 +4268,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "20"
+    "speed": "20",
+    "critical_chance": "0"
   },
   {
     "name": "Mogul's Mail",
@@ -4209,7 +4282,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "More More-ellonomicon",
@@ -4222,7 +4296,8 @@
     "mana_start": "0",
     "ap": "45",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Morellonomicon",
@@ -4235,7 +4310,8 @@
     "mana_start": "0",
     "ap": "25",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Needlessly Big Gem",
@@ -4248,7 +4324,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Needlessly Large Rod",
@@ -4261,7 +4338,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Negatron Cloak",
@@ -4274,7 +4352,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Noxus Emblem",
@@ -4287,7 +4366,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Obsidian Cleaver",
@@ -4299,8 +4379,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "25",
-    "speed": "0"
+    "attack": "25%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Piltover Emblem",
@@ -4313,7 +4394,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Protector's Vow",
@@ -4326,7 +4408,8 @@
     "mana_start": "45",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Quickestsilver",
@@ -4339,7 +4422,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "50"
+    "speed": "50%",
+    "critical_chance": "0"
   },
   {
     "name": "Quicksilver",
@@ -4352,7 +4436,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "30"
+    "speed": "30%",
+    "critical_chance": "0"
   },
   {
     "name": "Rabadon's Ascended Deathcap",
@@ -4365,7 +4450,8 @@
     "mana_start": "0",
     "ap": "125",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Rabadon's Deathcap",
@@ -4376,9 +4462,10 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
-    "ap": "70",
+    "ap": "10 10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Randuin's Sanctum",
@@ -4391,7 +4478,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Rapid Firecannon",
@@ -4404,7 +4492,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "55"
+    "speed": "55%",
+    "critical_chance": "0"
   },
   {
     "name": "Rapid Lightcannon",
@@ -4417,7 +4506,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "125"
+    "speed": "125%",
+    "critical_chance": "0"
   },
   {
     "name": "Rascal's Gloves",
@@ -4430,7 +4520,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "Crit Chance +40%"
   },
   {
     "name": "Recurve Bow",
@@ -4443,7 +4534,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Redemption",
@@ -4456,7 +4548,8 @@
     "mana_start": "15",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Robotic Arm",
@@ -4469,7 +4562,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Rogue Emblem",
@@ -4482,7 +4576,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Rosethorn Vest",
@@ -4495,7 +4590,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Runaan's Hurricane",
@@ -4507,8 +4603,9 @@
     "resistance": "20",
     "mana_start": "0",
     "ap": "0",
-    "attack": "30",
-    "speed": "10"
+    "attack": "30%",
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Runaan's Tempest",
@@ -4520,8 +4617,9 @@
     "resistance": "20",
     "mana_start": "0",
     "ap": "0",
-    "attack": "20",
-    "speed": "10"
+    "attack": "20%",
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Scroll of knowledge",
@@ -4534,7 +4632,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Shadow Isles Emblem",
@@ -4547,7 +4646,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Shimmer Injector",
@@ -4560,7 +4660,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Shroud of Reverance",
@@ -4573,7 +4674,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "20%"
   },
   {
     "name": "Shroud of Stillness",
@@ -4586,7 +4688,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Shurima Emblem",
@@ -4599,7 +4702,8 @@
     "mana_start": "0",
     "ap": "10",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Slayer Emblem",
@@ -4612,7 +4716,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Sniper's Focus",
@@ -4624,8 +4729,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "15",
-    "attack": "15",
-    "speed": "15"
+    "attack": "15%",
+    "speed": "15%",
+    "critical_chance": "0"
   },
   {
     "name": "Sorcerer Emblem",
@@ -4638,7 +4744,8 @@
     "mana_start": "15",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Sparring Gloves",
@@ -4651,7 +4758,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Spatula",
@@ -4664,7 +4772,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Spear of Hirana",
@@ -4676,8 +4785,9 @@
     "resistance": "0",
     "mana_start": "30",
     "ap": "50",
-    "attack": "25",
-    "speed": "0"
+    "attack": "25%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Spear of Shojin",
@@ -4689,8 +4799,9 @@
     "resistance": "0",
     "mana_start": "30",
     "ap": "25",
-    "attack": "10",
-    "speed": "0"
+    "attack": "10%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Statikk Favor",
@@ -4703,7 +4814,8 @@
     "mana_start": "15",
     "ap": "40",
     "attack": "0",
-    "speed": "10"
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Statikk Shiv",
@@ -4716,7 +4828,8 @@
     "mana_start": "15",
     "ap": "15",
     "attack": "0",
-    "speed": "10"
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Strategist Emblem",
@@ -4729,7 +4842,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Stride breaker",
@@ -4741,8 +4855,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "40",
-    "attack": "40",
-    "speed": "0"
+    "attack": "40%",
+    "speed": "0",
+    "critical_chance": "20%"
   },
   {
     "name": "Sunfire Cape",
@@ -4755,7 +4870,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Sunlight Cape",
@@ -4768,7 +4884,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Tactician's Crown",
@@ -4781,7 +4898,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Targon Emblem",
@@ -4794,7 +4912,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Tear of the Goddess",
@@ -4807,7 +4926,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "TheDarkinBlade",
@@ -4820,7 +4940,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Thief's Gloves",
@@ -4833,7 +4954,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "40%"
   },
   {
     "name": "Titan’s Resolve",
@@ -4846,7 +4968,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "10"
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Titan's Vow",
@@ -4859,7 +4982,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "20"
+    "speed": "Attack speed +20%",
+    "critical_chance": "0"
   },
   {
     "name": "Tricksters Glass",
@@ -4872,7 +4996,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "15"
+    "speed": "15",
+    "critical_chance": "15%"
   },
   {
     "name": "Unstable Chemtank",
@@ -4885,7 +5010,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Urf-Angel's Staff",
@@ -4898,7 +5024,8 @@
     "mana_start": "30",
     "ap": "50",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Virulent Bioware",
@@ -4911,7 +5038,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Void Emblem",
@@ -4924,20 +5052,22 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Warmog's Armor",
     "id": "42",
-    "desc": "+800 Health",
+    "desc": "+150 Health",
     "srcPath": "public/images/items/Warmog's Armor.png",
-    "health": "800",
+    "health": "150 150",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Warmog's Pride",
@@ -4950,7 +5080,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Zaun Emblem",
@@ -4963,7 +5094,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Zeke's Harmony",
@@ -4975,8 +5107,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "35",
-    "speed": "0"
+    "attack": "35%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Zeke's Herald",
@@ -4988,8 +5121,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "25",
-    "speed": "0"
+    "attack": "25%",
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Zenith Edge",
@@ -5001,8 +5135,9 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "55",
-    "speed": "0"
+    "attack": "55%",
+    "speed": "0",
+    "critical_chance": "75%"
   },
   {
     "name": "Zephyr",
@@ -5015,7 +5150,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "15"
+    "speed": "15%",
+    "critical_chance": "0"
   },
   {
     "name": "Zhonya's Paradox",
@@ -5028,7 +5164,8 @@
     "mana_start": "0",
     "ap": "30",
     "attack": "0",
-    "speed": "0"
+    "speed": "0",
+    "critical_chance": "0"
   },
   {
     "name": "Zz'Rot Portal",
@@ -5041,7 +5178,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "10"
+    "speed": "10%",
+    "critical_chance": "0"
   },
   {
     "name": "Zz'Rots Invitation",
@@ -5054,7 +5192,8 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "10"
+    "speed": "10",
+    "critical_chance": "0"
   }
 ]
 </script>

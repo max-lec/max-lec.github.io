@@ -118,6 +118,8 @@ function mapChampionStats(championStats, level){
     stats.ap = Number(championStats.ap);
     stats.attack = championStats.attack.length >= level ? Number(championStats.attack[level - 1]) : championStats.attack[0];
     stats.speed = Number(championStats.speed) * 100;
+    stats.criticalChance = 25;
+    stats.criticalDamage = 1.4;
     return stats;
 }
 
@@ -133,4 +135,16 @@ function decodeHtmlEntity(str) {
     return str.replace(/&#(\d+);/g, function(match, dec) {
       return String.fromCharCode(dec);
     });
+}
+
+function hasDamageSpell() {
+    let hasDamageSpell = false;
+    Alpine.store('currentChampion').spells.forEach(spell => hasDamageSpell = (spell.type == "damage"));
+    return hasDamageSpell;
+}
+
+function hasBuffSpell() {
+    let hasBuffSpell = false;
+    Alpine.store('currentChampion').spells.forEach(spell => hasBuffSpell = (spell.type == "buff"));
+    return hasBuffSpell;
 }

@@ -7,7 +7,8 @@
   "armor": "0",
   "resistance": "0",
   "mana_start": "0",
-  "ap": "40",
-  "attack": "10",
-  "speed": "0"
+  "ap": "Ability Power +40",
+  "attack": "Attack Damage +10%",
+  "speed": "0",
+  "critical_chance": "0"
 }

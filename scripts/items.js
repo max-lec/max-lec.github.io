@@ -200,9 +200,10 @@ function getItemStats(id) {
     item.resistance = Number(itemStats.resistance);
     item.manaStart = Number(itemStats.mana_start);
     item.manaCast = Number(itemStats.mana_cast ?? 0);
-    item.ap = Number(itemStats.ap);
-    item.attack = Number(itemStats.attack);
-    item.speed = Number(itemStats.speed);
+    item.ap = Number(itemStats.ap.replace(/%/g, ""));
+    item.attack = Number(itemStats.attack.replace(/%/g, ""));
+    item.speed = Number(itemStats.speed.replace(/%/g, ""));
+    item.criticalChance = Number(itemStats.critical_chance.replace(/%/g, ""));
     return item;
 }
 
@@ -214,6 +215,7 @@ function isStatsEmpty(item) {
     + Number(item.ap)
     + Number(item.attack)
     + Number(item.speed)
+    + Number(item.critical_chance)
     return stats < 1;
 }
 
@@ -261,4 +263,9 @@ function createEmptyItem(){
         speedOnhit:0
     };
     return emptyItem;
+}
+
+function hasSpellCrit(){
+    let names = Alpine.store('currentItem').getItemNames();
+    return names.includes("Jeweled Gauntlet") || names.includes("Infinity Edge") || names.includes("Zenith Edge") || names.includes("Glamorous Gauntlet");
 }

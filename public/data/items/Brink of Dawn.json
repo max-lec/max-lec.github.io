@@ -8,6 +8,7 @@
   "resistance": "0",
   "mana_start": "0",
   "ap": "0",
-  "attack": "30",
-  "speed": "0"
+  "attack": "30%",
+  "speed": "0",
+  "critical_chance": "0"
 }

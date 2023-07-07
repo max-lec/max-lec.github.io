@@ -67,7 +67,11 @@ for item in "${ITEMS_ARRAY[@]}"; do
     else 
         SPEED=0
     fi
-    
+    if grep -e "[Cc]rit.*[Cc]hance" <(echo "$ITEM_STATS"); then
+        CRIT=$(echo "$ITEM_STATS" | grep -e "[Cc]rit.*[Cc]hance" | sed 's|+\(.*\)%* .*[Cc]rit.*[Cc]hance.*|\1|' | xargs)
+    else 
+        CRIT=0
+    fi
     jq -n \
                   --arg name "$ITEM_NAME" \
                   --arg id "$ITEM_ID" \
@@ -80,6 +84,7 @@ for item in "${ITEMS_ARRAY[@]}"; do
                   --arg ap "$AP" \
                   --arg attack "$ATTACK" \
                   --arg speed "$SPEED" \
+                  --arg criticalChance "$CRIT" \
                   '{ 
                     name: $name, 
                     id: $id, 
@@ -91,7 +96,8 @@ for item in "${ITEMS_ARRAY[@]}"; do
                     mana_start: $mana_start,
                     ap: $ap,
                     attack: $attack,
-                    speed: $speed
+                    speed: $speed,
+                    critical_chance: $criticalChance
                     }' > "${DATA_PATH}/${item}.json"
 
 done

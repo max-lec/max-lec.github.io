@@ -12,6 +12,7 @@ document.addEventListener('alpine:init', () => {
         attack: 0,
         speed: 0,
         criticalChance: 0,
+        criticalDamage: 0,
 
         updateCurrentStats() {
             this.health = getTotalHealth();
@@ -25,6 +26,7 @@ document.addEventListener('alpine:init', () => {
             this.attack = getTotalAttack();
             this.speed = getTotalSpeed();
             this.criticalChance = getTotalCriticalChance();
+            this.criticalDamage = getTotalCriticalDamage();
         },
     });
 })
@@ -106,6 +108,10 @@ function getTotalSpeed() {
 function getTotalCriticalChance() {
     return Alpine.store('currentChampion').stats.criticalChance
         + Alpine.store('currentItem').getTotalItemCriticalChance()
-        // + Alpine.store('currentAugment').getTotalAugmentHealth()
+        ;
+}
+
+function getTotalCriticalDamage() {
+    return Alpine.store('currentChampion').stats.criticalDamage
         ;
 }
