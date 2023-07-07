@@ -63,8 +63,6 @@
         <span class="broken">
           <br><b>Broken stuff</b>
           <br>- Only champions starting with A have spell data for now, rest is updating
-          <br>- Item descriptions missing
-          <br>- Can't remove an item yet
           <br>- Spell crit and crit rate on auto/spells not taken into account for now
           <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
           <br>- Augments effects are not computed (ex: Harmacist true damage)
@@ -129,9 +127,9 @@
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item1.id }" x-data="{item, showItemTooltip: false}" 
                         @click="$store.currentItem.selectItem1(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
-                            <img class="item-image" x-bind:src="item.srcPath">
+                            <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label"  x-text="item.name"></span>
-                            <div class="item-tooltip-fixed item-1" x-show="showItemTooltip">
+                            <div class="item-tooltip-fixed item-1" x-show="showItemTooltip && item.srcPath">
                               <span class="item-tooltip-content" x-text="item.desc"></span>
                             </div>
                         </div>
@@ -158,9 +156,9 @@
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item2.id }" x-data="{item, showItemTooltip: false}"
                         @click="$store.currentItem.selectItem2(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
-                            <img class="item-image" x-bind:src="item.srcPath">
+                            <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
-                            <div class="item-tooltip-fixed item-2" x-show="showItemTooltip">
+                            <div class="item-tooltip-fixed item-2" x-show="showItemTooltip && item.srcPath">
                               <span class="item-tooltip-content" x-text="item.desc"></span>
                             </div>
                         </div>
@@ -187,9 +185,9 @@
                     <template x-for="item in itemMap">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item3.id }" x-data="{item, showItemTooltip: false}" 
                         @click="$store.currentItem.selectItem3(item.id); showSelect=false" @mouseover="showItemTooltip = true" @mouseleave="showItemTooltip = false">
-                            <img class="item-image" x-bind:src="item.srcPath">
+                            <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
-                            <div class="item-tooltip-fixed item-3" x-show="showItemTooltip">
+                            <div class="item-tooltip-fixed item-3" x-show="showItemTooltip && item.srcPath" >
                               <span class="item-tooltip-content" x-text="item.desc"></span>
                             </div>
                         </div>

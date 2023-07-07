@@ -11,7 +11,7 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.store('currentItem', {
         item1: {
-            name: "Choose an item",
+            name: "Empty item slot",
             srcPath: "",
             id: 0,
             desc: "",
@@ -39,7 +39,7 @@ document.addEventListener('alpine:init', () => {
             speedOnhit:0
         },
         item2:{            
-            name: "Choose an item",
+            name: "Empty item slot",
             srcPath: "",
             id: 0,
             desc: "",
@@ -67,7 +67,7 @@ document.addEventListener('alpine:init', () => {
             speedOnhit:0
         },
         item3: {
-            name: "Choose an item",
+            name: "Empty item slot",
             srcPath: "",
             id: 0,
             desc: "",
@@ -166,6 +166,9 @@ function getItemsData() {
     itemsStats = Alpine.store('itemsStatsData').itemsStats;
     itemMap = [];
 
+    // this stores a blank item to remove an item if needed
+    itemMap.push(createEmptyItem());
+
     for(var item of itemsStats){
 
         itemData = { 
@@ -183,6 +186,9 @@ function getItemsData() {
 }
 
 function getItemStats(id) {
+    if(id == 0) {
+        return createEmptyItem()
+    }
     itemStats = Alpine.store('itemsStatsData').itemsStats.find(itemStats => itemStats.id == id);
     item = {}
     item.name = itemStats.name;
@@ -213,4 +219,46 @@ function isStatsEmpty(item) {
 
 function getItemSrcPath(itemSrcPath) {
     return itemSrcPath;
+}
+
+function createEmptyItemData(){
+    let itemData = { 
+        "id": 0, 
+        "name": "Empty item slot", 
+        "srcPath": "",
+        "desc": ""
+    }
+    return itemData
+}
+
+function createEmptyItem(){
+    let emptyItem= {
+        name: "Empty item slot",
+        srcPath: "",
+        id: 0,
+        desc: "",
+        health:0,
+        armor:0,
+        resistance:0,
+        manaStart:0,
+        manaCast:0,
+        ap:0,
+        attack:0,
+        speed:0,
+        flatShield:0, 
+        percentShield:0,
+        percentDamage:0,
+        percentDamageAd:0,
+        percentDamageAp:0,
+        flatDamageAd:0,
+        flatDamageAp:0,
+        criticalChance:0,
+        sunder:0,
+        shred:0,
+        burn:0,
+        spellcrit:0,
+        manaOnhit:0,
+        speedOnhit:0
+    };
+    return emptyItem;
 }
