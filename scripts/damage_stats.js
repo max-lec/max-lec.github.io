@@ -1,7 +1,15 @@
 
 
 function computeAttackDPS() {
-    return (Alpine.store('stats').attack * (1 + (Alpine.store('stats').criticalChance/100) * Alpine.store('stats').criticalDamage)) * Alpine.store('stats').speed/100
+    let attack = Alpine.store('stats').attack;
+    let critChance = Alpine.store('stats').criticalChance/100;
+    let critDamage = Alpine.store('stats').criticalDamage;
+    let speed = Alpine.store('stats').speed/100;
+    
+    let averageCritBonus = attack * critChance * critDamage;
+    let damage = (attack + averageCritBonus) * speed;
+
+    return Math.round(damage);
 }
 
 
@@ -51,7 +59,7 @@ function computeAbilityDamageCrit() {
         return [];
     }
     let normalDamage = computeAbilityDamage();
-    let res = normalDamage.map(damage => Math.round(damage * Alpine.store('stats').criticalDamage));
+    let res = normalDamage.map(damage => Math.round(damage * (1+Alpine.store('stats').criticalDamage)));
     return res;
 }
 

@@ -24,7 +24,7 @@ document.addEventListener('alpine:init', () => {
             attack: 0,
             speed: 0,
             criticalChance: 25,
-            criticalDamage: 1.3
+            criticalDamage: 0.4
         },
         spellDesc: "",
         spells: [
@@ -119,7 +119,7 @@ function mapChampionStats(championStats, level){
     stats.attack = championStats.attack.length >= level ? Number(championStats.attack[level - 1]) : championStats.attack[0];
     stats.speed = Number(championStats.speed) * 100;
     stats.criticalChance = 25;
-    stats.criticalDamage = 1.4;
+    stats.criticalDamage = 0.4;
     return stats;
 }
 
