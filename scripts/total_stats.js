@@ -98,20 +98,30 @@ function getTotalAttack() {
 }
 
 function getTotalSpeed() {
-    return Alpine.store('currentChampion').stats.speed
+    let totalSpeed = Alpine.store('currentChampion').stats.speed
         + Alpine.store('currentItem').getTotalSpeed()
         + Alpine.store('currentAugment').getTotalSpeed()
         + Alpine.store('currentTrait').getTotalSpeed()
         ;
+    return totalSpeed > 500 ? 500 : totalSpeed;
 }
 
 function getTotalCriticalChance() {
-    return Alpine.store('currentChampion').stats.criticalChance
+    let totalCriticalChance = Alpine.store('currentChampion').stats.criticalChance
         + Alpine.store('currentItem').getTotalItemCriticalChance()
         ;
+    return totalCriticalChance > 100 ? 100 : totalCriticalChance;
 }
 
 function getTotalCriticalDamage() {
-    return Alpine.store('currentChampion').stats.criticalDamage
-        ;
+    let totalCriticalDamage = Alpine.store('currentChampion').stats.criticalDamage;
+    let critChance = Alpine.store('currentChampion').stats.criticalChance
+                    + Alpine.store('currentItem').getTotalItemCriticalChance()
+                    ;
+    // convert leftover crit chance to crit damage at 50% rate
+    if (critChance > 100) {
+        let leftover = critChance - 100;
+        totalCriticalDamage = totalCriticalDamage + leftover/2;
+    }
+    return totalCriticalDamage;
 }

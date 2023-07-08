@@ -17,7 +17,7 @@ readarray -t ITEMS_ARRAY <<< $ITEMS_LIST
 
 ITEM_ID=0
 for item in "${ITEMS_ARRAY[@]}"; do
-    echo "$item"
+    # echo "$item"
     ITEM_NAME="$item"
     ITEM_ID=$(( ITEM_ID + 1 ))
     
@@ -29,45 +29,50 @@ for item in "${ITEMS_ARRAY[@]}"; do
     curl -s "$DESC_URL" --output "${DATA_PATH}/html/${item}.html"
 
     ITEM_EFFECT=$(sed -n '/<div>/,/<\/div>/p' "${DATA_PATH}/html/${item}.html" | sed "s|'||g" | xargs | sed 's|.*<div>\(.*\).*</div>.*|\1|' )
+    if grep -qe "Mod:" <(echo "$ITEM_EFFECT"); then
+        # skip zaun mods for now
+        continue
+    fi
+
     ITEM_STATS=$(grep -A 8 'line-height-1' "${DATA_PATH}/html/${item}.html" | sed 's|<br>|\n|g' | sed 's|<div>|\n|g' | sed 's|</div>|\n|g' | sed 's|,|\n|g' )
 
     # basic stats for now
-    if grep -e "[Hh]ealth" <(echo "$ITEM_STATS"); then
+    if grep -qe "[Hh]ealth" <(echo "$ITEM_STATS"); then
         HEALTH=$(echo "$ITEM_STATS" | grep -e "[Hh]ealth" | sed 's|+\(.*\) .*[Hh]ealth.*|\1|' | xargs)
     else 
         HEALTH=0
     fi
-    if grep -e "[Aa]rmor" <(echo "$ITEM_STATS"); then
+    if grep -qe "[Aa]rmor" <(echo "$ITEM_STATS"); then
         ARMOR=$(echo "$ITEM_STATS" | grep -e "[Aa]rmor" | sed 's|+\(.*\) .*[Aa]rmor.*|\1|' | xargs)
     else 
         ARMOR=0
     fi
-    if grep -e "Magic [Rr]esist" <(echo "$ITEM_STATS"); then
+    if grep -qe "Magic [Rr]esist" <(echo "$ITEM_STATS"); then
         RESISTANCE=$(echo "$ITEM_STATS" | grep -e "Magic [Rr]esist" | sed 's|+\(.*\) .*Magic [Rr]esist.*|\1|' | xargs)
     else 
         RESISTANCE=0
     fi
-    if grep -e "[Mm]ana" <(echo "$ITEM_STATS"); then
+    if grep -qe "[Mm]ana" <(echo "$ITEM_STATS"); then
         MANA=$(echo "$ITEM_STATS" | grep -e "[Mm]ana" | sed 's|+\(.*\) .*[Mm]ana.*|\1|' | xargs)
     else 
         MANA=0
     fi
-    if grep -e "Ability [Pp]ower" <(echo "$ITEM_STATS"); then
+    if grep -qe "Ability [Pp]ower" <(echo "$ITEM_STATS"); then
         AP=$(echo "$ITEM_STATS" | grep -e "Ability [Pp]ower" | sed 's|+\(.*\) .*Ability [Pp]ower.*|\1|' | xargs)
     else 
         AP=0
     fi
-    if grep -e "Attack [Dd]amage" <(echo "$ITEM_STATS"); then
+    if grep -qe "Attack [Dd]amage" <(echo "$ITEM_STATS"); then
         ATTACK=$(echo "$ITEM_STATS" | grep -e "Attack [Dd]amage" | sed 's|+\(.*\)%* .*Attack [Dd]amage.*|\1|' | xargs)
     else 
         ATTACK=0
     fi
-    if grep -e "Attack [Ss]peed" <(echo "$ITEM_STATS"); then
+    if grep -qe "Attack [Ss]peed" <(echo "$ITEM_STATS"); then
         SPEED=$(echo "$ITEM_STATS" | grep -e "Attack [Ss]peed" | sed 's|+\(.*\)%* .*Attack [Ss]peed.*|\1|' | xargs)
     else 
         SPEED=0
     fi
-    if grep -e "[Cc]rit.*[Cc]hance" <(echo "$ITEM_STATS"); then
+    if grep -qe "[Cc]rit.*[Cc]hance" <(echo "$ITEM_STATS"); then
         CRIT=$(echo "$ITEM_STATS" | grep -e "[Cc]rit.*[Cc]hance" | sed 's|+\(.*\)%* .*[Cc]rit.*[Cc]hance.*|\1|' | xargs)
     else 
         CRIT=0

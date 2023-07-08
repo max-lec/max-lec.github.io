@@ -64,11 +64,14 @@
           <br><b>Broken stuff</b>
           <br>- Only champions starting with A have spell data for now, rest is updating
           <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
+          <br>- No zaun mods for now
+          <br>- Effective HP and tankiness stats aren't well computed for now, only damage
           <br>- Augments effects are not computed (ex: Harmacist true damage)
           <br>- Traits special effects are not computed (ex: multicaster)
           <br>- Enemy champion stats aren't used for now
           <br>- Noxus takedowns selector isn't used for now
           <br>- Spell description appearance
+          <br>- Max multihit on spell isn't shown anywhere yet
           <br>- Total damage and enemies killed not computed yet
           <br>- Abilities that buff don't work yet
           <br><br><br>
@@ -3318,7 +3321,8 @@
 ]
 </script>
 
-<script type="application/json" id="itemsStatsData">[
+<script type="application/json" id="itemsStatsData">
+  [
   {
     "name": "Absolution",
     "id": "106",
@@ -3328,20 +3332,6 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "15",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
-    "critical_chance": "0"
-  },
-  {
-    "name": "Adaptive Implant",
-    "id": "47",
-    "desc": " Mod: While above 50% health, gain 25% attack damage and 25 ability power. While below, gain 25% omnivamp.<br><br>Overcharge: Always gain both effects, and their power is increased by 60% ",
-    "srcPath": "public/images/items/Adaptive Implant.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
     "ap": "0",
     "attack": "0",
     "speed": "0",
@@ -3373,7 +3363,8 @@
     "ap": "20",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "scalingAp": [20, 5]
   },
   {
     "name": "B.F. Sword",
@@ -3385,7 +3376,7 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "0",
+    "attack": "10%",
     "speed": "0",
     "critical_chance": "0"
   },
@@ -3454,10 +3445,14 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "50",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "enemy" : {
+      "manaOnKill": "20"
+    }
   },
   {
     "name": "Blue Buff",
@@ -3468,10 +3463,14 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "40",
+    "mana_cast": "10",
     "ap": "10",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "enemy" : {
+      "manaOnKill": "10"
+    }
   },
   {
     "name": "Bramble Vest",
@@ -3499,6 +3498,20 @@
     "ap": "0",
     "attack": "30%",
     "speed": "0",
+    "critical_chance": "0"
+  },
+  {
+    "name": "Brink of Dawn (procced)",
+    "id": "86.5",
+    "desc": " Once per combat: At 60% Health and again at 30% Helath, briefly become untargetable and shed negative effects. Then, gain 50% bonus Attack Speed. This effect stacks. ",
+    "srcPath": "public/images/items/Brink of Dawn.png",
+    "health": "0",
+    "armor": "30",
+    "resistance": "0",
+    "mana_start": "0",
+    "ap": "0",
+    "attack": "30%",
+    "speed": "50%",
     "critical_chance": "0"
   },
   {
@@ -3535,7 +3548,7 @@
     "desc": " +20 Armor ",
     "srcPath": "public/images/items/Chain Vest.png",
     "health": "0",
-    "armor": "0",
+    "armor": "20",
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
@@ -3552,7 +3565,7 @@
     "armor": "0",
     "resistance": "45",
     "mana_start": "45",
-    "ap": "0",
+    "ap": "45",
     "attack": "0",
     "speed": "0",
     "critical_chance": "0"
@@ -3566,7 +3579,7 @@
     "armor": "0",
     "resistance": "45",
     "mana_start": "45",
-    "ap": "0",
+    "ap": "20",
     "attack": "0",
     "speed": "0",
     "critical_chance": "0"
@@ -3597,7 +3610,8 @@
     "ap": "10",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "shred": "50%"
   },
   {
     "name": "Crown of Demacia",
@@ -3637,7 +3651,7 @@
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
-    "attack": "10% 10%",
+    "attack": "66%",
     "speed": "0",
     "critical_chance": "0"
   },
@@ -3653,7 +3667,8 @@
     "ap": "50",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "percent_damage": "25%"
   },
   {
     "name": "Death's Defiance",
@@ -3695,7 +3710,15 @@
     "ap": "40",
     "attack": "50%",
     "speed": "10",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "enemy" : {
+      "condition": {
+        "health": "1600"
+      },
+      "effect": {
+        "percent_damage": "70%"
+      }
+    }
   },
   {
     "name": "Determined Investor",
@@ -3796,6 +3819,20 @@
     "critical_chance": "0"
   },
   {
+    "name": "Edge of Night (procced)",
+    "id": "45.5",
+    "desc": " Once per combat: At 60% Health, briefly become untargetable and shed negative effects. Then, gain 15% bonus Attack Speed.<br><br>[Unique - Only One Per Champion] ",
+    "srcPath": "public/images/items/Edge of Night.png",
+    "health": "0",
+    "armor": "20",
+    "resistance": "0",
+    "mana_start": "0",
+    "ap": "0",
+    "attack": "10%",
+    "speed": "15%",
+    "critical_chance": "0"
+  },
+  {
     "name": "Eternal Whisper",
     "id": "96",
     "desc": " Any physical damage dealt the 50% Sunders the target for the rest of combat. This effect does not stack.<br><br>[Unique - only one per champion]<br>Sunder: reduce Armor ",
@@ -3807,7 +3844,8 @@
     "ap": "0",
     "attack": "35%",
     "speed": "10%",
-    "critical_chance": "55%"
+    "critical_chance": "55%",
+    "sunders": "50%"
   },
   {
     "name": "Eternal Winter",
@@ -3832,8 +3870,8 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "15",
-    "ap": "0",
-    "attack": "0",
+    "ap": "50",
+    "attack": "50",
     "speed": "0",
     "critical_chance": "20%"
   },
@@ -3891,14 +3929,22 @@
     "ap": "20",
     "attack": "30%",
     "speed": "10%",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "enemy": {
+      "condition": {
+        "health": "1600"
+      },
+      "effect": {
+        "percent_damage": "25%"
+      }
+    }
   },
   {
     "name": "Giant's Belt",
     "id": "7",
     "desc": " +150 Health ",
     "srcPath": "public/images/items/Giant's Belt.png",
-    "health": "0",
+    "health": "150",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
@@ -3933,7 +3979,15 @@
     "ap": "0",
     "attack": "20%",
     "speed": "0",
-    "critical_chance": "30%"
+    "critical_chance": "30%",
+    "enemy": {
+      "condition": {
+        "currentHealth": "12%"
+      },
+      "effect": {
+        "execute": true
+      }
+    }
   },
   {
     "name": "Goldmancer's Staff",
@@ -3961,7 +4015,15 @@
     "ap": "20",
     "attack": "20%",
     "speed": "0",
-    "critical_chance": "20%"
+    "critical_chance": "20%",
+    "enemy": {
+      "condition": {
+        "shielded": true
+      },
+      "effect": {
+        "percent_damage": "25%"
+      }
+    }
   },
   {
     "name": "Guinsoo's Rageblade",
@@ -3975,7 +4037,8 @@
     "ap": "10",
     "attack": "0",
     "speed": "18%",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "speed_on_hit": "4%"
   },
   {
     "name": "Guinsoo's Reckoning",
@@ -3989,7 +4052,8 @@
     "ap": "8",
     "attack": "0",
     "speed": "30%",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "speed_on_hit": "10%"
   },
   {
     "name": "GunnerEmblem",
@@ -4014,24 +4078,24 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "15",
-    "ap": "0",
-    "attack": "0",
+    "ap": "15",
+    "attack": "15",
     "speed": "0",
     "critical_chance": "20%"
   },
   {
-    "name": "Hextech Exoskeleton",
-    "id": "61",
-    "desc": " Mod: Gain 30 armor and magic resistance. Every 5 seconds, cleanse all negative effects and heal for 10% of your max health.<br><br>Overcharge: Each time the wearer heals, deal 150% of the heal amount as damage to all nearby enemies. ",
-    "srcPath": "public/images/items/Hextech Exoskeleton.png",
+    "name": "Hand of Justice (double ad/ap)",
+    "id": "34.5",
+    "desc": " Grant 2 effects:<br>- +15% Attack Damage and +15 Ability Power.<br>- 15% Omnivamp.<br><br>Each round, randomly double 1 of these effects.<br><br>Omnivamp: heal for a percentage of damage dealt ",
+    "srcPath": "public/images/items/Hand of Justice.png",
     "health": "0",
     "armor": "0",
     "resistance": "0",
-    "mana_start": "0",
-    "ap": "0",
-    "attack": "0",
+    "mana_start": "15",
+    "ap": "30",
+    "attack": "30",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "20%"
   },
   {
     "name": "Hextech Gunblade",
@@ -4056,8 +4120,8 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
-    "ap": "Ability Power +40",
-    "attack": "Attack Damage +10%",
+    "ap": "40",
+    "attack": "10%",
     "speed": "0",
     "critical_chance": "0"
   },
@@ -4066,7 +4130,7 @@
     "id": "62",
     "desc": " If this unit has no adjacent allies at combat start, gain an additional 600 Health. ",
     "srcPath": "public/images/items/Hullcrusher.png",
-    "health": "0",
+    "health": "600",
     "armor": "30",
     "resistance": "30",
     "mana_start": "0",
@@ -4094,13 +4158,13 @@
     "id": "121",
     "desc": " Health +250, Mana +25, Attack Damage +25%, Ability Power +25, Armor +25, Magic Resist +25, Attack Speed +25% ",
     "srcPath": "public/images/items/Infinity Force.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
+    "health": "250",
+    "armor": "25",
+    "resistance": "25",
+    "mana_start": "25",
+    "ap": "25",
+    "attack": "25%",
+    "speed": "25%",
     "critical_chance": "0"
   },
   {
@@ -4143,7 +4207,8 @@
     "ap": "10",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "shred": "50%"
   },
   {
     "name": "Jeweled Gauntlet",
@@ -4185,14 +4250,15 @@
     "ap": "0",
     "attack": "10%",
     "speed": "10%",
-    "critical_chance": "20%"
+    "critical_chance": "20%",
+    "sunder": "50%"
   },
   {
     "name": "Locket of Targon Prime",
     "id": "99",
     "desc": " When combat begins, the holder and all allies within 3 hexes in the same row gain a shield that blocks 200/250/300/350★ damage for 25 seconds.<br><br>Radiant Bonus: Grants 200 Health for all allies at the start of combat. ",
     "srcPath": "public/images/items/Locket of Targon Prime.png",
-    "health": "0",
+    "health": "200",
     "armor": "20",
     "resistance": "0",
     "mana_start": "0",
@@ -4268,7 +4334,7 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "20",
+    "speed": "35",
     "critical_chance": "0"
   },
   {
@@ -4276,7 +4342,7 @@
     "id": "65",
     "desc": " Grants 1 Armor, 1 Magic Resist, and 8 Health when taking damage, stacking up to 40 times. At full stacks, grant 2 gold. ",
     "srcPath": "public/images/items/Mogul's Mail.png",
-    "health": "350",
+    "health": "0",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
@@ -4297,7 +4363,8 @@
     "ap": "45",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "burn": "60%"
   },
   {
     "name": "Morellonomicon",
@@ -4311,14 +4378,15 @@
     "ap": "25",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "burn": "10%"
   },
   {
     "name": "Needlessly Big Gem",
     "id": "66",
     "desc": " Once per combat: If the holder is alive after 15 seconds of combat, grant 1 gold per 2 living allies, and each living ally deals 1% more damage per gold in your bank (up to 60 gold). ",
     "srcPath": "public/images/items/Needlessly Big Gem.png",
-    "health": "500",
+    "health": "0",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
@@ -4336,7 +4404,7 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
-    "ap": "0",
+    "ap": "10",
     "attack": "0",
     "speed": "0",
     "critical_chance": "0"
@@ -4348,7 +4416,7 @@
     "srcPath": "public/images/items/Negatron Cloak.png",
     "health": "0",
     "armor": "0",
-    "resistance": "0",
+    "resistance": "20",
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
@@ -4381,7 +4449,9 @@
     "ap": "0",
     "attack": "25%",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "shred": "50%",
+    "sunder": "50%"
   },
   {
     "name": "Piltover Emblem",
@@ -4456,13 +4526,13 @@
   {
     "name": "Rabadon's Deathcap",
     "id": "24",
-    "desc": "+10 Ability Power",
+    "desc": "Grants Ability Power",
     "srcPath": "public/images/items/Rabadon's Deathcap.png",
     "health": "0",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
-    "ap": "10 10",
+    "ap": "70",
     "attack": "0",
     "speed": "0",
     "critical_chance": "0"
@@ -4473,8 +4543,8 @@
     "desc": " Combat start: Grant 40 Armor and 40 Magic Resistance to the holder and their adjacent allies.<br><br>[Aura item] ",
     "srcPath": "public/images/items/Randuin's Sanctum.png",
     "health": "150",
-    "armor": "0",
-    "resistance": "0",
+    "armor": "40",
+    "resistance": "40",
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
@@ -4521,7 +4591,7 @@
     "ap": "0",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "Crit Chance +40%"
+    "critical_chance": "0"
   },
   {
     "name": "Recurve Bow",
@@ -4534,7 +4604,7 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "0",
+    "speed": "10",
     "critical_chance": "0"
   },
   {
@@ -4546,20 +4616,6 @@
     "armor": "0",
     "resistance": "0",
     "mana_start": "15",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
-    "critical_chance": "0"
-  },
-  {
-    "name": "Robotic Arm",
-    "id": "68",
-    "desc": " Mod: Attacks have a 60% chance to trigger 1 additional attacks.<br><br>Overcharge: Attack deal 50% Attack Damage as bonus true damage. ",
-    "srcPath": "public/images/items/Robotic Arm.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
     "ap": "0",
     "attack": "0",
     "speed": "0",
@@ -4650,20 +4706,6 @@
     "critical_chance": "0"
   },
   {
-    "name": "Shimmer Injector",
-    "id": "72",
-    "desc": " Mod: Gain 25% attack speed. The first time you would be reduced to 1 heath, increase the attack speed by 100% and heal for 35% of your max health.<br><br>Overcharge: Instead increase the attack speed 400% and heal 100% of your max health. ",
-    "srcPath": "public/images/items/Shimmer Injector.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
-    "critical_chance": "0"
-  },
-  {
     "name": "Shroud of Reverance",
     "id": "111",
     "desc": " Combat start: Shoot a wider beam that 50% Mana Reaves enemies. Your team gains 25 starting Mana.<br><br>[Unique - only 1 per champion]<br>Mana Reave: increase maximum Mana until the next cast ",
@@ -4671,7 +4713,7 @@
     "health": "400",
     "armor": "20",
     "resistance": "0",
-    "mana_start": "0",
+    "mana_start": "25",
     "ap": "0",
     "attack": "0",
     "speed": "0",
@@ -4689,7 +4731,7 @@
     "ap": "0",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "20"
   },
   {
     "name": "Shurima Emblem",
@@ -4717,7 +4759,7 @@
     "ap": "0",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "20"
   },
   {
     "name": "Sniper's Focus",
@@ -4731,7 +4773,8 @@
     "ap": "15",
     "attack": "15%",
     "speed": "15%",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "percent_damage": "40%"
   },
   {
     "name": "Sorcerer Emblem",
@@ -4759,7 +4802,7 @@
     "ap": "0",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "20"
   },
   {
     "name": "Spatula",
@@ -4923,7 +4966,7 @@
     "health": "0",
     "armor": "0",
     "resistance": "0",
-    "mana_start": "0",
+    "mana_start": "15",
     "ap": "0",
     "attack": "0",
     "speed": "0",
@@ -4955,7 +4998,7 @@
     "ap": "0",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "40%"
+    "critical_chance": "0"
   },
   {
     "name": "Titan’s Resolve",
@@ -4972,17 +5015,45 @@
     "critical_chance": "0"
   },
   {
+    "name": "Titan’s Resolve (stacked)",
+    "id": "20.5",
+    "desc": " Grant 2% Attack Damage and 2 Ability Power when attacking or taking damage, stacking up to 25 times.<br><br>At full stacks, grant 25 Armor and Magic Resist. ",
+    "srcPath": "public/images/items/Titan’s Resolve.png",
+    "health": "0",
+    "armor": "45",
+    "resistance": "25",
+    "mana_start": "0",
+    "ap": "50",
+    "attack": "50",
+    "speed": "10%",
+    "critical_chance": "0"
+  },
+  {
     "name": "Titan's Vow",
     "id": "93",
     "desc": " Grant 3% Attack Damage 3 Ability Power when attacking or taking damage, stacking up to 25 times.<br><br>At full stacks, gain 50 Armor and Magic Resist. ",
     "srcPath": "public/images/items/Titan's Vow.png",
     "health": "0",
-    "armor": "Armor +30",
+    "armor": "30",
     "resistance": "0",
     "mana_start": "0",
     "ap": "0",
     "attack": "0",
-    "speed": "Attack speed +20%",
+    "speed": "20%",
+    "critical_chance": "0"
+  },
+  {
+    "name": "Titan's Vow (stacked)",
+    "id": "93.5",
+    "desc": " Grant 3% Attack Damage 3 Ability Power when attacking or taking damage, stacking up to 25 times.<br><br>At full stacks, gain 50 Armor and Magic Resist. ",
+    "srcPath": "public/images/items/Titan's Vow.png",
+    "health": "0",
+    "armor": "80",
+    "resistance": "50",
+    "mana_start": "0",
+    "ap": "75",
+    "attack": "75",
+    "speed": "20%",
     "critical_chance": "0"
   },
   {
@@ -5000,20 +5071,6 @@
     "critical_chance": "15%"
   },
   {
-    "name": "Unstable Chemtank",
-    "id": "78",
-    "desc": " Mod: Gain 33% bonus max health and explode on death, dealing 30% of your maximum health as magic damage to nearby enemies.<br><br>Overcharge: Explosion gets larger and damage increases to 45% of your maximum health. ",
-    "srcPath": "public/images/items/Unstable Chemtank.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
-    "critical_chance": "0"
-  },
-  {
     "name": "Urf-Angel's Staff",
     "id": "98",
     "desc": " Combat start: Gain 30 Ability Power every 4 seconds. ",
@@ -5025,21 +5082,8 @@
     "ap": "50",
     "attack": "0",
     "speed": "0",
-    "critical_chance": "0"
-  },
-  {
-    "name": "Virulent Bioware",
-    "id": "79",
-    "desc": " Mod: Release a virulent plague whenever you deal Ability damage, causing enemies within 1 hex of the target to take 20% more damage for 4 seconds.<br><br>Overcharge: Plague duration is 10 seconds and plague deals 5% max health magic damage per second. ",
-    "srcPath": "public/images/items/Virulent Bioware.png",
-    "health": "0",
-    "armor": "0",
-    "resistance": "0",
-    "mana_start": "0",
-    "ap": "0",
-    "attack": "0",
-    "speed": "0",
-    "critical_chance": "0"
+    "critical_chance": "0",
+    "scalingAp": [30, 4]
   },
   {
     "name": "Void Emblem",
@@ -5058,9 +5102,9 @@
   {
     "name": "Warmog's Armor",
     "id": "42",
-    "desc": "+150 Health",
+    "desc": "Grants Health",
     "srcPath": "public/images/items/Warmog's Armor.png",
-    "health": "150 150",
+    "health": "800",
     "armor": "0",
     "resistance": "0",
     "mana_start": "0",
@@ -5100,7 +5144,7 @@
   {
     "name": "Zeke's Harmony",
     "id": "88",
-    "desc": " Combat start: Grant 35% Attack Speed and 10% Omjnivamp to the holder and allies within 1 hex in the same row. ",
+    "desc": " Combat start: Grant 35% Attack Speed and 10% Omnivamp to the holder and allies within 1 hex in the same row. ",
     "srcPath": "public/images/items/Zeke's Harmony.png",
     "health": "350",
     "armor": "0",
@@ -5108,7 +5152,7 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "35%",
-    "speed": "0",
+    "speed": "35%",
     "critical_chance": "0"
   },
   {
@@ -5122,7 +5166,7 @@
     "mana_start": "0",
     "ap": "0",
     "attack": "25%",
-    "speed": "0",
+    "speed": "15%",
     "critical_chance": "0"
   },
   {
@@ -5196,6 +5240,7 @@
     "critical_chance": "0"
   }
 ]
+
 </script>
 
 <script type="application/json" id="augmentsStatsData">
