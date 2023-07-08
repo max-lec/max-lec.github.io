@@ -1,13 +1,14 @@
 var tickResolution=100; // ticks per second
 
 function computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, autoLockTime){
-    tick=1
+    let tick=1
+    let ticksPerAttack= Math.round(tickResolution * 100 / manaPerAuto[1]);
     while(manaToCast > 0 && tick < 3000) {
 
-        if(tick > autoLockTime && tick % manaPerAuto[1] == 0){
+        if(tick > autoLockTime && tick % ticksPerAttack == 0){
             manaToCast -= manaPerAuto[0];
         }
-        
+
         if(tick % augmentBonus[1] == 0){
             manaToCast -= augmentBonus[0];
         }
