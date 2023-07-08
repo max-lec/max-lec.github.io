@@ -14,7 +14,7 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 23vw;
+        height: 47vh;
     }
 
     .additional-options {
@@ -22,14 +22,14 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 6vw;
+        height: 12vh;
     }
 
     .result-stats {
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 18vw;
+        height: 40.7vh;
     }
 
     .section-separator {

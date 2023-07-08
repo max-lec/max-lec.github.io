@@ -322,6 +322,16 @@
 
     <!-- result stats -->
     <div class="result-stats">
+      
+        <div class="spell-desc" x-data>
+          <span x-text="$store.currentChampion.spellDesc"></span> <br><br>
+          <span>
+            Damage: <br>
+            <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD<br>
+            <span x-text="$store.currentChampion.spells[0].apRatio"></span> %AP<br>
+          </span>
+        </div>
+
         <div class="total-stats" x-data="$store.stats">
           <div class="total-stats-label">TOTAL STATS</div>
           <div class="total-stats-list">
@@ -385,6 +395,10 @@
             <div class="stat-label">MULTIHIT DAMAGE : </div>
             <span class="stat-result" x-text="computeAbilityDamageMultihit().join(' ')"></span>
           </div>
+          <div class="stat-line" x-show="hasDamageSpell()">
+            <div class="stat-label">AVERAGE ABILITY DAMAGE : </div>
+            <span class="stat-result" x-text="computeAverageAbilityDamage().join(' ')"></span>
+          </div>
         </div>
 
         <div class="cast-stats" x-data>
@@ -407,10 +421,6 @@
         </div>
 
         <div class="total-damage-stats" x-data>
-          <div class="stat-line" x-show="hasDamageSpell()">
-            <div class="stat-label">AVERAGE ABILITY DAMAGE : </div>
-            <span class="stat-result" x-text="computeAverageAbilityDamage().join(' ')"></span>
-          </div>
           <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 15s : </div>
             <span class="stat-result" >0</span>
@@ -429,14 +439,6 @@
           </div>
         </div>
 
-        <div class="spell-desc" x-data>
-          <span class="stat-line" x-text="$store.currentChampion.spellDesc"></span>
-          <span>
-            Damage: <br>
-            <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD<br>
-            <span x-text="$store.currentChampion.spells[0].apRatio"></span> %AP<br>
-          </span>
-        </div>
     </div>
 
 </body>
@@ -571,7 +573,7 @@
         "type": "damage",
         "duration": 3,
         "manaCast": 90,
-        "apRatio": [20, 35, 60],
+        "apRatio": [120, 210, 360],
         "attackRatio": [750, 750, 750],
         "speed": 0,
         "omnivamp": 0,

@@ -128,7 +128,7 @@
         "type": "damage",
         "duration": 3,
         "manaCast": 90,
-        "apRatio": [20, 35, 60],
+        "apRatio": [120, 210, 360],
         "attackRatio": [750, 750, 750],
         "speed": 0,
         "omnivamp": 0,
