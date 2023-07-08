@@ -14,7 +14,7 @@ body {
         flex-direction: row;
         align-items: center;
         width: 100%;
-        height: 47vh;
+        height: 45vh;
     }
 
     .additional-options {
@@ -29,7 +29,7 @@ body {
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 40.7vh;
+        height: 38.7vh;
     }
 
     .section-separator {

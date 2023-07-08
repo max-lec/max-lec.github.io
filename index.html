@@ -49,7 +49,7 @@
       <div class="notes" x-show="showNotes" x-on:click.outside="showNotes=false">
         <div class="close-button" @click="showNotes=false">x</div>
         <span class="how-to">
-          <br><b>How it works</b>
+          <br><b>STEPS</b>
           <br>1. Select a champion (only A's work see "Broken" below)
           <br>2. Select a star level
           <br>3. Select items (effects don't work, only pure stat buffs, except for Blue Buff and Shojin)
@@ -61,20 +61,19 @@
           <br>Enjoy.
         </span>
         <span class="broken">
-          <br><b>Broken stuff</b>
+          <br><b>BROKEN</b>
           <br>- Only champions starting with A have spell data for now, rest is updating
-          <br>- Item effects don't work yet (Titan's scaling, Giant slayer damage+)
+          <br>- Most item special effects don't work for now
           <br>- No zaun mods for now
           <br>- Effective HP and tankiness stats aren't well computed for now, only damage
           <br>- Augments effects are not computed (ex: Harmacist true damage)
-          <br>- Traits special effects are not computed (ex: multicaster)
+          <br>- Traits special effects are not computed (ex: multicaster double cast)
           <br>- Enemy champion stats aren't used for now
           <br>- Noxus takedowns selector isn't used for now
-          <br>- Spell description appearance
           <br>- Max multihit on spell isn't shown anywhere yet
           <br>- Total damage and enemies killed not computed yet
           <br>- Abilities that buff don't work yet
-          <br><br><br>
+          <br>
           <br> Version 0.0.0
         </span>
       </div>
@@ -317,12 +316,12 @@
           </select>
         </div>
     </div>
-
     <div class="section-separator"></div>
+
+    <div class="border-shadow"></div>
 
     <!-- result stats -->
     <div class="result-stats">
-      
         <div class="spell-desc" x-data>
           <span x-text="$store.currentChampion.spellDesc"></span> <br><br>
           <span>

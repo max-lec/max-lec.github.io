@@ -1,10 +1,28 @@
+
+.border-shadow {
+    background: rgba(21,17,54,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(21,17,54,0) 100%);
+    width: 100%;
+    height: 10px;
+    z-index: 200;
+    border-top: 6px ridge rgb(92 78 110);
+    margin-top: 2vw;
+}
+
 .result-stats {
 
     overflow-x: hidden;
-    background-color: rgb(12 10 24);
+    background: repeating-linear-gradient(
+        135deg,
+        rgba(102, 82, 128, 0.5),
+        rgba(102, 82, 128, 0.5) 3px,
+        rgb(21, 17, 54) 3px,
+        rgb(21, 17, 54) 20px
+    );
+    margin-top: calc(-16px);
 
     .total-stats {
-        margin-top: 3vw;
+        margin-top: 2vw;
         margin-left: 2vw;
 
         display: flex;
@@ -24,7 +42,7 @@
             padding-bottom: 1vw;
             width: 100%;
             text-align: center;
-            background-color: rgb(36, 31, 68);
+            background-color: rgba(21, 17, 54, 0.8);
             font-size: 1em;
         }
 
@@ -50,7 +68,7 @@
 
     .damage-stats, .cast-stats, .total-damage-stats , .spell-desc{
         margin-left: 3vw;
-        margin-top: 3vw;
+        margin-top: 2vw;
 
         display: flex;
         flex-direction: column;
