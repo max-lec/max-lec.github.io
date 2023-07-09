@@ -31,6 +31,7 @@ document.addEventListener('alpine:init', () => {
     });
 })
 
+
 function getTotalHealth() {
     return Alpine.store('currentChampion').stats.health
     + Alpine.store('currentItem').getTotalHealth()
@@ -39,12 +40,14 @@ function getTotalHealth() {
     ;
 }
 
+
 function getTotalMaxHealth() {
     return Alpine.store('currentItem').getTotalMaxHealth()
     + Alpine.store('currentAugment').getTotalMaxHealth()
     + Alpine.store('currentTrait').getTotalMaxHealth()
     ;
 }
+
 
 function getTotalArmor() {
     return Alpine.store('currentChampion').stats.armor
@@ -54,6 +57,7 @@ function getTotalArmor() {
         ;
 }
 
+
 function getTotalResistance() {
     return Alpine.store('currentChampion').stats.resistance
         + Alpine.store('currentItem').getTotalResistance()
@@ -61,6 +65,7 @@ function getTotalResistance() {
         + Alpine.store('currentTrait').getTotalResistance()
         ;
 }
+
 
 function getTotalManaStart() {
     return Alpine.store('currentChampion').stats.manaStart
@@ -70,16 +75,22 @@ function getTotalManaStart() {
         ;
 }
 
+
 function getTotalManaCast() {
     return Alpine.store('currentChampion').spells[0].manaCast
         - Alpine.store('currentItem').getTotalManaCast()
         ;
 }
 
+
 function getTotalManaGen() {
-    manaPerAuto = 10 + Alpine.store('currentItem').getManaPerAttack();
-    return [manaPerAuto, Alpine.store('stats').speed/100];
+    let manaPerAuto = 10 + Alpine.store('currentItem').getManaPerAttack();
+    return [
+        manaPerAuto, 
+        Alpine.store('stats').speed/100
+    ];
 }
+
 
 function getTotalAp() {
     return Alpine.store('currentChampion').stats.ap
@@ -89,6 +100,7 @@ function getTotalAp() {
         ;
 }
 
+
 function getTotalAttack() {
     return Alpine.store('currentChampion').stats.attack
         + Alpine.store('currentItem').getTotalAttack()
@@ -96,6 +108,7 @@ function getTotalAttack() {
         + Alpine.store('currentTrait').getTotalAttack()
         ;
 }
+
 
 function getTotalSpeed() {
     let totalSpeed = Alpine.store('currentChampion').stats.speed
@@ -106,12 +119,14 @@ function getTotalSpeed() {
     return totalSpeed > 500 ? 500 : totalSpeed;
 }
 
+
 function getTotalCriticalChance() {
     let totalCriticalChance = Alpine.store('currentChampion').stats.criticalChance
         + Alpine.store('currentItem').getTotalItemCriticalChance()
         ;
     return totalCriticalChance > 100 ? 100 : totalCriticalChance;
 }
+
 
 function getTotalCriticalDamage() {
     let totalCriticalDamage = Alpine.store('currentChampion').stats.criticalDamage;
@@ -123,5 +138,6 @@ function getTotalCriticalDamage() {
         let leftover = critChance - 100;
         totalCriticalDamage = totalCriticalDamage + leftover/2;
     }
+    
     return totalCriticalDamage;
 }

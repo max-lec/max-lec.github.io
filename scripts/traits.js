@@ -9,11 +9,10 @@ document.addEventListener('alpine:init', () => {
     });
 
     Alpine.store('currentTrait', {
-        activeTraits: [
-        ],
+        activeTraits: [],
         
         triggerTrait(id, level) {
-            activeTuple = this.activeTraits.filter(tuple => tuple[0] == id)[0];
+            let activeTuple = this.activeTraits.filter(tuple => tuple[0] == id)[0];
 
             if (activeTuple && activeTuple[1] == level) {
                 // clicked on activated trait, deactivate
@@ -29,15 +28,15 @@ document.addEventListener('alpine:init', () => {
         },
 
         isActive(id, level){
-            let tuple = this.activeTraits.filter(tuple => tuple[0] == id && tuple[1] >= level);
-            return tuple.length;
+            let matchedTuple = this.activeTraits.filter(tuple => tuple[0] == id && tuple[1] >= level);
+            return matchedTuple.length;
         },
 
         getTotalHealth(){
             let total = 0;
             // flat health
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.health ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.health ?? 0;
@@ -50,7 +49,7 @@ document.addEventListener('alpine:init', () => {
             let total = 0;
             // % max health
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.maxHealth ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.maxHealth ?? 0;
@@ -63,7 +62,7 @@ document.addEventListener('alpine:init', () => {
             let total = 0;
             // flat armor
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.armor ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.armor ?? 0;
@@ -76,7 +75,7 @@ document.addEventListener('alpine:init', () => {
             let total = 0;
             // flat MR
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.resistance ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.resistance ?? 0;
@@ -87,9 +86,8 @@ document.addEventListener('alpine:init', () => {
 
         getTotalManaStart(){
             let total = 0;
-            
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.manaStart ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.manaStart ?? 0;
@@ -100,9 +98,8 @@ document.addEventListener('alpine:init', () => {
 
         getTotalAp(){
             let total = 0;
-            
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let lettraitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.ap ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.ap ?? 0;
@@ -113,9 +110,8 @@ document.addEventListener('alpine:init', () => {
 
         getTotalAttack(){
             let total = 0;
-            
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.attack ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.attack ?? 0;
@@ -126,9 +122,8 @@ document.addEventListener('alpine:init', () => {
 
         getTotalSpeed(){
             let total = 0;
-            
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.speed ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.speed ?? 0;
@@ -138,9 +133,8 @@ document.addEventListener('alpine:init', () => {
         },
         getTotalManaBonus(){
             let total = [0, 0];
-            
             this.activeTraits.forEach(activeTuple => {
-                traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 if (traitStats.name.includes("Invoker")){
                     // only mana gen trait for now
                     total[1] = 3;
@@ -153,8 +147,8 @@ document.addEventListener('alpine:init', () => {
             return total;
         },
     });
-
 });
+
 
 document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
@@ -163,12 +157,13 @@ document.addEventListener('alpine:initialized', () => {
     });
 });
 
+
 function getTraitsData() {
-    traitsStats = Alpine.store('traitsStatsData').traitsStats;
-    traitMap = [];
+    let traitsStats = Alpine.store('traitsStatsData').traitsStats;
+    let traitMap = [];
 
     for(var trait of traitsStats){
-        traitData = { 
+        let traitData = { 
             "id": Number(trait.id), 
             "name": trait.name, 
             "desc": trait.desc, 
@@ -185,8 +180,8 @@ function getTraitsData() {
 
 
 function getTraitStats(id, level) {
-    traitStats = Alpine.store('traitsStatsData').traitsStats.find(traitStats => traitStats.id == id);
-    trait = {}
+    let traitStats = Alpine.store('traitsStatsData').traitsStats.find(traitStats => traitStats.id == id);
+    let trait = {}
     trait.name = traitStats.name;
     trait.srcPath = traitStats.srcPath;
     trait.id = Number(traitStats.id);

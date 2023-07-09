@@ -68,36 +68,45 @@ document.addEventListener('alpine:init', () => {
         getTotalHealth(){
             return this.augment1.health + this.augment2.health + this.augment3.health;
         },
+
         getTotalMaxHealth(){
             // TODO
             return 0;
         },
+
         getTotalArmor(){
             return this.augment1.armor + this.augment2.armor + this.augment3.armor;
         },
+
         getTotalResistance(){
             return this.augment1.resistance + this.augment2.resistance + this.augment3.resistance;
         },
+
         getTotalManaStart(){
             // only infusion this set (ignore sorcerer)
             return 0;
         },
+
         getTotalManaBonus(){
             // only infusion this set (ignore sorcerer)
             let names = this.augment1.name + this.augment2.name + this.augment3.name;
             return names.includes("Infusion") ? [20, 5] : [0, 0];
         },
+
         getTotalAp(){
             return this.augment1.ap + this.augment2.ap + this.augment3.ap;
         },
+
         getTotalAttack(){
             return this.augment1.attack + this.augment2.attack + this.augment3.attack;
         },
+
         getTotalSpeed(){
             return this.augment1.speed + this.augment2.speed + this.augment3.speed;
         },
     });
 })
+
 
 document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
@@ -109,13 +118,12 @@ document.addEventListener('alpine:initialized', () => {
 });
 
 
-
 function getAugmentsData() {
-    augmentsStats = Alpine.store('augmentsStatsData').augmentsStats;
-    augmentMap = [];
+    let augmentsStats = Alpine.store('augmentsStatsData').augmentsStats;
+    let augmentMap = [];
 
     for(var augment of augmentsStats){
-        augmentData = { 
+        let augmentData = { 
             "id": Number(augment.id), 
             "name": augment.name, 
             "desc": augment.desc, 
@@ -127,9 +135,10 @@ function getAugmentsData() {
     return quicksort(augmentMap);
 }
 
+
 function getAugmentStats(id) {
-    augmentStats = Alpine.store('augmentsStatsData').augmentsStats.find(augmentStats => augmentStats.id == id);
-    augment = {}
+    let augmentStats = Alpine.store('augmentsStatsData').augmentsStats.find(augmentStats => augmentStats.id == id);
+    let augment = {}
     augment.name = augmentStats.name;
     augment.srcPath = augmentStats.srcPath;
     augment.id = augmentStats.id;

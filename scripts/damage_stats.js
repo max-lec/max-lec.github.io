@@ -12,43 +12,40 @@ function computeAttackDPS() {
     return Math.round(damage);
 }
 
+function computeAbilityDamage(spell, isMultihit) {
+    
+    let multihit = 1;
+    if(isMultihit) {
+        multihit = Alpine.store('options').multihit;
+    }
+    if(multihit > spell.maxMultihit) {
+        multihit = spell.maxMultihit
+    }
 
-function computeAbilityDamage() {
-    let damageSpells = []
+    let rank = Alpine.store('currentChampion').level -1;
+    let apDamage = spell.apRatio[rank] + (spell.apRatio[rank] * Alpine.store('stats').ap/100);
+    let attackDamage = (spell.attackRatio[rank]/100) * Alpine.store('stats').attack;
+    let res = (apDamage + attackDamage) * multihit;
+    return Math.round(res);
+}
+
+function computeEveryAbilityDamage() {
+    let abilityDamages = []
     Alpine.store('currentChampion').spells.forEach(spell => {
         if(spell.type == "damage") {
-            damageSpells.push(spell);
+            abilityDamages.push(computeAbilityDamage(spell, false));
         }
-    });
-
-    let abilityDamages = []
-    damageSpells.forEach(spell => {
-        let rank = Alpine.store('currentChampion').level -1;
-        let apDamage = spell.apRatio[rank] + (spell.apRatio[rank] * Alpine.store('stats').ap/100);
-        let attackDamage = (spell.attackRatio[rank]/100) * Alpine.store('stats').attack;
-        let res = (apDamage + attackDamage)
-        abilityDamages.push(Math.round(res));
     });
 
     return abilityDamages;
 }
 
 function computeAbilityDamageMultihit() {
-    let damageSpells = []
+    let abilityDamages = []
     Alpine.store('currentChampion').spells.forEach(spell => {
         if(spell.type == "damage") {
-            damageSpells.push(spell);
+            abilityDamages.push(computeAbilityDamage(spell, true));
         }
-    });
-
-    let abilityDamages = []
-    damageSpells.forEach(spell => {
-        let rank = Alpine.store('currentChampion').level -1;
-        let apDamage = spell.apRatio[rank] + (spell.apRatio[rank] * Alpine.store('stats').ap/100);
-        let attackDamage = (spell.attackRatio[rank]/100) * Alpine.store('stats').attack;
-        let multihit = Alpine.store('options').multihit <= spell.maxMultihit ? Alpine.store('options').multihit : spell.maxMultihit ;
-        let res = (apDamage + attackDamage) * multihit;
-        abilityDamages.push(Math.round(res));
     });
 
     return abilityDamages;
@@ -58,7 +55,7 @@ function computeAbilityDamageCrit() {
     if(! hasSpellCrit()) {
         return [];
     }
-    let normalDamage = computeAbilityDamage();
+    let normalDamage = computeEveryAbilityDamage();
     let res = normalDamage.map(damage => Math.round(damage * (1+Alpine.store('stats').criticalDamage)));
     return res;
 }

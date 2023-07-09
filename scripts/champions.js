@@ -56,13 +56,11 @@ document.addEventListener('alpine:init', () => {
         },
 
         setChampionStats(id) {
-            championStats = getChampionStats(id);
-
+            let championStats = getChampionStats(id);
             this.name = decodeHtmlEntity(championStats.name);
             this.srcPath = getChampionSrcPath(this.name);
             this.type = championStats.type[0];
             this.spellDesc = championStats.spell_desc;
-
             this.stats = mapChampionStats(championStats, this.level);
             this.spells = championStats.spells;
         },
@@ -80,6 +78,7 @@ document.addEventListener('alpine:init', () => {
 
 });
 
+
 document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
         const id = Alpine.store('currentChampion').id;
@@ -88,12 +87,13 @@ document.addEventListener('alpine:initialized', () => {
     });
 });
 
+
 function getChampionsData() {
-    championsStats = Alpine.store('championsStatsData').championsStats;
-    championMap = [];
+    let championsStats = Alpine.store('championsStatsData').championsStats;
+    let championMap = [];
 
     for(var champion of championsStats){
-        championData = { 
+        let championData = { 
             "id": champion.id, 
             "name": decodeHtmlEntity(champion.name), 
             "srcPath": getChampionSrcPath(decodeHtmlEntity(champion.name))
@@ -102,12 +102,13 @@ function getChampionsData() {
     }
 
     return championMap;
-
 }
+
 
 function getChampionStats(id) {
     return Alpine.store('championsStatsData').championsStats.find(champ => champ.id == id);
 }
+
 
 function mapChampionStats(championStats, level){
     let stats = {};
@@ -123,13 +124,16 @@ function mapChampionStats(championStats, level){
     return stats;
 }
 
+
 function hasCurrentChampionTrait(traitName){
     return Alpine.store('currentChampion').type.includes(traitName) || Alpine.store('currentItem').getItemNames().includes(traitName);
 }
 
+
 function getChampionSrcPath(championName) {
     return "public/images/champions/" + championName.replace(" ", "") + ".webp"
 }
+
 
 function decodeHtmlEntity(str) {
     return str.replace(/&#(\d+);/g, function(match, dec) {
@@ -137,14 +141,20 @@ function decodeHtmlEntity(str) {
     });
 }
 
+
 function hasDamageSpell() {
     let hasDamageSpell = false;
-    Alpine.store('currentChampion').spells.forEach(spell => hasDamageSpell = (spell.type == "damage"));
+    Alpine.store('currentChampion').spells.forEach(
+        spell => hasDamageSpell = (spell.type == "damage")
+    );
     return hasDamageSpell;
 }
 
+
 function hasBuffSpell() {
     let hasBuffSpell = false;
-    Alpine.store('currentChampion').spells.forEach(spell => hasBuffSpell = (spell.type == "buff"));
+    Alpine.store('currentChampion').spells.forEach(
+        spell => hasBuffSpell = (spell.type == "buff")
+    );
     return hasBuffSpell;
 }

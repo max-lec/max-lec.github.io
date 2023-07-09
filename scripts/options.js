@@ -1,6 +1,5 @@
 
 document.addEventListener('alpine:init', () => {
-
     Alpine.store('options', {
         multihit: 1,
     });

@@ -110,37 +110,48 @@ document.addEventListener('alpine:init', () => {
         getItemNames(){
             return this.item1.name + this.item2.name + this.item3.name;
         },
+
         getTotalHealth(){
             return this.item1.health + this.item2.health + this.item3.health;
         },
+
         getTotalMaxHealth(){
             // TODO
             return 0;
         },
+
         getTotalArmor(){
             return this.item1.armor + this.item2.armor + this.item3.armor;
         },
+
         getTotalResistance(){
             return this.item1.resistance + this.item2.resistance + this.item3.resistance;
         },
+
         getTotalManaStart(){
             return this.item1.manaStart + this.item2.manaStart + this.item3.manaStart;
         },
+
         getTotalManaCast(){
             return this.item1.manaCast + this.item2.manaCast + this.item3.manaCast;
         },
+
         getTotalAp(){
             return this.item1.ap + this.item2.ap + this.item3.ap;
         },
+
         getTotalAttack(){
             return this.item1.attack + this.item2.attack + this.item3.attack;
         },
+
         getTotalSpeed(){
             return this.item1.speed + this.item2.speed + this.item3.speed;
         },
+
         getTotalItemCriticalChance(){
             return this.item1.criticalChance + this.item2.criticalChance + this.item3.criticalChance;
         },
+
         getManaPerAttack(){
             // shojin/hirana are the only items to change mana onhit
             let itemNames = this.getItemNames();
@@ -150,6 +161,7 @@ document.addEventListener('alpine:init', () => {
         },
     });
 })
+
 
 document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
@@ -161,22 +173,20 @@ document.addEventListener('alpine:initialized', () => {
 });
 
 
-
 function getItemsData() {
-    itemsStats = Alpine.store('itemsStatsData').itemsStats;
-    itemMap = [];
-
-    // this stores a blank item to remove an item if needed
-    itemMap.push(createEmptyItem());
+    let itemsStats = Alpine.store('itemsStatsData').itemsStats;
+    let itemMap = [];
+    itemMap.push(createEmptyItem()); // this stores a blank item to remove an item if needed
 
     for(var item of itemsStats){
 
-        itemData = { 
+        let itemData = { 
             "id": Number(item.id), 
             "name": item.name, 
             "srcPath": item.srcPath,
             "desc": item.desc.replace(/<br>/g, "\n")
         };
+
         if(!isStatsEmpty(item)){
             itemMap.push(itemData);
         }
@@ -185,12 +195,14 @@ function getItemsData() {
     return quicksort(itemMap);
 }
 
+
 function getItemStats(id) {
     if(id == 0) {
         return createEmptyItem()
     }
-    itemStats = Alpine.store('itemsStatsData').itemsStats.find(itemStats => itemStats.id == id);
-    item = {}
+
+    let itemStats = Alpine.store('itemsStatsData').itemsStats.find(itemStats => itemStats.id == id);
+    let item = {}
     item.name = itemStats.name;
     item.srcPath = itemStats.srcPath;
     item.desc = itemStats.desc.replace(/<br>/g, "\n");
@@ -207,6 +219,7 @@ function getItemStats(id) {
     return item;
 }
 
+
 function isStatsEmpty(item) {
     let stats = Number(item.health) 
     + Number(item.armor) 
@@ -219,9 +232,11 @@ function isStatsEmpty(item) {
     return stats < 1;
 }
 
+
 function getItemSrcPath(itemSrcPath) {
     return itemSrcPath;
 }
+
 
 function createEmptyItemData(){
     let itemData = { 
@@ -232,6 +247,7 @@ function createEmptyItemData(){
     }
     return itemData
 }
+
 
 function createEmptyItem(){
     let emptyItem= {
@@ -265,7 +281,12 @@ function createEmptyItem(){
     return emptyItem;
 }
 
+
 function hasSpellCrit(){
     let names = Alpine.store('currentItem').getItemNames();
-    return names.includes("Jeweled Gauntlet") || names.includes("Infinity Edge") || names.includes("Zenith Edge") || names.includes("Glamorous Gauntlet");
+    return names.includes("Jeweled Gauntlet") 
+            || names.includes("Infinity Edge") 
+            || names.includes("Zenith Edge") 
+            || names.includes("Glamorous Gauntlet")
+            ;
 }
