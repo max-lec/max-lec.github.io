@@ -32,9 +32,7 @@
             flex-direction: row;
             align-items: left;
 
-            &:hover {
-                cursor: pointer;
-            }
+
 
             .level-content {
                 display: flex;
@@ -46,6 +44,12 @@
                 width: 40px;
                 height: 28px;
                 margin-left: 1vw;
+                
+                user-select: none;
+
+                &:hover {
+                    cursor: pointer;
+                }
 
                 &:before, &:after {
                     left: 0;
