@@ -128,7 +128,7 @@ function hasCurrentChampionTrait(traitName){
 }
 
 function getChampionSrcPath(championName) {
-    return "public/images/champions/" + championName.replace(" ", "") + ".png"
+    return "public/images/champions/" + championName.replace(" ", "") + ".webp"
 }
 
 function decodeHtmlEntity(str) {
