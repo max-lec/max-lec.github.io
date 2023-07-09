@@ -1,22 +1,21 @@
 .additional-options {
 
     .additional-option {
-        height: 6vw;
-
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-
+        height: 6vw;
         padding-right: 2vw;
         padding-left: 2vw;
+
         &:after {
             content: "";
-            background: rgba(244, 187, 72, 0.7);
             position: absolute;
             right: 0;
-            height: 66%;
             width: 1px;
+            height: 66%;
+            background: rgba(244, 187, 72, 0.7);
         }
 
         &:first-of-type {

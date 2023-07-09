@@ -11,8 +11,8 @@
     height: 14.5vw;
 
     .item-image {
-        height: 2.5vw;
         width: 2.5vw;
+        height: 2.5vw;
         padding-right: 10px;
     }
 
@@ -24,9 +24,8 @@
         display: flex;
         position: relative;
         flex-direction: column;
-        background-color: rgb(44, 39, 79);
-        /* padding: 5px 5px; */
         width: 14vw;
+        background-color: rgb(44, 39, 79);
         border: 2px ridge rgb(102, 82, 128);
 
         &:hover {
@@ -42,20 +41,20 @@
             height: 2.5vw;
 
             .item-image-wrapper {
+                margin-right: 10px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                min-width: 3.7vw;
+                height: 3.7vw;
+                background-color: rgb(44, 39, 79);
                 border-radius: 50%;
                 border: 2px groove rgb(244, 187, 72);
-                background-color: rgb(44, 39, 79);
-                height: 3.7vw;
-                min-width: 3.7vw;
                 overflow: hidden;
-                margin-right: 10px;
 
                 .item-image {
-                    height: 3.7vw;
                     width: 3.7vw;
+                    height: 3.7vw;
                     padding: 0;
                 }
             }
@@ -67,7 +66,7 @@
             align-items: left;
             position: absolute;
             top: 3.5vw;
-            left: -2px; /* because of rectangle border*/
+            left: -2px; /* because of border*/
             overflow-y: auto;
             z-index: 600;
 
@@ -76,14 +75,15 @@
                 flex-direction: row;
                 align-items: center;
                 justify-content: left;
+                max-width: 14vw;
+                height: 2.5vw;
+                min-height: 2.5vw;
                 padding: 5px 5px;
                 padding-top: 7px;
                 border-bottom: 1px solid rgb(21, 17, 54);
-                height: 2.5vw;
-                min-height: 2.5vw;
-                max-width: 14vw;
+
                 &:hover {
-                    background-color: rgb(165, 78, 124);;
+                    background-color: rgb(165, 78, 124);
                 }
 
                 .item-image { 
@@ -96,14 +96,13 @@
             }
         }
 
-
         .item-tooltip-fixed {
             position: fixed;
             width: 10vw;
-            z-index: 800;
             padding: 1vw;
             border: 2px groove rgb(244, 187, 72);
-            background-color: rgb(44, 39, 79);           
+            background-color: rgb(44, 39, 79);          
+            z-index: 800; 
         }
 
         .item-tooltip-fixed.item-1 {
@@ -125,5 +124,4 @@
             background-color: rgb(44, 39, 79);
         }
     }
-
 }

@@ -9,14 +9,13 @@
 
     &:hover {
         cursor: pointer;
-        
         .current-champion, .champion-list-arrow{
             opacity: 0.85;
         }
     }
 
-
     .current-champion {
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,7 +25,6 @@
         border: 2px groove rgb(244, 187, 72);
         overflow: hidden;
         z-index: 500;
-        margin: 0;
 
         .champion-image {
             width: 8.6vw;
@@ -81,9 +79,7 @@
         .champion-content-selected {
             background-color: rgb(165, 78, 124);
         }
-
     }
-
 }
 
 .main-options .champion-list.list-active {

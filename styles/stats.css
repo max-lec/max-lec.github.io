@@ -1,16 +1,17 @@
 
 .border-shadow {
-    background: rgba(21,17,54,0);
-    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(21,17,54,0) 100%);
+    margin-top: 2vw;
     width: 100%;
     height: 10px;
-    z-index: 200;
+    background: rgba(21,17,54,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(21,17,54,0) 100%);
     border-top: 6px ridge rgb(92 78 110);
-    margin-top: 2vw;
+    z-index: 200;
 }
 
 .result-stats {
 
+    margin-top: calc(-16px);
     overflow-x: hidden;
     background: repeating-linear-gradient(
         135deg,
@@ -19,28 +20,25 @@
         rgb(21, 17, 54) 3px,
         rgb(21, 17, 54) 20px
     );
-    margin-top: calc(-16px);
 
     .total-stats {
+
         margin-top: 2vw;
         margin-left: 2vw;
-
         display: flex;
         flex-direction: column;
         align-items: left;
+        position: relative;
         width: 12vw;
         height: 15vw;
-        position: relative;
         overflow-y: auto;
-
         background-color: rgb(44, 39, 79);
         border: 1px ridge rgb(244, 187, 72);
 
-
         .total-stats-label {
+            width: 100%;
             padding-top: 1vw;
             padding-bottom: 1vw;
-            width: 100%;
             text-align: center;
             background-color: rgba(21, 17, 54, 0.8);
             font-size: 1em;
@@ -61,20 +59,19 @@
                 .stat-label {
                     width: 8vw;
                 }
-
             }
         }
     }
 
     .damage-stats, .cast-stats, .total-damage-stats , .spell-desc{
-        margin-left: 3vw;
+        
         margin-top: 2vw;
-
+        margin-left: 3vw;
         display: flex;
         flex-direction: column;
         align-items: left;
-        width: 14vw;
         position: relative;
+        width: 14vw;
         
         .stat-line {
             display: flex;
@@ -95,11 +92,11 @@
             }
 
             .stat-result {
-                width: 2vw;
-                font-weight: bold;
                 display: flex;
                 flex-direction: column;
                 align-items: left;
+                width: 2vw;
+                font-weight: bold;
             }
         }
     }
