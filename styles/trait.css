@@ -70,7 +70,6 @@
 
                 .trait-image {
                     width: 21px;
-                    height: 21px;
                     filter: brightness(70%) sepia(0) saturate(100) hue-rotate(0deg);
                 }
     
