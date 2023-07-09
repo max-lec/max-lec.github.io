@@ -436,15 +436,13 @@
             <span class="stat-result" x-text="$store.damageStats.abilitiesDamage.join(' ')"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell() && hasSpellCrit()">
-            <div class="stat-label">CRITICAL DAMAGE : </div>
+            <div class="stat-label">ON CRITICAL : </div>
             <span class="stat-result" x-text="$store.damageStats.abilitiesDamageCrit.join(' ')"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
-            <div class="stat-label">MULTIHIT DAMAGE : </div>
-            <span class="stat-result" x-text="$store.damageStats.abilitiesDamageMultihit.join(' ')"></span>
-          </div>
-          <div class="stat-line" x-show="hasDamageSpell()">
-            <div class="stat-label">AVERAGE ABILITY DAMAGE : </div>
+            <div class="stat-label">
+              AVERAGE ABILITY DAMAGE
+              <br>HITTING <span x-text="$store.options.multihit"></span> ENEM<span x-show="$store.options.multihit > 1">IES</span><span x-show="$store.options.multihit < 2">Y</span> : </div>
             <span class="stat-result" x-text="$store.damageStats.abilitiesDamageAverage.join(' ')"></span>
           </div>
         </div>
