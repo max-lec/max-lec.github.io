@@ -27,6 +27,7 @@ document.addEventListener('alpine:init', () => {
             this.speed = getTotalSpeed();
             this.criticalChance = getTotalCriticalChance();
             this.criticalDamage = getTotalCriticalDamage();
+            Alpine.store('damageStats').updateDamageStats();
         },
     });
 })

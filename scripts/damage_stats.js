@@ -1,4 +1,21 @@
+document.addEventListener('alpine:init', () => {
 
+    Alpine.store('damageStats', {
+        attackDPS: 0,
+        abilitiesDamage: [],
+        abilitiesDamageMultihit: [],
+        abilitiesDamageCrit: [],
+        abilitiesDamageAverage: [],
+
+        updateDamageStats() {
+            this.attackDPS = computeAttackDPS();
+            this.abilitiesDamage = computeEveryAbilityDamage();
+            this.abilitiesDamageMultihit = computeAbilityDamageMultihit();
+            this.abilitiesDamageCrit = computeAbilityDamageCrit();
+            this.abilitiesDamageAverage = computeAverageAbilityDamage();
+        },
+    });
+})
 
 function computeAttackDPS() {
     let attack = Alpine.store('stats').attack;
@@ -55,13 +72,13 @@ function computeAbilityDamageCrit() {
     if(! hasSpellCrit()) {
         return [];
     }
-    let normalDamage = computeEveryAbilityDamage();
+    let normalDamage = Alpine.store('damageStats').abilitiesDamage;
     let res = normalDamage.map(damage => Math.round(damage * (1+Alpine.store('stats').criticalDamage)));
     return res;
 }
 
 function computeAverageAbilityDamage() {
-    let normalDamage = computeAbilityDamageMultihit();
+    let normalDamage = Alpine.store('damageStats').abilitiesDamageMultihit;
     let res = normalDamage;
     if(hasSpellCrit()) {
         res = normalDamage.map(damage => Math.round(damage * (1 + (Alpine.store('stats').criticalChance/100) * Alpine.store('stats').criticalDamage)));

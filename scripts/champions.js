@@ -143,18 +143,10 @@ function decodeHtmlEntity(str) {
 
 
 function hasDamageSpell() {
-    let hasDamageSpell = false;
-    Alpine.store('currentChampion').spells.forEach(
-        spell => hasDamageSpell = (spell.type == "damage")
-    );
-    return hasDamageSpell;
+    return Alpine.store('currentChampion').spells.filter(spell => spell.type == "damage").length;
 }
 
 
 function hasBuffSpell() {
-    let hasBuffSpell = false;
-    Alpine.store('currentChampion').spells.forEach(
-        spell => hasBuffSpell = (spell.type == "buff")
-    );
-    return hasBuffSpell;
+    return Alpine.store('currentChampion').spells.filter(spell => spell.type == "buff").length;
 }

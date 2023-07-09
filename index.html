@@ -425,7 +425,7 @@
         <div class="damage-stats" x-data>
           <div class="stat-line">
             <div class="stat-label">DPS AUTOS : </div>
-            <span class="stat-result" x-text="computeAttackDPS()"></span>
+            <span class="stat-result" x-text="$store.damageStats.attackDPS"></span>
           </div>
           <div class="stat-line" x-show="hasBuffSpell()">
             <div class="stat-label">STATS BUFF FROM ABILITY : </div>
@@ -433,19 +433,19 @@
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">ABILITY DAMAGE : </div>
-            <span class="stat-result" x-text="computeEveryAbilityDamage().join(' ')"></span>
+            <span class="stat-result" x-text="$store.damageStats.abilitiesDamage.join(' ')"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell() && hasSpellCrit()">
             <div class="stat-label">CRITICAL DAMAGE : </div>
-            <span class="stat-result" x-text="computeAbilityDamageCrit().join(' ')"></span>
+            <span class="stat-result" x-text="$store.damageStats.abilitiesDamageCrit.join(' ')"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">MULTIHIT DAMAGE : </div>
-            <span class="stat-result" x-text="computeAbilityDamageMultihit().join(' ')"></span>
+            <span class="stat-result" x-text="$store.damageStats.abilitiesDamageMultihit.join(' ')"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">AVERAGE ABILITY DAMAGE : </div>
-            <span class="stat-result" x-text="computeAverageAbilityDamage().join(' ')"></span>
+            <span class="stat-result" x-text="$store.damageStats.abilitiesDamageAverage.join(' ')"></span>
           </div>
         </div>
 
