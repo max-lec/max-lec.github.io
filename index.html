@@ -441,8 +441,8 @@
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">
-              AVERAGE ABILITY DAMAGE
-              <br>HITTING <span x-text="$store.options.multihit"></span> ENEM<span x-show="$store.options.multihit > 1">IES</span><span x-show="$store.options.multihit < 2">Y</span> : </div>
+              AVERAGE ABILITY DAMAGE :
+              <br>(hitting <span x-text="$store.options.multihit"></span> enem<span x-show="$store.options.multihit > 1">ies</span><span x-show="$store.options.multihit < 2">y</span>)</div>
             <span class="stat-result" x-text="$store.damageStats.abilitiesDamageAverage.join(' ')"></span>
           </div>
         </div>
