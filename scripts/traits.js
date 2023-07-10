@@ -99,7 +99,7 @@ document.addEventListener('alpine:init', () => {
         getTotalAp(){
             let total = 0;
             this.activeTraits.forEach(activeTuple => {
-                let lettraitStats = getTraitStats(activeTuple[0], activeTuple[1]);
+                let traitStats = getTraitStats(activeTuple[0], activeTuple[1]);
                 total += traitStats?.all?.ap ?? 0;
                 if (hasCurrentChampionTrait(traitStats.name)){
                     total += traitStats?.trait?.ap ?? 0;
