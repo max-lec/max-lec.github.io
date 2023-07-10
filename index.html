@@ -96,12 +96,14 @@
             <img class="champion-list-arrow" src="./public/icons/arrow-icon.png" 
             @click="showChampionSelect= true"/>
 
-            <div class="champion-list" :class="{'list-active': showChampionSelect}" x-data="{championList: getChampionsData()}" 
+            <div class="champion-list" :class="{'list-active': showChampionSelect}" x-data="{championList: getChampionsData(), search: ''}" 
             x-show="showChampionSelect" x-on:click.outside="showChampionSelect= false">
-
+                
+                <input class="search-input" type="search" placeholder="Search for champions..." x-model="search"></input>
+                
                 <template x-for="champion in championList">
                     <div class="champion-content" :class="{'champion-content-selected': champion.id == $store.currentChampion.id}"  
-                    @click="$store.currentChampion.selectChampion(champion.id); showChampionSelect= false">
+                    @click="$store.currentChampion.selectChampion(champion.id); showChampionSelect= false" x-show="search === '' || champion.name.toLowerCase().includes(search.toLowerCase())">
                         <img class="champion-image" x-bind:src="champion.srcPath">
                         <span x-text="champion.name"></span>
                     </div>
@@ -138,12 +140,15 @@
                     </div>
                 </div>
 
-                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData()}" 
+                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData(), search: ''}" 
                 x-show="showItemSelect" x-on:click.outside="showItemSelect= false" >
+
+                    <input class="search-input" type="search" placeholder="Search for items..." x-model="search"></input>
 
                     <template x-for="item in itemsList">
                         <div class="item-content" :class="{'item-content-selected': item.id == $store.currentItem.item1.id }" x-data="{showItemTooltip: false}" 
-                        @click="$store.currentItem.selectItem1(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false">
+                        @click="$store.currentItem.selectItem1(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false"
+                        x-show="search === '' || item.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label"  x-text="item.name"></span>
                             <div class="item-tooltip-fixed item-1" x-show="showItemTooltip && item.srcPath">
@@ -170,12 +175,15 @@
                     </div>
                 </div>
 
-                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData()}" 
+                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData(), search: ''}" 
                 x-show="showItemSelect" x-on:click.outside="showItemSelect= false" >
+
+                    <input class="search-input" type="search" placeholder="Search for items..." x-model="search"></input>
 
                     <template x-for="item in itemsList">
                         <div class="item-content" :class="{'item-content-selected' : item.id == $store.currentItem.item2.id }" x-data="{showItemTooltip: false}"
-                        @click="$store.currentItem.selectItem2(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false">
+                        @click="$store.currentItem.selectItem2(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false"
+                        x-show="search === '' || item.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
                             <div class="item-tooltip-fixed item-2" x-show="showItemTooltip && item.srcPath">
@@ -202,12 +210,15 @@
                     </div>
                 </div>
 
-                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData()}" 
+                <div class="item-list" :class="{'list-active': showItemSelect}" x-data="{itemsList: getItemsData(), search: ''}" 
                 x-show="showItemSelect" x-on:click.outside="showItemSelect= false" >
+
+                    <input class="search-input" type="search" placeholder="Search for items..." x-model="search"></input>
 
                     <template x-for="item in itemsList">
                         <div class="item-content" :class="{'item-content-selected': item.id == $store.currentItem.item3.id }" x-data="{showItemTooltip: false}" 
-                        @click="$store.currentItem.selectItem3(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false">
+                        @click="$store.currentItem.selectItem3(item.id); showItemSelect= false" @mouseover="showItemTooltip= true" @mouseleave="showItemTooltip= false"
+                        x-show="search === '' || item.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="item-image" x-bind:src="item.srcPath" x-show="item.srcPath">
                             <span class="item-label" x-text="item.name"></span>
                             <div class="item-tooltip-fixed item-3" x-show="showItemTooltip && item.srcPath" >
@@ -232,12 +243,15 @@
                     <span class="augment-desc" x-text="$store.currentAugment.augment1.desc"></span>
                 </div>
 
-                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData()}"
+                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData(), search: ''}"
                 x-show="showAugmentSelect" x-on:click.outside="showAugmentSelect= false" >
+
+                    <input class="search-input" type="search" placeholder="Search for augments..." x-model="search"></input>
 
                     <template x-for="augment in augmentsList">
                         <div class="augment-content" :class="{'augment-content-selected': augment.id == $store.currentAugment.augment1.id}" 
-                        @click="$store.currentAugment.selectAugment1(augment.id); showAugmentSelect= false" >
+                        @click="$store.currentAugment.selectAugment1(augment.id); showAugmentSelect= false" 
+                        x-show="search === '' || augment.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="augment-image" x-bind:src="augment.srcPath">
                             <span class="augment-name" x-text="augment.name"></span>
                         </div>
@@ -254,12 +268,15 @@
                     <span class="augment-desc" x-text="$store.currentAugment.augment2.desc"></span>
                 </div>
 
-                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData()}" 
+                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData(), search: ''}" 
                 x-show="showAugmentSelect" x-on:click.outside="showAugmentSelect= false" >
+                  
+                    <input class="search-input" type="search" placeholder="Search for augments..." x-model="search"></input>
 
                     <template x-for="augment in augmentsList">
                         <div class="augment-content" :class="{'augment-content-selected': augment.id == $store.currentAugment.augment2.id}" 
-                        @click="$store.currentAugment.selectAugment2(augment.id); showAugmentSelect= false" >
+                        @click="$store.currentAugment.selectAugment2(augment.id); showAugmentSelect= false"
+                        x-show="search === '' || augment.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="augment-image" x-bind:src="augment.srcPath">
                             <span class="augment-name" x-text="augment.name"></span>
                         </div>
@@ -276,12 +293,15 @@
                     <span class="augment-desc" x-text="$store.currentAugment.augment3.desc"></span>
                 </div>
 
-                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData()}" 
+                <div class="augment-list" :class="{'list-active': showAugmentSelect}" x-data="{augmentsList: getAugmentsData(), search: ''}" 
                 x-show="showAugmentSelect" x-on:click.outside="showAugmentSelect= false" >
+
+                    <input class="search-input" type="search" placeholder="Search for augments..." x-model="search"></input>
 
                     <template x-for="augment in augmentsList">
                         <div class="augment-content" :class="{'augment-content-selected': augment.id == $store.currentAugment.augment3.id }" 
-                        @click="$store.currentAugment.selectAugment3(augment.id); showAugmentSelect= false" >
+                        @click="$store.currentAugment.selectAugment3(augment.id); showAugmentSelect= false"
+                        x-show="search === '' || augment.name.toLowerCase().includes(search.toLowerCase())">
                             <img class="augment-image" x-bind:src="augment.srcPath">
                             <span class="augment-name" x-text="augment.name"></span>
                         </div>

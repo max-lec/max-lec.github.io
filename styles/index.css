@@ -62,4 +62,27 @@ body {
     ::-webkit-scrollbar-thumb:hover {
         background: rgb(21, 17, 54); 
     }
+
+    /* for firefox nerds */
+    scrollbar-color: rgb(21, 17, 54) rgb(119, 105, 137);
+
+
+    /* Custom input fields */
+    .search-input {
+        border: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background: rgb(94 77 114);
+        padding: 12px;
+        width: 100%;
+        color: rgb(239, 232, 216);
+        border-bottom: 1px solid rgb(239, 232, 216);
+
+        &::placeholder { 
+            color: rgb(239, 232, 216);
+            opacity: 1; /* Firefox */
+        }
+    }
 }
