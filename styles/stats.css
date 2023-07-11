@@ -103,9 +103,24 @@
 
     .spell-desc {
         margin-left: 4vw;
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
         height: calc(15vw - 30px);
         padding: 15px;
         background-color: rgb(44, 39, 79);
         border: 1px ridge rgb(244, 187, 72);
+
+        .spell-damage-wrapper {
+            margin-top: 1vw;
+            display: flex;
+            flex-direction: row;
+            align-items: left;
+            .spell-damage {
+                padding-left: 1vw;
+                padding-right: 1vw;
+                border-left: 1px solid white;
+            }
+        }
     }
 }

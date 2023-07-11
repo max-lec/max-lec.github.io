@@ -27,6 +27,8 @@
 <script src="./scripts/total_stats.js"></script>
 <script src="./scripts/damage_stats.js"></script>
 <script src="./scripts/cast_stats.js"></script>
+<script src="./scripts/enemy.js"></script>
+<script src="./scripts/total_damage.js"></script>
 
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
@@ -347,7 +349,7 @@
     <div class="additional-options" x-data>
         <div class="additional-option">
           <label for="multihit" class="label-option">Enemies hit : </label>
-          <select name="multihit" class="select-option" x-model="$store.options.multihit">
+          <select name="multihit" class="select-option multihit-select" x-model="$store.options.multihit">
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
@@ -360,15 +362,28 @@
           </select>
         </div>
 
-        <div class="additional-option">        
-          <label for="enemyChampion" class="label-option">Enemy champion stats : </label>
-          <select name="enemyChampion" class="select-option" x-data="{championMap: getChampionsData()}">
-            <template x-for="champion in championMap">
-                <option x-data="champion" value="champion.id">
-                    <span x-text="champion.name"></span>
-                </option>
-            </template>
-          </select>
+        <div class="enemy-options" x-data="$store.enemyChampion">
+
+          <div class="enemy-option">
+            <label for="enemyChampion" class="label-option">Enemy champion stats : </label>
+            <select name="enemyChampion" class="select-option enemy-select" 
+            x-data="{championMap: getChampionsData()}" x-model="$store.enemyChampion.id">
+              <template x-for="champion in championMap">
+                  <option x-data="champion" :value="champion.id">
+                      <span x-text="champion.name"></span>
+                  </option>
+              </template>
+            </select>
+          </div> 
+
+          <div class="enemy-option">
+            <label for="enemyChampionLevel" class="label-option">Level : </label>
+            <select name="enemyChampionLevel" class="select-option enemy-level-select" x-model="$store.enemyChampion.level">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </div> 
         </div>
 
         <div class="additional-option">
@@ -392,12 +407,21 @@
     <div class="result-stats">
 
         <div class="spell-desc" x-data>
-          <span x-text="$store.currentChampion.spellDesc"></span> <br><br>
-          <span>
-            Damage: <br>
-            <span x-text="$store.currentChampion.spells[0].attackRatio"></span> %AD<br>
-            <span x-text="$store.currentChampion.spells[0].apRatio"></span> %AP<br>
-          </span>
+
+          <span x-text="$store.currentChampion.spellDesc"></span>
+
+          <div class="spell-damage-wrapper">
+            <template x-for="spell in $store.currentChampion.spells">
+              <div class="spell-damage">
+                Damage: <br>
+                <span x-text="spell.attackRatio"></span> %AD<br>
+                <span x-text="spell.apRatio"></span> %AP<br>
+                <i>(max multihit : <span x-text="spell.maxMultihit"></span>)</i>
+              </div>
+            </template>
+          </div>
+          
+          
         </div>
 
         <div class="total-stats" x-data="$store.stats">
@@ -488,8 +512,12 @@
 
         <div class="total-damage-stats" x-data>
           <div class="stat-line">
+            <div class="stat-label">ABILITY DAMAGE ON ENEMY : </div>
+            <span class="stat-result" x-text="computeDamageOnEnemy()">0</span>
+          </div>
+          <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 15s : </div>
-            <span class="stat-result" >0</span>
+            <span class="stat-result" x-text="totalDamagePer15()"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ENEMIES KILLED / 15s : </div>
