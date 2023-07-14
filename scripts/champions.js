@@ -89,7 +89,8 @@ document.addEventListener('alpine:initialized', () => {
 
 
 function getChampionsData() {
-    let championsStats = Alpine.store('championsStatsData').championsStats;
+    let championsStats = Alpine.store('championsStatsData').championsStats.filter(champs => champs.id != -1);
+
     let championMap = [];
 
     for(var champion of championsStats){

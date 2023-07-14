@@ -30,6 +30,10 @@
 <script src="./scripts/enemy.js"></script>
 <script src="./scripts/total_damage.js"></script>
 
+<!-- Tests here -->
+<script src="./tests/activate.test.js"></script>
+<script src="./tests/cast_stats.test.js"></script>
+
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
 <link href="./styles/champion.css" rel="stylesheet">
@@ -48,7 +52,8 @@
 <body>
 
     <div class="notes-section" x-data="{showNotes: false}">
-      <div class="show-notes-button" @click="showNotes=true">Click me !</div>
+      <div class="launch-tests-button" @click="testComputeFunctions()">Tests</div>
+      <div class="show-notes-button" @click="showNotes=true">Show Help !</div>
       <div class="notes" x-show="showNotes" x-on:click.outside="showNotes=false">
         <div class="close-button" @click="showNotes=false">x</div>
         <span class="how-to">
@@ -540,6 +545,71 @@
 
 <script type="application/json" id="championsStatsData">[
   {
+    "name": "Test",
+    "id": "-1",
+    "type": [
+      "Bruiser, Slayer, Bastion"
+    ],
+    "spell_desc": "Lorem ipsum",
+    "spells": [
+          {
+            "type": "damage",
+            "duration": 2,
+            "manaCast": 50,
+            "apRatio": [10, 10, 10],
+            "attackRatio": [200, 200, 200],
+            "speed": 0,
+            "omnivamp": 0,
+            "flatAp": 0,
+            "flatAttack": 0,
+            "switchSpellAfter": 0,
+            "maxMultihit": 3,
+            "sunder": 0,
+            "shred": 0,
+            "percentDamage": 0,
+            "manaLock": true,
+            "autoLock": true,
+            "channel": false
+        },
+        {
+          "type": "buff",
+          "duration": 10,
+          "manaCast": 50,
+          "apRatio": [100, 100, 100],
+          "attackRatio": [100, 100, 100],
+          "speed": 0,
+          "omnivamp": 0,
+          "flatAp": 0,
+          "flatAttack": 0,
+          "switchSpellAfter": 0,
+          "maxMultihit": 1,
+          "sunder": 0,
+          "shred": 0,
+          "percentDamage": 0
+      }
+    ],
+    "health": [
+      1000,
+      2000,
+      3000
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      100,
+      200,
+      300
+    ],
+    "speed": "0.5"
+  },
+  {
     "name": "Aatrox",
     "id": "1",
     "type": [
@@ -824,7 +894,7 @@
     "type": [
       "Shurima, Strategist"
     ],
-    "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
+    "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals X magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
     "spells": [
       {
         "type": "damage",

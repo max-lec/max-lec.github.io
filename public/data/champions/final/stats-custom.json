@@ -1,5 +1,70 @@
 [
   {
+    "name": "Test",
+    "id": "-1",
+    "type": [
+      "Bruiser, Slayer, Bastion"
+    ],
+    "spell_desc": "Lorem ipsum",
+    "spells": [
+          {
+            "type": "damage",
+            "duration": 2,
+            "manaCast": 50,
+            "apRatio": [10, 10, 10],
+            "attackRatio": [200, 200, 200],
+            "speed": 0,
+            "omnivamp": 0,
+            "flatAp": 0,
+            "flatAttack": 0,
+            "switchSpellAfter": 0,
+            "maxMultihit": 3,
+            "sunder": 0,
+            "shred": 0,
+            "percentDamage": 0,
+            "manaLock": true,
+            "autoLock": true,
+            "channel": false
+        },
+        {
+          "type": "buff",
+          "duration": 10,
+          "manaCast": 50,
+          "apRatio": [100, 100, 100],
+          "attackRatio": [100, 100, 100],
+          "speed": 0,
+          "omnivamp": 0,
+          "flatAp": 0,
+          "flatAttack": 0,
+          "switchSpellAfter": 0,
+          "maxMultihit": 1,
+          "sunder": 0,
+          "shred": 0,
+          "percentDamage": 0
+      }
+    ],
+    "health": [
+      1000,
+      2000,
+      3000
+    ],
+    "armor": [
+      60
+    ],
+    "resistance": [
+      60
+    ],
+    "mana_start": "0",
+    "mana_cost": "50",
+    "ap": "100",
+    "attack": [
+      100,
+      200,
+      300
+    ],
+    "speed": "0.5"
+  },
+  {
     "name": "Aatrox",
     "id": "1",
     "type": [
