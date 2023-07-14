@@ -413,7 +413,8 @@
           <div class="spell-damage-wrapper">
             <template x-for="spell in $store.currentChampion.spells">
               <div class="spell-damage">
-                Damage: <br>
+                <span x-show="spell.type == 'buff'">Buff: <br></span>
+                <span x-show="spell.type == 'damage'">Damage: <br></span>
                 <span x-text="spell.attackRatio"></span> %AD<br>
                 <span x-text="spell.apRatio"></span> %AP<br>
                 <i>(max multihit : <span x-text="spell.maxMultihit"></span>)</i>
@@ -472,8 +473,8 @@
             <span class="stat-result" x-text="$store.damageStats.attackDPS"></span>
           </div>
           <div class="stat-line" x-show="hasBuffSpell()">
-            <div class="stat-label">STATS BUFF FROM ABILITY : </div>
-            <span class="stat-result" >0</span>
+            <div class="stat-label">DPS AUTOS WITH BUFF : </div>
+            <span class="stat-result" x-text="computeBuffedAttackDPS()"></span>
           </div>
           <div class="stat-line" x-show="hasDamageSpell()">
             <div class="stat-label">ABILITY DAMAGE : </div>
@@ -497,7 +498,7 @@
             <span class="stat-result" x-text="computeFirstCast()"></span>
           </div>
           <div class="stat-line">
-            <div class="stat-label">NEXT CAST TIME : (includes mana lock)</div>
+            <div class="stat-label">NEXT CAST TIME : <br>(includes mana lock)</div>
             <span class="stat-result" x-text="computeNextCast()"></span>
           </div>
           <div class="stat-line">
@@ -561,9 +562,7 @@
           "sunder": 0,
           "shred": 0,
           "percentDamage": 0,
-          "manaLock": true,
-          "autoLock": false,
-          "channel": false
+          "manaLock": true
       }
     ],
     "health": [
@@ -722,7 +721,7 @@
         "omnivamp": 0,
         "flatAp": 0,
         "flatAttack": 0,
-        "switchSpellAfter": 1,
+        "switchSpellAfter": 0,
         "maxMultihit": 9,
         "sunder": 0,
         "shred": 0,
@@ -734,20 +733,19 @@
       {
         "type": "buff",
         "duration": 7,
+        "manaCast": 140,
         "apRatio": [0, 0, 0],
         "attackRatio": [148, 148, 340],
         "speed": 0,
         "omnivamp": 0,
         "flatAp": 0,
         "flatAttack": 0,
-        "switchSpellAfter": 1,
-        "maxMultihit": 9,
+        "switchSpellAfter": 0,
+        "maxMultihit": 1,
         "sunder": 0,
         "shred": 0,
         "percentDamage": 0,
-        "manaLock": false,
-        "autoLock": true,
-        "channel": false
+        "manaLock": false
       }
     ],
     "health": [
@@ -829,10 +827,10 @@
     "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
     "spells": [
       {
-        "type": "buff",
+        "type": "damage",
         "duration": 0,
         "manaCast": 50,
-        "apRatio": [95, 140, 500],
+        "apRatio": [105, 165, 800],
         "attackRatio": [0, 0, 0],
         "speed": 0,
         "omnivamp": 0,
@@ -851,8 +849,8 @@
         "type": "damage",
         "duration": 0,
         "manaCast": 50,
-        "apRatio": [200, 294, 1050],
-        "attackRatio": [100, 100, 100],
+        "apRatio": [220, 345, 1680],
+        "attackRatio": [0, 0, 0],
         "speed": 0,
         "omnivamp": 0,
         "flatAp": 0,
@@ -865,6 +863,23 @@
         "manaLock": false,
         "autoLock": false,
         "channel": false
+      },
+      {
+        "type": "buff",
+        "duration": 30,
+        "manaCast": 0,
+        "apRatio": [35, 55, 265],
+        "attackRatio": [0, 0, 0],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 0,
+        "maxMultihit": 1,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false
       }
     ],
     "health": [

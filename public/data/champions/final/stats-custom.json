@@ -22,9 +22,7 @@
           "sunder": 0,
           "shred": 0,
           "percentDamage": 0,
-          "manaLock": true,
-          "autoLock": false,
-          "channel": false
+          "manaLock": true
       }
     ],
     "health": [
@@ -183,7 +181,7 @@
         "omnivamp": 0,
         "flatAp": 0,
         "flatAttack": 0,
-        "switchSpellAfter": 1,
+        "switchSpellAfter": 0,
         "maxMultihit": 9,
         "sunder": 0,
         "shred": 0,
@@ -195,20 +193,19 @@
       {
         "type": "buff",
         "duration": 7,
+        "manaCast": 140,
         "apRatio": [0, 0, 0],
         "attackRatio": [148, 148, 340],
         "speed": 0,
         "omnivamp": 0,
         "flatAp": 0,
         "flatAttack": 0,
-        "switchSpellAfter": 1,
-        "maxMultihit": 9,
+        "switchSpellAfter": 0,
+        "maxMultihit": 1,
         "sunder": 0,
         "shred": 0,
         "percentDamage": 0,
-        "manaLock": false,
-        "autoLock": true,
-        "channel": false
+        "manaLock": false
       }
     ],
     "health": [
@@ -287,13 +284,13 @@
     "type": [
       "Shurima, Strategist"
     ],
-    "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals 105 magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
+    "spell_desc": "Passive: After every third attack from Azir, a Sand Soldier deals X magic damage to their target.\n\nActive: Summon a Sand Soldier to attack your target. It Azir already has 3 Soldiers, they all immediately deal magic damage instead.",
     "spells": [
       {
-        "type": "buff",
+        "type": "damage",
         "duration": 0,
         "manaCast": 50,
-        "apRatio": [95, 140, 500],
+        "apRatio": [105, 165, 800],
         "attackRatio": [0, 0, 0],
         "speed": 0,
         "omnivamp": 0,
@@ -312,8 +309,8 @@
         "type": "damage",
         "duration": 0,
         "manaCast": 50,
-        "apRatio": [200, 294, 1050],
-        "attackRatio": [100, 100, 100],
+        "apRatio": [220, 345, 1680],
+        "attackRatio": [0, 0, 0],
         "speed": 0,
         "omnivamp": 0,
         "flatAp": 0,
@@ -326,6 +323,23 @@
         "manaLock": false,
         "autoLock": false,
         "channel": false
+      },
+      {
+        "type": "buff",
+        "duration": 30,
+        "manaCast": 0,
+        "apRatio": [35, 55, 265],
+        "attackRatio": [0, 0, 0],
+        "speed": 0,
+        "omnivamp": 0,
+        "flatAp": 0,
+        "flatAttack": 0,
+        "switchSpellAfter": 0,
+        "maxMultihit": 1,
+        "sunder": 0,
+        "shred": 0,
+        "percentDamage": 0,
+        "manaLock": false
       }
     ],
     "health": [

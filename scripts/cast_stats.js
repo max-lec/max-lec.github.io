@@ -88,3 +88,35 @@ function computeCastsPer30(){
     let timeToCast = computeNextCast();
     return Math.floor(timeAfterFirstCast / timeToCast) + 1;
 }
+
+// endTime 15 or 30
+function computeBuffedTimePer(endTime){
+    let buffSpellStats = Alpine.store('currentChampion').spells.filter(spell => spell.type == "buff")[0];
+
+    // no buffs
+    if (buffSpellStats == null || buffSpellStats.length == 0) {
+        return 0;
+    }
+    // always active (think azir)
+    if (buffSpellStats.manaCast == 0) {
+        return endTime;
+    }
+    
+    // buff only on after cast
+    let time = endTime - computeFirstCast();
+    let timeToCast = computeNextCast();
+    let duration = buffSpellStats.duration;
+    // if duration > timeToCast, this means the buff is always on for remaining time
+    if (duration > timeToCast) {
+        return time;
+    }
+
+    let buffedTime = 0;
+    while (time > 1 && time > duration) {
+        buffedTime += duration;
+        time -= timeToCast;
+    }
+
+    // don't forget to add remainder
+    return buffedTime + time;
+}

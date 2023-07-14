@@ -2,13 +2,15 @@ document.addEventListener('alpine:init', () => {
 
     Alpine.store('damageStats', {
         attackDPS: 0,
+        buffedAttackDPS: 0,
         abilitiesDamage: [],
         abilitiesDamageMultihit: [],
         abilitiesDamageCrit: [],
         abilitiesDamageAverage: [],
 
         updateDamageStats() {
-            this.attackDPS = computeAttackDPS();
+            this.attackDPS = computeAttackDPS(Alpine.store('stats').attack);
+            this.buffedAttackDPS = computeBuffedAttackDPS();
             this.abilitiesDamage = computeEveryAbilityDamage();
             this.abilitiesDamageMultihit = computeAbilityDamageMultihit();
             this.abilitiesDamageCrit = computeAbilityDamageCrit();
@@ -17,15 +19,14 @@ document.addEventListener('alpine:init', () => {
     });
 })
 
-function computeAttackDPS() {
-    let attack = Alpine.store('stats').attack;
+function computeAttackDPS(attack) {
     let critChance = Alpine.store('stats').criticalChance/100;
     let critDamage = Alpine.store('stats').criticalDamage;
     let speed = Alpine.store('stats').speed/100;
     
     let averageCritBonus = attack * critChance * critDamage;
     let damage = (attack + averageCritBonus) * speed;
-
+    
     return Math.round(damage);
 }
 
@@ -53,7 +54,11 @@ function computeEveryAbilityDamage() {
             abilityDamages.push(computeAbilityDamage(spell, false));
         }
     });
-
+    
+    if (abilityDamages.length == 0){
+        return [0, 0];
+    }
+    
     return abilityDamages;
 }
 
@@ -65,6 +70,10 @@ function computeAbilityDamageMultihit() {
         }
     });
 
+    if (abilityDamages.length == 0){
+        return [0, 0];
+    }
+    
     return abilityDamages;
 }
 
@@ -84,4 +93,14 @@ function computeAverageAbilityDamage() {
         res = normalDamage.map(damage => Math.round(damage * (1 + (Alpine.store('stats').criticalChance/100) * Alpine.store('stats').criticalDamage)));
     }
     return res;
+}
+
+
+function computeBuffedAttackDPS(){
+    let buffSpell = Alpine.store('currentChampion').spells.filter(spell => spell.type == "buff")[0];
+    if(buffSpell == null || buffSpell.length == 0) {
+        return 0;
+    }
+    let buffedAttack = computeAbilityDamage(buffSpell, true)
+    return computeAttackDPS(buffedAttack);
 }

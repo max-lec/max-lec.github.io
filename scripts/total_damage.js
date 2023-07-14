@@ -5,23 +5,26 @@ function computeDamageOnEnemy() {
 
     // apDamage, attackDamage, enemyStats
 
-    let apDamageTaken = apDamage * 100 / (100 + enemyStats.resistance);
-    let attackDamageTaken = attackDamage * 100 / (100 + enemyStats.armor);
+    // let apDamageTaken = apDamage * 100 / (100 + enemyStats.resistance);
+    // let attackDamageTaken = attackDamage * 100 / (100 + enemyStats.armor);
     
-    return Math.round(apDamageTaken + attackDamageTaken);
+    // return Math.round(apDamageTaken + attackDamageTaken);
 }
 
 
 function totalDamagePer15() {
     
     let nbCasts = computeCastsPer15();
-    let dps = Alpine.store('damageStats').attackDPS;
+    let timeBuffed = computeBuffedTimePer(15);
+    let attackDPS = Alpine.store('damageStats').attackDPS * (15 - timeBuffed);
+    let buffedDPS = Alpine.store('damageStats').buffedAttackDPS * (timeBuffed);
+    let totalAutoDamage = attackDPS + buffedDPS;
 
     let switchSpellAfter = Alpine.store('currentChampion').spells[0].switchSpellAfter;
     let abilityDamage = Alpine.store('damageStats').abilitiesDamageAverage[0];
 
     if (switchSpellAfter == 0) {
-        return (nbCasts * abilityDamage) + (dps * 15);
+        return Math.round( (nbCasts * abilityDamage) + totalAutoDamage );
     }
 
     // else compute with spell switching
@@ -50,5 +53,5 @@ function totalDamagePer15() {
         }
     }
     
-    return totalDamage + (dps * 15);
+    return Math.round( totalDamage + totalAutoDamage );
 }
