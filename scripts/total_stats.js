@@ -137,7 +137,7 @@ function getTotalCriticalDamage() {
     // convert leftover crit chance to crit damage at 50% rate
     if (critChance > 100) {
         let leftover = critChance - 100;
-        totalCriticalDamage = totalCriticalDamage + leftover/2;
+        totalCriticalDamage = totalCriticalDamage + (leftover/2)/100;
     }
     
     return totalCriticalDamage;

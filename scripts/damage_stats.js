@@ -23,8 +23,9 @@ function computeAttackDPS(attack) {
     let critChance = Alpine.store('stats').criticalChance/100;
     let critDamage = Alpine.store('stats').criticalDamage;
     let speed = Alpine.store('stats').speed/100;
-    
-    let averageCritBonus = attack * critChance * critDamage;
+
+    let critBonus = attack * critDamage; // base is +40% of attack
+    let averageCritBonus = critBonus * critChance;
     let damage = (attack + averageCritBonus) * speed;
     
     return Math.round(damage);
