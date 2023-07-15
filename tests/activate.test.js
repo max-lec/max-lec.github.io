@@ -6,4 +6,6 @@ function testComputeFunctions() {
     // test suite
     testComputeCast();
     testComputeFirstCast();
+    testComputeNextCast();
+    testComputeBuffedTimePer();
 }

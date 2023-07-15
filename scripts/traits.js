@@ -140,7 +140,7 @@ document.addEventListener('alpine:init', () => {
                     total[1] = 3;
                     total[0] = traitStats.all.special.manaGen;
                     if (hasCurrentChampionTrait(traitStats.name)){
-                        total[0] = traitStats.trait.special.manaGen;
+                        total[0] += traitStats.trait.special.manaGen;
                     }
                 }
             });

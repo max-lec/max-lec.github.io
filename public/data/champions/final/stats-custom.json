@@ -28,7 +28,7 @@
         },
         {
           "type": "buff",
-          "duration": 10,
+          "duration": 5,
           "manaCast": 50,
           "apRatio": [100, 100, 100],
           "attackRatio": [100, 100, 100],
@@ -62,7 +62,7 @@
       200,
       300
     ],
-    "speed": "0.5"
+    "speed": "1"
   },
   {
     "name": "Aatrox",

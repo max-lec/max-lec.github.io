@@ -1,10 +1,9 @@
 var tickResolution=100; // global var, ticks per second
 
 
-function computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, autoLockTime){
-    let tick=1
+function computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, manaLockTime, autoLockTime){
+    let tick=1 + manaLockTime;
     let ticksPerAttack= Math.round(tickResolution * 100 / manaPerAuto[1]);
-
     while(manaToCast > 0 && tick < 3000) {
 
         if(tick > autoLockTime && tick % ticksPerAttack == 0){
@@ -42,7 +41,7 @@ function computeFirstCast(){
         Alpine.store('currentTrait').getTotalManaBonus()[1] *tickResolution
     ]; // [15, 3*100]
 
-    return computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, 0);
+    return computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, 0, 0);
 }
 
 
@@ -67,12 +66,11 @@ function computeNextCast(){
     let autoLockTime = 0;
     if (Alpine.store('currentChampion').spells[0].manaLock) {
         waitFor = Alpine.store('currentChampion').spells[0].duration;
-    }
-    if (Alpine.store('currentChampion').spells[0].autoLock) {
+    } else if (Alpine.store('currentChampion').spells[0].autoLock) {
         autoLockTime = Alpine.store('currentChampion').spells[0].duration;
     }
     
-    return Math.round(waitFor + computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, autoLockTime*tickResolution)*10)/10;
+    return Math.round(computeCast(manaToCast, manaPerAuto, augmentBonus, traitBonus, waitFor*tickResolution, autoLockTime*tickResolution)*10)/10;
 }
 
 
