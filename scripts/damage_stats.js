@@ -27,7 +27,6 @@ function computeAttackDPS(attack) {
     let critBonus = attack * critDamage; // base is +40% of attack
     let averageCritBonus = critBonus * critChance;
     let damage = (attack + averageCritBonus) * speed;
-    
     return Math.round(damage);
 }
 

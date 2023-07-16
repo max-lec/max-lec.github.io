@@ -11,4 +11,8 @@ function testComputeFunctions() {
 
     // damage_stats
     testComputeAttackDPS();
+    testComputeAbilityDamage();
+    testComputeAbilityDamageCrit();
+    testComputeAverageAbilityDamage();
+    testComputeBuffedAttackDPS();
 }
