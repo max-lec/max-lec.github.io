@@ -50,10 +50,10 @@
     <div class="notes-section" x-data="{showNotes: false}">
 
       <!-- Tests here -->
-      <script src="./tests/activate.test.js"></script>
+      <!-- <script src="./tests/activate.test.js"></script>
       <script src="./tests/cast_stats.test.js"></script>
       <script src="./tests/damage_stats.test.js"></script>
-      <div class="launch-tests-button" @click="testComputeFunctions()">Tests</div>
+      <div class="launch-tests-button" @click="testComputeFunctions()">Tests</div> -->
 
       <div class="show-notes-button" @click="showNotes=true">Show Help !</div>
       <div class="notes" x-show="showNotes" x-on:click.outside="showNotes=false">
@@ -75,14 +75,9 @@
           <br>- Only champions starting with A have spell data for now, rest is updating
           <br>- Most item special effects don't work for now
           <br>- No zaun mods for now
-          <br>- Effective HP and tankiness stats aren't well computed for now, only damage
           <br>- Augments effects are not computed (ex: Harmacist true damage)
           <br>- Traits special effects are not computed (ex: multicaster double cast)
-          <br>- Enemy champion stats aren't used for now
           <br>- Noxus takedowns selector isn't used for now
-          <br>- Max multihit on spell isn't shown anywhere yet
-          <br>- Total damage and enemies killed not computed yet
-          <br>- Abilities that buff don't work yet
           <br>
           <br> Version 0.0.0
         </span>
@@ -167,6 +162,19 @@
                     </template>
                 </div>
             </div>
+
+            <div class="current-item-stats" x-data>
+              <div class="health" x-show="$store.currentItem.item1.health > 0">Health +<span x-text="$store.currentItem.item1.health"></span>,&nbsp;</div>
+              <div class="armor" x-show="$store.currentItem.item1.armor > 0">Armor +<span x-text="$store.currentItem.item1.armor"></span>,&nbsp;</div>
+              <div class="resistance" x-show="$store.currentItem.item1.resistance > 0">MR +<span x-text="$store.currentItem.item1.resistance"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item1.manaStart > 0">Mana +<span x-text="$store.currentItem.item1.manaStart"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item1.manaCast > 0">Mana onHit +<span x-text="$store.currentItem.item1.manaCast"></span>,&nbsp;</div>
+              <div class="ap" x-show="$store.currentItem.item1.ap > 0">AP +<span x-text="$store.currentItem.item1.ap"></span>,&nbsp;</div>
+              <div class="attack" x-show="$store.currentItem.item1.attack > 0">AD +<span x-text="$store.currentItem.item1.attack"></span>,&nbsp;</div>
+              <div class="speed" x-show="$store.currentItem.item1.speed > 0">AS +<span x-text="$store.currentItem.item1.speed"></span>%,&nbsp;</div>
+              <div class="crit" x-show="$store.currentItem.item1.criticalChance > 0">CC +<span x-text="$store.currentItem.item1.criticalChance"></span>%</div>
+              <div>&nbsp;</div>
+            </div>
             
             <div class="item-select" x-data="{showItemSelect: false, showItemTooltip: false}">
                             
@@ -203,6 +211,19 @@
                 </div>
             </div>
 
+            <div class="current-item-stats" x-data>
+              <div class="health" x-show="$store.currentItem.item2.health > 0">Health +<span x-text="$store.currentItem.item2.health"></span>,&nbsp;</div>
+              <div class="armor" x-show="$store.currentItem.item2.armor > 0">Armor +<span x-text="$store.currentItem.item2.armor"></span>,&nbsp;</div>
+              <div class="resistance" x-show="$store.currentItem.item2.resistance > 0">MR +<span x-text="$store.currentItem.item2.resistance"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item2.manaStart > 0">Mana +<span x-text="$store.currentItem.item2.manaStart"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item2.manaCast > 0">Mana onHit +<span x-text="$store.currentItem.item2.manaCast"></span>,&nbsp;</div>
+              <div class="ap" x-show="$store.currentItem.item2.ap > 0">AP +<span x-text="$store.currentItem.item2.ap"></span>,&nbsp;</div>
+              <div class="attack" x-show="$store.currentItem.item2.attack > 0">AD +<span x-text="$store.currentItem.item2.attack"></span>,&nbsp;</div>
+              <div class="speed" x-show="$store.currentItem.item2.speed > 0">AS +<span x-text="$store.currentItem.item2.speed"></span>%,&nbsp;</div>
+              <div class="crit" x-show="$store.currentItem.item2.criticalChance > 0">CC +<span x-text="$store.currentItem.item2.criticalChance"></span>%</div>
+              <div>&nbsp;</div>
+            </div>
+
             <div class="item-select" x-data="{showItemSelect: false, showItemTooltip: false}">
                             
                 <div class="current-item" x-data="$store.currentItem.item3" 
@@ -236,6 +257,20 @@
                         </div>
                     </template>
                 </div>
+            </div>
+
+            
+            <div class="current-item-stats" x-data>
+              <div class="health" x-show="$store.currentItem.item3.health > 0">Health +<span x-text="$store.currentItem.item3.health"></span>,&nbsp;</div>
+              <div class="armor" x-show="$store.currentItem.item3.armor > 0">Armor +<span x-text="$store.currentItem.item3.armor"></span>,&nbsp;</div>
+              <div class="resistance" x-show="$store.currentItem.item3.resistance > 0">MR +<span x-text="$store.currentItem.item3.resistance"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item3.manaStart > 0">Mana +<span x-text="$store.currentItem.item3.manaStart"></span>,&nbsp;</div>
+              <div class="mana" x-show="$store.currentItem.item3.manaCast > 0">Mana onHit +<span x-text="$store.currentItem.item3.manaCast"></span>,&nbsp;</div>
+              <div class="ap" x-show="$store.currentItem.item3.ap > 0">AP +<span x-text="$store.currentItem.item3.ap"></span>,&nbsp;</div>
+              <div class="attack" x-show="$store.currentItem.item3.attack > 0">AD +<span x-text="$store.currentItem.item3.attack"></span>,&nbsp;</div>
+              <div class="speed" x-show="$store.currentItem.item3.speed > 0">AS +<span x-text="$store.currentItem.item3.speed"></span>%,&nbsp;</div>
+              <div class="crit" x-show="$store.currentItem.item3.criticalChance > 0">CC +<span x-text="$store.currentItem.item3.criticalChance"></span>%</div>
+              <div>&nbsp;</div>
             </div>
         </div> 
 
