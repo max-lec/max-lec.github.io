@@ -74,18 +74,12 @@ function computeNextCast(){
 }
 
 
-function computeCastsPer15(){
-    let timeAfterFirstCast = 15 - computeFirstCast();
+function computeCastsPer(time){
+    let timeAfterFirstCast = time - computeFirstCast();
     let timeToCast = computeNextCast();
     return Math.floor(timeAfterFirstCast / timeToCast) + 1;
 }
 
-
-function computeCastsPer30(){
-    let timeAfterFirstCast = 30 - computeFirstCast();
-    let timeToCast = computeNextCast();
-    return Math.floor(timeAfterFirstCast / timeToCast) + 1;
-}
 
 // endTime 15 or 30
 function computeBuffedTimePer(endTime){
@@ -117,4 +111,44 @@ function computeBuffedTimePer(endTime){
 
     // don't forget to add remainder
     return buffedTime + time;
+}
+
+
+function computeSwitchCastsPer(endTime) {
+    let nbCasts = computeCastsPer(endTime);
+    let nbFirstCasts = 0;
+    let nbSecondCasts = 0;
+
+    let firstSwitchSpellAfter = Alpine.store('currentChampion').spells[0].switchSpellAfter;
+    // check if there is only 1 damage spell
+    if (firstSwitchSpellAfter == 0) {
+        return [nbCasts, 0];
+    }
+
+    // else compute with spell switching
+    let secondSwitchSpellAfter = Alpine.store('currentChampion').spells[1].switchSpellAfter;
+    let firstCastsLeft = firstSwitchSpellAfter;
+    let secondCastsLeft = 0;
+
+    for(cast = 1; cast <= nbCasts; cast++) {
+        if (firstCastsLeft == 0) {
+            firstCastsLeft = -1;
+            secondCastsLeft = secondSwitchSpellAfter;
+        }
+        if (secondCastsLeft == 0) {
+            firstCastsLeft = firstSwitchSpellAfter;
+            secondCastsLeft = -1;
+        }
+
+        if (firstCastsLeft > 0) {
+            nbFirstCasts ++;
+            firstCastsLeft --;
+        }
+        if (secondCastsLeft > 0) {
+            nbSecondCasts ++;
+            secondCastsLeft --; 
+        }
+    }
+
+    return [nbFirstCasts, nbSecondCasts];
 }

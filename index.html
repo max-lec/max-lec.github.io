@@ -30,11 +30,6 @@
 <script src="./scripts/enemy.js"></script>
 <script src="./scripts/total_damage.js"></script>
 
-<!-- Tests here -->
-<script src="./tests/activate.test.js"></script>
-<script src="./tests/cast_stats.test.js"></script>
-<script src="./tests/damage_stats.test.js"></script>
-
 <!-- compiled css here -->
 <link href="./styles/index.css" rel="stylesheet">
 <link href="./styles/champion.css" rel="stylesheet">
@@ -53,7 +48,13 @@
 <body>
 
     <div class="notes-section" x-data="{showNotes: false}">
+
+      <!-- Tests here -->
+      <script src="./tests/activate.test.js"></script>
+      <script src="./tests/cast_stats.test.js"></script>
+      <script src="./tests/damage_stats.test.js"></script>
       <div class="launch-tests-button" @click="testComputeFunctions()">Tests</div>
+
       <div class="show-notes-button" @click="showNotes=true">Show Help !</div>
       <div class="notes" x-show="showNotes" x-on:click.outside="showNotes=false">
         <div class="close-button" @click="showNotes=false">x</div>
@@ -509,34 +510,30 @@
           </div>
           <div class="stat-line">
             <div class="stat-label">CASTS / 15s: </div>
-            <span class="stat-result" x-text="computeCastsPer15()"></span>
+            <span class="stat-result" x-text="computeCastsPer(15)"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">CASTS / 30s : </div>
-            <span class="stat-result" x-text="computeCastsPer30()"></span>
+            <span class="stat-result" x-text="computeCastsPer(30)"></span>
           </div>
         </div>
 
         <div class="total-damage-stats" x-data>
           <div class="stat-line">
-            <div class="stat-label">ABILITY DAMAGE ON ENEMY : </div>
-            <span class="stat-result" x-text="computeDamageOnEnemy()">0</span>
-          </div>
-          <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 15s : </div>
-            <span class="stat-result" x-text="totalDamagePer15()"></span>
+            <span class="stat-result" x-text="totalDamagePer(15)"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ENEMIES KILLED / 15s : </div>
-            <span class="stat-result" >0</span>
+            <span class="stat-result" x-text="enemiesKilledPer(15)"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">TOTAL DAMAGE / 30s : </div>
-            <span class="stat-result" >0</span>
+            <span class="stat-result" x-text="totalDamagePer(30)"></span>
           </div>
           <div class="stat-line">
             <div class="stat-label">ENEMIES KILLED / 30s : </div>
-            <span class="stat-result" >0</span>
+            <span class="stat-result" x-text="enemiesKilledPer(30)"></span>
           </div>
         </div>
 
