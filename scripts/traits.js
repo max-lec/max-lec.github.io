@@ -25,6 +25,7 @@ document.addEventListener('alpine:init', () => {
                 // trait not found, add it
                 this.activeTraits.push([id, level]);
             }
+            Alpine.store('urlData').query.set("activeTraits", JSON.stringify(this.activeTraits));
         },
 
         isActive(id, level){
@@ -146,14 +147,6 @@ document.addEventListener('alpine:init', () => {
             });
             return total;
         },
-    });
-});
-
-
-document.addEventListener('alpine:initialized', () => {
-    Alpine.effect(() => {
-        const activeTraits = Alpine.store('currentTrait').activeTraits;
-        Alpine.store('stats').updateCurrentStats();
     });
 });
 

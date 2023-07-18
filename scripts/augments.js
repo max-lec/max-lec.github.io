@@ -54,14 +54,17 @@ document.addEventListener('alpine:init', () => {
         },
 
         selectAugment1(id) {
+            Alpine.store('urlData').query.set("augment1", id);
             this.augment1 = getAugmentStats(id)
         },
 
         selectAugment2(id) {
+            Alpine.store('urlData').query.set("augment2", id);
             this.augment2 = getAugmentStats(id)
         },
         
         selectAugment3(id) {
+            Alpine.store('urlData').query.set("augment3", id);
             this.augment3 = getAugmentStats(id)
         },
 
@@ -106,17 +109,6 @@ document.addEventListener('alpine:init', () => {
         },
     });
 })
-
-
-document.addEventListener('alpine:initialized', () => {
-    Alpine.effect(() => {
-        const augment1 = Alpine.store('currentAugment').augment1;
-        const augment2 = Alpine.store('currentAugment').augment2;
-        const augment3 = Alpine.store('currentAugment').augment3;
-        Alpine.store('stats').updateCurrentStats();
-    });
-});
-
 
 function getAugmentsData() {
     let augmentsStats = Alpine.store('augmentsStatsData').augmentsStats;

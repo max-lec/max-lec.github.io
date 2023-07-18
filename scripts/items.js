@@ -96,14 +96,17 @@ document.addEventListener('alpine:init', () => {
         },
 
         selectItem1(id) {
+            Alpine.store('urlData').query.set("item1", id);
             this.item1 = getItemStats(id)
         },
 
         selectItem2(id) {
+            Alpine.store('urlData').query.set("item2", id);
             this.item2 = getItemStats(id)
         },
         
         selectItem3(id) {
+            Alpine.store('urlData').query.set("item3", id);
             this.item3 = getItemStats(id)
         },
 
@@ -161,16 +164,6 @@ document.addEventListener('alpine:init', () => {
         },
     });
 })
-
-
-document.addEventListener('alpine:initialized', () => {
-    Alpine.effect(() => {
-        const item1 = Alpine.store('currentItem').item1;
-        const item2 = Alpine.store('currentItem').item2;
-        const item3 = Alpine.store('currentItem').item3;
-        Alpine.store('stats').updateCurrentStats();
-    });
-});
 
 
 function getItemsData() {

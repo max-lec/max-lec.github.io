@@ -81,15 +81,6 @@ document.addEventListener('alpine:init', () => {
 });
 
 
-document.addEventListener('alpine:initialized', () => {
-    Alpine.effect(() => {
-        const id = Alpine.store('currentChampion').id;
-        const level = Alpine.store('currentChampion').level;
-        // Alpine.store('stats').updateCurrentStats();
-    });
-});
-
-
 function getChampionsData() {
     let championsStats = Alpine.store('championsStatsData').championsStats.filter(champs => champs.id != -1);
 

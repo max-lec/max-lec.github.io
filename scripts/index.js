@@ -16,15 +16,51 @@ document.addEventListener('alpine:initialized', () => {
         },
 
         loadData() {
-            if (this.query.size > 0){
-                let id = this.query.get("champion")
+
+            // champion
+            let id = this.query.get("champion");
+            if (id != undefined){
                 Alpine.store('currentChampion').id = id;
-                let level = this.query.get("level")
+                Alpine.store('currentChampion').loadChampionStats();
+            }
+            let level = this.query.get("level");
+            if (level != undefined){
                 Alpine.store('currentChampion').level = level
                 Alpine.store('currentChampion').loadChampionStats();
-            } else {
-                Alpine.store('currentChampion').id = 1; //inits to aatrox
-                Alpine.store('currentChampion').level = 1;
+            }
+
+            // items
+            let item1 = this.query.get("item1");
+            if (item1 != undefined){
+                Alpine.store('currentItem').item1 = getItemStats(item1);
+            } 
+            let item2 = this.query.get("item2");
+            if (item2 != undefined){
+                Alpine.store('currentItem').item2 = getItemStats(item2);
+            }
+            let item3 = this.query.get("item3");
+            if (item3 != undefined){
+                Alpine.store('currentItem').item3 = getItemStats(item3);
+            }
+
+            // augments
+            let augment1 = this.query.get("augment1");
+            if (augment1 != undefined){
+                Alpine.store('currentAugment').augment1 = getAugmentStats(augment1);
+            } 
+            let augment2 = this.query.get("augment2");
+            if (augment2 != undefined){
+                Alpine.store('currentAugment').augment2 = getAugmentStats(augment2);
+            }
+            let augment3 = this.query.get("augment3");
+            if (augment3 != undefined){
+                Alpine.store('currentAugment').augment3 = getAugmentStats(augment3);
+            }
+
+            // traits
+            let activeTraits = this.query.get("activeTraits");
+            if (activeTraits != undefined){
+                Alpine.store('currentTrait').activeTraits = JSON.parse(activeTraits);
             }
         }
     });
