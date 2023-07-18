@@ -52,11 +52,11 @@ document.addEventListener('alpine:init', () => {
         init() {
             this.id = 1; //inits to aatrox (jhin is 19)
             this.level = 1;
-            this.selectChampion(this.id);
+            this.loadChampionStats();
         },
 
-        setChampionStats(id) {
-            let championStats = getChampionStats(id);
+        loadChampionStats() {
+            let championStats = getChampionStats(this.id);
             this.name = decodeHtmlEntity(championStats.name);
             this.srcPath = getChampionSrcPath(this.name);
             this.type = championStats.type[0];
@@ -67,12 +67,14 @@ document.addEventListener('alpine:init', () => {
 
         selectChampion(id) {
             this.id = id;
-            this.setChampionStats(id);
+            Alpine.store('urlData').query.set("champion", this.id);
+            this.loadChampionStats();
         },
         
         setChampionLevel(level) {
             this.level = level;
-            this.setChampionStats(this.id);
+            Alpine.store('urlData').query.set("level", this.level);
+            this.loadChampionStats();
         },
     });
 
@@ -83,7 +85,7 @@ document.addEventListener('alpine:initialized', () => {
     Alpine.effect(() => {
         const id = Alpine.store('currentChampion').id;
         const level = Alpine.store('currentChampion').level;
-        Alpine.store('stats').updateCurrentStats();
+        // Alpine.store('stats').updateCurrentStats();
     });
 });
 

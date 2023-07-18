@@ -24,8 +24,8 @@ document.addEventListener('alpine:init', () => {
             this.selectChampion(this.id);
         },
 
-        setChampionStats(id) {
-            let championStats = getChampionStats(id);
+        loadChampionStats() {
+            let championStats = getChampionStats(this.id);
             this.name = decodeHtmlEntity(championStats.name);
             this.srcPath = getChampionSrcPath(this.name);
             this.type = championStats.type[0];
@@ -34,12 +34,12 @@ document.addEventListener('alpine:init', () => {
 
         selectChampion(id) {
             this.id = id;
-            this.setChampionStats(id);
+            this.loadChampionStats();
         },
         
         setChampionLevel(level) {
             this.level = level;
-            this.setChampionStats(this.id);
+            this.loadChampionStats();
         },
     });
 
