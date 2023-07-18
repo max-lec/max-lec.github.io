@@ -12,25 +12,64 @@ body {
 
     .main-options {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         width: 100%;
-        height: 45vh;
+        
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            height: 45vh;
+            align-items: center;
+        }
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .mobile-wrapper {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            @media only screen and (min-width: 768px) {
+            }
+    
+            @media only screen and (max-width: 768px) {
+                margin-top: 10vw;
+                justify-content: center;
+                width: 100vw;
+            }
+        }
     }
 
     .additional-options {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         width: 100%;
-        height: 12vh;
+
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            height: 12vh;
+        }
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
     }
 
     .result-stats {
         display: flex;
-        flex-direction: row;
         width: 100%;
-        height: 38.7vh;
+
+        @media only screen and (min-width: 768px) {
+            flex-direction: row;
+            height: 38.7vh;
+        }
+        
+        @media only screen and (max-width: 768px) {
+            flex-direction: column;
+            height: auto;
+        }
     }
 
     .section-separator {

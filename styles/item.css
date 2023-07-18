@@ -1,31 +1,61 @@
 .main-options .item-selects-wrapper {
 
-    margin-left: 4vw;
-    margin-top: 2vw;
     display: flex;
     flex-direction: column;
-    gap: 1vw;
     position: relative;
     padding: 0;
     border: 0;
 
+    @media only screen and (min-width: 768px) {
+        margin-left: 4vw;
+        margin-top: 2vw;
+        gap: 1vw;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-left: 13vw;
+        margin-top: 20vw;
+        gap: 5vw;
+    }
+
     .item-image {
-        width: 2.5vw;
-        height: 2.5vw;
-        padding-right: 10px;
+        @media only screen and (min-width: 768px) {
+            width: 2.5vw;
+            height: 2.5vw;
+            padding-right: 10px;    
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 12vw;
+            height: 12vw;
+            padding-right: 20px;    
+        }
     }
 
     .item-label {
-        width: 10vw;
+        @media only screen and (min-width: 768px) {
+            width: 10vw;
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 50vw;
+        }
     }
 
     .item-select {
         display: flex;
         position: relative;
         flex-direction: column;
-        width: 14vw;
         background-color: rgb(44, 39, 79);
         border: 2px ridge rgb(102, 82, 128);
+
+        @media only screen and (min-width: 768px) {
+            width: 14vw;
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 70vw;
+        }
 
         &:hover {
             cursor: pointer;
@@ -37,7 +67,14 @@
             flex-direction: row;
             align-items: center;
             justify-content: left;
-            height: 2.5vw;
+
+            @media only screen and (min-width: 768px) { 
+                height: 2.5vw;
+            }
+    
+            @media only screen and (max-width: 768px) {
+                height: 12vw;
+            }
 
             .item-image-wrapper {
                 margin-right: 10px;
@@ -51,10 +88,28 @@
                 border: 2px groove rgb(244, 187, 72);
                 overflow: hidden;
 
-                .item-image {
-                    width: 3.7vw;
+                @media only screen and (min-width: 768px) { 
+                    min-width: 3.7vw;
                     height: 3.7vw;
+                }
+        
+                @media only screen and (max-width: 768px) {
+                    min-width: 15vw;
+                    height: 15vw;
+                }
+
+                .item-image {
                     padding: 0;
+
+                    @media only screen and (min-width: 768px) { 
+                        width: 3.7vw;
+                        height: 3.7vw;
+                    }
+            
+                    @media only screen and (max-width: 768px) {
+                        width: 15vw;
+                        height: 15vw;
+                    }
                 }
             }
         }
@@ -63,23 +118,44 @@
             display: flex;
             flex-direction: column;
             align-items: left;
-            position: absolute;
-            top: 3.5vw;
             left: -2px; /* because of border*/
             overflow-y: auto;
             z-index: 600;
+
+            @media only screen and (min-width: 768px) { 
+                position: absolute;
+                top: 3.5vw;
+                min-width: 14vw;
+            }
+    
+            @media only screen and (max-width: 768px) {
+                position: fixed;
+                left: 15vw;
+                min-width: 70vw;
+                top: 10vh;
+                min-height: 80vh;
+            }
 
             .item-content {
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: left;
-                max-width: 14vw;
-                height: 2.5vw;
-                min-height: 2.5vw;
                 padding: 5px 5px;
                 padding-top: 7px;
                 border-bottom: 1px solid rgb(21, 17, 54);
+
+                @media only screen and (min-width: 768px) { 
+                    max-width: 14vw;
+                    height: 2.5vw;
+                    min-height: 2.5vw;
+                }
+        
+                @media only screen and (max-width: 768px) {
+                    max-width: 70vw;
+                    height: 12vw;
+                    min-height: 12vw;
+                }
 
                 &:hover {
                     background-color: rgb(165, 78, 124);
@@ -102,6 +178,13 @@
             border: 2px groove rgb(244, 187, 72);
             background-color: rgb(44, 39, 79);          
             z-index: 800; 
+
+            @media only screen and (min-width: 768px) { 
+            }
+    
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
         .item-tooltip-fixed.item-1 {
@@ -129,9 +212,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin-left:1vw;
-        width: 12vw;
         font-size: 0.8em;
         opacity: 0.9;
+
+        @media only screen and (min-width: 768px) { 
+            width: 12vw;
+        }
+
+        @media only screen and (max-width: 768px) {
+            width: 70vw;
+        }
         
         .health {
             color: rgb(32 153 93);

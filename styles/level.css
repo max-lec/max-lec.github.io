@@ -1,16 +1,24 @@
 .main-options .level-select {
 
-    margin-left: 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 1vw;
-    height: 6vw;
     font-size: 1.3em;
     line-height: 20px;
     color: rgb(180, 180, 180);
     cursor: pointer;
+
+    @media only screen and (min-width: 768px) {
+        margin-left: 1vw;
+        width: 1vw;
+        height: 6vw;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-left: 10vw;
+        width: 20vw;
+    }
 
     .level-star {
         padding: 10px;

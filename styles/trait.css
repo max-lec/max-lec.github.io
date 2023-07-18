@@ -1,17 +1,27 @@
 .main-options .trait-select {
     
-    margin-left: 4vw;
     display: flex;
     flex-direction: column;
     align-items: left;
     position: relative;
-    width: 17vw;
-    height: 18vw;
     padding: 0;
     border: 0;
     font-size: 1em;
     overflow-y: scroll;
     background-color: rgb(44, 39, 79);
+
+    @media only screen and (min-width: 768px) { 
+        margin-left: 4vw;
+        width: 17vw;
+        height: 18vw;
+    }
+
+    @media only screen and (max-width: 768px) {
+        margin-top: 20vw;
+        margin-left: 5vw;
+        width: 90vw;
+        height: 50vh;
+    }
 
     .trait-wrapper {
 
