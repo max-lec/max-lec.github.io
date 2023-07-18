@@ -32,6 +32,7 @@ function enemiesKilledPer(endTime) {
     let abilityDamages = computeAbilityDamageOnEnemy();
     
     damageOnEnemy += nbFirstCasts*(abilityDamages[0] ?? 0) + nbSecondCasts*(abilityDamages[1] ?? 0)
+    
 
     return Math.round((damageOnEnemy / Alpine.store('enemyChampion').stats.health) * 10)/10;
 }

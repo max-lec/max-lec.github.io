@@ -97,7 +97,8 @@ function getChampionsData() {
         let championData = { 
             "id": champion.id, 
             "name": decodeHtmlEntity(champion.name), 
-            "srcPath": getChampionSrcPath(decodeHtmlEntity(champion.name))
+            "srcPath": getChampionSrcPath(decodeHtmlEntity(champion.name)),
+            "broken": champion.broken ?? false
         };
         championMap.push(championData);
     }

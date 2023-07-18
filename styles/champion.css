@@ -79,6 +79,10 @@
         .champion-content-selected {
             background-color: rgb(165, 78, 124);
         }
+
+        .champion-broken {
+            opacity: 0.5;
+        }
     }
 }
 
