@@ -23,6 +23,7 @@ body {
         @media only screen and (max-width: 768px) {
             flex-direction: column;
             height: auto;
+            padding-bottom: 5vh;
         }
 
         .mobile-wrapper {
@@ -43,32 +44,35 @@ body {
 
     .additional-options {
         display: flex;
-        width: 100%;
+        flex-direction: row;
+        align-items: center;
 
         @media only screen and (min-width: 768px) {
-            flex-direction: row;
-            align-items: center;
+            width: 100%;
             height: 12vh;
         }
 
         @media only screen and (max-width: 768px) {
-            flex-direction: column;
-            height: auto;
+            margin-left: 5vw;
+            width: 95vw;
+            height: 20vh;
+            flex-flow: row wrap;
         }
     }
 
     .result-stats {
         display: flex;
+        flex-direction: row;
         width: 100%;
 
         @media only screen and (min-width: 768px) {
-            flex-direction: row;
             height: 38.7vh;
         }
         
         @media only screen and (max-width: 768px) {
-            flex-direction: column;
+            flex-flow: row wrap;
             height: auto;
+            padding-bottom: 20px;
         }
     }
 

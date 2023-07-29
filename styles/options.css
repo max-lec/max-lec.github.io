@@ -1,13 +1,23 @@
 .additional-options {
 
     .additional-option {
+
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-        height: 6vw;
-        padding-right: 2vw;
-        padding-left: 2vw;
+
+        @media only screen and (min-width: 768px) {
+            height: 6vw;
+            padding-right: 2vw;
+            padding-left: 2vw;
+        }
+    
+        @media only screen and (max-width: 768px) {
+            height: 10vh;
+            padding-right: 5vw;
+            padding-left: 5vw;
+        }
 
         &:after {
             content: "";
@@ -19,17 +29,35 @@
         }
 
         &:first-of-type {
-            margin-left: 4vw;
+            @media only screen and (min-width: 768px) {
+                margin-left: 4vw;
+            }
+        
+            @media only screen and (max-width: 768px) {
+            }
         }
 
         .label-option {
             padding-bottom: 10px;
+            @media only screen and (min-width: 768px) {
+            }
+        
+            @media only screen and (max-width: 768px) {
+                font-size: 0.8em;
+            }
         }
 
         .select-option {
             padding-top: 2px;
             padding-bottom: 2px;
-            font-size: 1em;
+
+            @media only screen and (min-width: 768px) {
+                font-size: 1em;
+            }
+        
+            @media only screen and (max-width: 768px) {
+                font-size: 0.8em;
+            }
         }
     }
 
@@ -42,15 +70,36 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            height: 6vw;
+
+            @media only screen and (min-width: 768px) {
+                height: 6vw;
+            }
+        
+            @media only screen and (max-width: 768px) {
+                height: 10vh;
+            }
             
-            &:first-of-type {
-                padding-right: 0vw;
-                padding-left: 2vw;
+            &:first-of-type {                
+                @media only screen and (min-width: 768px) {
+                    padding-right: 0vw;
+                    padding-left: 2vw;
+                }
+            
+                @media only screen and (max-width: 768px) {
+                    padding-right: 0vw;
+                    padding-left: 5vw;
+                }
             }
             &:last-of-type {
-                padding-left: 1vw;
-                padding-right: 2vw;
+                @media only screen and (min-width: 768px) {
+                    padding-left: 1vw;
+                    padding-right: 2vw;
+                }
+            
+                @media only screen and (max-width: 768px) {
+                    padding-left: 2vw;
+                    padding-right: 5vw;
+                }
             }
             
             &:last-of-type:after {
@@ -64,12 +113,24 @@
 
             .label-option {
                 padding-bottom: 10px;
+                @media only screen and (min-width: 768px) {
+                }
+            
+                @media only screen and (max-width: 768px) {
+                    font-size: 0.8em;
+                }
             }
     
             .select-option {
                 padding-top: 2px;
                 padding-bottom: 2px;
-                font-size: 1em;
+                @media only screen and (min-width: 768px) {
+                    font-size: 1em;
+                }
+            
+                @media only screen and (max-width: 768px) {
+                    font-size: 0.8em;
+                }
             }
         }
 
