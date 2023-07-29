@@ -16,12 +16,22 @@
     }
 
     @media only screen and (max-width: 768px) {
-        margin-left: 10vw;
-        width: 20vw;
+        margin-left: 1vw;
+        width: 8vw;
+        height: 24.8vw;
+        font-size: 1em;
+        line-height: 1.2em;
     }
 
     .level-star {
-        padding: 10px;
+
+        @media only screen and (min-width: 768px) {
+            padding: 10px;
+        }
+    
+        @media only screen and (max-width: 768px) {
+            padding: 5px;
+        }
 
         &:hover {
             font-size: 1.5em;

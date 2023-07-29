@@ -34,9 +34,9 @@ body {
             }
     
             @media only screen and (max-width: 768px) {
-                margin-top: 10vw;
-                justify-content: center;
-                width: 100vw;
+                margin-top: 5vh;
+                margin-left: 5vw;
+                width: 95vw;
             }
         }
     }

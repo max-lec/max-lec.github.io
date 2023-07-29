@@ -13,32 +13,33 @@
     }
 
     @media only screen and (max-width: 768px) {
-        margin-left: 13vw;
-        margin-top: 20vw;
-        gap: 5vw;
+        margin-left: 5vw;
+        gap: 1vh;
     }
 
     .item-image {
+        padding-right: 10px;
+
         @media only screen and (min-width: 768px) {
             width: 2.5vw;
-            height: 2.5vw;
-            padding-right: 10px;    
+            height: 2.5vw; 
         }
 
         @media only screen and (max-width: 768px) {
-            width: 12vw;
-            height: 12vw;
-            padding-right: 20px;    
+            width: 10vw;
+            height: 10vw;  
         }
     }
 
     .item-label {
         @media only screen and (min-width: 768px) {
             width: 10vw;
+            font-size: 1em;
         }
 
         @media only screen and (max-width: 768px) {
-            width: 50vw;
+            width: 33vw;
+            font-size: 0.8em;
         }
     }
 
@@ -54,7 +55,7 @@
         }
 
         @media only screen and (max-width: 768px) {
-            width: 70vw;
+            width: 45vw;
         }
 
         &:hover {
@@ -73,7 +74,7 @@
             }
     
             @media only screen and (max-width: 768px) {
-                height: 12vw;
+                height: 10vw;
             }
 
             .item-image-wrapper {
@@ -94,8 +95,8 @@
                 }
         
                 @media only screen and (max-width: 768px) {
-                    min-width: 15vw;
-                    height: 15vw;
+                    min-width: 12vw;
+                    height: 12vw;
                 }
 
                 .item-image {
@@ -107,8 +108,8 @@
                     }
             
                     @media only screen and (max-width: 768px) {
-                        width: 15vw;
-                        height: 15vw;
+                        width: 12vw;
+                        height: 12vw;
                     }
                 }
             }
@@ -118,21 +119,21 @@
             display: flex;
             flex-direction: column;
             align-items: left;
-            left: -2px; /* because of border*/
             overflow-y: auto;
             z-index: 600;
 
             @media only screen and (min-width: 768px) { 
                 position: absolute;
                 top: 3.5vw;
+                left: -2px; /* because of border*/
                 min-width: 14vw;
             }
     
             @media only screen and (max-width: 768px) {
                 position: fixed;
-                left: 15vw;
-                min-width: 70vw;
-                top: 10vh;
+                left: 10vw;
+                min-width: 80vw;
+                top: 5vh;
                 min-height: 80vh;
             }
 
@@ -153,8 +154,8 @@
         
                 @media only screen and (max-width: 768px) {
                     max-width: 70vw;
-                    height: 12vw;
-                    min-height: 12vw;
+                    height: 10vw;
+                    min-height: 10vw;
                 }
 
                 &:hover {
@@ -162,7 +163,25 @@
                 }
 
                 .item-image { 
-                    padding-right: 10px
+                    padding-right: 10px;
+
+                    @media only screen and (min-width: 768px) {
+                    }
+            
+                    @media only screen and (max-width: 768px) {
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                .item-label {
+                    @media only screen and (min-width: 768px) {
+                    }
+            
+                    @media only screen and (max-width: 768px) {
+                        width: 50vw;
+                        font-size: 1em;
+                    }
                 }
             }
 
@@ -190,14 +209,32 @@
         .item-tooltip-fixed.item-1 {
             top: 4.2vw;
             left: 33vw;  
+            @media only screen and (min-width: 768px) { 
+            }
+    
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
         }
         .item-tooltip-fixed.item-2 {
             top: 10.1vw;
-            left: 33vw;  
+            left: 33vw; 
+            @media only screen and (min-width: 768px) { 
+            }
+    
+            @media only screen and (max-width: 768px) {
+                display: none;
+            } 
         }
         .item-tooltip-fixed.item-3 {
             top: 16vw;
             left: 33vw;  
+            @media only screen and (min-width: 768px) { 
+            }
+    
+            @media only screen and (max-width: 768px) {
+                display: none;
+            }
         }
 
         .item-list.list-active {
@@ -212,15 +249,16 @@
         flex-direction: row;
         flex-wrap: wrap;
         margin-left:1vw;
-        font-size: 0.8em;
         opacity: 0.9;
 
         @media only screen and (min-width: 768px) { 
             width: 12vw;
+            font-size: 0.8em;
         }
 
         @media only screen and (max-width: 768px) {
-            width: 70vw;
+            width: 45vw;
+            font-size: 0.7em;
         }
         
         .health {

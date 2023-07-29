@@ -1,25 +1,25 @@
 .main-options .augment-selects-wrapper {
     
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     position: relative;
     padding: 0;
     border: 0;
-    font-size: 1.2em;
 
     @media only screen and (min-width: 768px) { 
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
         margin-left: 4vw;
         width: 39vw;
         height: 18vw;
+        font-size: 1.2em;
     }
 
     @media only screen and (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-        margin-top: 20vw;
-        width: 100vw;
+        margin-top: 5vh;
+        margin-left: 5vw;
+        width: 90vw;
+        font-size: 0.9em;
     }
 
     .augment-select {
@@ -36,9 +36,8 @@
         }
     
         @media only screen and (max-width: 768px) {
-            margin-top: 3vh;
-            width: 50vw;
-            height: 30vh;
+            width: 22vw;
+            height: 15vh;
         }
 
         .current-augment {
@@ -57,8 +56,8 @@
             }
         
             @media only screen and (max-width: 768px) {
-                width: 50vw;
-                height: 30vh;
+                width: 22vw;
+                height: 15vh;
             }
 
             &:hover {
@@ -76,15 +75,13 @@
                 }
             
                 @media only screen and (max-width: 768px) {
-                    width: 20vw;
-                    height: 20vw;
-                    padding: 5vw;
-                    padding-top: 5vw;
+                    width: 10vw;
+                    height: 10vw;
+                    padding: 2vw;
                 }
             }
 
             .augment-name {
-                font-size: 1em;
 
                 @media only screen and (min-width: 768px) { 
                     padding-top: 1vw;
@@ -92,8 +89,7 @@
                 }
             
                 @media only screen and (max-width: 768px) {
-                    padding-top: 1vw;
-                    padding-bottom: 5vw;
+                    padding: 1vw;
                 }
             }
 
@@ -107,9 +103,7 @@
                 }
             
                 @media only screen and (max-width: 768px) {
-                    padding-bottom: 5vw;
-                    padding-left: 5vw;
-                    padding-right: 5vw;
+                    display: none;
                 }
             }
         }
@@ -118,11 +112,22 @@
             display: flex;
             flex-direction: column;
             align-items: left;
-            position: absolute;
-            top: 18vw;
-            height: 50vh;
             overflow-y: auto;
             z-index: 600;
+
+            @media only screen and (min-width: 768px) { 
+                position: absolute;
+                top: 18vw;
+                height: 50vh;
+            }
+        
+            @media only screen and (max-width: 768px) {
+                position: fixed;
+                left: 10vw;
+                width: 80vw;
+                top: 5vh;
+                height: 80vh;
+            }
 
             .augment-content {
                 display: flex;
@@ -145,7 +150,13 @@
                 }
 
                 .augment-name {
-                    font-size: 0.7em;
+                    @media only screen and (min-width: 768px) { 
+                        font-size: 0.7em;
+                    }
+                
+                    @media only screen and (max-width: 768px) {
+                        font-size: 1em;
+                    }
                 }
             }
 

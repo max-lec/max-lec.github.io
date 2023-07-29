@@ -11,8 +11,8 @@
     }
 
     @media only screen and (max-width: 768px) {
-        width: 40vw;
-        height: 40vw;
+        width: 26vw;
+        height: 26vw;
     }
 
     &:hover {
@@ -39,8 +39,8 @@
         }
     
         @media only screen and (max-width: 768px) {
-            width: 39.8vw;
-            height: 39.8vw;
+            width: 24.8vw;
+            height: 24.8vw;
         }
 
         .champion-image {
@@ -53,8 +53,8 @@
             }
         
             @media only screen and (max-width: 768px) {
-                width: 40.6vw;
-                height: 40.6vw;
+                width: 25.6vw;
+                height: 25.6vw;
             }
         }
 
@@ -72,8 +72,8 @@
         }
     
         @media only screen and (max-width: 768px) {
-            left: 32vw;
-            top: 37vw;
+            left: 17vw;
+            top: 22vw;
             width: 6vw;
             height: 3vw;
         }
@@ -97,9 +97,9 @@
     
         @media only screen and (max-width: 768px) {
             position: fixed;
-            left: 15vw;
-            width: 70vw;
-            top: 10vh;
+            left: 10vw;
+            width: 80vw;
+            top: 5vh;
             height: 80vh;
         }
 
